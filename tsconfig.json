@@ -11,6 +11,12 @@
 			"@lib/*": [
 				"src/lib/*"
 			],
+			"@options/*": [
+				"src/options/*"
+			],
+			"@pages/*": [
+				"src/pages/*"
+			],
 			"@scripts/*": [
 				"src/scripts/*"
 			]
