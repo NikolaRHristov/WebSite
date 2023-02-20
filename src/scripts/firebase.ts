@@ -1,14 +1,13 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-	apiKey: "", // TODO Replace with your own API key
-	appId: "", // TODO Replace with your own app ID
-	authDomain: "", // TODO Replace with your own auth domain
-	databaseURL: "", // TODO Replace with your own database URL
-	measurementId: "", // TODO Replace with your own measurement ID
-	messagingSenderId: "", // TODO Replace with your own messaging sender ID
-	projectId: "", // TODO Replace with your own project ID
-	storageBucket: "", // TODO Replace with your own storage bucket
+	apiKey: "AIzaSyDw2ssiqGAC1rqPGlNY2-49Xowx7IzhEa0",
+	appId: "1:742384357186:web:89760157292cbcf091c2db",
+	authDomain: "nikola-hristov.firebaseapp.com",
+	measurementId: "G-YJD003JSKY",
+	messagingSenderId: "742384357186",
+	projectId: "nikola-hristov",
+	storageBucket: "nikola-hristov.appspot.com",
 };
 
 initializeApp(firebaseConfig);
