@@ -1,14 +1,14 @@
 {
-	"name": "astro-starter-template",
+	"name": "nikolahristov-web",
 	"version": "0.0.1",
 	"description": "📄 Starter template for AstroJS.",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Lightrix/astro-starter-template.git"
+		"url": "https://github.com/nikolaxhristov/nikolahristov.tech.git"
 	},
-	"homepage": "https://github.com/Lightrix/astro-starter-template#readme",
+	"homepage": "https://github.com/nikolaxhristov/nikolahristov.tech#readme",
 	"bugs": {
-		"url": "https://github.com/Lightrix/astro-starter-template/issues"
+		"url": "https://github.com/nikolaxhristov/nikolahristov.tech/issues"
 	},
 	"license": "MIT",
 	"private": true,
@@ -20,6 +20,7 @@
 		"@astrojs/prefetch": "0.1.2",
 		"@astrojs/sitemap": "1.0.1",
 		"@lightrix/config": "0.0.7",
+		"@octokit/core": "4.2.0",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.3",
 		"@tailwindcss/line-clamp": "0.4.2",
@@ -34,6 +35,7 @@
 		"cssnano-preset-advanced": "5.3.10",
 		"dotenv": "16.0.3",
 		"firebase": "9.17.1",
+		"github-markdown-css": "5.2.0",
 		"postcss": "8.4.21",
 		"postcss-combine-duplicated-selectors": "10.0.3",
 		"postcss-combine-media-query": "1.0.1",
