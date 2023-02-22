@@ -10,7 +10,7 @@
 		"url": "https://github.com/nikolaxhristov/nikolahristov.tech/issues"
 	},
 	"license": "MIT",
-	"private": true,
+	"private": false,
 	"scripts": {
 		"build": "astro check && astro build",
 		"start": "astro dev"
@@ -46,6 +46,6 @@
 		"zod": "3.20.6"
 	},
 	"publishConfig": {
-		"access": "restricted"
+		"access": "public"
 	}
 }
