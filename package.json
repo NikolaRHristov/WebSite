@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"@astrojs/prefetch": "0.1.2",
-		"@astrojs/sitemap": "1.0.1",
+		"@astrojs/sitemap": "1.1.0",
 		"@lightrix/config": "0.0.7",
 		"@octokit/core": "4.2.0",
 		"@tailwindcss/aspect-ratio": "0.4.2",
