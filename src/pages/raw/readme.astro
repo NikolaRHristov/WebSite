@@ -6,7 +6,11 @@ const packages = Astro.props["packages"] ?? new Map<string, Set<packageCell>>();
 
 packages.set(
 	"projects",
-	new Set<packageCell>(["npm:files-pipe", "github:nikolaxhristov/bench"])
+	new Set<packageCell>([
+		"npm:files-pipe",
+		"github:lightrix/inn",
+		"github:nikolaxhristov/bench",
+	])
 );
 
 packages.set(
