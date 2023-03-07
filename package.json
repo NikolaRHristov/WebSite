@@ -16,7 +16,7 @@
 		"start": "astro dev"
 	},
 	"devDependencies": {
-		"@astrojs/prefetch": "0.1.2",
+		"@astrojs/prefetch": "0.2.0",
 		"@astrojs/sitemap": "1.1.0",
 		"@lightrix/config": "0.0.7",
 		"@octokit/core": "4.2.0",
