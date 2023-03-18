@@ -99,7 +99,7 @@ for (const _package of packages) {
 									{Array.from(_package.badges).map(
 										(badge) => (
 											<>
-												<a href={badge.link}>
+												<a href={badge.link} target="_blank">
 													<picture>
 														<source
 															media="(prefers-color-scheme: dark)"
@@ -126,7 +126,7 @@ for (const _package of packages) {
 							)}
 							<td valign="top" colspan={colspan}>
 								<br />
-								<a href={_package.link}>
+								<a href={_package.link} target="_blank">
 									<picture>
 										<source
 											media="(prefers-color-scheme: dark)"
@@ -143,7 +143,7 @@ for (const _package of packages) {
 									</picture>
 								</a>
 								<br />
-								<a href={_package.link}>
+								<a href={_package.link} target="_blank">
 									<b>{_package.name}</b>
 								</a>
 								<br />
