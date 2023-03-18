@@ -96,8 +96,9 @@ for (const _package of packages) {
 							{_package.badges.size >= 1 ? (
 								<td valign="top" colspan={colspan}>
 									<br />
-									{Array.from(_package.badges).map((badge) =>
-										<>
+									{Array.from(_package.badges).map(
+										(badge) => (
+											<>
 												<a href={badge.link}>
 													<picture>
 														<source
@@ -116,6 +117,7 @@ for (const _package of packages) {
 												</a>
 												<br />
 											</>
+										)
 									)}
 									<br />
 								</td>
