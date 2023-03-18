@@ -1,6 +1,7 @@
 ---
 import chunks from "@lib/chunks.js";
 import request from "@lib/request.js";
+import Badge from "@components/PackagesRow.astro";
 
 const DARK_STYLE = "&color=black&logoColor=white&labelColor=black&logoWidth=15";
 const LIGHT_STYLE =
@@ -21,7 +22,7 @@ interface PackagesRowItem {
 	badges: Set<Badges>;
 }
 
-let newPackages = new Set<PackagesRowItem>();
+let items = new Set<PackagesRowItem>();
 
 for (const _package of packages) {
 	if (_package.match(/npm:/)) {
@@ -34,7 +35,7 @@ for (const _package of packages) {
 			.replace(/(git\+)?http?s:\/\/github.com\//, "")
 			.replace("#readme", "");
 
-		newPackages.add({
+		items.add({
 			link: `https://github.com/${githubOwnerRepo}`,
 			name: packageJson.name,
 			github: githubOwnerRepo,
@@ -65,26 +66,26 @@ for (const _package of packages) {
 		const githubOwner = githubOwnerRepo.split("/")[0];
 		const githubRepo = githubOwnerRepo.split("/")[1];
 
-		const githubJson = (
-			await request(`GET /repos/${githubOwnerRepo}`, {
-				owner: githubOwner,
-				repo: githubRepo,
-			})
-		)?.data;
-
-		newPackages.add({
-			link: githubJson?.html_url ?? "",
-			name: githubJson?.name ?? "",
-			github: githubJson?.full_name ?? "",
-			description: githubJson?.description ?? "",
-			badges: new Set(),
+		const githubJson = await request(`GET /repos/${githubOwnerRepo}`, {
+			owner: githubOwner,
+			repo: githubRepo,
 		});
+
+		if (githubJson.data) {
+			items.add({
+				link: githubJson?.html_url ?? "",
+				name: githubJson?.name ?? "",
+				github: githubJson?.full_name ?? "",
+				description: githubJson?.description ?? "",
+				badges: new Set(),
+			});
+		}
 	}
 }
 ---
 
 {
-	[...chunks(Array.from(newPackages), 2)].map((packageRow) => (
+	[...chunks(Array.from(items), 2)].map((packageRow) => (
 		<>
 			<tr>
 				{packageRow.map((_package) => {
@@ -98,25 +99,7 @@ for (const _package of packages) {
 									<br />
 									{Array.from(_package.badges).map(
 										(badge) => (
-											<>
-												<a href={badge.link} target="_blank">
-													<picture>
-														<source
-															media="(prefers-color-scheme: dark)"
-															srcset={`${badge.img}${DARK_STYLE}`}
-														/>
-														<source
-															media="(prefers-color-scheme: light)"
-															srcset={`${badge.img}${LIGHT_STYLE}`}
-														/>
-														<img
-															alt="Astro"
-															src={`${badge.img}${DARK_STYLE}`}
-														/>
-													</picture>
-												</a>
-												<br />
-											</>
+											<Badge />
 										)
 									)}
 									<br />
