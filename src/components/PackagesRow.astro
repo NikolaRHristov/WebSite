@@ -1,7 +1,6 @@
 ---
 import chunks from "@lib/chunks.js";
 import request from "@lib/request.js";
-import Badge from "@components/PackagesRow.astro";
 
 const DARK_STYLE = "&color=black&logoColor=white&labelColor=black&logoWidth=15";
 const LIGHT_STYLE =
@@ -37,9 +36,9 @@ for (const _package of packages) {
 
 		items.add({
 			link: `https://github.com/${githubOwnerRepo}`,
-			name: packageJson.name,
+			name: packageJson?.name ?? "",
 			github: githubOwnerRepo,
-			description: packageJson.description,
+			description: packageJson?.description ?? "",
 			badges: new Set([
 				{
 					img: `https://img.shields.io/github/actions/workflow/status/${githubOwnerRepo}/node.yml?branch=main&label=Build&logo=node.js`,
@@ -82,6 +81,8 @@ for (const _package of packages) {
 		}
 	}
 }
+
+console.log(items);
 ---
 
 {
@@ -97,11 +98,7 @@ for (const _package of packages) {
 							{_package.badges.size >= 1 ? (
 								<td valign="top" colspan={colspan}>
 									<br />
-									{Array.from(_package.badges).map(
-										(badge) => (
-											<Badge />
-										)
-									)}
+
 									<br />
 								</td>
 							) : (

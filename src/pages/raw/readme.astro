@@ -4,6 +4,7 @@ import type { packageCell } from "@options/packageCell.js";
 
 const packages = Astro.props["packages"] ?? new Map<string, Set<packageCell>>();
 
+
 packages.set(
 	"projects",
 	new Set<packageCell>([
