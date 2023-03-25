@@ -76,7 +76,12 @@ for (const _package of packages) {
 				name: githubJson?.name ?? "",
 				github: githubJson?.full_name ?? "",
 				description: githubJson?.description ?? "",
-				badges: new Set(),
+				badges: new Set([
+					{
+						link: `https://github.com.org/${githubOwner}/${githubRepo}`,
+						img: `https://img.shields.io/github/last-commit/${githubOwner}/${githubRepo}?label=Last Updated&logo=github`,
+					},
+				]),
 			});
 		}
 	}
@@ -96,7 +101,31 @@ for (const _package of packages) {
 							{_package.badges.size >= 1 ? (
 								<td valign="top" colspan={colspan}>
 									<br />
-									{Array.from(_package.badges).length}
+									{Array.from(_package.badges).map(
+										(badge) => (
+											<>
+												<a
+													href={badge.link}
+													target="_blank">
+													<picture>
+														<source
+															media="(prefers-color-scheme: dark)"
+															srcset={`${badge.img}${DARK_STYLE}`}
+														/>
+														<source
+															media="(prefers-color-scheme: light)"
+															srcset={`${badge.img}${LIGHT_STYLE}`}
+														/>
+														<img
+															alt="Astro"
+															src={`${badge.img}${DARK_STYLE}`}
+														/>
+													</picture>
+												</a>
+												<br />
+											</>
+										)
+									)}
 									<br />
 								</td>
 							) : (
