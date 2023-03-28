@@ -19,11 +19,6 @@ const Readme = (await import(`../raw/readmes/${slug}/index.astro`)).default;
 	<div class="container">
 		<div class="markdown-body">
 			<Readme />
-			<sup
-				>Source: <a href={Astro.request.url} target="_blank"
-					>{Astro.request.url}</a
-				></sup
-			>
 		</div>
 	</div>
 </Base>
