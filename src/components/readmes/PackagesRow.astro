@@ -98,78 +98,72 @@ for (const _package of packages) {
 
 {
 	[...chunks(Array.from(items), 2)].map((packageRow) => (
-		<>
-			<tr>
-				{packageRow.map((_package) => {
-					let colspan = packageRow.length > 1 ? 2 : 3;
-					colspan -= _package.badges.size >= 1 ? 1 : 0;
+		<tr>
+			{packageRow.map((_package) => {
+				let colspan = packageRow.length > 1 ? 2 : 3;
+				colspan -= _package.badges.size >= 1 ? 1 : 0;
 
-					return (
-						<>
-							{_package.badges.size >= 1 ? (
-								<td valign="top" colspan={colspan}>
-									<br />
-									{Array.from(_package.badges).map(
-										(badge) => (
-											<>
-												<a
-													href={badge.link}
-													target="_blank">
-													<picture>
-														<source
-															media="(prefers-color-scheme: dark)"
-															srcset={`${badge.img}${DARK_STYLE}`}
-														/>
-														<source
-															media="(prefers-color-scheme: light)"
-															srcset={`${badge.img}${LIGHT_STYLE}`}
-														/>
-														<img
-															src={`${badge.img}${DARK_STYLE}`}
-														/>
-													</picture>
-												</a>
-												<br />
-											</>
-										)
-									)}
-									<br />
-								</td>
-							) : (
-								""
-							)}
+				return (
+					<>
+						{_package.badges.size >= 1 ? (
 							<td valign="top" colspan={colspan}>
 								<br />
-								<a href={_package.link} target="_blank">
-									<picture>
-										<source
-											media="(prefers-color-scheme: dark)"
-											srcset={`https://img.shields.io/github/stars/${_package.github}?label=stars&logo=github${DARK_STYLE}`}
-										/>
-										<source
-											media="(prefers-color-scheme: light)"
-											srcset={`https://img.shields.io/github/stars/${_package.github}?label=stars&logo=github${LIGHT_STYLE}`}
-										/>
-										<img
-											src={`https://img.shields.io/github/stars/${_package.github}?label=stars&logo=github${DARK_STYLE}`}
-										/>
-									</picture>
-								</a>
+								{Array.from(_package.badges).map((badge) => (
+									<>
+										<a href={badge.link} target="_blank">
+											<picture>
+												<source
+													media="(prefers-color-scheme: dark)"
+													srcset={`${badge.img}${DARK_STYLE}`}
+												/>
+												<source
+													media="(prefers-color-scheme: light)"
+													srcset={`${badge.img}${LIGHT_STYLE}`}
+												/>
+												<img
+													src={`${badge.img}${DARK_STYLE}`}
+												/>
+											</picture>
+										</a>
+										<br />
+									</>
+								))}
 								<br />
-								<a href={_package.link} target="_blank">
-									<b>{_package.name}</b>
-								</a>
-								<br />
-								<b
-									set:html={_package.description
-										?.split(".")
-										?.join(".<br />")}
-								/>
 							</td>
-						</>
-					);
-				})}
-			</tr>
-		</>
+						) : (
+							""
+						)}
+						<td valign="top" colspan={colspan}>
+							<br />
+							<a href={_package.link} target="_blank">
+								<picture>
+									<source
+										media="(prefers-color-scheme: dark)"
+										srcset={`https://img.shields.io/github/stars/${_package.github}?label=stars&logo=github${DARK_STYLE}`}
+									/>
+									<source
+										media="(prefers-color-scheme: light)"
+										srcset={`https://img.shields.io/github/stars/${_package.github}?label=stars&logo=github${LIGHT_STYLE}`}
+									/>
+									<img
+										src={`https://img.shields.io/github/stars/${_package.github}?label=stars&logo=github${DARK_STYLE}`}
+									/>
+								</picture>
+							</a>
+							<br />
+							<a href={_package.link} target="_blank">
+								<b>{_package.name}</b>
+							</a>
+							<br />
+							<b
+								set:html={_package.description
+									?.split(".")
+									?.join(".<br />")}
+							/>
+						</td>
+					</>
+				);
+			})}
+		</tr>
 	))
 }
