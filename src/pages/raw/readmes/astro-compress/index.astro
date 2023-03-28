@@ -1,5 +1,6 @@
 ---
-import PackagesRow from "@components/PackagesRow.astro";
+import RelatedHeader from "@components/readmes/RelatedHeader.astro";
+import PackagesRow from "@components/Readmes/PackagesRow.astro";
 import type { packageCell } from "@options/packageCell.js";
 
 const packages = new Map<string, Set<packageCell>>();
@@ -11,21 +12,7 @@ packages.set(
 ---
 
 <>
-	<h2>
-		<picture
-			><source
-				media="(prefers-color-scheme: dark)"
-				srcset="https://raw.githubusercontent.com/image-repository/logos/main/.github/img/logomark-dark.svg"
-			/><source
-				media="(prefers-color-scheme: light)"
-				srcset="https://raw.githubusercontent.com/image-repository/logos/main/.github/img/logomark-light.svg"
-			/><img
-				width="25"
-				alt="Astro"
-				src="https://raw.githubusercontent.com/image-repository/logos/main/.github/img/logomark-light.svg"
-			/>
-		</picture> Related
-	</h2>
+	<RelatedHeader />
 	<table>
 		<PackagesRow packages={packages.get("astro-compress")} />
 	</table>
