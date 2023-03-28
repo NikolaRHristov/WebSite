@@ -1,0 +1,79 @@
+.article {
+	@apply prose
+		mx-auto
+		dark:prose-invert
+		prose-h1:font-black;
+
+	.data-footnote-backref {
+		@apply font-sans
+			no-underline;
+	}
+
+	a,
+	.underline {
+		text-underline-position: under;
+		--text-shadow-color: white;
+		text-shadow: -1px 1px var(--text-shadow-color),
+			-1px 2px var(--text-shadow-color), -2px 1px var(--text-shadow-color),
+			-2px 2px var(--text-shadow-color), -3px 1px var(--text-shadow-color),
+			-3px 2px var(--text-shadow-color), 0 1px var(--text-shadow-color),
+			0 2px var(--text-shadow-color), 1px 1px var(--text-shadow-color),
+			1px 2px var(--text-shadow-color), 2px 1px var(--text-shadow-color),
+			2px 2px var(--text-shadow-color), 3px 1px var(--text-shadow-color),
+			3px 2px var(--text-shadow-color);
+
+		@apply decoration-blue-600;
+	}
+
+	a {
+		@apply ease-apple
+			decoration-blue-600
+			outline-none
+			outline-offset-4
+			transition-all
+			duration-150
+			hover:text-blue-600
+			focus-visible:decoration-transparent
+			focus-visible:outline-4
+			focus-visible:outline-blue-500;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		a,
+		.underline {
+			--text-shadow-color: black;
+		}
+	}
+
+	ul + h1 {
+		@apply mt-7;
+	}
+
+	.footnotes ol {
+		@apply p-0;
+
+		p {
+			font-size: 0;
+
+			* {
+				font-size: initial;
+			}
+
+			.data-footnote-backref {
+				@apply m-2;
+				font-family: ui-sans-serif, system-ui, -apple-system,
+					BlinkMacSystemFont, sans-serif, Apple Color Emoji,
+					Segoe UI Symbol;
+			}
+		}
+	}
+
+	table ol > li::marker,
+	.footnotes ol > li::marker {
+		content: none;
+	}
+
+	ol > li::marker {
+		content: counters(list-item, ".") ".";
+	}
+}
