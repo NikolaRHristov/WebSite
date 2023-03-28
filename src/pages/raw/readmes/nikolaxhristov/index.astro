@@ -1,6 +1,5 @@
 ---
 import PackagesRow from "@components/readmes/PackagesRow.astro";
-import RelatedHeader from "@components/readmes/RelatedHeader.astro";
 
 import type { packageCell } from "@options/packageCell.js";
 
@@ -193,5 +192,5 @@ packages.set(
 
 	<br /><br />
 
-	Source: <a href={Astro.request.url} target="_blank">{Astro.request.url}</a>
+	<sup>Source: <a href={Astro.request.url} target="_blank">{Astro.request.url}</a></sup>
 </>
