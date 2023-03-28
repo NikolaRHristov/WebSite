@@ -3,16 +3,16 @@ import RelatedHeader from "@components/readmes/RelatedHeader.astro";
 import PackagesRow from "@components/readmes/PackagesRow.astro";
 
 import type { packageCell } from "@options/packageCell.js";
-
-const packages = new Map<string, Set<packageCell>>();
-
-packages.set(
-	"astro-critters",
-	new Set<packageCell>(["npm:astro-compress", "npm:astro-rome"])
-);
 ---
 
 <>
 	<RelatedHeader />
-	<table><PackagesRow packages={packages.get("astro-critters")} /></table>
+	<table>
+		<PackagesRow
+			packages={new Set<packageCell>([
+				"npm:astro-compress",
+				"npm:astro-rome",
+			])}
+		/>
+	</table>
 </>
