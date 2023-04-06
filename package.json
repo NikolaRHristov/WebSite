@@ -19,10 +19,7 @@
 		"@astrojs/prefetch": "0.2.1",
 		"@astrojs/sitemap": "1.2.1",
 		"@lightrix/config": "0.0.8",
-<<<<<<< HEAD
 		"@octokit/core": "4.2.0",
-=======
->>>>>>> upstream/main
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.3",
 		"@tailwindcss/typography": "0.5.9",
@@ -36,10 +33,7 @@
 		"cssnano-preset-advanced": "6.0.0",
 		"dotenv": "16.0.3",
 		"firebase": "9.19.1",
-<<<<<<< HEAD
 		"github-markdown-css": "5.2.0",
-=======
->>>>>>> upstream/main
 		"postcss": "8.4.21",
 		"postcss-combine-duplicated-selectors": "10.0.3",
 		"postcss-combine-media-query": "1.0.1",
