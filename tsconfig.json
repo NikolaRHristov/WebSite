@@ -5,10 +5,7 @@
 			"@components/*": ["src/components/*"],
 			"@layouts/*": ["src/layouts/*"],
 			"@lib/*": ["src/lib/*"],
-<<<<<<< HEAD
 			"@options/*": ["src/options/*"],
-=======
->>>>>>> upstream/main
 			"@pages/*": ["src/pages/*"],
 			"@scripts/*": ["src/scripts/*"]
 		},
