@@ -4,7 +4,7 @@ module.exports = {
 		"./public/**/*.html",
 		"./src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}",
 	],
-	darkMode: "class",
+	darkMode: "media",
 	theme: {
 		container: {
 			center: true,

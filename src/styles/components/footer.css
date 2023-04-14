@@ -1,0 +1,53 @@
+.footer {
+	ul {
+		@apply px-4
+		py-2;
+	}
+
+	li {
+		+ li {
+			@apply mt-3
+			sm:ml-3
+			sm:mt-0;
+		}
+	}
+
+	a {
+		text-underline-position: under;
+		--text-shadow-color: white;
+		text-shadow: -1px 1px var(--text-shadow-color),
+			-1px 2px var(--text-shadow-color), -2px 1px var(--text-shadow-color),
+			-2px 2px var(--text-shadow-color), -3px 1px var(--text-shadow-color),
+			-3px 2px var(--text-shadow-color), 0 1px var(--text-shadow-color),
+			0 2px var(--text-shadow-color), 1px 1px var(--text-shadow-color),
+			1px 2px var(--text-shadow-color), 2px 1px var(--text-shadow-color),
+			2px 2px var(--text-shadow-color), 3px 1px var(--text-shadow-color),
+			3px 2px var(--text-shadow-color);
+
+		@apply ease-apple relative
+			text-base
+			font-medium
+			underline
+			decoration-blue-600
+			outline-none
+			outline-offset-4
+			transition-all
+			duration-150
+			hover:text-blue-600
+			focus-visible:z-10
+			focus-visible:decoration-transparent
+			focus-visible:outline-4
+			focus-visible:outline-blue-500
+			sm:text-sm;
+	}
+
+	.icon {
+		@apply h-5 w-5;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		a {
+			--text-shadow-color: black;
+		}
+	}
+}

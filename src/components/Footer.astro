@@ -1,0 +1,24 @@
+<footer class="footer flex">
+	<ul class="flex shrink flex-col justify-start sm:flex-row">
+		<li>
+			<a
+				href="https://github.com/nikolaxhristov"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="icon flex">
+				<picture>
+					<source
+						media="(prefers-color-scheme: light)"
+						srcset="/img/vendor/github-mark.svg"
+					/>
+					<img alt="GitHub" src="/img/vendor/github-mark.svg" />
+				</picture>
+			</a>
+		</li>
+	</ul>
+	<slot />
+</footer>
+
+<style is:global>
+	@import "../styles/components/footer.css";
+</style>

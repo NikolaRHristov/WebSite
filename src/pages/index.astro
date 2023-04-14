@@ -2,4 +2,53 @@
 import Base from "@layouts/Base.astro";
 ---
 
-<Base />
+<Base>
+	<div class="flex flex-col">
+		<main class="justify-center flex grow">
+			<div class="flex grow self-center">
+				<div class="container pt-96 sm:pb-36">
+					<div class="flex justify-center">
+						<picture class="block mx-8">
+							<source
+								srcset="/img/pages/index/rakuten.svg"
+								media="(prefers-color-scheme: dark)"
+							/>
+							<img
+								width="260"
+								src="/img/pages/index/rakuten.svg"
+								alt="Rakuten"
+								loading="lazy"
+							/>
+						</picture>
+
+						<picture class="block mx-8">
+							<source
+								srcset="/img/pages/index/meta.svg"
+								media="(prefers-color-scheme: dark)"
+							/>
+							<img
+								width="260"
+								src="/img/pages/index/meta.svg"
+								alt="Meta"
+								loading="lazy"
+							/>
+						</picture>
+
+						<picture class="block mx-8">
+							<source
+								srcset="/img/pages/index/discord.svg"
+								media="(prefers-color-scheme: dark)"
+							/>
+							<img
+								width="260"
+								src="/img/pages/index/discord.svg"
+								alt="Discord"
+								loading="lazy"
+							/>
+						</picture>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</Base>

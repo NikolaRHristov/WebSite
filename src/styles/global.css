@@ -12,8 +12,6 @@ body {
 		flex-grow
 		flex-col
 		antialiased
-		dark:bg-black
-		dark:text-white
 		sm:subpixel-antialiased;
 }
 
