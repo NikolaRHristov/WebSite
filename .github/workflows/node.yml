@@ -53,15 +53,7 @@ jobs:
                 node-version: [16, 18, 19]
 
         steps:
-<<<<<<< HEAD
-<<<<<<< HEAD
             - uses: actions/checkout@v3.5.2
-=======
-            - uses: actions/checkout@v3.5.1
->>>>>>> upstream/main
-=======
-            - uses: actions/checkout@v3.5.2
->>>>>>> upstream/main
             - uses: pnpm/action-setup@v2.2.4
               with:
                   version: 7.17.1
