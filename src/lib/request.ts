@@ -1,6 +1,5 @@
 import { Octokit } from "@octokit/core";
 import type { OctokitResponse } from "@octokit/types";
-
 import env from "@lib/env.js";
 
 const octokit = new Octokit({
