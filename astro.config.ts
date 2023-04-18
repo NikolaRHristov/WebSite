@@ -14,6 +14,7 @@ export default defineConfig({
 			? worker({
 					workbox: {
 						cleanupOutdatedCaches: true,
+						cacheId: "53",
 					},
 			  })
 			: null,
