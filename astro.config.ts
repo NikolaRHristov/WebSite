@@ -5,11 +5,12 @@ import compress from "astro-compress";
 import critters from "astro-critters";
 import rome from "astro-rome";
 import { defineConfig } from "astro/config";
+import worker from "astrojs-service-worker";
 
 export default defineConfig({
 	site: "https://nikolahristov.tech",
 	integrations: [
-		// import.meta.env.MODE === "production" ? worker() : null,
+		import.meta.env.MODE === "production" ? worker() : null,
 		sitemap(),
 		critters({ logger: 1 }),
 		prefetch(),
