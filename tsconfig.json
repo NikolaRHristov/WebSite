@@ -7,7 +7,8 @@
 			"@lib/*": ["src/lib/*"],
 			"@options/*": ["src/options/*"],
 			"@pages/*": ["src/pages/*"],
-			"@scripts/*": ["src/scripts/*"]
+			"@scripts/*": ["src/scripts/*"],
+			"@styles/*": ["src/styles/*"]
 		},
 		"types": ["astro/client", "astro/env"]
 	},
