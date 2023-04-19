@@ -1,12 +1,12 @@
+import env from "@lib/env.js";
 import { Octokit } from "@octokit/core";
 import type { OctokitResponse } from "@octokit/types";
-import env from "@lib/env.js";
 
 const octokit = new Octokit({
 	auth: env.GH_AUTH_TOKEN,
 });
 
-const request = async (
+export default async (
 	where: string,
 	// rome-ignore lint/suspicious/noExplicitAny:
 	_with: any = {},
@@ -24,5 +24,3 @@ const request = async (
 		console.log(`Could not ${where}`);
 	}
 };
-
-export default request;
