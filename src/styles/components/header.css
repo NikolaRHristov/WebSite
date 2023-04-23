@@ -1,6 +1,6 @@
 .header {
 	.bar {
-		border-radius: 7px;
+		border-radius: 5px;
 		@apply h-5 w-full bg-slate-400/80;
 	}
 }
