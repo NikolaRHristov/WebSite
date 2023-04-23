@@ -70,7 +70,7 @@ for (const _package of packages) {
 			repo: githubRepo,
 		});
 
-		if (githubJson.data) {
+		if (githubJson?.data) {
 			items.add({
 				link: githubJson.data?.html_url ?? "",
 				name: githubJson.data?.name ?? "",
