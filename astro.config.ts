@@ -9,6 +9,9 @@ import worker from "astrojs-service-worker";
 
 export default defineConfig({
 	site: "https://nikolahristov.tech",
+	experimental: {
+		assets: true,
+	},
 	integrations: [
 		import.meta.env.MODE === "production" ? worker() : null,
 		sitemap(),
