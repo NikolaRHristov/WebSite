@@ -1,3 +1,7 @@
+---
+import github from "@assets/github-mark.svg";
+---
+
 <footer class="footer flex">
 	<ul class="flex shrink flex-col justify-start sm:flex-row">
 		<li>
@@ -5,13 +9,14 @@
 				href="https://github.com/nikolaxhristov"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="icon flex">
+				class="icon flex"
+			>
 				<picture>
 					<source
 						media="(prefers-color-scheme: light)"
-						srcset="/img/vendor/github-mark.svg"
+						srcset={github.src}
 					/>
-					<img alt="GitHub" src="/img/vendor/github-mark.svg" />
+					<img alt="GitHub" src={github.src} />
 				</picture>
 			</a>
 		</li>
