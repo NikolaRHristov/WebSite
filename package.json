@@ -3,11 +3,11 @@
 	"version": "0.0.1",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/NikolaRHristov/nikolahristov.tech.git"
+		"url": "https://github.com/NicholasJoyChrist/nikolahristov.tech.git"
 	},
-	"homepage": "https://github.com/NikolaRHristov/nikolahristov.tech#readme",
+	"homepage": "https://github.com/NicholasJoyChrist/nikolahristov.tech#readme",
 	"bugs": {
-		"url": "https://github.com/NikolaRHristov/nikolahristov.tech/issues"
+		"url": "https://github.com/NicholasJoyChrist/nikolahristov.tech/issues"
 	},
 	"license": "MIT",
 	"private": true,
