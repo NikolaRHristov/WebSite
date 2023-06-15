@@ -11,10 +11,11 @@ body {
 	@apply flex
 		flex-grow
 		flex-col
+		tabular-nums
 		text-black
 		antialiased
 		sm:subpixel-antialiased;
-	font-variant-numeric: tabular-nums;
+
 	font-variant-ligatures: no-common-ligatures;
 }
 
