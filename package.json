@@ -26,7 +26,11 @@
 		"astro": "2.6.4",
 		"astro-compress": "1.1.47",
 		"astro-critters": "1.1.38",
+<<<<<<< HEAD
 		"astro-rome": "astro-community/astro-rome",
+=======
+		"astro-rome": "0.1.18",
+>>>>>>> upstream/main
 		"astrojs-service-worker": "1.0.0",
 		"autoprefixer": "10.4.14",
 		"cssnano": "6.0.1",
