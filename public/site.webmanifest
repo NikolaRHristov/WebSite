@@ -1,10 +1,19 @@
 {
+<<<<<<< HEAD
 	"background_color": "#ffffff",
 	"theme_color": "#ffffff",
 	"name": "Nikola Hristov",
 	"short_name": "nikolahristov",
 	"display": "minimal-ui",
 	"start_url": "/",
+=======
+	"background_color": "// TODO Set the background color of the app",
+>>>>>>> upstream/main
 	"categories": [],
-	"orientation": "landscape"
+	"display": "minimal-ui",
+	"name": "// TODO Use the same title as in template.html",
+	"orientation": "landscape",
+	"short_name": "// TODO Title but lowercase",
+	"start_url": "/",
+	"theme_color": "// TODO Use the same theme color from template.html"
 }
