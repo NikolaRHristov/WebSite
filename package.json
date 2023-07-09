@@ -1,16 +1,16 @@
 {
 	"name": "nikolahristov-web",
 	"version": "0.0.1",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/NikolaRHristov/nikolahristov.tech.git"
-	},
+	"private": true,
 	"homepage": "https://github.com/NikolaRHristov/nikolahristov.tech#readme",
 	"bugs": {
 		"url": "https://github.com/NikolaRHristov/nikolahristov.tech/issues"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/NikolaRHristov/nikolahristov.tech.git"
+	},
 	"license": "MIT",
-	"private": true,
 	"scripts": {
 		"build": "astro check && astro build",
 		"start": "astro dev"
