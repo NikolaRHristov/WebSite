@@ -1,14 +1,28 @@
 {
 	"name": "nikolahristov-web",
 	"version": "0.0.1",
+<<<<<<< HEAD
 	"private": true,
 	"homepage": "https://github.com/NikolaRHristov/nikolahristov.tech#readme",
+=======
+	"private": false,
+	"description": "📄 Starter template for AstroJS.",
+	"keywords": [
+		"astro",
+		"starter"
+	],
+	"homepage": "https://github.com/Lightrix/astro-starter-template#readme",
+>>>>>>> upstream/main
 	"bugs": {
 		"url": "https://github.com/NikolaRHristov/nikolahristov.tech/issues"
 	},
 	"repository": {
 		"type": "git",
+<<<<<<< HEAD
 		"url": "https://github.com/NikolaRHristov/nikolahristov.tech.git"
+=======
+		"url": "https://github.com/Lightrix/astro-starter-template.git"
+>>>>>>> upstream/main
 	},
 	"license": "MIT",
 	"scripts": {
