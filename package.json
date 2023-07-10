@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
 	"name": "nikolahristov-web",
 	"version": "0.0.1",
 	"private": true,
@@ -16,26 +15,6 @@
 		"build": "astro check && astro build",
 		"start": "astro dev"
 	},
-=======
-	"bugs": {
-<<<<<<< HEAD
-		"url": "https://github.com/Lightrix/astro-starter-template/issues"
-=======
-		"url": "https://github.com/Playform/blank-web-starter/issues"
-	},
-	"license": "MIT",
-	"private": false,
-	"keywords": [
-		"astro",
-		"starter"
-	],
-	"scripts": {
-		"build": "astro check && astro build",
-		"start": "astro dev"
->>>>>>> upstream/main
-	},
-	"description": "📄 Starter template for AstroJS.",
->>>>>>> upstream/main
 	"devDependencies": {
 		"@astrojs/prefetch": "0.2.3",
 		"@astrojs/sitemap": "1.3.3",
@@ -64,30 +43,7 @@
 		"tailwindcss": "3.3.2",
 		"zod": "3.21.4"
 	},
-	"homepage": "https://github.com/Lightrix/astro-starter-template#readme",
-	"keywords": [
-		"astro",
-		"starter"
-	],
-	"license": "MIT",
-	"name": "astro-starter-template",
-	"private": false,
 	"publishConfig": {
-<<<<<<< HEAD
 		"access": "restricted"
 	}
 }
-=======
-		"access": "public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Lightrix/astro-starter-template.git"
-	},
-	"scripts": {
-		"build": "astro check && astro build",
-		"start": "astro dev"
-	},
-	"version": "0.0.1"
-}
->>>>>>> upstream/main
