@@ -15,13 +15,20 @@
 	a {
 		text-underline-position: under;
 		--text-shadow-color: white;
-		text-shadow: -1px 1px var(--text-shadow-color),
-			-1px 2px var(--text-shadow-color), -2px 1px var(--text-shadow-color),
-			-2px 2px var(--text-shadow-color), -3px 1px var(--text-shadow-color),
-			-3px 2px var(--text-shadow-color), 0 1px var(--text-shadow-color),
-			0 2px var(--text-shadow-color), 1px 1px var(--text-shadow-color),
-			1px 2px var(--text-shadow-color), 2px 1px var(--text-shadow-color),
-			2px 2px var(--text-shadow-color), 3px 1px var(--text-shadow-color),
+		text-shadow:
+			-1px 1px var(--text-shadow-color),
+			-1px 2px var(--text-shadow-color),
+			-2px 1px var(--text-shadow-color),
+			-2px 2px var(--text-shadow-color),
+			-3px 1px var(--text-shadow-color),
+			-3px 2px var(--text-shadow-color),
+			0 1px var(--text-shadow-color),
+			0 2px var(--text-shadow-color),
+			1px 1px var(--text-shadow-color),
+			1px 2px var(--text-shadow-color),
+			2px 1px var(--text-shadow-color),
+			2px 2px var(--text-shadow-color),
+			3px 1px var(--text-shadow-color),
 			3px 2px var(--text-shadow-color);
 
 		@apply ease-apple relative
