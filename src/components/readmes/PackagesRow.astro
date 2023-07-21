@@ -111,10 +111,12 @@ for (const _package of packages) {
 
 		items.add({
 			link: crateJSON?.crate?.repository ?? "",
-			badges: new Set([{
-						link: `https://github.com/${githubOwner}/${githubRepo}`,
-						img: `https://img.shields.io/github/last-commit/${githubOwner}/${githubRepo}?label=Last%20Updated&logo=github`,
-					}]),
+			badges: new Set([
+				{
+					link: `https://github.com/${githubOwner}/${githubRepo}`,
+					img: `https://img.shields.io/github/last-commit/${githubOwner}/${githubRepo}?label=Last%20Updated&logo=github`,
+				}
+			]),
 			description: crateJSON?.crate?.description ?? "",
 			github: crateJSON?.crate?.repository ?? "",
 			name: crateJSON?.crate?.name ?? ""
