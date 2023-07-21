@@ -8,11 +8,11 @@ const packages = Astro.props["packages"] ?? new Map<string, Set<packageCell>>();
 packages.set(
 	"projects",
 	new Set<packageCell>([
+		"github:astro-starters/pac-stac",
 		"npm:files-pipe",
 		"cargo:innkeeper",
-		"github:RoundedCorners/app",
 		"github:NikolaRHristov/bench",
-		"github:astro-starters/pac-stac",
+		"github:RoundedCorners/app",
 	])
 );
 

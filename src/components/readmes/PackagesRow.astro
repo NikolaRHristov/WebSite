@@ -24,6 +24,40 @@ interface PackagesRowItem {
 let items = new Set<PackagesRowItem>();
 
 for (const _package of packages) {
+	if (_package.match(/github:/)) {
+		const githubOwnerRepo = _package.split(":")[1];
+		const githubOwner = githubOwnerRepo.split("/")[0];
+		const githubRepo = githubOwnerRepo.split("/")[1];
+
+		const githubJSON = await request(`GET /repos/${githubOwnerRepo}`, {
+			owner: githubOwner,
+			repo: githubRepo,
+		});
+
+		if (githubJSON?.data) {
+			items.add({
+				link: githubJSON.data?.html_url ?? "",
+				name: githubJSON.data?.name ?? "",
+				github: githubJSON.data?.full_name ?? "",
+				description: githubJSON.data?.description ?? "",
+				badges: new Set([
+					{
+						link: `https://github.com/${githubOwner}/${githubRepo}`,
+						img: `https://img.shields.io/github/last-commit/${githubOwner}/${githubRepo}?label=Last%20Updated&logo=github`,
+					},
+					{
+						link: `https://github.com/${githubOwner}/${githubRepo}`,
+						img: `https://img.shields.io/github/issues/${githubOwner}/${githubRepo}?label=Issues&logo=github`,
+					},
+					{
+						link: `https://github.com/${githubOwner}/${githubRepo}`,
+						img: `https://img.shields.io/github/downloads/${githubOwner}/${githubRepo}/total?label=Downloads&logo=github`,
+					},
+				]),
+			});
+		}
+	}
+
 	if (_package.match(/npm:/)) {
 		const packageScopeName = _package.split(":")[1];
 		const packageJSON = await (
@@ -61,40 +95,6 @@ for (const _package of packages) {
 		});
 	}
 
-	if (_package.match(/github:/)) {
-		const githubOwnerRepo = _package.split(":")[1];
-		const githubOwner = githubOwnerRepo.split("/")[0];
-		const githubRepo = githubOwnerRepo.split("/")[1];
-
-		const githubJSON = await request(`GET /repos/${githubOwnerRepo}`, {
-			owner: githubOwner,
-			repo: githubRepo,
-		});
-
-		if (githubJSON?.data) {
-			items.add({
-				link: githubJSON.data?.html_url ?? "",
-				name: githubJSON.data?.name ?? "",
-				github: githubJSON.data?.full_name ?? "",
-				description: githubJSON.data?.description ?? "",
-				badges: new Set([
-					{
-						link: `https://github.com/${githubOwner}/${githubRepo}`,
-						img: `https://img.shields.io/github/last-commit/${githubOwner}/${githubRepo}?label=Last%20Updated&logo=github`,
-					},
-					{
-						link: `https://github.com/${githubOwner}/${githubRepo}`,
-						img: `https://img.shields.io/github/issues/${githubOwner}/${githubRepo}?label=Issues&logo=github`,
-					},
-					{
-						link: `https://github.com/${githubOwner}/${githubRepo}`,
-						img: `https://img.shields.io/github/downloads/${githubOwner}/${githubRepo}/total?label=Downloads&logo=github`,
-					},
-				]),
-			});
-		}
-	}
-
 
 	if (_package.match(/cargo:/)) {
 		const crateScopeName = _package.split(":")[1];
@@ -106,21 +106,25 @@ for (const _package of packages) {
 			.replace(/(git\+)?http?s:\/\/github.com\//, "")
 			.replace("#readme", "")
 			.replace(".git", "");
-		const githubOwner = githubOwnerRepo.split("/")[0];
-		const githubRepo = githubOwnerRepo.split("/")[1];
-
+		
 		items.add({
 			link: crateJSON?.crate?.repository ?? "",
 			badges: new Set([
 				{
-
-
-					link: `https://github.com/${githubOwner}/${githubRepo}`,
-					img: `https://img.shields.io/github/last-commit/${githubOwner}/${githubRepo}?label=Last%20Updated&logo=github`,
-				}
+					img: `https://img.shields.io/github/actions/workflow/status/${githubOwnerRepo}/rust.yml?branch=main&label=Build&logo=rust`,
+					link: `https://github.com/${githubOwnerRepo}/actions/workflows/rust.yml`,
+				},
+				{
+					link: `https://crates.io/${crateJSON?.crate?.name}`,
+					img: `https://img.shields.io/crates/v/${crateJSON?.crate?.name}?label=Version&logo=rust`,
+				},
+				{
+					link: `https://crates.io/${crateJSON?.crate?.name}`,
+					img: `https://img.shields.io/crates/d/${crateJSON?.crate?.name}?label=Downloads&logo=rust`,
+				},
 			]),
 			description: crateJSON?.crate?.description ?? "",
-			github: crateJSON?.crate?.repository ?? "",
+			github: githubOwnerRepo,
 			name: crateJSON?.crate?.name ?? ""
 		})
 	}
