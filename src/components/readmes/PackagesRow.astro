@@ -32,7 +32,8 @@ for (const _package of packages) {
 
 		const githubOwnerRepo = packageJSON.homepage
 			.replace(/(git\+)?http?s:\/\/github.com\//, "")
-			.replace("#readme", "");
+			.replace("#readme", "")
+			.replace(".git", "");
 
 		items.add({
 			link: `https://github.com/${githubOwnerRepo}`,
@@ -100,13 +101,18 @@ for (const _package of packages) {
 		const crateJSON = await (
 			await fetch(`https://crates.io/api/v1/crates/${crateScopeName}`)
 		).json();
+	
+		const githubOwnerRepo = crateJSON?.crate?.repository
+			.replace(/(git\+)?http?s:\/\/github.com\//, "")
+			.replace("#readme", "")
+			.replace(".git", "");
 
 		items.add({
-			link: "",
+			link: crateJSON?.crate?.repository ?? "",
 			badges: new Set([]),
-			description: "",
-			github: "",
-			name: ""
+			description: crateJSON?.crate?.description ?? "",
+			github: crateJSON?.crate?.repository ?? "",
+			name: crateJSON?.crate?.name ?? ""
 		})
 	}
 }
