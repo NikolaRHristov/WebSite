@@ -10,7 +10,7 @@ export default async (
 	where: string,
 	// rome-ignore lint/suspicious/noExplicitAny:
 	_with: any = {},
-	type: string = "octokit"
+	type = "octokit"
 	// rome-ignore lint/suspicious/noExplicitAny:
 ): Promise<OctokitResponse<any, number> | any> => {
 	try {

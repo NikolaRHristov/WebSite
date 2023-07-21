@@ -26,35 +26,35 @@ let items = new Set<PackagesRowItem>();
 for (const _package of packages) {
 	if (_package.match(/npm:/)) {
 		const packageScopeName = _package.split(":")[1];
-		const packageJson = await (
+		const packageJSON = await (
 			await fetch(`https://registry.npmjs.org/${packageScopeName}`)
 		).json();
 
-		const githubOwnerRepo = packageJson.homepage
+		const githubOwnerRepo = packageJSON.homepage
 			.replace(/(git\+)?http?s:\/\/github.com\//, "")
 			.replace("#readme", "");
 
 		items.add({
 			link: `https://github.com/${githubOwnerRepo}`,
-			name: packageJson?.name ?? "",
+			name: packageJSON?.name ?? "",
 			github: githubOwnerRepo,
-			description: packageJson?.description ?? "",
+			description: packageJSON?.description ?? "",
 			badges: new Set([
 				{
 					img: `https://img.shields.io/github/actions/workflow/status/${githubOwnerRepo}/node.yml?branch=main&label=Build&logo=node.js`,
 					link: `https://github.com/${githubOwnerRepo}/actions/workflows/node.yml`,
 				},
 				{
-					link: `https://npmjs.org/${packageJson.name}`,
-					img: `https://img.shields.io/npm/v/${packageJson.name}?label=Version&logo=npm`,
+					link: `https://npmjs.org/${packageJSON.name}`,
+					img: `https://img.shields.io/npm/v/${packageJSON.name}?label=Version&logo=npm`,
 				},
 				{
-					link: `https://npmjs.org/${packageJson.name}`,
-					img: `https://img.shields.io/librariesio/release/npm/${packageJson.name}?label=Dependencies&logo=dependabot`,
+					link: `https://npmjs.org/${packageJSON.name}`,
+					img: `https://img.shields.io/librariesio/release/npm/${packageJSON.name}?label=Dependencies&logo=dependabot`,
 				},
 				{
-					link: `https://npmjs.org/${packageJson.name}`,
-					img: `https://img.shields.io/npm/dw/${packageJson.name}?label=Downloads&logo=npm`,
+					link: `https://npmjs.org/${packageJSON.name}`,
+					img: `https://img.shields.io/npm/dw/${packageJSON.name}?label=Downloads&logo=npm`,
 				},
 			]),
 		});
@@ -65,17 +65,17 @@ for (const _package of packages) {
 		const githubOwner = githubOwnerRepo.split("/")[0];
 		const githubRepo = githubOwnerRepo.split("/")[1];
 
-		const githubJson = await request(`GET /repos/${githubOwnerRepo}`, {
+		const githubJSON = await request(`GET /repos/${githubOwnerRepo}`, {
 			owner: githubOwner,
 			repo: githubRepo,
 		});
 
-		if (githubJson?.data) {
+		if (githubJSON?.data) {
 			items.add({
-				link: githubJson.data?.html_url ?? "",
-				name: githubJson.data?.name ?? "",
-				github: githubJson.data?.full_name ?? "",
-				description: githubJson.data?.description ?? "",
+				link: githubJSON.data?.html_url ?? "",
+				name: githubJSON.data?.name ?? "",
+				github: githubJSON.data?.full_name ?? "",
+				description: githubJSON.data?.description ?? "",
 				badges: new Set([
 					{
 						link: `https://github.com/${githubOwner}/${githubRepo}`,
@@ -92,6 +92,22 @@ for (const _package of packages) {
 				]),
 			});
 		}
+	}
+
+
+	if (_package.match(/cargo:/)) {
+		const crateScopeName = _package.split(":")[1];
+		const crateJSON = await (
+			await fetch(`https://crates.io/api/v1/crates/${crateScopeName}`)
+		).json();
+
+		items.add({
+			link: "",
+			badges: new Set([]),
+			description: "",
+			github: "",
+			name: ""
+		})
 	}
 }
 ---
