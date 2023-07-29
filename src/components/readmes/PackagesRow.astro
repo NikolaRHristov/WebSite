@@ -241,16 +241,20 @@ items.forEach((item) =>
 											<picture>
 												<source
 													media="(prefers-color-scheme: dark)"
-													srcset={language.lightIcon}
+													srcset={
+														language.lightIcon.src
+													}
 												/>
 												<source
 													media="(prefers-color-scheme: light)"
-													srcset={language.darkIcon}
+													srcset={
+														language.darkIcon.src
+													}
 												/>
 												<img
 													width="24"
 													height="24"
-													src={language.lightIcon}
+													src={language.lightIcon.src}
 													title={`Lines of code ${language.loc}`}
 													alt={language.language}
 												/>
