@@ -2,28 +2,7 @@
 import chunks from "@lib/chunks.js";
 import request from "@lib/request.js";
 
-import css3Dark from "@assets/images/packages/css3Dark.svg";
-import css3Light from "@assets/images/packages/css3Light.svg";
-import gnubashDark from "@assets/images/packages/gnubashDark.svg";
-import gnubashLight from "@assets/images/packages/gnubashLight.svg";
-import goDark from "@assets/images/packages/goDark.svg";
-import goLight from "@assets/images/packages/goLight.svg";
-import javascriptDark from "@assets/images/packages/javascriptDark.svg";
-import javascriptLight from "@assets/images/packages/javascriptLight.svg";
-import luaDark from "@assets/images/packages/luaDark.svg";
-import luaLight from "@assets/images/packages/luaLight.svg";
-import mdxDark from "@assets/images/packages/mdxDark.svg";
-import mdxLight from "@assets/images/packages/mdxLight.svg";
-import powershellDark from "@assets/images/packages/powershellDark.svg";
-import powershellLight from "@assets/images/packages/powershellLight.svg";
-import pythonDark from "@assets/images/packages/pythonDark.svg";
-import pythonLight from "@assets/images/packages/pythonLight.svg";
-import rustDark from "@assets/images/packages/rustDark.svg";
-import rustLight from "@assets/images/packages/rustLight.svg";
-import typescriptDark from "@assets/images/packages/typescriptDark.svg";
-import typescriptLight from "@assets/images/packages/typescriptLight.svg";
-import windowsterminalDark from "@assets/images/packages/windowsterminalDark.svg";
-import windowsterminalLight from "@assets/images/packages/windowsterminalLight.svg";
+import Package from "@options/package";
 
 const DARK_STYLE = "&color=black&logoColor=white&labelColor=black&logoWidth=15";
 const LIGHT_STYLE =
@@ -174,37 +153,58 @@ for (const _package of packages) {
 						switch (language) {
 							case "Batchfile":
 								return [
-									windowsterminalLight.src,
-									windowsterminalDark.src,
+									Package.icons.windowsterminalLight.src,
+									Package.icons.windowsterminalDark.src,
 								];
 							case "CSS":
-								return [css3Light.src, css3Dark.src];
+								return [
+									Package.icons.css3Light.src,
+									Package.icons.css3Dark.src,
+								];
 							case "Go":
-								return [goLight.src, goDark.src];
+								return [
+									Package.icons.goLight.src,
+									Package.icons.goDark.src,
+								];
 							case "JavaScript":
 								return [
-									javascriptLight.src,
-									javascriptDark.src,
+									Package.icons.javascriptLight.src,
+									Package.icons.javascriptDark.src,
 								];
 							case "Lua":
-								return [luaLight.src, luaDark.src];
+								return [
+									Package.icons.luaLight.src,
+									Package.icons.luaDark.src,
+								];
 							case "MDX":
-								return [mdxLight.src, mdxDark.src];
+								return [
+									Package.icons.mdxLight.src,
+									Package.icons.mdxDark.src,
+								];
 							case "PowerShell":
 								return [
-									powershellLight.src,
-									powershellDark.src,
+									Package.icons.powershellLight.src,
+									Package.icons.powershellDark.src,
 								];
 							case "Python":
-								return [pythonLight.src, pythonDark.src];
+								return [
+									Package.icons.pythonLight.src,
+									Package.icons.pythonDark.src,
+								];
 							case "Rust":
-								return [rustLight.src, rustDark.src];
+								return [
+									Package.icons.rustLight.src,
+									Package.icons.rustDark.src,
+								];
 							case "Shell":
-								return [gnubashLight.src, gnubashDark.src];
+								return [
+									Package.icons.gnubashLight.src,
+									Package.icons.gnubashDark.src,
+								];
 							case "TypeScript":
 								return [
-									typescriptLight.src,
-									typescriptDark.src,
+									Package.icons.typescriptLight.src,
+									Package.icons.typescriptDark.src,
 								];
 							default:
 								return [null, null];
