@@ -146,14 +146,14 @@ for (const item of items) {
 	item.languages = new Set();
 
 	for (const language in languages) {
-		if (Object.prototype.hasOwnProperty.call(languages?.data, language)) {
+		if (Object.prototype.hasOwnProperty.call(languages, language)) {
 			let [lightIcon, darkIcon] = Package.icons[language] ?? [null, null];
 
 			item.languages.add({
 				lightIcon,
 				darkIcon,
 				language,
-				loc: languages?.data[language],
+				loc: languages[language],
 			});
 		}
 	}
