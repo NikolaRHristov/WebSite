@@ -1,5 +1,6 @@
 ---
 import chunks from "@lib/chunks.js";
+import formatBytes from "@lib/format-bytes";
 import request from "@lib/request.js";
 
 import Package from "@options/package";
@@ -19,7 +20,7 @@ interface Languages {
 	lightIcon: ImageMetadata | null;
 	darkIcon: ImageMetadata | null;
 	language: string;
-	loc: string;
+	boc: string;
 }
 
 interface PackagesRowItem {
@@ -153,7 +154,7 @@ for (const item of items) {
 				lightIcon,
 				darkIcon,
 				language,
-				loc: languages[language],
+				boc: await formatBytes(languages[language]),
 			});
 		}
 	}
@@ -257,7 +258,7 @@ for (const item of items) {
 															language.lightIcon
 																.src
 														}
-														title={`Lines of code: ${language.loc}`}
+														title={language.boc}
 														alt={language.language}
 													/>
 												</picture>
