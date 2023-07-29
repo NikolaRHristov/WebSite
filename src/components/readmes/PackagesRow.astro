@@ -2,6 +2,29 @@
 import chunks from "@lib/chunks.js";
 import request from "@lib/request.js";
 
+import css3Dark from "@assets/images/packages/css3Dark.svg";
+import css3Light from "@assets/images/packages/css3Light.svg";
+import gnubashDark from "@assets/images/packages/gnubashDark.svg";
+import gnubashLight from "@assets/images/packages/gnubashLight.svg";
+import goDark from "@assets/images/packages/goDark.svg";
+import goLight from "@assets/images/packages/goLight.svg";
+import javascriptDark from "@assets/images/packages/javascriptDark.svg";
+import javascriptLight from "@assets/images/packages/javascriptLight.svg";
+import luaDark from "@assets/images/packages/luaDark.svg";
+import luaLight from "@assets/images/packages/luaLight.svg";
+import mdxDark from "@assets/images/packages/mdxDark.svg";
+import mdxLight from "@assets/images/packages/mdxLight.svg";
+import powershellDark from "@assets/images/packages/powershellDark.svg";
+import powershellLight from "@assets/images/packages/powershellLight.svg";
+import pythonDark from "@assets/images/packages/pythonDark.svg";
+import pythonLight from "@assets/images/packages/pythonLight.svg";
+import rustDark from "@assets/images/packages/rustDark.svg";
+import rustLight from "@assets/images/packages/rustLight.svg";
+import typescriptDark from "@assets/images/packages/typescriptDark.svg";
+import typescriptLight from "@assets/images/packages/typescriptLight.svg";
+import windowsterminalDark from "@assets/images/packages/windowsterminalDark.svg";
+import windowsterminalLight from "@assets/images/packages/windowsterminalLight.svg";
+
 const DARK_STYLE = "&color=black&logoColor=white&labelColor=black&logoWidth=15";
 const LIGHT_STYLE =
 	"&color=white&logoColor=black&labelColor=white&logoWidth=15";
@@ -13,12 +36,20 @@ interface Badges {
 	link: string;
 }
 
+interface Languages {
+	lightIcon: string | null;
+	darkIcon: string | null;
+	language: string;
+	loc: string;
+}
+
 interface PackagesRowItem {
 	name: string;
 	link: string;
 	github: string;
 	description: string;
 	badges: Set<Badges>;
+	languages?: Set<Languages>;
 }
 
 let items = new Set<PackagesRowItem>();
@@ -95,18 +126,17 @@ for (const _package of packages) {
 		});
 	}
 
-
 	if (_package.match(/cargo:/)) {
 		const crateScopeName = _package.split(":")[1];
 		const crateJSON = await (
 			await fetch(`https://crates.io/api/v1/crates/${crateScopeName}`)
 		).json();
-	
+
 		const githubOwnerRepo = (crateJSON?.crate?.repository ?? "")
 			.replace(/(git\+)?http?s:\/\/github.com\//, "")
 			.replace("#readme", "")
 			.replace(".git", "");
-		
+
 		items.add({
 			link: crateJSON?.crate?.repository ?? "",
 			badges: new Set([
@@ -125,9 +155,72 @@ for (const _package of packages) {
 			]),
 			description: crateJSON?.crate?.description ?? "",
 			github: githubOwnerRepo,
-			name: crateJSON?.crate?.name ?? ""
-		})
+			name: crateJSON?.crate?.name ?? "",
+		});
 	}
+
+	items.forEach((item) =>
+		request(`GET /repos/${item.github}/languages`).then((languages) => {
+			item.languages = new Set();
+
+			for (const language in languages?.data) {
+				if (
+					Object.prototype.hasOwnProperty.call(
+						languages?.data,
+						language
+					)
+				) {
+					let [lightIcon, darkIcon] = ((language) => {
+						switch (language) {
+							case "Batchfile":
+								return [
+									windowsterminalLight.src,
+									windowsterminalDark.src,
+								];
+							case "CSS":
+								return [css3Light.src, css3Dark.src];
+							case "Go":
+								return [goLight.src, goDark.src];
+							case "JavaScript":
+								return [
+									javascriptLight.src,
+									javascriptDark.src,
+								];
+							case "Lua":
+								return [luaLight.src, luaDark.src];
+							case "MDX":
+								return [mdxLight.src, mdxDark.src];
+							case "PowerShell":
+								return [
+									powershellLight.src,
+									powershellDark.src,
+								];
+							case "Python":
+								return [pythonLight.src, pythonDark.src];
+							case "Rust":
+								return [rustLight.src, rustDark.src];
+							case "Shell":
+								return [gnubashLight.src, gnubashDark.src];
+							case "TypeScript":
+								return [
+									typescriptLight.src,
+									typescriptDark.src,
+								];
+							default:
+								return [null, null];
+						}
+					})(language);
+
+					item.languages.add({
+						lightIcon,
+						darkIcon,
+						language,
+						loc: languages?.data[language],
+					});
+				}
+			}
+		})
+	);
 }
 ---
 
@@ -193,8 +286,40 @@ for (const _package of packages) {
 							<b
 								set:html={_package.description
 									?.split(".")
-									?.join(".<br />")}
+									?.join(".<br />")
+									?.split("!")
+									?.join("!<br />")
+									?.split("?")
+									?.join("?<br />")}
 							/>
+							<br />
+							{Array.from(_package.languages ?? []).map(
+								(language) =>
+									language.lightIcon &&
+									language.darkIcon && (
+										<>
+											<picture>
+												<source
+													media="(prefers-color-scheme: dark)"
+													srcset={language.lightIcon}
+												/>
+												<source
+													media="(prefers-color-scheme: light)"
+													srcset={language.darkIcon}
+												/>
+												<img
+													width="24"
+													height="24"
+													src={language.lightIcon}
+													title={`Lines of code ${language.loc}`}
+													alt={language.language}
+												/>
+											</picture>
+											&nbsp;
+										</>
+									)
+							)}
+							<br />
 						</td>
 					</>
 				);
