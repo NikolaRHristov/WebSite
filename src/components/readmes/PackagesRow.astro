@@ -158,8 +158,6 @@ for (const item of items) {
 		}
 	}
 }
-
-console.log(items);
 ---
 
 {
@@ -231,36 +229,43 @@ console.log(items);
 									?.join("?<br />")}
 							/>
 							<br />
-							{Array.from(_package.languages ?? []).map(
-								(language) =>
-									language.lightIcon &&
-									language.darkIcon && (
-										<>
-											<picture>
-												<source
-													media="(prefers-color-scheme: dark)"
-													srcset={
-														language.lightIcon.src
-													}
-												/>
-												<source
-													media="(prefers-color-scheme: light)"
-													srcset={
-														language.darkIcon.src
-													}
-												/>
-												<img
-													width="18"
-													height="18"
-													src={language.lightIcon.src}
-													title={`Lines of code ${language.loc}`}
-													alt={language.language}
-												/>
-											</picture>
-											&nbsp;
-										</>
-									)
-							)}
+							<center>
+								{Array.from(_package.languages ?? []).map(
+									(language) =>
+										language.lightIcon &&
+										language.darkIcon && (
+											<>
+												<picture>
+													<source
+														media="(prefers-color-scheme: dark)"
+														srcset={
+															language.lightIcon
+																.src
+														}
+													/>
+													<source
+														media="(prefers-color-scheme: light)"
+														srcset={
+															language.darkIcon
+																.src
+														}
+													/>
+													<img
+														width="18"
+														height="18"
+														src={
+															language.lightIcon
+																.src
+														}
+														title={`Lines of code ${language.loc}`}
+														alt={language.language}
+													/>
+												</picture>
+												&nbsp;
+											</>
+										)
+								)}
+							</center>
 							<br />
 						</td>
 					</>
