@@ -21,29 +21,24 @@ import typescriptLight from "@assets/images/packages/typescriptLight.svg";
 import windowsterminalDark from "@assets/images/packages/windowsterminalDark.svg";
 import windowsterminalLight from "@assets/images/packages/windowsterminalLight.svg";
 
+export interface Package {
+	icons: {
+		[key: string]: [ImageMetadata, ImageMetadata];
+	};
+}
+
 export default {
 	icons: {
-		css3Dark,
-		css3Light,
-		gnubashDark,
-		gnubashLight,
-		goDark,
-		goLight,
-		javascriptDark,
-		javascriptLight,
-		luaDark,
-		luaLight,
-		mdxDark,
-		mdxLight,
-		powershellDark,
-		powershellLight,
-		pythonDark,
-		pythonLight,
-		rustDark,
-		rustLight,
-		typescriptDark,
-		typescriptLight,
-		windowsterminalDark,
-		windowsterminalLight,
+		"CSS": [css3Dark, css3Light],
+		"Shell": [gnubashDark, gnubashLight],
+		"Go": [goDark, goLight],
+		"JavaScript": [javascriptDark, javascriptLight],
+		"Lua": [luaDark, luaLight],
+		"MDX": [mdxDark, mdxLight],
+		"PowerShell": [powershellDark, powershellLight],
+		"Python": [pythonDark, pythonLight],
+		"Rust": [rustDark, rustLight],
+		"TypeScript": [typescriptDark, typescriptLight],
+		"Batchfile": [windowsterminalDark, windowsterminalLight],
 	},
-};
+} satisfies Package as Package;

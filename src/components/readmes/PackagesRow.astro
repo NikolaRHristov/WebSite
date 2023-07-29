@@ -16,8 +16,8 @@ interface Badges {
 }
 
 interface Languages {
-	lightIcon: string | null;
-	darkIcon: string | null;
+	lightIcon: ImageMetadata | null;
+	darkIcon: ImageMetadata | null;
 	language: string;
 	loc: string;
 }
@@ -147,67 +147,10 @@ items.forEach((item) =>
 			if (
 				Object.prototype.hasOwnProperty.call(languages?.data, language)
 			) {
-				let [lightIcon, darkIcon] = ((language) => {
-					switch (language) {
-						case "Batchfile":
-							return [
-								Package.icons.windowsterminalLight.src,
-								Package.icons.windowsterminalDark.src,
-							];
-						case "CSS":
-							return [
-								Package.icons.css3Light.src,
-								Package.icons.css3Dark.src,
-							];
-						case "Go":
-							return [
-								Package.icons.goLight.src,
-								Package.icons.goDark.src,
-							];
-						case "JavaScript":
-							return [
-								Package.icons.javascriptLight.src,
-								Package.icons.javascriptDark.src,
-							];
-						case "Lua":
-							return [
-								Package.icons.luaLight.src,
-								Package.icons.luaDark.src,
-							];
-						case "MDX":
-							return [
-								Package.icons.mdxLight.src,
-								Package.icons.mdxDark.src,
-							];
-						case "PowerShell":
-							return [
-								Package.icons.powershellLight.src,
-								Package.icons.powershellDark.src,
-							];
-						case "Python":
-							return [
-								Package.icons.pythonLight.src,
-								Package.icons.pythonDark.src,
-							];
-						case "Rust":
-							return [
-								Package.icons.rustLight.src,
-								Package.icons.rustDark.src,
-							];
-						case "Shell":
-							return [
-								Package.icons.gnubashLight.src,
-								Package.icons.gnubashDark.src,
-							];
-						case "TypeScript":
-							return [
-								Package.icons.typescriptLight.src,
-								Package.icons.typescriptDark.src,
-							];
-						default:
-							return [null, null];
-					}
-				})(language);
+				let [lightIcon, darkIcon] = Package.icons[language] ?? [
+					null,
+					null,
+				];
 
 				item.languages.add({
 					lightIcon,
