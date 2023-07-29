@@ -29,16 +29,16 @@ export interface Package {
 
 export default {
 	icons: {
-		"CSS": [css3Dark, css3Light],
-		"Shell": [gnubashDark, gnubashLight],
-		"Go": [goDark, goLight],
-		"JavaScript": [javascriptDark, javascriptLight],
-		"Lua": [luaDark, luaLight],
-		"MDX": [mdxDark, mdxLight],
-		"PowerShell": [powershellDark, powershellLight],
-		"Python": [pythonDark, pythonLight],
-		"Rust": [rustDark, rustLight],
-		"TypeScript": [typescriptDark, typescriptLight],
-		"Batchfile": [windowsterminalDark, windowsterminalLight],
+		"CSS": [css3Light, css3Dark],
+		"Shell": [gnubashLight, gnubashDark],
+		"Go": [goLight, goDark],
+		"JavaScript": [javascriptLight, javascriptDark],
+		"Lua": [luaLight, luaDark],
+		"MDX": [mdxLight, mdxDark],
+		"PowerShell": [powershellLight, powershellDark],
+		"Python": [pythonLight, pythonDark],
+		"Rust": [rustLight, rustDark],
+		"TypeScript": [typescriptLight, typescriptDark],
+		"Batchfile": [windowsterminalLight, windowsterminalDark],
 	},
 } satisfies Package as Package;

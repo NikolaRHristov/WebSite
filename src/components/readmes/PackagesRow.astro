@@ -139,29 +139,27 @@ for (const _package of packages) {
 	}
 }
 
-items.forEach((item) =>
-	request(`GET /repos/${item.github}/languages`).then((languages) => {
-		item.languages = new Set();
+for (const item of items) {
+	const languages =
+		(await request(`GET /repos/${item.github}/languages`))?.data ?? [];
 
-		for (const language in languages?.data) {
-			if (
-				Object.prototype.hasOwnProperty.call(languages?.data, language)
-			) {
-				let [lightIcon, darkIcon] = Package.icons[language] ?? [
-					null,
-					null,
-				];
+	item.languages = new Set();
 
-				item.languages.add({
-					lightIcon,
-					darkIcon,
-					language,
-					loc: languages?.data[language],
-				});
-			}
+	for (const language in languages) {
+		if (Object.prototype.hasOwnProperty.call(languages?.data, language)) {
+			let [lightIcon, darkIcon] = Package.icons[language] ?? [null, null];
+
+			item.languages.add({
+				lightIcon,
+				darkIcon,
+				language,
+				loc: languages?.data[language],
+			});
 		}
-	})
-);
+	}
+}
+
+console.log(items);
 ---
 
 {
