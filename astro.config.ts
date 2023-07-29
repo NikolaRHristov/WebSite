@@ -1,5 +1,4 @@
 // @ts-nocheck
-import compress from "astro-compress";
 import critters from "astro-critters";
 import rome from "astro-rome";
 import { defineConfig } from "astro/config";
@@ -21,7 +20,7 @@ export default defineConfig({
 		critters({ logger: 1 }),
 		prefetch(),
 		rome({ logger: 1 }),
-		compress({ logger: 1 }),
+		// compress({ logger: 1 }),
 	],
 	vite: {
 		build: {

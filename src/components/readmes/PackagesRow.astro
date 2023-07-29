@@ -173,27 +173,6 @@ for (const item of items) {
 						{_package.badges.size >= 1 ? (
 							<td valign="top" colspan={colspan}>
 								<br />
-								{Array.from(_package.badges).map((badge) => (
-									<>
-										<a href={badge.link} target="_blank">
-											<picture>
-												<source
-													media="(prefers-color-scheme: dark)"
-													srcset={`${badge.img}${DARK_STYLE}`}
-												/>
-												<source
-													media="(prefers-color-scheme: light)"
-													srcset={`${badge.img}${LIGHT_STYLE}`}
-												/>
-												<img
-													src={`${badge.img}${DARK_STYLE}`}
-												/>
-											</picture>
-										</a>
-										<br />
-									</>
-								))}
-								<br />
 								<center>
 									{Array.from(_package.languages ?? []).map(
 										(language) =>
@@ -231,11 +210,32 @@ for (const item of items) {
 															}
 														/>
 													</picture>
-													&nbsp;
 												</>
 											)
 									)}
 								</center>
+								<br />
+								{Array.from(_package.badges).map((badge) => (
+									<>
+										<a href={badge.link} target="_blank">
+											<picture>
+												<source
+													media="(prefers-color-scheme: dark)"
+													srcset={`${badge.img}${DARK_STYLE}`}
+												/>
+												<source
+													media="(prefers-color-scheme: light)"
+													srcset={`${badge.img}${LIGHT_STYLE}`}
+												/>
+												<img
+													src={`${badge.img}${DARK_STYLE}`}
+												/>
+											</picture>
+										</a>
+										<br />
+									</>
+								))}
+								<br />
 							</td>
 						) : (
 							""
