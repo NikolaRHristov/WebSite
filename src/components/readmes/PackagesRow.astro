@@ -194,6 +194,48 @@ for (const item of items) {
 									</>
 								))}
 								<br />
+								<center>
+									{Array.from(_package.languages ?? []).map(
+										(language) =>
+											language.lightIcon &&
+											language.darkIcon && (
+												<>
+													<picture>
+														<source
+															media="(prefers-color-scheme: dark)"
+															srcset={
+																language
+																	.lightIcon
+																	.src
+															}
+														/>
+														<source
+															media="(prefers-color-scheme: light)"
+															srcset={
+																language
+																	.darkIcon
+																	.src
+															}
+														/>
+														<img
+															width="18"
+															height="18"
+															src={
+																language
+																	.lightIcon
+																	.src
+															}
+															title={language.boc}
+															alt={
+																language.language
+															}
+														/>
+													</picture>
+													&nbsp;
+												</>
+											)
+									)}
+								</center>
 							</td>
 						) : (
 							""
@@ -229,44 +271,6 @@ for (const item of items) {
 									?.split("?")
 									?.join("?<br />")}
 							/>
-							<br />
-							<center>
-								{Array.from(_package.languages ?? []).map(
-									(language) =>
-										language.lightIcon &&
-										language.darkIcon && (
-											<>
-												<picture>
-													<source
-														media="(prefers-color-scheme: dark)"
-														srcset={
-															language.lightIcon
-																.src
-														}
-													/>
-													<source
-														media="(prefers-color-scheme: light)"
-														srcset={
-															language.darkIcon
-																.src
-														}
-													/>
-													<img
-														width="18"
-														height="18"
-														src={
-															language.lightIcon
-																.src
-														}
-														title={language.boc}
-														alt={language.language}
-													/>
-												</picture>
-												&nbsp;
-											</>
-										)
-								)}
-							</center>
 							<br />
 						</td>
 					</>
