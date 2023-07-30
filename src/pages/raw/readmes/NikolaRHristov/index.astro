@@ -1,6 +1,5 @@
 ---
 import PackagesRow from "@components/readmes/PackagesRow.astro";
-
 import type { packageCell } from "@options/packageCell.js";
 
 const packages = Astro.props["packages"] ?? new Map<string, Set<packageCell>>();
