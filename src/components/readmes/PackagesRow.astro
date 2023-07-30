@@ -10,12 +10,12 @@ const LIGHT_STYLE =
 
 const { packages } = Astro.props;
 
-interface Badges {
+interface Badge {
 	img: string;
 	link: string;
 }
 
-interface Languages {
+interface Language {
 	lightIcon: ImageMetadata | null;
 	darkIcon: ImageMetadata | null;
 	language: string;
@@ -27,8 +27,8 @@ interface PackagesRowItem {
 	link: string;
 	github: string;
 	description: string;
-	badges: Set<Badges>;
-	languages?: Set<Languages>;
+	badges: Set<Badge>;
+	languages?: Set<Language>;
 }
 
 let items = new Set<PackagesRowItem>();
