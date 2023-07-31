@@ -175,10 +175,8 @@ for (const item of items) {
 									<br />
 									{Array.from(_package.languages ?? []).map(
 										(language, index) => {
-											console.log(index);
-
 											let nbsp =
-												index ==
+												index + 1 ==
 												_package.languages?.size
 													? ""
 													: "&nbsp;&nbsp;";
@@ -218,6 +216,7 @@ for (const item of items) {
 																}
 															/>
 														</picture>
+														{nbsp}
 													</>
 												)
 											);
