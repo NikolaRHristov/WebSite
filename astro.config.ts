@@ -7,7 +7,7 @@ import { defineConfig } from "astro/config";
 import worker from "astrojs-service-worker";
 
 export default defineConfig({
-	site: "https://nikolahristov.tech",
+	site: "https://nikolahristov.tech/",
 	experimental: {
 		assets: true,
 		viewTransitions: true,

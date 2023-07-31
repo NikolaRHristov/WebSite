@@ -158,6 +158,8 @@ for (const item of items) {
 		}
 	}
 }
+
+const site = Astro.url.origin;
 ---
 
 {
@@ -189,6 +191,7 @@ for (const item of items) {
 															<source
 																media="(prefers-color-scheme: dark)"
 																srcset={
+																	site +
 																	language
 																		.lightIcon
 																		.src
@@ -197,6 +200,7 @@ for (const item of items) {
 															<source
 																media="(prefers-color-scheme: light)"
 																srcset={
+																	site +
 																	language
 																		.darkIcon
 																		.src
@@ -206,6 +210,7 @@ for (const item of items) {
 																width="18"
 																height="18"
 																src={
+																	site +
 																	language
 																		.lightIcon
 																		.src
