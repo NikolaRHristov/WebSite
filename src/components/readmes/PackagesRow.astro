@@ -174,44 +174,54 @@ for (const item of items) {
 								<center>
 									<br />
 									{Array.from(_package.languages ?? []).map(
-										(language) =>
-											language.lightIcon &&
-											language.darkIcon && (
-												<>
-													<picture>
-														<source
-															media="(prefers-color-scheme: dark)"
-															srcset={
-																language
-																	.lightIcon
-																	.src
-															}
-														/>
-														<source
-															media="(prefers-color-scheme: light)"
-															srcset={
-																language
-																	.darkIcon
-																	.src
-															}
-														/>
-														<img
-															width="18"
-															height="18"
-															src={
-																language
-																	.lightIcon
-																	.src
-															}
-															title={`${language.boc} of ${language.language}`}
-															alt={
-																language.language
-															}
-														/>
-													</picture>
-													&nbsp;&nbsp;
-												</>
-											)
+										(language, index) => {
+											console.log(index);
+
+											let nbsp =
+												index ==
+												_package.languages?.size
+													? ""
+													: "&nbsp;&nbsp;";
+
+											return (
+												language.lightIcon &&
+												language.darkIcon && (
+													<>
+														<picture>
+															<source
+																media="(prefers-color-scheme: dark)"
+																srcset={
+																	language
+																		.lightIcon
+																		.src
+																}
+															/>
+															<source
+																media="(prefers-color-scheme: light)"
+																srcset={
+																	language
+																		.darkIcon
+																		.src
+																}
+															/>
+															<img
+																width="18"
+																height="18"
+																src={
+																	language
+																		.lightIcon
+																		.src
+																}
+																title={`${language.boc} of ${language.language}`}
+																alt={
+																	language.language
+																}
+															/>
+														</picture>
+													</>
+												)
+											);
+										}
 									)}
 									<br />
 									{Array.from(_package.badges).map(
