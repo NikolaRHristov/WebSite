@@ -3,6 +3,7 @@ export default async (bytes: number, decimals = 2.0) => {
 		return "0 Bytes";
 	}
 
+
 	const k = 1024;
 	const i = Math.floor(Math.log(bytes) / Math.log(k));
 
