@@ -1,9 +1,9 @@
-import env from "@lib/env.js";
+import Environment from "@lib/Environment.js";
 import { Octokit } from "@octokit/core";
 import type { OctokitResponse } from "@octokit/types";
 
 const octokit = new Octokit({
-	auth: env.GH_AUTH_TOKEN,
+	auth: Environment.GH_AUTH_TOKEN,
 });
 
 export default async (

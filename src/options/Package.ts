@@ -20,6 +20,8 @@ import typescriptDark from "@assets/images/packages/typescriptDark.svg";
 import typescriptLight from "@assets/images/packages/typescriptLight.svg";
 import windowsterminalDark from "@assets/images/packages/windowsterminalDark.svg";
 import windowsterminalLight from "@assets/images/packages/windowsterminalLight.svg";
+import astroDark from "@assets/images/packages/astroDark.svg";
+import astroLight from "@assets/images/packages/astroLight.svg";
 
 export interface Package {
 	icons: {
@@ -40,5 +42,6 @@ export default {
 		"Rust": [rustLight, rustDark],
 		"TypeScript": [typescriptLight, typescriptDark],
 		"Batchfile": [windowsterminalLight, windowsterminalDark],
+		"Astro": [astroLight, astroDark],
 	},
 } satisfies Package as Package;
