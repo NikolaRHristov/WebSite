@@ -1,12 +1,12 @@
 ---
 import PackagesRow from "@components/readmes/PackagesRow.astro";
-import type { packageCell } from "@options/packageCell.js";
+import type { CellPackage } from "@options/CellPackage.js";
 
-const packages = Astro.props["packages"] ?? new Map<string, Set<packageCell>>();
+const packages = Astro.props["packages"] ?? new Map<string, Set<CellPackage>>();
 
 packages.set(
 	"projects",
-	new Set<packageCell>([
+	new Set<CellPackage>([
 		"github:astro-starters/pac-stac",
 		"npm:files-pipe",
 		"cargo:innkeeper",
@@ -17,7 +17,7 @@ packages.set(
 
 packages.set(
 	"astro",
-	new Set<packageCell>([
+	new Set<CellPackage>([
 		"npm:astro-compress",
 		"npm:astro-convert",
 		"npm:astro-critters",
@@ -32,12 +32,12 @@ packages.set(
 
 packages.set(
 	"npm",
-	new Set<packageCell>(["npm:@lightrix/config", "npm:@lightrix/scripts"])
+	new Set<CellPackage>(["npm:@lightrix/config", "npm:@lightrix/scripts"])
 );
 
 packages.set(
 	"github",
-	new Set<packageCell>([
+	new Set<CellPackage>([
 		"npm:@yesmaintenance/scripts",
 		"npm:github-history-slider",
 	])
@@ -45,7 +45,7 @@ packages.set(
 
 packages.set(
 	"dotfiles",
-	new Set<packageCell>([
+	new Set<CellPackage>([
 		"github:NikolaRHristov/dot",
 		"github:NikolaRHristov/nvim",
 		"github:NikolaRHristov/powershell",

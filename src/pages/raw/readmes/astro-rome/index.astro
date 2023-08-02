@@ -1,14 +1,14 @@
 ---
 import PackagesRow from "@components/readmes/PackagesRow.astro";
 import RelatedHeader from "@components/readmes/RelatedHeader.astro";
-import type { packageCell } from "@options/packageCell.js";
+import type { CellPackage } from "@options/CellPackage.js";
 ---
 
 <>
 	<RelatedHeader />
 	<table>
 		<PackagesRow
-			packages={new Set<packageCell>([
+			packages={new Set<CellPackage>([
 				"npm:astro-compress",
 				"npm:astro-critters",
 			])}
