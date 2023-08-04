@@ -10,7 +10,12 @@ export default defineConfig({
 	srcDir: "./Source",
 	publicDir: "./Public",
 	outDir: "./Target",
+<<<<<<< HEAD
 	site: "https://nikolahristov.tech/",
+=======
+	// TODO Place your site URL here
+	// site: "",
+>>>>>>> upstream/main
 	experimental: {
 		assets: true,
 		viewTransitions: true,
