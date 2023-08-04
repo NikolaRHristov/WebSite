@@ -1,4 +1,4 @@
-import Environment from "@Lib/Environment.js";
+import Environment from "@Library/Environment.js";
 import { Octokit } from "@octokit/core";
 import type { OctokitResponse } from "@octokit/types";
 
