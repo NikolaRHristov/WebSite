@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import "@styles/Base.css";
@@ -20,12 +19,6 @@ const links = (hrefs = []) =>
 		/>`
 		)
 		.join("\n");
-=======
-import "@styles/Base.css";
-
-// TODO Place your title and description here
-const { title = "", description = "" } = Astro.props;
->>>>>>> upstream/main
 ---
 
 <!DOCTYPE html>
@@ -41,12 +34,7 @@ const { title = "", description = "" } = Astro.props;
 		<meta charset="utf-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<<<<<<< HEAD
 		<meta name="theme-color" content="#ffffff" />
-=======
-		<!-- TODO Define your color theme in hex here -->
-		<meta name="theme-color" content="" />
->>>>>>> upstream/main
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="twitter:dnt" content="on" />
 
@@ -67,7 +55,6 @@ const { title = "", description = "" } = Astro.props;
 			@import "@styles/Global.css";
 		</style>
 
-<<<<<<< HEAD
 		<slot name="styles" />
 
 		<Fragment set:html={links(fonts.map((font: any) => font.href))} />
@@ -105,26 +92,13 @@ const { title = "", description = "" } = Astro.props;
 			<div id="footer" class="shrink">
 				<Footer />
 			</div>
-=======
-		<!-- Favicon -->
-	</head>
-	<body>
-		<!-- TODO Generate the ID here -->
-		<div id="">
-			<div class="grow">
-				<slot />
-			</div>
->>>>>>> upstream/main
 			<script>
 				import "@scripts/FIREBASE";
 			</script>
 		</div>
-<<<<<<< HEAD
 		<a
 			class="absolute left-0 top-0 hidden"
 			rel="me"
 			href="https://mastodon.social/@nikolahristov"></a>
-=======
->>>>>>> upstream/main
 	</body>
 </html>
