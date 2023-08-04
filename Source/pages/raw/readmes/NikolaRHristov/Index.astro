@@ -2,9 +2,9 @@
 import PackagesRow from "@components/readmes/PackagesRow.astro";
 import type { PackageCell } from "@options/PackageCell.js";
 
-const packages = Astro.props["packages"] ?? new Map<string, Set<PackageCell>>();
+const Packages = Astro.props["packages"] ?? new Map<string, Set<PackageCell>>();
 
-packages.set(
+Packages.set(
 	"projects",
 	new Set<PackageCell>([
 		"github:astro-starters/pac-stac",
@@ -15,7 +15,7 @@ packages.set(
 	])
 );
 
-packages.set(
+Packages.set(
 	"astro",
 	new Set<PackageCell>([
 		"npm:astro-compress",
@@ -30,12 +30,12 @@ packages.set(
 	])
 );
 
-packages.set(
+Packages.set(
 	"npm",
 	new Set<PackageCell>(["npm:@lightrix/config", "npm:@lightrix/scripts"])
 );
 
-packages.set(
+Packages.set(
 	"github",
 	new Set<PackageCell>([
 		"npm:@yesmaintenance/scripts",
@@ -43,7 +43,7 @@ packages.set(
 	])
 );
 
-packages.set(
+Packages.set(
 	"dotfiles",
 	new Set<PackageCell>([
 		"github:NikolaRHristov/dot",
@@ -55,7 +55,7 @@ packages.set(
 );
 ---
 
-<img>
+<>
 	<h1>
 		<a href="https://holopin.io/@nikola" target="_blank"
 			><img
@@ -71,7 +71,7 @@ packages.set(
 				<h2>🔥 Projects</h2>
 			</td>
 		</tr>
-		<PackagesRow packages={packages.get("projects")} />
+		<PackagesRow packages={Packages.get("projects")} />
 	</table>
 
 	<table>
@@ -94,7 +94,7 @@ packages.set(
 				</h2>
 			</td>
 		</tr>
-		<PackagesRow packages={packages.get("astro")} />
+		<PackagesRow packages={Packages.get("astro")} />
 	</table>
 
 	<table>
@@ -117,7 +117,7 @@ packages.set(
 				</h2>
 			</td>
 		</tr>
-		<PackagesRow packages={packages.get("npm")} />
+		<PackagesRow packages={Packages.get("npm")} />
 	</table>
 
 	<table>
@@ -131,7 +131,7 @@ packages.set(
 				</h2>
 			</td>
 		</tr>
-		<PackagesRow packages={packages.get("dotfiles")} />
+		<PackagesRow packages={Packages.get("dotfiles")} />
 	</table>
 
 	<table>
@@ -154,7 +154,7 @@ packages.set(
 				</h2>
 			</td>
 		</tr>
-		<PackagesRow packages={packages.get("github")} />
+		<PackagesRow packages={Packages.get("github")} />
 	</table>
 
 	<a href="https://app.daily.dev/nikolahristov" target="_blank"
