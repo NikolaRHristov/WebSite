@@ -7,10 +7,10 @@
 			"@components/*": ["Source/components/*"],
 			"@layouts/*": ["Source/Layout/*"],
 			"@Library/*": ["Source/Library/*"],
-			"@options/*": ["Source/options/*"],
-			"@pages/*": ["Source/pages/*"],
-			"@scripts/*": ["Source/scripts/*"],
-			"@styles/*": ["Source/styles/*"]
+			"@Option/*": ["Source/Option/*"],
+			"@Page/*": ["Source/pages/*"],
+			"@Script/*": ["Source/Script/*"],
+			"@Style/*": ["Source/styles/*"]
 		},
 		"types": ["astro/client", "astro/client-image", "astro/env"]
 	},

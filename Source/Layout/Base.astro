@@ -1,7 +1,7 @@
 ---
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import "@styles/Base.css";
+import "@Style/Base.css";
 
 const {
 	fonts = [],
@@ -52,7 +52,7 @@ const links = (hrefs = []) =>
 		/>
 
 		<style is:global>
-			@import "@styles/Global.css";
+			@import "@Style/Global.css";
 		</style>
 
 		<slot name="styles" />
@@ -93,7 +93,7 @@ const links = (hrefs = []) =>
 				<Footer />
 			</div>
 			<script>
-				import "@scripts/FIREBASE";
+				import "@Script/FIREBASE";
 			</script>
 		</div>
 		<a
