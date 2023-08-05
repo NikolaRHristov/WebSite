@@ -5,7 +5,7 @@
 		"paths": {
 			"@assets/*": ["Source/assets/*"],
 			"@components/*": ["Source/components/*"],
-			"@layouts/*": ["Source/layouts/*"],
+			"@layouts/*": ["Source/Layout/*"],
 			"@Library/*": ["Source/Library/*"],
 			"@options/*": ["Source/options/*"],
 			"@pages/*": ["Source/pages/*"],
