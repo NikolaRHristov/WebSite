@@ -1,14 +1,14 @@
 ---
-import chunks from "@Library/Chunks";
+import Chunks from "@Library/Chunks";
 import Bytes from "@Library/Bytes";
-import request from "@Library/Request";
+import Request from "@Library/Request";
 import Package from "@Option/Package";
 
 const DARK_STYLE = "&color=black&logoColor=white&labelColor=black&logoWidth=15";
 const LIGHT_STYLE =
 	"&color=white&logoColor=black&labelColor=white&logoWidth=15";
 
-const { packages } = Astro.props;
+const { Packages } = Astro.props;
 
 interface Badge {
 	img: string;
@@ -16,52 +16,52 @@ interface Badge {
 }
 
 interface Language {
-	lightIcon: ImageMetadata | null;
-	darkIcon: ImageMetadata | null;
-	language: string;
-	boc: string;
+	LightIcon: ImageMetadata | null;
+	DarkIcon: ImageMetadata | null;
+	Name: string;
+	BoC: string;
 }
 
 interface PackagesRowItem {
-	name: string;
-	link: string;
-	github: string;
-	description: string;
-	badges: Set<Badge>;
-	languages?: Set<Language>;
+	Name: string;
+	Link: string;
+	GitHub: string;
+	Description: string;
+	Badges: Set<Badge>;
+	Languages?: Set<Language>;
 }
 
-let items = new Set<PackagesRowItem>();
+let Items = new Set<PackagesRowItem>();
 
-for (const _package of packages) {
+for (const _package of Packages) {
 	if (_package.match(/github:/)) {
-		const githubOwnerRepo = _package.split(":")[1];
-		const githubOwner = githubOwnerRepo.split("/")[0];
-		const githubRepo = githubOwnerRepo.split("/")[1];
+		const GitHubOwnerRepo = _package.split(":")[1];
+		const GitHubOwner = GitHubOwnerRepo.split("/")[0];
+		const GitHubRepo = GitHubOwnerRepo.split("/")[1];
 
-		const githubJSON = await request(`GET /repos/${githubOwnerRepo}`, {
-			owner: githubOwner,
-			repo: githubRepo,
+		const GitHubJSON = await Request(`GET /repos/${GitHubOwnerRepo}`, {
+			owner: GitHubOwner,
+			repo: GitHubRepo,
 		});
 
-		if (githubJSON?.data) {
-			items.add({
-				link: githubJSON.data?.html_url ?? "",
-				name: githubJSON.data?.name ?? "",
-				github: githubJSON.data?.full_name ?? "",
-				description: githubJSON.data?.description ?? "",
-				badges: new Set([
+		if (GitHubJSON?.data) {
+			Items.add({
+				Link: GitHubJSON.data?.html_url ?? "",
+				Name: GitHubJSON.data?.name ?? "",
+				GitHub: GitHubJSON.data?.full_name ?? "",
+				Description: GitHubJSON.data?.description ?? "",
+				Badges: new Set([
 					{
-						link: `https://github.com/${githubOwner}/${githubRepo}`,
-						img: `https://img.shields.io/github/last-commit/${githubOwner}/${githubRepo}?label=Last%20Updated&logo=github`,
+						link: `https://github.com/${GitHubOwner}/${GitHubRepo}`,
+						img: `https://img.shields.io/github/last-commit/${GitHubOwner}/${GitHubRepo}?label=Last%20Updated&logo=github`,
 					},
 					{
-						link: `https://github.com/${githubOwner}/${githubRepo}`,
-						img: `https://img.shields.io/github/issues/${githubOwner}/${githubRepo}?label=Issues&logo=github`,
+						link: `https://github.com/${GitHubOwner}/${GitHubRepo}`,
+						img: `https://img.shields.io/github/issues/${GitHubOwner}/${GitHubRepo}?label=Issues&logo=github`,
 					},
 					{
-						link: `https://github.com/${githubOwner}/${githubRepo}`,
-						img: `https://img.shields.io/github/downloads/${githubOwner}/${githubRepo}/total?label=Downloads&logo=github`,
+						link: `https://github.com/${GitHubOwner}/${GitHubRepo}`,
+						img: `https://img.shields.io/github/downloads/${GitHubOwner}/${GitHubRepo}/total?label=Downloads&logo=github`,
 					},
 				]),
 			});
@@ -70,36 +70,36 @@ for (const _package of packages) {
 
 	if (_package.match(/npm:/)) {
 		const packageScopeName = _package.split(":")[1];
-		const packageJSON = await (
+		const PackageJSON = await (
 			await fetch(`https://registry.npmjs.org/${packageScopeName}`)
 		).json();
 
-		const githubOwnerRepo = packageJSON.homepage
+		const GitHubOwnerRepo = PackageJSON.homepage
 			.replace(/(git\+)?http?s:\/\/github.com\//, "")
 			.replace("#readme", "")
 			.replace(".git", "");
 
-		items.add({
-			link: `https://github.com/${githubOwnerRepo}`,
-			name: packageJSON?.name ?? "",
-			github: githubOwnerRepo,
-			description: packageJSON?.description ?? "",
-			badges: new Set([
+		Items.add({
+			Link: `https://github.com/${GitHubOwnerRepo}`,
+			Name: PackageJSON?.name ?? "",
+			GitHub: GitHubOwnerRepo,
+			Description: PackageJSON?.description ?? "",
+			Badges: new Set([
 				{
-					img: `https://img.shields.io/github/actions/workflow/status/${githubOwnerRepo}/node.yml?branch=main&label=Build&logo=node.js`,
-					link: `https://github.com/${githubOwnerRepo}/actions/workflows/node.yml`,
+					img: `https://img.shields.io/github/actions/workflow/status/${GitHubOwnerRepo}/node.yml?branch=main&label=Build&logo=node.js`,
+					link: `https://github.com/${GitHubOwnerRepo}/actions/workflows/node.yml`,
 				},
 				{
-					link: `https://npmjs.org/${packageJSON.name}`,
-					img: `https://img.shields.io/npm/v/${packageJSON.name}?label=Version&logo=npm`,
+					link: `https://npmjs.org/${PackageJSON.name}`,
+					img: `https://img.shields.io/npm/v/${PackageJSON.name}?label=Version&logo=npm`,
 				},
 				{
-					link: `https://npmjs.org/${packageJSON.name}`,
-					img: `https://img.shields.io/librariesio/release/npm/${packageJSON.name}?label=Dependencies&logo=dependabot`,
+					link: `https://npmjs.org/${PackageJSON.name}`,
+					img: `https://img.shields.io/librariesio/release/npm/${PackageJSON.name}?label=Dependencies&logo=dependabot`,
 				},
 				{
-					link: `https://npmjs.org/${packageJSON.name}`,
-					img: `https://img.shields.io/npm/dw/${packageJSON.name}?label=Downloads&logo=npm`,
+					link: `https://npmjs.org/${PackageJSON.name}`,
+					img: `https://img.shields.io/npm/dw/${PackageJSON.name}?label=Downloads&logo=npm`,
 				},
 			]),
 		});
@@ -107,53 +107,53 @@ for (const _package of packages) {
 
 	if (_package.match(/cargo:/)) {
 		const crateScopeName = _package.split(":")[1];
-		const crateJSON = await (
+		const CrateJSON = await (
 			await fetch(`https://crates.io/api/v1/crates/${crateScopeName}`)
 		).json();
 
-		const githubOwnerRepo = (crateJSON?.crate?.repository ?? "")
+		const GitHubOwnerRepo = (CrateJSON?.crate?.repository ?? "")
 			.replace(/(git\+)?http?s:\/\/github.com\//, "")
 			.replace("#readme", "")
 			.replace(".git", "");
 
-		items.add({
-			link: crateJSON?.crate?.repository ?? "",
-			badges: new Set([
+		Items.add({
+			Link: CrateJSON?.crate?.repository ?? "",
+			Badges: new Set([
 				{
-					img: `https://img.shields.io/github/actions/workflow/status/${githubOwnerRepo}/rust.yml?branch=main&label=Build&logo=rust`,
-					link: `https://github.com/${githubOwnerRepo}/actions/workflows/rust.yml`,
+					img: `https://img.shields.io/github/actions/workflow/status/${GitHubOwnerRepo}/rust.yml?branch=main&label=Build&logo=rust`,
+					link: `https://github.com/${GitHubOwnerRepo}/actions/workflows/rust.yml`,
 				},
 				{
-					link: `https://crates.io/${crateJSON?.crate?.name}`,
-					img: `https://img.shields.io/crates/v/${crateJSON?.crate?.name}?label=Version&logo=rust`,
+					link: `https://crates.io/${CrateJSON?.crate?.name}`,
+					img: `https://img.shields.io/crates/v/${CrateJSON?.crate?.name}?label=Version&logo=rust`,
 				},
 				{
-					link: `https://crates.io/${crateJSON?.crate?.name}`,
-					img: `https://img.shields.io/crates/d/${crateJSON?.crate?.name}?label=Downloads&logo=rust`,
+					link: `https://crates.io/${CrateJSON?.crate?.name}`,
+					img: `https://img.shields.io/crates/d/${CrateJSON?.crate?.name}?label=Downloads&logo=rust`,
 				},
 			]),
-			description: crateJSON?.crate?.description ?? "",
-			github: githubOwnerRepo,
-			name: crateJSON?.crate?.name ?? "",
+			Description: CrateJSON?.crate?.description ?? "",
+			GitHub: GitHubOwnerRepo,
+			Name: CrateJSON?.crate?.name ?? "",
 		});
 	}
 }
 
-for (const item of items) {
+for (const item of Items) {
 	const languages =
-		(await request(`GET /repos/${item.github}/languages`))?.data ?? [];
+		(await Request(`GET /repos/${item.GitHub}/languages`))?.data ?? [];
 
-	item.languages = new Set();
+	item.Languages = new Set();
 
 	for (const language in languages) {
 		if (Object.prototype.hasOwnProperty.call(languages, language)) {
 			let [lightIcon, darkIcon] = Package.icons[language] ?? [null, null];
 
-			item.languages.add({
-				lightIcon,
-				darkIcon,
-				language,
-				boc: await Bytes(languages[language]),
+			item.Languages.add({
+				LightIcon: lightIcon,
+				DarkIcon: darkIcon,
+				Name: language,
+				BoC: await Bytes(languages[language]),
 			});
 		}
 	}
@@ -163,29 +163,29 @@ const site = Astro.url.origin;
 ---
 
 {
-	[...chunks(Array.from(items), 2)].map((packageRow) => (
+	[...Chunks(Array.from(Items), 2)].map((packageRow) => (
 		<tr>
 			{packageRow.map((_package) => {
 				let colspan = packageRow.length > 1 ? 2 : 3;
-				colspan -= _package.badges.size >= 1 ? 1 : 0;
+				colspan -= _package.Badges.size >= 1 ? 1 : 0;
 
 				return (
 					<>
-						{_package.badges.size >= 1 ? (
+						{_package.Badges.size >= 1 ? (
 							<td valign="top" colspan={colspan}>
 								<center>
 									<br />
-									{Array.from(_package.languages ?? []).map(
+									{Array.from(_package.Languages ?? []).map(
 										(language, index) => {
 											let nbsp =
 												index + 1 ==
-												_package.languages?.size
+												_package.Languages?.size
 													? ""
 													: "&nbsp;&nbsp;";
 
 											return (
-												language.lightIcon &&
-												language.darkIcon && (
+												language.LightIcon &&
+												language.DarkIcon && (
 													<>
 														<picture>
 															<source
@@ -193,7 +193,7 @@ const site = Astro.url.origin;
 																srcset={
 																	site +
 																	language
-																		.lightIcon
+																		.LightIcon
 																		.src
 																}
 															/>
@@ -202,7 +202,7 @@ const site = Astro.url.origin;
 																srcset={
 																	site +
 																	language
-																		.darkIcon
+																		.DarkIcon
 																		.src
 																}
 															/>
@@ -212,12 +212,12 @@ const site = Astro.url.origin;
 																src={
 																	site +
 																	language
-																		.lightIcon
+																		.LightIcon
 																		.src
 																}
-																title={`${language.boc} of ${language.language}`}
+																title={`${language.BoC} of ${language.Name}`}
 																alt={
-																	language.language
+																	language.Name
 																}
 															/>
 														</picture>
@@ -228,7 +228,7 @@ const site = Astro.url.origin;
 										}
 									)}
 									<br />
-									{Array.from(_package.badges).map(
+									{Array.from(_package.Badges).map(
 										(badge) => (
 											<>
 												<a
@@ -259,28 +259,28 @@ const site = Astro.url.origin;
 						)}
 						<td valign="top" colspan={colspan}>
 							<br />
-							<a href={_package.link} target="_blank">
+							<a href={_package.Link} target="_blank">
 								<picture>
 									<source
 										media="(prefers-color-scheme: dark)"
-										srcset={`https://img.shields.io/github/stars/${_package.github}?label=stars&logo=github${DARK_STYLE}`}
+										srcset={`https://img.shields.io/github/stars/${_package.GitHub}?label=stars&logo=github${DARK_STYLE}`}
 									/>
 									<source
 										media="(prefers-color-scheme: light)"
-										srcset={`https://img.shields.io/github/stars/${_package.github}?label=stars&logo=github${LIGHT_STYLE}`}
+										srcset={`https://img.shields.io/github/stars/${_package.GitHub}?label=stars&logo=github${LIGHT_STYLE}`}
 									/>
 									<img
-										src={`https://img.shields.io/github/stars/${_package.github}?label=stars&logo=github${DARK_STYLE}`}
+										src={`https://img.shields.io/github/stars/${_package.GitHub}?label=stars&logo=github${DARK_STYLE}`}
 									/>
 								</picture>
 							</a>
 							<br />
-							<a href={_package.link} target="_blank">
-								<b>{_package.name}</b>
+							<a href={_package.Link} target="_blank">
+								<b>{_package.Name}</b>
 							</a>
 							<br />
 							<b
-								set:html={_package.description
+								set:html={_package.Description
 									?.split(".")
 									?.join(".<br />")
 									?.split("!")
