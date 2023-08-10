@@ -1,11 +1,13 @@
-name: Node
+name: CodeQL
 
 concurrency:
-    group: node-${{ github.workflow }}-${{ github.ref }}
+    group: CodeQL-${{ github.workflow }}-${{ github.ref }}
     cancel-in-progress: true
 
 permissions:
     security-events: write
+    contents: write
+    pull-requests: write
 
 on:
     workflow_dispatch:
@@ -16,7 +18,7 @@ on:
     workflow_call:
 
 jobs:
-    node:
+    CodeQL:
         runs-on: ubuntu-latest
 
         env:
@@ -49,41 +51,14 @@ jobs:
             STNOUPGRADE: 1
             STRIPE_CLI_TELEMETRY_OPTOUT: 1
 
-        strategy:
-            matrix:
-                node-version: [16, 18, 19]
-
         steps:
             - uses: actions/checkout@v3.5.3
-            - uses: pnpm/action-setup@v2.4.0
-              with:
-                  version: 8.6.6
-                  run_install: |
-                      - recursive: true
-                        args: [
-                          --child-concurrency=9999,
-                          --link-workspace-packages=true,
-                          --lockfile-only,
-                          --network-concurrency=9999,
-                          --prefer-frozen-lockfile=false,
-                          --shamefully-hoist=false,
-                          --shared-workspace-lockfile=true,
-                          --strict-peer-dependencies=false,
-                          --unsafe-perm=true
-                        ]
 
-            - uses: actions/setup-node@v3.7.0
+            - uses: github/codeql-action/init@v2.21.2
               with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: "pnpm"
-                  cache-dependency-path: ./pnpm-lock.yaml
-            - run: pnpm install
-              working-directory: .
+                  languages: javascript
 
-            - run: pnpm run build
-              working-directory: .
-
-            - uses: actions/upload-artifact@v3.1.2
+            - name: Perform CodeQL Analysis
+              uses: github/codeql-action/analyze@v2.21.2
               with:
-                  name: .-node-${{ matrix.node-version }}-Target
-                  path: ./Target
+                  category: "/language:javascript"
