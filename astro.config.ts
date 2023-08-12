@@ -1,5 +1,5 @@
-import PreFetch from "@astrojs/prefetch";
-import SiteMap from "@astrojs/sitemap";
+import Fetch from "@astrojs/prefetch";
+import Map from "@astrojs/sitemap";
 import Compress from "astro-compress";
 import { defineConfig } from "astro/config";
 import Worker from "astrojs-service-worker";
@@ -16,8 +16,8 @@ export default defineConfig({
 	compressHTML: true,
 	integrations: [
 		import.meta.env.MODE === "production" ? Worker() : null,
-		SiteMap(),
-		PreFetch(),
+		Map(),
+		Fetch(),
 		Compress({ Logger: 1 }),
 	],
 	vite: {
