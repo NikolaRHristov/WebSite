@@ -13,20 +13,13 @@
 	.underline {
 		text-underline-position: under;
 		--text-shadow-color: white;
-		text-shadow:
-			-1px 1px var(--text-shadow-color),
-			-1px 2px var(--text-shadow-color),
-			-2px 1px var(--text-shadow-color),
-			-2px 2px var(--text-shadow-color),
-			-3px 1px var(--text-shadow-color),
-			-3px 2px var(--text-shadow-color),
-			0 1px var(--text-shadow-color),
-			0 2px var(--text-shadow-color),
-			1px 1px var(--text-shadow-color),
-			1px 2px var(--text-shadow-color),
-			2px 1px var(--text-shadow-color),
-			2px 2px var(--text-shadow-color),
-			3px 1px var(--text-shadow-color),
+		text-shadow: -1px 1px var(--text-shadow-color),
+			-1px 2px var(--text-shadow-color), -2px 1px var(--text-shadow-color),
+			-2px 2px var(--text-shadow-color), -3px 1px var(--text-shadow-color),
+			-3px 2px var(--text-shadow-color), 0 1px var(--text-shadow-color),
+			0 2px var(--text-shadow-color), 1px 1px var(--text-shadow-color),
+			1px 2px var(--text-shadow-color), 2px 1px var(--text-shadow-color),
+			2px 2px var(--text-shadow-color), 3px 1px var(--text-shadow-color),
 			3px 2px var(--text-shadow-color);
 
 		@apply decoration-blue-600;
@@ -68,13 +61,8 @@
 
 			.data-footnote-backref {
 				@apply m-2;
-				font-family:
-					ui-sans-serif,
-					system-ui,
-					-apple-system,
-					BlinkMacSystemFont,
-					sans-serif,
-					Apple Color Emoji,
+				font-family: ui-sans-serif, system-ui, -apple-system,
+					BlinkMacSystemFont, sans-serif, Apple Color Emoji,
 					Segoe UI Symbol;
 			}
 		}

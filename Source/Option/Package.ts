@@ -1,3 +1,5 @@
+import astroDark from "@Asset/Images/packages/astroDark.svg";
+import astroLight from "@Asset/Images/packages/astroLight.svg";
 import css3Dark from "@Asset/Images/packages/css3Dark.svg";
 import css3Light from "@Asset/Images/packages/css3Light.svg";
 import gnubashDark from "@Asset/Images/packages/gnubashDark.svg";
@@ -20,8 +22,6 @@ import typescriptDark from "@Asset/Images/packages/typescriptDark.svg";
 import typescriptLight from "@Asset/Images/packages/typescriptLight.svg";
 import windowsterminalDark from "@Asset/Images/packages/windowsterminalDark.svg";
 import windowsterminalLight from "@Asset/Images/packages/windowsterminalLight.svg";
-import astroDark from "@Asset/Images/packages/astroDark.svg";
-import astroLight from "@Asset/Images/packages/astroLight.svg";
 
 export interface Package {
 	icons: {
