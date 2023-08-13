@@ -14,5 +14,5 @@
 		},
 		"types": ["astro/client", "astro/client-image", "astro/env"]
 	},
-	"extends": "syclone/Target/Configuration/TypeScript"
+	"extends": "typescript-esbuild/Target/Configuration/TypeScript"
 }

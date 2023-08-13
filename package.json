@@ -24,7 +24,7 @@
 		"astro-compress": "2.0.5",
 		"astrojs-service-worker": "1.0.0",
 		"autoprefixer": "10.4.14",
-		"syclone": "0.1.6",
+		"typescript-esbuild": "0.1.8",
 		"cssnano": "6.0.1",
 		"cssnano-preset-advanced": "6.0.1",
 		"dotenv": "16.3.1",
