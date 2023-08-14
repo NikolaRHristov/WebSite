@@ -4,15 +4,15 @@ import "github-markdown-css";
 
 export const getStaticPaths = async () =>
 	["astro-compress", "astro-critters", "astro-rome", "NikolaRHristov"].map(
-		(slug) => ({
-			params: { slug },
+		(Slug) => ({
+			params: { Slug },
 		})
 	);
 
-const slug =
-	typeof Astro.params["slug"] === "string" ? Astro.params["slug"] : "";
+const Slug =
+	typeof Astro.params["Slug"] === "string" ? Astro.params["Slug"] : "";
 
-const Readme = (await import(`../raw/readmes/${slug}/index.astro`)).default;
+const Readme = (await import(`../raw/readmes/${Slug}/index.astro`)).default;
 ---
 
 <Base>
