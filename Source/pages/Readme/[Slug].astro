@@ -12,7 +12,7 @@ export const getStaticPaths = async () =>
 const Slug =
 	typeof Astro.params["Slug"] === "string" ? Astro.params["Slug"] : "";
 
-const Readme = (await import(`../raw/readmes/${Slug}/index.astro`)).default;
+const Readme = (await import(`../raw/Readme/${Slug}/index.astro`)).default;
 ---
 
 <Base>
