@@ -3,7 +3,7 @@ import { Octokit } from "@octokit/core";
 import type { OctokitResponse } from "@octokit/types";
 
 const octokit = new Octokit({
-	auth: Environment.GH_AUTH_TOKEN,
+	auth: Environment.GitHub,
 });
 
 export default async (
