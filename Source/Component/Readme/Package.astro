@@ -82,12 +82,20 @@ for (const Package of Packages) {
 			Description: _JSON?.description ?? "",
 			Badge: new Set([
 				{
-					link: `https://npmjs.org/${_JSON.name}`,
-					img: `https://img.shields.io/npm/dt/${_JSON.name}?label=Downloads&logo=npm`,
+					img: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
+					link: `https://github.com/${GitHub}/actions/workflows/Node.yml`,
 				},
 				{
 					link: `https://npmjs.org/${_JSON.name}`,
 					img: `https://img.shields.io/npm/v/${_JSON.name}?label=Version&logo=npm`,
+				},
+				{
+					link: `https://npmjs.org/${_JSON.name}`,
+					img: `https://img.shields.io/librariesio/release/npm/${_JSON.name}?label=&logo=dependabot`,
+				},
+				{
+					link: `https://npmjs.org/${_JSON.name}`,
+					img: `https://img.shields.io/npm/dt/${_JSON.name}?label=Downloads&logo=npm`,
 				},
 			]),
 		});
@@ -107,6 +115,10 @@ for (const Package of Packages) {
 		Items.add({
 			Link: _JSON?.crate?.repository ?? "",
 			Badge: new Set([
+				{
+					img: `https://img.shields.io/github/actions/workflow/status/${GitHub}/rust.yml?branch=main&label=Build&logo=rust`,
+					link: `https://github.com/${GitHub}/actions/workflows/rust.yml`,
+				},
 				{
 					link: `https://crates.io/${_JSON?.crate?.name}`,
 					img: `https://img.shields.io/crates/v/${_JSON?.crate?.name}?label=Version&logo=rust`,
