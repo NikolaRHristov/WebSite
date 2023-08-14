@@ -159,7 +159,7 @@ for (const Item of Items) {
 	}
 }
 
-const site = Astro.url.origin;
+const Site = Astro.url.origin;
 ---
 
 {
@@ -235,21 +235,21 @@ const site = Astro.url.origin;
 												<source
 													media="(prefers-color-scheme: dark)"
 													srcset={
-														site +
+														Site +
 														Language.Light.src
 													}
 												/>
 												<source
 													media="(prefers-color-scheme: light)"
 													srcset={
-														site + Language.Dark.src
+														Site + Language.Dark.src
 													}
 												/>
 												<img
 													width="18"
 													height="18"
 													src={
-														site +
+														Site +
 														Language.Light.src
 													}
 													title={`${Language.BoC} of ${Language.Name}`}
