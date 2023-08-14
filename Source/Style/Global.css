@@ -13,6 +13,7 @@ body {
 		flex-col
 		tabular-nums
 		text-black
+		bg-white
 		antialiased
 		sm:subpixel-antialiased;
 
