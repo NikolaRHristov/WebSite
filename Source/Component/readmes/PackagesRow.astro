@@ -86,8 +86,8 @@ for (const _package of Packages) {
 			Description: PackageJSON?.description ?? "",
 			Badges: new Set([
 				{
-					img: `https://img.shields.io/github/actions/workflow/status/${GitHubOwnerRepo}/node.yml?branch=main&label=Build&logo=node.js`,
-					link: `https://github.com/${GitHubOwnerRepo}/actions/workflows/node.yml`,
+					img: `https://img.shields.io/github/actions/workflow/status/${GitHubOwnerRepo}/Node.yml?branch=main&label=Build&logo=node.js`,
+					link: `https://github.com/${GitHubOwnerRepo}/actions/workflows/Node.yml`,
 				},
 				{
 					link: `https://npmjs.org/${PackageJSON.name}`,
@@ -221,7 +221,7 @@ const site = Astro.url.origin;
 																}
 															/>
 														</picture>
-														<Fragment set:html={nbsp}>
+														<Fragment set:html={nbsp} />
 													</>
 												)
 											);
