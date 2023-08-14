@@ -23,25 +23,21 @@ import typescriptLight from "@Asset/Image/Package/typescriptLight.svg";
 import windowsterminalDark from "@Asset/Image/Package/windowsterminalDark.svg";
 import windowsterminalLight from "@Asset/Image/Package/windowsterminalLight.svg";
 
-export interface Package {
-	icons: {
-		[key: string]: [ImageMetadata, ImageMetadata];
-	};
+export interface Icon {
+	[key: string]: [ImageMetadata, ImageMetadata];
 }
 
 export default {
-	icons: {
-		"CSS": [css3Light, css3Dark],
-		"Shell": [gnubashLight, gnubashDark],
-		"Go": [goLight, goDark],
-		"JavaScript": [javascriptLight, javascriptDark],
-		"Lua": [luaLight, luaDark],
-		"MDX": [mdxLight, mdxDark],
-		"PowerShell": [powershellLight, powershellDark],
-		"Python": [pythonLight, pythonDark],
-		"Rust": [rustLight, rustDark],
-		"TypeScript": [typescriptLight, typescriptDark],
-		"Batchfile": [windowsterminalLight, windowsterminalDark],
-		"Astro": [astroLight, astroDark],
-	},
-} satisfies Package as Package;
+	"CSS": [css3Light, css3Dark],
+	"Shell": [gnubashLight, gnubashDark],
+	"Go": [goLight, goDark],
+	"JavaScript": [javascriptLight, javascriptDark],
+	"Lua": [luaLight, luaDark],
+	"MDX": [mdxLight, mdxDark],
+	"PowerShell": [powershellLight, powershellDark],
+	"Python": [pythonLight, pythonDark],
+	"Rust": [rustLight, rustDark],
+	"TypeScript": [typescriptLight, typescriptDark],
+	"Batchfile": [windowsterminalLight, windowsterminalDark],
+	"Astro": [astroLight, astroDark],
+} satisfies Icon as Icon;

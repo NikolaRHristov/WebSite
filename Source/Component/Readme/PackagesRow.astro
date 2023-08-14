@@ -16,8 +16,8 @@ interface Badge {
 }
 
 interface Language {
-	LightIcon: ImageMetadata | null;
-	DarkIcon: ImageMetadata | null;
+	Light: ImageMetadata | null;
+	Dark: ImageMetadata | null;
 	Name: string;
 	BoC: string;
 }
@@ -27,8 +27,8 @@ interface PackagesRowItem {
 	Link: string;
 	GitHub: string;
 	Description: string;
-	Badges: Set<Badge>;
-	Languages?: Set<Language>;
+	Badge: Set<Badge>;
+	Language?: Set<Language>;
 }
 
 let Items = new Set<PackagesRowItem>();
@@ -50,7 +50,7 @@ for (const Package of Packages) {
 				Name: _JSON.data?.name ?? "",
 				GitHub: _JSON.data?.full_name ?? "",
 				Description: _JSON.data?.description ?? "",
-				Badges: new Set([
+				Badge: new Set([
 					{
 						link: `https://github.com/${Owner}/${Repository}`,
 						img: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Updated&logo=github`,
@@ -84,7 +84,7 @@ for (const Package of Packages) {
 			Name: _JSON?.name ?? "",
 			GitHub,
 			Description: _JSON?.description ?? "",
-			Badges: new Set([
+			Badge: new Set([
 				{
 					img: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
 					link: `https://github.com/${GitHub}/actions/workflows/Node.yml`,
@@ -118,7 +118,7 @@ for (const Package of Packages) {
 
 		Items.add({
 			Link: _JSON?.crate?.repository ?? "",
-			Badges: new Set([
+			Badge: new Set([
 				{
 					img: `https://img.shields.io/github/actions/workflow/status/${GitHub}/rust.yml?branch=main&label=Build&logo=rust`,
 					link: `https://github.com/${GitHub}/actions/workflows/rust.yml`,
@@ -140,20 +140,22 @@ for (const Package of Packages) {
 }
 
 for (const Item of Items) {
-	const languages =
+
+	const Language =
 		(await Request(`GET /repos/${Item.GitHub}/languages`))?.data ?? [];
 
-	Item.Languages = new Set();
+	Item.Language = new Set();
+	console.log(Language);
 
-	for (const language in languages) {
-		if (Object.prototype.hasOwnProperty.call(languages, language)) {
-			let [lightIcon, darkIcon] = Icon[language] ?? [null, null];
+	for (const Name in Language) {
+		if (Object.prototype.hasOwnProperty.call(Language, Name)) {
+			let [Light, Dark] = Icon[Name] ?? [null, null];
 
-			Item.Languages.add({
-				LightIcon: lightIcon,
-				DarkIcon: darkIcon,
-				Name: language,
-				BoC: await Bytes(languages[language]),
+			Item.Language.add({
+				Light,
+				Dark,
+				Name,
+				BoC: await Bytes(Language[Name]),
 			});
 		}
 	}
@@ -167,24 +169,24 @@ const site = Astro.url.origin;
 		<tr>
 			{packageRow.map((_package) => {
 				let colspan = packageRow.length > 1 ? 2 : 3;
-				colspan -= _package.Badges.size >= 1 ? 1 : 0;
+				colspan -= _package.Badge.size >= 1 ? 1 : 0;
 
 				return (
 					<>
-						{_package.Badges.size >= 1 ? (
+						{_package.Badge.size >= 1 ? (
 							<td valign="top" colspan={colspan}>
 								<center>
-									{Array.from(_package.Languages ?? []).map(
+									{Array.from(_package.Language ?? []).map(
 										(language, index) => {
 											let nbsp =
 												index + 1 ==
-												_package.Languages?.size
+												_package.Language?.size
 													? ""
 													: "&nbsp;&nbsp;";
 
 											return (
-												language.LightIcon &&
-												language.DarkIcon && (
+												language.Light &&
+												language.Dark && (
 													<>
 														<picture>
 															<source
@@ -192,7 +194,7 @@ const site = Astro.url.origin;
 																srcset={
 																	site +
 																	language
-																		.LightIcon
+																		.Light
 																		.src
 																}
 															/>
@@ -201,7 +203,7 @@ const site = Astro.url.origin;
 																srcset={
 																	site +
 																	language
-																		.DarkIcon
+																		.Dark
 																		.src
 																}
 															/>
@@ -211,7 +213,7 @@ const site = Astro.url.origin;
 																src={
 																	site +
 																	language
-																		.LightIcon
+																		.Light
 																		.src
 																}
 																title={`${language.BoC} of ${language.Name}`}
@@ -229,30 +231,28 @@ const site = Astro.url.origin;
 										}
 									)}
 									<br />
-									{Array.from(_package.Badges).map(
-										(badge) => (
-											<>
-												<a
-													href={badge.link}
-													target="_blank">
-													<picture>
-														<source
-															media="(prefers-color-scheme: dark)"
-															srcset={`${badge.img}${DARK_STYLE}`}
-														/>
-														<source
-															media="(prefers-color-scheme: light)"
-															srcset={`${badge.img}${LIGHT_STYLE}`}
-														/>
-														<img
-															src={`${badge.img}${DARK_STYLE}`}
-														/>
-													</picture>
-												</a>
-												<br />
-											</>
-										)
-									)}
+									{Array.from(_package.Badge).map((badge) => (
+										<>
+											<a
+												href={badge.link}
+												target="_blank">
+												<picture>
+													<source
+														media="(prefers-color-scheme: dark)"
+														srcset={`${badge.img}${DARK_STYLE}`}
+													/>
+													<source
+														media="(prefers-color-scheme: light)"
+														srcset={`${badge.img}${LIGHT_STYLE}`}
+													/>
+													<img
+														src={`${badge.img}${DARK_STYLE}`}
+													/>
+												</picture>
+											</a>
+											<br />
+										</>
+									))}
 								</center>
 							</td>
 						) : (
