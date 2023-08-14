@@ -1,13 +1,13 @@
 ---
-import PackagesRow from "@Component/Readme/PackagesRow.astro";
-import RelatedHeader from "@Component/Readme/RelatedHeader.astro";
+import Package from "@Component/Readme/Package.astro";
+import Related from "@Component/Readme/Related.astro";
 import type { PackageCell } from "@Option/Cell.js";
 ---
 
 <>
-	<RelatedHeader />
+	<Related />
 	<table>
-		<PackagesRow
+		<Package
 			Packages={new Set<PackageCell>([
 				"NPM:astro-compress",
 				"NPM:astro-rome",
