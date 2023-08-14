@@ -7,20 +7,21 @@ const octokit = new Octokit({
 });
 
 export default async (
-	where: string,
+	Where: string,
 	// rome-ignore lint/suspicious/noExplicitAny:
-	_with: any = {},
-	type = "octokit"
+	With: any = {},
+	Type = "octokit"
 	// rome-ignore lint/suspicious/noExplicitAny:
 ): Promise<OctokitResponse<any, number> | any> => {
 	try {
-		console.log(`Successfully ${where}`);
+		console.log(`Successfully ${Where}`);
 
-		switch (type) {
+		switch (Type) {
 			case "octokit":
-				return await octokit.request(where, _with);
+				return await octokit.request(Where, With);
 		}
-	} catch (_e) {
-		console.log(`Could not ${where}`);
+	} catch (_Error) {
+		console.log(_Error);
+		console.log(`Could not ${Where}`);
 	}
 };
