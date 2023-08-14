@@ -140,6 +140,8 @@ for (const Package of Packages) {
 }
 
 for (const Item of Items) {
+	console.log(Item.GitHub);
+
 	const Language =
 		(await Request(`GET /repos/${Item.GitHub}/languages`))?.data ?? [];
 
