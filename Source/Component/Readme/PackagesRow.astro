@@ -34,7 +34,7 @@ interface PackagesRowItem {
 let Items = new Set<PackagesRowItem>();
 
 for (const Package of Packages) {
-	if (Package.match(/github:/)) {
+	if (Package.match(/GitHub:/)) {
 		const GitHub = Package.split(":")[1];
 		const Owner = GitHub.split("/")[0];
 		const Repository = GitHub.split("/")[1];
@@ -68,7 +68,7 @@ for (const Package of Packages) {
 		}
 	}
 
-	if (Package.match(/npm:/)) {
+	if (Package.match(/NPM:/)) {
 		const _Package = Package.split(":")[1];
 		const _JSON = await (
 			await fetch(`https://registry.npmjs.org/${_Package}`)

@@ -1,2 +1,2 @@
 export type PackageCell = `${PackageCellType}:${string}`;
-export type PackageCellType = "npm" | "github" | "cargo";
+export type PackageCellType = "NPM" | "GitHub" | "cargo";

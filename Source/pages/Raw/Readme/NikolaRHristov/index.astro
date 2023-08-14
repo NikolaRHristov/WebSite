@@ -7,50 +7,50 @@ const Packages = Astro.props["packages"] ?? new Map<string, Set<PackageCell>>();
 Packages.set(
 	"projects",
 	new Set<PackageCell>([
-		"github:astro-starters/pac-stac",
-		"npm:files-pipe",
+		"GitHub:astro-starters/pac-stac",
+		"NPM:files-pipe",
 		"cargo:innkeeper",
-		"github:NikolaRHristov/bench",
-		"github:RoundedCorners/app",
+		"GitHub:NikolaRHristov/bench",
+		"GitHub:RoundedCorners/app",
 	])
 );
 
 Packages.set(
 	"astro",
 	new Set<PackageCell>([
-		"npm:astro-compress",
-		"npm:astro-convert",
-		"npm:astro-critters",
-		"npm:astro-dashboard",
-		"npm:astro-dead-links",
-		"npm:astro-networks",
-		"npm:astro-rome",
-		"npm:astro-short-urls",
-		"npm:astro-starter-template",
+		"NPM:astro-compress",
+		"NPM:astro-convert",
+		"NPM:astro-critters",
+		"NPM:astro-dashboard",
+		"NPM:astro-dead-links",
+		"NPM:astro-networks",
+		"NPM:astro-rome",
+		"NPM:astro-short-urls",
+		"NPM:astro-starter-template",
 	])
 );
 
 Packages.set(
 	"npm",
-	new Set<PackageCell>(["npm:typescript-esbuild", "npm:deployment-delete"])
+	new Set<PackageCell>(["NPM:typescript-esbuild", "NPM:deployment-delete"])
 );
 
 Packages.set(
 	"github",
 	new Set<PackageCell>([
-		"npm:@yesmaintenance/scripts",
-		"npm:github-history-slider",
+		"NPM:@yesmaintenance/scripts",
+		"NPM:github-history-slider",
 	])
 );
 
 Packages.set(
 	"dotfiles",
 	new Set<PackageCell>([
-		"github:NikolaRHristov/dot",
-		"github:NikolaRHristov/nvim",
-		"github:NikolaRHristov/powershell",
-		"github:NikolaRHristov/bash",
-		"github:NikolaRHristov/zsh",
+		"GitHub:NikolaRHristov/dot",
+		"GitHub:NikolaRHristov/nvim",
+		"GitHub:NikolaRHristov/powershell",
+		"GitHub:NikolaRHristov/bash",
+		"GitHub:NikolaRHristov/zsh",
 	])
 );
 ---
