@@ -4,21 +4,19 @@ import Header from "@Component/Header.astro";
 import "@Style/Base.css";
 
 const {
-	fonts = [],
-	title = "Nikola Hristov",
-	description = "Web Developer",
+	Font = [],
+	Title = "Nikola Hristov",
+	Description = "Web Developer",
 } = Astro.props;
 
-const links = (hrefs = []) =>
-	hrefs
-		.map(
-			(href) => `<link
+const Link = (Link = []) =>
+	Link.map(
+		(href) => `<link
 			rel="stylesheet"
 			type="text/css"
 			href="${href}"
 		/>`
-		)
-		.join("\n");
+	).join("\n");
 ---
 
 <!DOCTYPE html>
@@ -30,9 +28,9 @@ const links = (hrefs = []) =>
 		</script>
 
 		<!-- Meta -->
-		<title>{title}</title>
+		<title>{Title}</title>
 		<meta charset="utf-8" />
-		<meta name="description" content={description} />
+		<meta name="description" content={Description} />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		<meta name="theme-color" content="#ffffff" />
 		<meta name="format-detection" content="telephone=no" />
@@ -57,7 +55,7 @@ const links = (hrefs = []) =>
 
 		<slot name="styles" />
 
-		<Fragment set:html={links(fonts.map((font: any) => font.href))} />
+		<Fragment set:html={Link(Font.map((font: any) => font.href))} />
 
 		<!-- Favicon -->
 
@@ -75,14 +73,13 @@ const links = (hrefs = []) =>
 			rel="webmention"
 			href="https://webmention.io/nikolahristov.tech/webmention"
 		/>
-
 		<link
 			rel="pingback"
 			href="https://webmention.io/nikolahristov.tech/xmlrpc"
 		/>
 	</head>
 	<body>
-		<div id="nikolahristov-web" class="flex grow flex-col">
+		<div id="nikolahristov-web" class="flex flex-col grow">
 			<div id="header" class="grow">
 				<Header />
 			</div>
@@ -97,7 +94,7 @@ const links = (hrefs = []) =>
 			</script>
 		</div>
 		<a
-			class="absolute left-0 top-0 hidden"
+			class="absolute top-0 left-0 hidden"
 			rel="me"
 			href="https://mastodon.social/@nikolahristov"></a>
 	</body>
