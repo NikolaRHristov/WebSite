@@ -192,7 +192,7 @@ const Site = Astro.url.origin;
 										<br />
 									</>
 								))}
-								<center>
+								<p align="center">
 									{Array.from(Package.Language ?? []).map(
 										(Language, Index) =>
 											Language.Light &&
@@ -239,13 +239,12 @@ const Site = Astro.url.origin;
 												</>
 											)
 									)}
-								</center>
+								</p>
 							</td>
 						) : (
 							""
 						)}
 						<td valign="top" colspan={Span}>
-							<br />
 							<a href={Package.Link} target="_blank">
 								<picture>
 									<source
