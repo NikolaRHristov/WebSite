@@ -4,9 +4,8 @@ import Chunks from "@Library/Chunks";
 import Request from "@Library/Request";
 import Icon from "@Option/Icon";
 
-const DARK_STYLE = "&color=black&logoColor=white&labelColor=black&logoWidth=15";
-const LIGHT_STYLE =
-	"&color=white&logoColor=black&labelColor=white&logoWidth=15";
+const Dark = "&color=black&logoColor=white&labelColor=black&logoWidth=15";
+const Light = "&color=white&logoColor=black&labelColor=white&logoWidth=15";
 
 const { Packages } = Astro.props;
 
@@ -179,14 +178,14 @@ const Site = Astro.url.origin;
 											<picture>
 												<source
 													media="(prefers-color-scheme: dark)"
-													srcset={`${Badge.Image}${DARK_STYLE}`}
+													srcset={`${Badge.Image}${Dark}`}
 												/>
 												<source
 													media="(prefers-color-scheme: light)"
-													srcset={`${Badge.Image}${LIGHT_STYLE}`}
+													srcset={`${Badge.Image}${Light}`}
 												/>
 												<img
-													src={`${Badge.Image}${DARK_STYLE}`}
+													src={`${Badge.Image}${Dark}`}
 												/>
 											</picture>
 										</a>
@@ -251,14 +250,14 @@ const Site = Astro.url.origin;
 								<picture>
 									<source
 										media="(prefers-color-scheme: dark)"
-										srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${DARK_STYLE}`}
+										srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}`}
 									/>
 									<source
 										media="(prefers-color-scheme: light)"
-										srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${LIGHT_STYLE}`}
+										srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Light}`}
 									/>
 									<img
-										src={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${DARK_STYLE}`}
+										src={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}`}
 									/>
 								</picture>
 							</a>
