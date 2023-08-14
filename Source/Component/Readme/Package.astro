@@ -140,13 +140,10 @@ for (const Package of Packages) {
 }
 
 for (const Item of Items) {
-	console.log(Item.GitHub);
-
 	const Language =
 		(await Request(`GET /repos/${Item.GitHub}/languages`))?.data ?? [];
 
 	Item.Language = new Set();
-	console.log(Language);
 
 	for (const Name in Language) {
 		if (Object.prototype.hasOwnProperty.call(Language, Name)) {
@@ -166,78 +163,78 @@ const site = Astro.url.origin;
 ---
 
 {
-	[...Chunks(Array.from(Items), 2)].map((packageRow) => (
+	[...Chunks(Array.from(Items), 2)].map((Row) => (
 		<tr>
-			{packageRow.map((_package) => {
-				let colspan = packageRow.length > 1 ? 2 : 3;
-				colspan -= _package.Badge.size >= 1 ? 1 : 0;
+			{Row.map((Package) => {
+				let Span = Row.length > 1 ? 2 : 3;
+				Span -= Package.Badge.size >= 1 ? 1 : 0;
 
 				return (
 					<>
-						{_package.Badge.size >= 1 ? (
-							<td valign="top" colspan={colspan}>
-								<center>
-									{Array.from(_package.Badge).map((badge) => (
-										<>
-											<a
-												href={badge.link}
-												target="_blank">
-												<picture>
-													<source
-														media="(prefers-color-scheme: dark)"
-														srcset={`${badge.img}${DARK_STYLE}`}
-													/>
-													<source
-														media="(prefers-color-scheme: light)"
-														srcset={`${badge.img}${LIGHT_STYLE}`}
-													/>
-													<img
-														src={`${badge.img}${DARK_STYLE}`}
-													/>
-												</picture>
-											</a>
-											<br />
-										</>
-									))}
-								</center>
-							</td>
-						) : (
-							""
-						)}
-						<td valign="top" colspan={colspan}>
-							<br />
-							<a href={_package.Link} target="_blank">
+						<td valign="top" colspan={Span}>
+							{Package.Badge.size >= 1 ? (
+								<td valign="top" colspan={Span}>
+									<center>
+										{Array.from(Package.Badge).map(
+											(badge) => (
+												<>
+													<a
+														href={badge.link}
+														target="_blank">
+														<picture>
+															<source
+																media="(prefers-color-scheme: dark)"
+																srcset={`${badge.img}${DARK_STYLE}`}
+															/>
+															<source
+																media="(prefers-color-scheme: light)"
+																srcset={`${badge.img}${LIGHT_STYLE}`}
+															/>
+															<img
+																src={`${badge.img}${DARK_STYLE}`}
+															/>
+														</picture>
+													</a>
+												</>
+											)
+										)}
+									</center>
+								</td>
+							) : (
+								""
+							)}
+							<a href={Package.Link} target="_blank">
 								<picture>
 									<source
 										media="(prefers-color-scheme: dark)"
-										srcset={`https://img.shields.io/github/stars/${_package.GitHub}?label=stars&logo=github${DARK_STYLE}`}
+										srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${DARK_STYLE}`}
 									/>
 									<source
 										media="(prefers-color-scheme: light)"
-										srcset={`https://img.shields.io/github/stars/${_package.GitHub}?label=stars&logo=github${LIGHT_STYLE}`}
+										srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${LIGHT_STYLE}`}
 									/>
 									<img
-										src={`https://img.shields.io/github/stars/${_package.GitHub}?label=stars&logo=github${DARK_STYLE}`}
+										src={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${DARK_STYLE}`}
 									/>
 								</picture>
 							</a>
 							<br />
-							<a href={_package.Link} target="_blank">
-								<b>{_package.Name}</b>
+							<a href={Package.Link} target="_blank">
+								<b>{Package.Name}</b>
 							</a>
 							<br />
 							<b
-								set:html={_package.Description?.split(".")
+								set:html={Package.Description?.split(".")
 									?.join(".<br />")
 									?.split("!")
 									?.join("!<br />")
 									?.split("?")
 									?.join("?<br />")}
 							/>
-							{Array.from(_package.Language ?? []).map(
+							{Array.from(Package.Language ?? []).map(
 								(language, index) => {
 									let nbsp =
-										index + 1 == _package.Language?.size
+										index + 1 == Package.Language?.size
 											? ""
 											: "&nbsp;&nbsp;";
 
