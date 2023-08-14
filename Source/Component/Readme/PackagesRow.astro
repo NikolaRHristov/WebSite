@@ -140,7 +140,6 @@ for (const Package of Packages) {
 }
 
 for (const Item of Items) {
-
 	const Language =
 		(await Request(`GET /repos/${Item.GitHub}/languages`))?.data ?? [];
 
@@ -176,61 +175,6 @@ const site = Astro.url.origin;
 						{_package.Badge.size >= 1 ? (
 							<td valign="top" colspan={colspan}>
 								<center>
-									{Array.from(_package.Language ?? []).map(
-										(language, index) => {
-											let nbsp =
-												index + 1 ==
-												_package.Language?.size
-													? ""
-													: "&nbsp;&nbsp;";
-
-											return (
-												language.Light &&
-												language.Dark && (
-													<>
-														<picture>
-															<source
-																media="(prefers-color-scheme: dark)"
-																srcset={
-																	site +
-																	language
-																		.Light
-																		.src
-																}
-															/>
-															<source
-																media="(prefers-color-scheme: light)"
-																srcset={
-																	site +
-																	language
-																		.Dark
-																		.src
-																}
-															/>
-															<img
-																width="18"
-																height="18"
-																src={
-																	site +
-																	language
-																		.Light
-																		.src
-																}
-																title={`${language.BoC} of ${language.Name}`}
-																alt={
-																	language.Name
-																}
-															/>
-														</picture>
-														<Fragment
-															set:html={nbsp}
-														/>
-													</>
-												)
-											);
-										}
-									)}
-									<br />
 									{Array.from(_package.Badge).map((badge) => (
 										<>
 											<a
@@ -288,7 +232,49 @@ const site = Astro.url.origin;
 									?.split("?")
 									?.join("?<br />")}
 							/>
-							<br />
+							{Array.from(_package.Language ?? []).map(
+								(language, index) => {
+									let nbsp =
+										index + 1 == _package.Language?.size
+											? ""
+											: "&nbsp;&nbsp;";
+
+									return (
+										language.Light &&
+										language.Dark && (
+											<>
+												<picture>
+													<source
+														media="(prefers-color-scheme: dark)"
+														srcset={
+															site +
+															language.Light.src
+														}
+													/>
+													<source
+														media="(prefers-color-scheme: light)"
+														srcset={
+															site +
+															language.Dark.src
+														}
+													/>
+													<img
+														width="18"
+														height="18"
+														src={
+															site +
+															language.Light.src
+														}
+														title={`${language.BoC} of ${language.Name}`}
+														alt={language.Name}
+													/>
+												</picture>
+												<Fragment set:html={nbsp} />
+											</>
+										)
+									);
+								}
+							)}
 						</td>
 					</>
 				);
