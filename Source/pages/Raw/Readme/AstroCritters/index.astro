@@ -1,7 +1,7 @@
 ---
 import PackagesRow from "@Component/Readme/PackagesRow.astro";
 import RelatedHeader from "@Component/Readme/RelatedHeader.astro";
-import type { PackageCell } from "@Option/PackageCell.js";
+import type { PackageCell } from "@Option/Cell.js";
 ---
 
 <>
@@ -9,8 +9,8 @@ import type { PackageCell } from "@Option/PackageCell.js";
 	<table>
 		<PackagesRow
 			Packages={new Set<PackageCell>([
-				"npm:astro-compress",
-				"npm:astro-rome",
+				"NPM:astro-compress",
+				"NPM:astro-rome",
 			])}
 		/>
 	</table>

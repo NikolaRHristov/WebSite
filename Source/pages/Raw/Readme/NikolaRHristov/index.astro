@@ -1,11 +1,11 @@
 ---
 import PackagesRow from "@Component/Readme/PackagesRow.astro";
-import type { PackageCell } from "@Option/PackageCell.js";
+import type { PackageCell } from "@Option/Cell.js";
 
-const Packages = Astro.props["packages"] ?? new Map<string, Set<PackageCell>>();
+const Packages = Astro.props["Packages"] ?? new Map<string, Set<PackageCell>>();
 
 Packages.set(
-	"projects",
+	"Project",
 	new Set<PackageCell>([
 		"GitHub:astro-starters/pac-stac",
 		"NPM:files-pipe",
@@ -16,7 +16,7 @@ Packages.set(
 );
 
 Packages.set(
-	"astro",
+	"Astro",
 	new Set<PackageCell>([
 		"NPM:astro-compress",
 		"NPM:astro-convert",
@@ -31,12 +31,12 @@ Packages.set(
 );
 
 Packages.set(
-	"npm",
+	"NPM",
 	new Set<PackageCell>(["NPM:typescript-esbuild", "NPM:deployment-delete"])
 );
 
 Packages.set(
-	"github",
+	"GitHub",
 	new Set<PackageCell>([
 		"NPM:@yesmaintenance/scripts",
 		"NPM:github-history-slider",
@@ -44,7 +44,7 @@ Packages.set(
 );
 
 Packages.set(
-	"dotfiles",
+	"Dot",
 	new Set<PackageCell>([
 		"GitHub:NikolaRHristov/dot",
 		"GitHub:NikolaRHristov/nvim",
@@ -68,10 +68,10 @@ Packages.set(
 	<table>
 		<tr>
 			<td colspan="4">
-				<h2>🔥 Projects</h2>
+				<h2>🔥 Project</h2>
 			</td>
 		</tr>
-		<PackagesRow Packages={Packages.get("projects")} />
+		<PackagesRow Packages={Packages.get("Project")} />
 	</table>
 
 	<table>
@@ -94,7 +94,7 @@ Packages.set(
 				</h2>
 			</td>
 		</tr>
-		<PackagesRow Packages={Packages.get("astro")} />
+		<PackagesRow Packages={Packages.get("Astro")} />
 	</table>
 
 	<table>
@@ -117,7 +117,7 @@ Packages.set(
 				</h2>
 			</td>
 		</tr>
-		<PackagesRow Packages={Packages.get("npm")} />
+		<PackagesRow Packages={Packages.get("NPM")} />
 	</table>
 
 	<table>
@@ -131,7 +131,7 @@ Packages.set(
 				</h2>
 			</td>
 		</tr>
-		<PackagesRow Packages={Packages.get("dotfiles")} />
+		<PackagesRow Packages={Packages.get("Dot")} />
 	</table>
 
 	<table>
@@ -154,7 +154,7 @@ Packages.set(
 				</h2>
 			</td>
 		</tr>
-		<PackagesRow Packages={Packages.get("github")} />
+		<PackagesRow Packages={Packages.get("GitHub")} />
 	</table>
 
 	<a href="https://app.daily.dev/nikolahristov" target="_blank"
