@@ -74,10 +74,10 @@ for (const _package of Packages) {
 			await fetch(`https://registry.npmjs.org/${packageScopeName}`)
 		).json();
 
-		const GitHubOwnerRepo = PackageJSON.homepage
-			.replace(/(git\+)?http?s:\/\/github.com\//, "")
-			.replace("#readme", "")
-			.replace(".git", "");
+		const GitHubOwnerRepo = (PackageJSON?.homepage ?? "")
+			?.replace(/(git\+)?http?s:\/\/github.com\//, "")
+			?.replace("#readme", "")
+			?.replace(".git", "");
 
 		Items.add({
 			Link: `https://github.com/${GitHubOwnerRepo}`,
@@ -112,9 +112,9 @@ for (const _package of Packages) {
 		).json();
 
 		const GitHubOwnerRepo = (CrateJSON?.crate?.repository ?? "")
-			.replace(/(git\+)?http?s:\/\/github.com\//, "")
-			.replace("#readme", "")
-			.replace(".git", "");
+			?.replace(/(git\+)?http?s:\/\/github.com\//, "")
+			?.replace("#readme", "")
+			?.replace(".git", "");
 
 		Items.add({
 			Link: CrateJSON?.crate?.repository ?? "",
@@ -221,7 +221,9 @@ const site = Astro.url.origin;
 																}
 															/>
 														</picture>
-														<Fragment set:html={nbsp} />
+														<Fragment
+															set:html={nbsp}
+														/>
 													</>
 												)
 											);
@@ -280,8 +282,7 @@ const site = Astro.url.origin;
 							</a>
 							<br />
 							<b
-								set:html={_package.Description
-									?.split(".")
+								set:html={_package.Description?.split(".")
 									?.join(".<br />")
 									?.split("!")
 									?.join("!<br />")
