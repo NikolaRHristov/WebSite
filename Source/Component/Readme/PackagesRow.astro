@@ -2,7 +2,7 @@
 import Bytes from "@Library/Bytes";
 import Chunks from "@Library/Chunks";
 import Request from "@Library/Request";
-import Package from "@Option/Package";
+import Icon from "@Option/Icon";
 
 const DARK_STYLE = "&color=black&logoColor=white&labelColor=black&logoWidth=15";
 const LIGHT_STYLE =
@@ -33,123 +33,123 @@ interface PackagesRowItem {
 
 let Items = new Set<PackagesRowItem>();
 
-for (const _package of Packages) {
-	if (_package.match(/github:/)) {
-		const GitHubOwnerRepo = _package.split(":")[1];
-		const GitHubOwner = GitHubOwnerRepo.split("/")[0];
-		const GitHubRepo = GitHubOwnerRepo.split("/")[1];
+for (const Package of Packages) {
+	if (Package.match(/github:/)) {
+		const GitHub = Package.split(":")[1];
+		const Owner = GitHub.split("/")[0];
+		const Repository = GitHub.split("/")[1];
 
-		const GitHubJSON = await Request(`GET /repos/${GitHubOwnerRepo}`, {
-			owner: GitHubOwner,
-			repo: GitHubRepo,
+		const _JSON = await Request(`GET /repos/${GitHub}`, {
+			owner: Owner,
+			repo: Repository,
 		});
 
-		if (GitHubJSON?.data) {
+		if (_JSON?.data) {
 			Items.add({
-				Link: GitHubJSON.data?.html_url ?? "",
-				Name: GitHubJSON.data?.name ?? "",
-				GitHub: GitHubJSON.data?.full_name ?? "",
-				Description: GitHubJSON.data?.description ?? "",
+				Link: _JSON.data?.html_url ?? "",
+				Name: _JSON.data?.name ?? "",
+				GitHub: _JSON.data?.full_name ?? "",
+				Description: _JSON.data?.description ?? "",
 				Badges: new Set([
 					{
-						link: `https://github.com/${GitHubOwner}/${GitHubRepo}`,
-						img: `https://img.shields.io/github/last-commit/${GitHubOwner}/${GitHubRepo}?label=Last%20Updated&logo=github`,
+						link: `https://github.com/${Owner}/${Repository}`,
+						img: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Updated&logo=github`,
 					},
 					{
-						link: `https://github.com/${GitHubOwner}/${GitHubRepo}`,
-						img: `https://img.shields.io/github/issues/${GitHubOwner}/${GitHubRepo}?label=Issues&logo=github`,
+						link: `https://github.com/${Owner}/${Repository}`,
+						img: `https://img.shields.io/github/issues/${Owner}/${Repository}?label=Issues&logo=github`,
 					},
 					{
-						link: `https://github.com/${GitHubOwner}/${GitHubRepo}`,
-						img: `https://img.shields.io/github/downloads/${GitHubOwner}/${GitHubRepo}/total?label=Downloads&logo=github`,
+						link: `https://github.com/${Owner}/${Repository}`,
+						img: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Downloads&logo=github`,
 					},
 				]),
 			});
 		}
 	}
 
-	if (_package.match(/npm:/)) {
-		const packageScopeName = _package.split(":")[1];
-		const PackageJSON = await (
-			await fetch(`https://registry.npmjs.org/${packageScopeName}`)
+	if (Package.match(/npm:/)) {
+		const _Package = Package.split(":")[1];
+		const _JSON = await (
+			await fetch(`https://registry.npmjs.org/${_Package}`)
 		).json();
 
-		const GitHubOwnerRepo = (PackageJSON?.homepage ?? "")
+		const GitHub = (_JSON?.homepage ?? "")
 			?.replace(/(git\+)?http?s:\/\/github.com\//, "")
 			?.replace("#readme", "")
 			?.replace(".git", "");
 
 		Items.add({
-			Link: `https://github.com/${GitHubOwnerRepo}`,
-			Name: PackageJSON?.name ?? "",
-			GitHub: GitHubOwnerRepo,
-			Description: PackageJSON?.description ?? "",
+			Link: `https://github.com/${GitHub}`,
+			Name: _JSON?.name ?? "",
+			GitHub,
+			Description: _JSON?.description ?? "",
 			Badges: new Set([
 				{
-					img: `https://img.shields.io/github/actions/workflow/status/${GitHubOwnerRepo}/Node.yml?branch=main&label=Build&logo=node.js`,
-					link: `https://github.com/${GitHubOwnerRepo}/actions/workflows/Node.yml`,
+					img: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
+					link: `https://github.com/${GitHub}/actions/workflows/Node.yml`,
 				},
 				{
-					link: `https://npmjs.org/${PackageJSON.name}`,
-					img: `https://img.shields.io/npm/v/${PackageJSON.name}?label=Version&logo=npm`,
+					link: `https://npmjs.org/${_JSON.name}`,
+					img: `https://img.shields.io/npm/v/${_JSON.name}?label=Version&logo=npm`,
 				},
 				{
-					link: `https://npmjs.org/${PackageJSON.name}`,
-					img: `https://img.shields.io/librariesio/release/npm/${PackageJSON.name}?label=&logo=dependabot`,
+					link: `https://npmjs.org/${_JSON.name}`,
+					img: `https://img.shields.io/librariesio/release/npm/${_JSON.name}?label=&logo=dependabot`,
 				},
 				{
-					link: `https://npmjs.org/${PackageJSON.name}`,
-					img: `https://img.shields.io/npm/dt/${PackageJSON.name}?label=Downloads&logo=npm`,
+					link: `https://npmjs.org/${_JSON.name}`,
+					img: `https://img.shields.io/npm/dt/${_JSON.name}?label=Downloads&logo=npm`,
 				},
 			]),
 		});
 	}
 
-	if (_package.match(/cargo:/)) {
-		const crateScopeName = _package.split(":")[1];
-		const CrateJSON = await (
-			await fetch(`https://crates.io/api/v1/crates/${crateScopeName}`)
+	if (Package.match(/cargo:/)) {
+		const Crate = Package.split(":")[1];
+		const _JSON = await (
+			await fetch(`https://crates.io/api/v1/crates/${Crate}`)
 		).json();
 
-		const GitHubOwnerRepo = (CrateJSON?.crate?.repository ?? "")
+		const GitHub = (_JSON?.crate?.repository ?? "")
 			?.replace(/(git\+)?http?s:\/\/github.com\//, "")
 			?.replace("#readme", "")
 			?.replace(".git", "");
 
 		Items.add({
-			Link: CrateJSON?.crate?.repository ?? "",
+			Link: _JSON?.crate?.repository ?? "",
 			Badges: new Set([
 				{
-					img: `https://img.shields.io/github/actions/workflow/status/${GitHubOwnerRepo}/rust.yml?branch=main&label=Build&logo=rust`,
-					link: `https://github.com/${GitHubOwnerRepo}/actions/workflows/rust.yml`,
+					img: `https://img.shields.io/github/actions/workflow/status/${GitHub}/rust.yml?branch=main&label=Build&logo=rust`,
+					link: `https://github.com/${GitHub}/actions/workflows/rust.yml`,
 				},
 				{
-					link: `https://crates.io/${CrateJSON?.crate?.name}`,
-					img: `https://img.shields.io/crates/v/${CrateJSON?.crate?.name}?label=Version&logo=rust`,
+					link: `https://crates.io/${_JSON?.crate?.name}`,
+					img: `https://img.shields.io/crates/v/${_JSON?.crate?.name}?label=Version&logo=rust`,
 				},
 				{
-					link: `https://crates.io/${CrateJSON?.crate?.name}`,
-					img: `https://img.shields.io/crates/d/${CrateJSON?.crate?.name}?label=Downloads&logo=rust`,
+					link: `https://crates.io/${_JSON?.crate?.name}`,
+					img: `https://img.shields.io/crates/d/${_JSON?.crate?.name}?label=Downloads&logo=rust`,
 				},
 			]),
-			Description: CrateJSON?.crate?.description ?? "",
-			GitHub: GitHubOwnerRepo,
-			Name: CrateJSON?.crate?.name ?? "",
+			Description: _JSON?.crate?.description ?? "",
+			GitHub,
+			Name: _JSON?.crate?.name ?? "",
 		});
 	}
 }
 
-for (const item of Items) {
+for (const Item of Items) {
 	const languages =
-		(await Request(`GET /repos/${item.GitHub}/languages`))?.data ?? [];
+		(await Request(`GET /repos/${Item.GitHub}/languages`))?.data ?? [];
 
-	item.Languages = new Set();
+	Item.Languages = new Set();
 
 	for (const language in languages) {
 		if (Object.prototype.hasOwnProperty.call(languages, language)) {
-			let [lightIcon, darkIcon] = Package.icons[language] ?? [null, null];
+			let [lightIcon, darkIcon] = Icon[language] ?? [null, null];
 
-			item.Languages.add({
+			Item.Languages.add({
 				LightIcon: lightIcon,
 				DarkIcon: darkIcon,
 				Name: language,
@@ -174,7 +174,6 @@ const site = Astro.url.origin;
 						{_package.Badges.size >= 1 ? (
 							<td valign="top" colspan={colspan}>
 								<center>
-									<br />
 									{Array.from(_package.Languages ?? []).map(
 										(language, index) => {
 											let nbsp =
