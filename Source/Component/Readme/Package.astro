@@ -11,8 +11,8 @@ const LIGHT_STYLE =
 const { Packages } = Astro.props;
 
 interface Badge {
-	img: string;
-	link: string;
+	Image: string;
+	Link: string;
 }
 
 interface Language {
@@ -52,16 +52,16 @@ for (const Package of Packages) {
 				Description: _JSON.data?.description ?? "",
 				Badge: new Set([
 					{
-						link: `https://github.com/${Owner}/${Repository}`,
-						img: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Updated&logo=github`,
+						Link: `https://github.com/${Owner}/${Repository}`,
+						Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Updated&logo=github`,
 					},
 					{
-						link: `https://github.com/${Owner}/${Repository}`,
-						img: `https://img.shields.io/github/issues/${Owner}/${Repository}?label=Issues&logo=github`,
+						Link: `https://github.com/${Owner}/${Repository}`,
+						Image: `https://img.shields.io/github/issues/${Owner}/${Repository}?label=Issues&logo=github`,
 					},
 					{
-						link: `https://github.com/${Owner}/${Repository}`,
-						img: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Downloads&logo=github`,
+						Link: `https://github.com/${Owner}/${Repository}`,
+						Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Downloads&logo=github`,
 					},
 				]),
 			});
@@ -86,20 +86,20 @@ for (const Package of Packages) {
 			Description: _JSON?.description ?? "",
 			Badge: new Set([
 				{
-					img: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
-					link: `https://github.com/${GitHub}/actions/workflows/Node.yml`,
+					Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
+					Link: `https://github.com/${GitHub}/actions/workflows/Node.yml`,
 				},
 				{
-					link: `https://npmjs.org/${_JSON.name}`,
-					img: `https://img.shields.io/npm/v/${_JSON.name}?label=Version&logo=npm`,
+					Link: `https://npmjs.org/${_JSON.name}`,
+					Image: `https://img.shields.io/npm/v/${_JSON.name}?label=Version&logo=npm`,
 				},
 				{
-					link: `https://npmjs.org/${_JSON.name}`,
-					img: `https://img.shields.io/librariesio/release/npm/${_JSON.name}?label=&logo=dependabot`,
+					Link: `https://npmjs.org/${_JSON.name}`,
+					Image: `https://img.shields.io/librariesio/release/npm/${_JSON.name}?label=&logo=dependabot`,
 				},
 				{
-					link: `https://npmjs.org/${_JSON.name}`,
-					img: `https://img.shields.io/npm/dt/${_JSON.name}?label=Downloads&logo=npm`,
+					Link: `https://npmjs.org/${_JSON.name}`,
+					Image: `https://img.shields.io/npm/dt/${_JSON.name}?label=Downloads&logo=npm`,
 				},
 			]),
 		});
@@ -120,16 +120,16 @@ for (const Package of Packages) {
 			Link: _JSON?.crate?.repository ?? "",
 			Badge: new Set([
 				{
-					img: `https://img.shields.io/github/actions/workflow/status/${GitHub}/rust.yml?branch=main&label=Build&logo=rust`,
-					link: `https://github.com/${GitHub}/actions/workflows/rust.yml`,
+					Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/rust.yml?branch=main&label=Build&logo=rust`,
+					Link: `https://github.com/${GitHub}/actions/workflows/rust.yml`,
 				},
 				{
-					link: `https://crates.io/${_JSON?.crate?.name}`,
-					img: `https://img.shields.io/crates/v/${_JSON?.crate?.name}?label=Version&logo=rust`,
+					Link: `https://crates.io/${_JSON?.crate?.name}`,
+					Image: `https://img.shields.io/crates/v/${_JSON?.crate?.name}?label=Version&logo=rust`,
 				},
 				{
-					link: `https://crates.io/${_JSON?.crate?.name}`,
-					img: `https://img.shields.io/crates/d/${_JSON?.crate?.name}?label=Downloads&logo=rust`,
+					Link: `https://crates.io/${_JSON?.crate?.name}`,
+					Image: `https://img.shields.io/crates/d/${_JSON?.crate?.name}?label=Downloads&logo=rust`,
 				},
 			]),
 			Description: _JSON?.crate?.description ?? "",
@@ -171,34 +171,82 @@ const Site = Astro.url.origin;
 
 				return (
 					<>
+						{Package.Badge.size >= 1 ? (
+							<td valign="top" colspan={Span}>
+								{Array.from(Package.Badge).map((Badge) => (
+									<>
+										<a href={Badge.Link} target="_blank">
+											<picture>
+												<source
+													media="(prefers-color-scheme: dark)"
+													srcset={`${Badge.Image}${DARK_STYLE}`}
+												/>
+												<source
+													media="(prefers-color-scheme: light)"
+													srcset={`${Badge.Image}${LIGHT_STYLE}`}
+												/>
+												<img
+													src={`${Badge.Image}${DARK_STYLE}`}
+												/>
+											</picture>
+										</a>
+										<br />
+									</>
+								))}
+								<center>
+									{Array.from(Package.Language ?? []).map(
+										(Language, Index) =>
+											Language.Light &&
+											Language.Dark && (
+												<>
+													<picture>
+														<source
+															media="(prefers-color-scheme: dark)"
+															srcset={
+																Site +
+																Language.Light
+																	.src
+															}
+														/>
+														<source
+															media="(prefers-color-scheme: light)"
+															srcset={
+																Site +
+																Language.Dark
+																	.src
+															}
+														/>
+														<img
+															width="18"
+															height="18"
+															src={
+																Site +
+																Language.Light
+																	.src
+															}
+															title={`${Language.BoC} of ${Language.Name}`}
+															alt={Language.Name}
+														/>
+													</picture>
+													<Fragment
+														set:html={
+															Index + 1 ==
+															Package.Language
+																?.size
+																? ""
+																: "&nbsp;&nbsp;"
+														}
+													/>
+												</>
+											)
+									)}
+								</center>
+							</td>
+						) : (
+							""
+						)}
 						<td valign="top" colspan={Span}>
 							<br />
-							{Array.from(Package.Badge).map((Badge, Index) => (
-								<>
-									<a href={Badge.link} target="_blank">
-										<picture>
-											<source
-												media="(prefers-color-scheme: dark)"
-												srcset={`${Badge.img}${DARK_STYLE}`}
-											/>
-											<source
-												media="(prefers-color-scheme: light)"
-												srcset={`${Badge.img}${LIGHT_STYLE}`}
-											/>
-											<img
-												src={`${Badge.img}${DARK_STYLE}`}
-											/>
-										</picture>
-									</a>
-									<Fragment
-										set:html={
-											Index == Package.Badge?.size
-												? ""
-												: "&nbsp;&nbsp;"
-										}
-									/>
-								</>
-							))}
 							<a href={Package.Link} target="_blank">
 								<picture>
 									<source
@@ -227,47 +275,6 @@ const Site = Astro.url.origin;
 									?.split("?")
 									?.join("?<br />")}
 							/>
-							{Array.from(Package.Language ?? []).map(
-								(Language, Index) =>
-									Language.Light &&
-									Language.Dark && (
-										<>
-											<picture>
-												<source
-													media="(prefers-color-scheme: dark)"
-													srcset={
-														Site +
-														Language.Light.src
-													}
-												/>
-												<source
-													media="(prefers-color-scheme: light)"
-													srcset={
-														Site + Language.Dark.src
-													}
-												/>
-												<img
-													width="18"
-													height="18"
-													src={
-														Site +
-														Language.Light.src
-													}
-													title={`${Language.BoC} of ${Language.Name}`}
-													alt={Language.Name}
-												/>
-											</picture>
-											<Fragment
-												set:html={
-													Index + 1 ==
-													Package.Language?.size
-														? ""
-														: "&nbsp;&nbsp;"
-												}
-											/>
-										</>
-									)
-							)}
 						</td>
 					</>
 				);
