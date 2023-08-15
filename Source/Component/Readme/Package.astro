@@ -172,6 +172,7 @@ const Site = Astro.url.origin;
 					<>
 						{Package.Badge.size >= 1 ? (
 							<td valign="top" colspan={Span}>
+								<br />
 								{Array.from(Package.Badge).map((Badge) => (
 									<>
 										<a href={Badge.Link} target="_blank">
@@ -190,7 +191,7 @@ const Site = Astro.url.origin;
 											</picture>
 										</a>
 										<br />
-									</>
+									</br>
 								))}
 							</td>
 						) : (
