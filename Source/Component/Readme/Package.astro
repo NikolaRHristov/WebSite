@@ -159,6 +159,9 @@ for (const Item of Items) {
 }
 
 const Site = Astro.url.origin;
+
+const Center = `<p align="center">`;
+const CenterEnd = `</>`;
 ---
 
 {
@@ -193,54 +196,50 @@ const Site = Astro.url.origin;
 										<br />
 									</>
 								))}
-								<p align="center">
-									{Array.from(Package.Language ?? []).map(
-										(Language, Index) =>
-											Language.Light &&
-											Language.Dark && (
-												<>
-													<picture>
-														<source
-															media="(prefers-color-scheme: dark)"
-															srcset={
-																Site +
-																Language.Light
-																	.src
-															}
-														/>
-														<source
-															media="(prefers-color-scheme: light)"
-															srcset={
-																Site +
-																Language.Dark
-																	.src
-															}
-														/>
-														<img
-															width="18"
-															height="18"
-															src={
-																Site +
-																Language.Light
-																	.src
-															}
-															title={`${Language.BoC} of ${Language.Name}`}
-															alt={Language.Name}
-														/>
-													</picture>
-													<Fragment
-														set:html={
-															Index + 1 ==
-															Package.Language
-																?.size
-																? ""
-																: "&nbsp;&nbsp;"
+								<Fragment set:html={Center} />
+								{Array.from(Package.Language ?? []).map(
+									(Language, Index) =>
+										Language.Light &&
+										Language.Dark && (
+											<>
+												<picture>
+													<source
+														media="(prefers-color-scheme: dark)"
+														srcset={
+															Site +
+															Language.Light.src
 														}
 													/>
-												</>
-											)
-									)}
-								</p>
+													<source
+														media="(prefers-color-scheme: light)"
+														srcset={
+															Site +
+															Language.Dark.src
+														}
+													/>
+													<img
+														width="18"
+														height="18"
+														src={
+															Site +
+															Language.Light.src
+														}
+														title={`${Language.BoC} of ${Language.Name}`}
+														alt={Language.Name}
+													/>
+												</picture>
+												<Fragment
+													set:html={
+														Index + 1 ==
+														Package.Language?.size
+															? ""
+															: "&nbsp;&nbsp;"
+													}
+												/>
+											</>
+										)
+								)}
+								<Fragment set:html={CenterEnd} />
 							</td>
 						) : (
 							""
