@@ -22,6 +22,8 @@
 		"@tailwindcss/typography": "0.5.9",
 		"astro": "2.10.7",
 		"astro-compress": "2.0.9",
+		"astro-critters": "workspace:2.0.8",
+		"astro-rome": "workspace:2.0.6",
 		"astrojs-service-worker": "1.0.0",
 		"autoprefixer": "10.4.15",
 		"cssnano": "6.0.1",
