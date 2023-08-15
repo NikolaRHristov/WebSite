@@ -159,9 +159,6 @@ for (const Item of Items) {
 }
 
 const Site = Astro.url.origin;
-
-const Center = `<p align="center">`;
-const CenterEnd = `</>`;
 ---
 
 {
@@ -172,12 +169,11 @@ const CenterEnd = `</>`;
 				Span -= Package.Badge.size >= 1 ? 1 : 0;
 
 				return (
-					<p>
+					<>
 						{Package.Badge.size >= 1 ? (
 							<td valign="top" colspan={Span}>
-								<br />
 								{Array.from(Package.Badge).map((Badge) => (
-									<p>
+									<>
 										<a href={Badge.Link} target="_blank">
 											<picture>
 												<source
@@ -193,9 +189,12 @@ const CenterEnd = `</>`;
 												/>
 											</picture>
 										</a>
-									</p>
+										<br />
+									</>
 								))}
-								<Fragment set:html={Center} />
+
+								<Fragment set:html={`<p align="center">`} />
+
 								{Array.from(Package.Language ?? []).map(
 									(Language, Index) =>
 										Language.Light &&
@@ -238,13 +237,13 @@ const CenterEnd = `</>`;
 											</>
 										)
 								)}
-								<Fragment set:html={CenterEnd} />
+
+								<Fragment set:html={`</p>`} />
 							</td>
 						) : (
 							""
 						)}
 						<td valign="top" colspan={Span}>
-							<br />
 							<a href={Package.Link} target="_blank">
 								<picture>
 									<source
@@ -274,7 +273,7 @@ const CenterEnd = `</>`;
 									?.join("?<br />")}
 							/>
 						</td>
-					</p>
+					</>
 				);
 			})}
 		</tr>
