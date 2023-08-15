@@ -84,6 +84,30 @@ for (const Package of Packages) {
 			GitHub,
 			Description: _JSON?.description ?? "",
 			Badge: new Set([
+				// <a href={Package.Link} target="_blank">
+				// 	<picture>
+				// 		<source
+				// 			media="(prefers-color-scheme: dark)"
+				// 			srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}`}
+				// 		/>
+				// 		<source
+				// 			media="(prefers-color-scheme: light)"
+				// 			srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Light}`}
+				// 		/>
+				// 		<img
+				// 			src={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}`}
+				// 			alt="Stars"
+				// 		/>
+				// 	</picture>
+				// </a>
+				{
+					Link: `https://npmjs.org/${_JSON.name}`,
+					Image: `https://img.shields.io/librariesio/release/npm/${_JSON.name}?label=Dependencies`,
+				},
+				{
+					Image: `https://img.shields.io/github/stars/${GitHub}?label=Stars`,
+					Link: `https://github.com/${GitHub}`,
+				},
 				{
 					Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build`,
 					Link: `https://github.com/${GitHub}/actions/workflows/Node.yml`,
@@ -91,10 +115,6 @@ for (const Package of Packages) {
 				{
 					Link: `https://npmjs.org/${_JSON.name}`,
 					Image: `https://img.shields.io/npm/v/${_JSON.name}?label=Version`,
-				},
-				{
-					Link: `https://npmjs.org/${_JSON.name}`,
-					Image: `https://img.shields.io/librariesio/release/npm/${_JSON.name}?label=`,
 				},
 				{
 					Link: `https://npmjs.org/${_JSON.name}`,
@@ -171,28 +191,9 @@ for (const Item of Items) {
 						<td valign="top" colspan={Span}>
 							<br />
 
-							<a href={Package.Link} target="_blank">
-								<b>{Package.Name}</b>
-							</a>
-
-							<br />
-
-							<b
-								set:html={Package.Description?.split(".")
-									?.join(".<br />")
-									?.split("!")
-									?.join("!<br />")
-									?.split("?")
-									?.join("?<br />")}
-							/>
-
-							<br />
-						</td>
-						{Package.Badge.size >= 1 ? (
-							<td valign="top" colspan={Span}>
-								<br />
-
-								{Array.from(Package.Badge).map((Badge) => (
+							{Array.from(Package.Badge)
+								.splice(0, 2)
+								.map((Badge) => (
 									<>
 										<a href={Badge.Link} target="_blank">
 											<picture>
@@ -210,9 +211,58 @@ for (const Item of Items) {
 												/>
 											</picture>
 										</a>
-										<br />
+										<Fragment set:html={`&nbsp;&nbsp;`} />
 									</>
 								))}
+
+							<br />
+
+							<a href={Package.Link} target="_blank">
+								<b>{Package.Name}</b>
+							</a>
+
+							<br />
+
+							<b
+								set:html={Package.Description?.split(".")
+									?.join(".<br />")
+									?.split("!")
+									?.join("!<br />")
+									?.split("?")
+									?.join("?<br />")}
+							/>
+
+							<br />
+						</td>
+						{Array.from(Package.Badge).splice(2).length >= 1 ? (
+							<td valign="top" colspan={Span}>
+								<br />
+
+								{Array.from(Package.Badge)
+									.splice(2)
+									.map((Badge) => (
+										<>
+											<a
+												href={Badge.Link}
+												target="_blank">
+												<picture>
+													<source
+														media="(prefers-color-scheme: dark)"
+														srcset={`${Badge.Image}${Dark}`}
+													/>
+													<source
+														media="(prefers-color-scheme: light)"
+														srcset={`${Badge.Image}${Light}`}
+													/>
+													<img
+														src={`${Badge.Image}${Dark}`}
+														alt={Package.Name}
+													/>
+												</picture>
+											</a>
+											<br />
+										</>
+									))}
 
 								<br />
 							</td>
