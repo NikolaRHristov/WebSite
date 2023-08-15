@@ -4,8 +4,8 @@ import Chunks from "@Library/Chunks";
 import Request from "@Library/Request";
 import Icon from "@Option/Icon";
 
-const Dark = "&color=black&logoColor=white&labelColor=black&logoWidth=15";
-const Light = "&color=white&logoColor=black&labelColor=white&logoWidth=15";
+const Dark = "&color=black&labelColor=black&logoColor=white&logoWidth=0";
+const Light = "&color=white&labelColor=white&logoColor=black&logoWidth=0";
 
 const { Packages } = Astro.props;
 
@@ -52,15 +52,15 @@ for (const Package of Packages) {
 				Badge: new Set([
 					{
 						Link: `https://github.com/${Owner}/${Repository}`,
-						Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Updated&logo=github`,
+						Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Updated`,
 					},
 					{
 						Link: `https://github.com/${Owner}/${Repository}`,
-						Image: `https://img.shields.io/github/issues/${Owner}/${Repository}?label=Issues&logo=github`,
+						Image: `https://img.shields.io/github/issues/${Owner}/${Repository}?label=Issues`,
 					},
 					{
 						Link: `https://github.com/${Owner}/${Repository}`,
-						Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Downloads&logo=github`,
+						Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Downloads`,
 					},
 				]),
 			});
@@ -85,20 +85,20 @@ for (const Package of Packages) {
 			Description: _JSON?.description ?? "",
 			Badge: new Set([
 				{
-					Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
+					Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build`,
 					Link: `https://github.com/${GitHub}/actions/workflows/Node.yml`,
 				},
 				{
 					Link: `https://npmjs.org/${_JSON.name}`,
-					Image: `https://img.shields.io/npm/v/${_JSON.name}?label=Version&logo=npm`,
+					Image: `https://img.shields.io/npm/v/${_JSON.name}?label=Version`,
 				},
 				{
 					Link: `https://npmjs.org/${_JSON.name}`,
-					Image: `https://img.shields.io/librariesio/release/npm/${_JSON.name}?label=&logo=dependabot`,
+					Image: `https://img.shields.io/librariesio/release/npm/${_JSON.name}?label=`,
 				},
 				{
 					Link: `https://npmjs.org/${_JSON.name}`,
-					Image: `https://img.shields.io/npm/dt/${_JSON.name}?label=Downloads&logo=npm`,
+					Image: `https://img.shields.io/npm/dt/${_JSON.name}?label=Downloads`,
 				},
 			]),
 		});
@@ -119,16 +119,16 @@ for (const Package of Packages) {
 			Link: _JSON?.crate?.repository ?? "",
 			Badge: new Set([
 				{
-					Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/rust.yml?branch=main&label=Build&logo=rust`,
+					Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/rust.yml?branch=main&label=Build`,
 					Link: `https://github.com/${GitHub}/actions/workflows/rust.yml`,
 				},
 				{
 					Link: `https://crates.io/${_JSON?.crate?.name}`,
-					Image: `https://img.shields.io/crates/v/${_JSON?.crate?.name}?label=Version&logo=rust`,
+					Image: `https://img.shields.io/crates/v/${_JSON?.crate?.name}?label=Version`,
 				},
 				{
 					Link: `https://crates.io/${_JSON?.crate?.name}`,
-					Image: `https://img.shields.io/crates/d/${_JSON?.crate?.name}?label=Downloads&logo=rust`,
+					Image: `https://img.shields.io/crates/d/${_JSON?.crate?.name}?label=Downloads`,
 				},
 			]),
 			Description: _JSON?.crate?.description ?? "",
