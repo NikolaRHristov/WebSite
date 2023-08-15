@@ -245,6 +245,8 @@ const Site = Astro.url.origin;
 							""
 						)}
 						<td valign="top" colspan={Span}>
+							<br />
+
 							<a href={Package.Link} target="_blank">
 								<picture>
 									<source
@@ -260,11 +262,15 @@ const Site = Astro.url.origin;
 									/>
 								</picture>
 							</a>
+
 							<br />
+
 							<a href={Package.Link} target="_blank">
 								<b>{Package.Name}</b>
 							</a>
+
 							<br />
+
 							<b
 								set:html={Package.Description?.split(".")
 									?.join(".<br />")
