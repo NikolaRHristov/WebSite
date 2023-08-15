@@ -157,8 +157,6 @@ for (const Item of Items) {
 		}
 	}
 }
-
-const Site = Astro.url.origin;
 ---
 
 {
@@ -170,6 +168,26 @@ const Site = Astro.url.origin;
 
 				return (
 					<>
+						<td valign="top" colspan={Span}>
+							<br />
+
+							<a href={Package.Link} target="_blank">
+								<b>{Package.Name}</b>
+							</a>
+
+							<br />
+
+							<b
+								set:html={Package.Description?.split(".")
+									?.join(".<br />")
+									?.split("!")
+									?.join("!<br />")
+									?.split("?")
+									?.join("?<br />")}
+							/>
+
+							<br />
+						</td>
 						{Package.Badge.size >= 1 ? (
 							<td valign="top" colspan={Span}>
 								<br />
@@ -197,96 +215,10 @@ const Site = Astro.url.origin;
 								))}
 
 								<br />
-
-								<Fragment set:html={`<p align="center">`} />
-
-								{Array.from(Package.Language ?? []).map(
-									(Language, Index) =>
-										Language.Light &&
-										Language.Dark && (
-											<>
-												<picture>
-													<source
-														media="(prefers-color-scheme: dark)"
-														srcset={
-															Site +
-															Language.Light.src
-														}
-													/>
-													<source
-														media="(prefers-color-scheme: light)"
-														srcset={
-															Site +
-															Language.Dark.src
-														}
-													/>
-													<img
-														width="18"
-														height="18"
-														src={
-															Site +
-															Language.Light.src
-														}
-														title={`${Language.BoC} of ${Language.Name}`}
-														alt={Language.Name}
-													/>
-												</picture>
-												<Fragment
-													set:html={
-														Index + 1 ==
-														Package.Language?.size
-															? ""
-															: "&nbsp;&nbsp;"
-													}
-												/>
-											</>
-										)
-								)}
-
-								<Fragment set:html={`</p>`} />
 							</td>
 						) : (
 							""
 						)}
-						<td valign="top" colspan={Span}>
-							<br />
-
-							<a href={Package.Link} target="_blank">
-								<picture>
-									<source
-										media="(prefers-color-scheme: dark)"
-										srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}`}
-									/>
-									<source
-										media="(prefers-color-scheme: light)"
-										srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Light}`}
-									/>
-									<img
-										src={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}`}
-										alt="Stars"
-									/>
-								</picture>
-							</a>
-
-							<br />
-
-							<a href={Package.Link} target="_blank">
-								<b>{Package.Name}</b>
-							</a>
-
-							<br />
-
-							<b
-								set:html={Package.Description?.split(".")
-									?.join(".<br />")
-									?.split("!")
-									?.join("!<br />")
-									?.split("?")
-									?.join("?<br />")}
-							/>
-
-							<br />
-						</td>
 					</>
 				);
 			})}
