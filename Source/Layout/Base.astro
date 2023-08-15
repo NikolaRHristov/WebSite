@@ -11,10 +11,10 @@ const {
 
 const Link = (Link = []) =>
 	Link.map(
-		(href) => `<link
+		(Link) => `<link
 			rel="stylesheet"
 			type="text/css"
-			href="${href}"
+			href="${Link}"
 		/>`
 	).join("\n");
 ---
@@ -55,7 +55,7 @@ const Link = (Link = []) =>
 
 		<slot name="styles" />
 
-		<Fragment set:html={Link(Font.map((font: any) => font.href))} />
+		<Fragment set:html={Link(Font.map((Font: any) => Font))} />
 
 		<script>
 			import "@Script/Swup";
@@ -96,7 +96,7 @@ const Link = (Link = []) =>
 				<Footer />
 			</div>
 			<script>
-				import "@Script/FIREBASE";
+				import "@Script/Firebase";
 			</script>
 		</div>
 		<a
