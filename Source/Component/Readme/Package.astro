@@ -172,12 +172,12 @@ const CenterEnd = `</>`;
 				Span -= Package.Badge.size >= 1 ? 1 : 0;
 
 				return (
-					<>
+					<p>
 						{Package.Badge.size >= 1 ? (
 							<td valign="top" colspan={Span}>
 								<br />
 								{Array.from(Package.Badge).map((Badge) => (
-									<>
+									<p>
 										<a href={Badge.Link} target="_blank">
 											<picture>
 												<source
@@ -193,8 +193,7 @@ const CenterEnd = `</>`;
 												/>
 											</picture>
 										</a>
-										<br />
-									</>
+									</p>
 								))}
 								<Fragment set:html={Center} />
 								{Array.from(Package.Language ?? []).map(
@@ -275,7 +274,7 @@ const CenterEnd = `</>`;
 									?.join("?<br />")}
 							/>
 						</td>
-					</>
+					</p>
 				);
 			})}
 		</tr>
