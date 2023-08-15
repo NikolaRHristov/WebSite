@@ -5,7 +5,7 @@ import SwupScrollPlugin from "@swup/scroll-plugin";
 import Swup from "swup";
 
 new Swup({
-	containers: ["#footer", "#main"],
+	containers: ["#footer", "#main", "#header"],
 	plugins: [
 		new SwupHeadPlugin(),
 		new SwupPreloadPlugin(),
