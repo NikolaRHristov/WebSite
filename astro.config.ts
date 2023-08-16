@@ -1,8 +1,8 @@
 import Fetch from "@astrojs/prefetch";
 import Sitemap from "@astrojs/sitemap";
-import Rome from "astro-rome";
-import Critters from "astro-critters";
 import Compress from "astro-compress";
+import Critters from "astro-critters";
+import Rome from "astro-rome";
 import { defineConfig } from "astro/config";
 import Worker from "astrojs-service-worker";
 
