@@ -68,7 +68,11 @@ Packages.set(
 	<table>
 		<tr>
 			<td colspan="4">
-				<h2>🔥 Project</h2>
+				<center>
+					<Fragment set:html={`<h2 align="center">`} />
+					🔥 <p>Project</p>
+					<Fragment set:html={`</h2>`} />
+				</center>
 			</td>
 		</tr>
 		<PackagesRow Packages={Packages.get("Project")} />
@@ -77,7 +81,8 @@ Packages.set(
 	<table>
 		<tr>
 			<td colspan="4">
-				<h2>
+				<center>
+					<Fragment set:html={`<h2 align="center">`} />
 					<picture
 						><source
 							media="(prefers-color-scheme: dark)"
@@ -90,8 +95,10 @@ Packages.set(
 							alt="Astro"
 							src="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/LightAstro.svg"
 						/>
-					</picture> Astro
-				</h2>
+					</picture>
+					<p>Astro</p>
+					<Fragment set:html={`</h2>`} />
+				</center>
 			</td>
 		</tr>
 		<PackagesRow Packages={Packages.get("Astro")} />
@@ -100,7 +107,8 @@ Packages.set(
 	<table>
 		<tr
 			><td colspan="4">
-				<h2>
+				<center>
+					<Fragment set:html={`<h2 align="center">`} />
 					<picture
 						><source
 							media="(prefers-color-scheme: dark)"
@@ -114,8 +122,10 @@ Packages.set(
 							width="22"
 							alt="NPM"
 						/></picture
-					> NPM
-				</h2>
+					>
+					<p>NPM</p>
+					<Fragment set:html={`</h2>`} />
+				</center>
 			</td>
 		</tr>
 		<PackagesRow Packages={Packages.get("NPM")} />
@@ -124,13 +134,16 @@ Packages.set(
 	<table>
 		<tr
 			><td colspan="4">
-				<h2>
+				<center>
+					<Fragment set:html={`<h2 align="center">`} />
 					<img
 						src="https://raw.githubusercontent.com/jglovier/dotfiles-logo/master/dotfiles-logo-icon.png"
 						width="16"
 						alt="Dotfiles"
-					/> Dotfiles
-				</h2>
+					/>
+					<p>Dotfiles</p>
+					<Fragment set:html={`</h2>`} />
+				</center>
 			</td>
 		</tr>
 		<PackagesRow Packages={Packages.get("Dot")} />
@@ -139,7 +152,8 @@ Packages.set(
 	<table>
 		<tr>
 			<td colspan="4">
-				<h2>
+				<center>
+					<Fragment set:html={`<h2 align="center">`} />
 					<picture
 						><source
 							media="(prefers-color-scheme: dark)"
@@ -152,8 +166,10 @@ Packages.set(
 							alt="GitHub"
 							src="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-32px.png"
 						/>
-					</picture>GitHub
-				</h2>
+					</picture>
+					<p>GitHub</p>
+					<Fragment set:html={`</h2>`} />
+				</center>
 			</td>
 		</tr>
 		<PackagesRow Packages={Packages.get("GitHub")} />
