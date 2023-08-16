@@ -9,6 +9,7 @@
 		"type": "git",
 		"url": "git+https://github.com/NikolaRHristov/nikolahristov.tech.git"
 	},
+	"license": "MIT",
 	"scripts": {
 		"prepublishOnly": "astro check && astro build",
 		"start": "astro dev"
