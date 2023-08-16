@@ -22,7 +22,7 @@
 		"@tailwindcss/typography": "0.5.9",
 		"astro": "2.10.8",
 		"astro-compress": "2.0.11",
-		"astro-critters": "2.0.9",
+		"astro-critters": "2.0.10",
 		"astro-rome": "2.0.7",
 		"astrojs-service-worker": "1.0.0",
 		"autoprefixer": "10.4.15",
