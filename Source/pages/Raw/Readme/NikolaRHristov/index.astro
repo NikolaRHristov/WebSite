@@ -7,10 +7,10 @@ const Packages = Astro.props["Packages"] ?? new Map<string, Set<PackageCell>>();
 Packages.set(
 	"Project",
 	new Set<PackageCell>([
-		"GitHub:AstroStarter/pac-stac",
 		"NPM:files-pipe",
+		"NPM:deploymentdelete",
+		"GitHub:AstroStarter/pac-stac",
 		"cargo:innkeeper",
-		"GitHub:NikolaRHristov/bench",
 		"GitHub:RoundedCorners/app",
 	])
 );
