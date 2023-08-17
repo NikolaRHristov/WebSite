@@ -5,6 +5,6 @@ Environment.config();
 
 export default z
 	.object({
-		GitHub: z.string().default(""),
+		Token: z.string().default(""),
 	})
 	.parse(process.env);
