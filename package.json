@@ -1,7 +1,7 @@
 {
 	"name": "nikolahristov-web",
 	"version": "0.0.1",
-	"private": "false",
+	"private": false,
 	"homepage": "https://github.com/NikolaRHristov/nikolahristov.tech#readme",
 	"bugs": {
 		"url": "https://github.com/NikolaRHristov/nikolahristov.tech/issues"
