@@ -3,11 +3,15 @@ import Base from "@Layout/Base.astro";
 import "github-markdown-css";
 
 export const getStaticPaths = async () =>
-	["AstroCompress", "AstroCritters", "AstroRome", "NikolaRHristov"].map(
-		(Slug) => ({
-			params: { Slug },
-		})
-	);
+	[
+		"AstroCompress",
+		"AstroCritters",
+		"AstroRome",
+		"NikolaRHristov",
+		"RoundedCorners",
+	].map((Slug) => ({
+		params: { Slug },
+	}));
 
 const Slug =
 	typeof Astro.params["Slug"] === "string" ? Astro.params["Slug"] : "";
