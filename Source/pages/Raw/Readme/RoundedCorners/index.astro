@@ -1,36 +1,17 @@
 ---
-import Package from "@Component/Readme/Package.astro";
-import type { PackageCell } from "@Option/Cell.js";
+import Heading from "@Component/Readme/Heading.astro";
+import Row from "@Component/Readme/Row.astro";
 ---
 
 <>
 	<table>
-		<tr>
-			<td colspan="4">
-				<center>
-					<Fragment set:html={`<h3 align="center">`} />
-
-					<picture
-						><source
-							srcset="https://raw.githubusercontent.com/RoundedCorners/Application/main/src-tauri/src/Image/32x32.png"
-						/><img
-							width="32"
-							alt="Astro"
-							src="https://raw.githubusercontent.com/RoundedCorners/Application/main/src-tauri/src/Image/32x32.png"
-						/>
-					</picture>
-					<br />
-					Rounded Corners
-					<br />
-					<br />
-
-					<Fragment set:html={`</h3>`} />
-				</center>
-			</td>
-		</tr>
-
-		<Package
-			Packages={new Set<PackageCell>([
+		<Heading
+			DarkIcon="https://raw.githubusercontent.com/RoundedCorners/Application/main/src-tauri/src/Image/32x32.png"
+			LightIcon="https://raw.githubusercontent.com/RoundedCorners/Application/main/src-tauri/src/Image/32x32.png"
+			Text="Rounded Corners"
+		/>
+		<Row
+			Package={new Set([
 				"GitHub:RoundedCorners/Application",
 				"GitHub:RoundedCorners/Website",
 			])}

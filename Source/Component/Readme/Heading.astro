@@ -1,0 +1,67 @@
+---
+interface Props {
+	Emoji?: string;
+	DarkIcon?: string;
+	LightIcon?: string;
+	Text?: string;
+	AltIcon?: string;
+}
+
+let {
+	Emoji = null,
+	DarkIcon = null,
+	LightIcon = null,
+	Text = null,
+	AltIcon = null,
+} = Astro.props;
+
+DarkIcon = DarkIcon ?? LightIcon;
+LightIcon = LightIcon ?? DarkIcon;
+---
+
+<tr>
+	<td colspan="4">
+		<Fragment set:html={`<h3 align="center">`} />
+
+		<picture>
+			{
+				DarkIcon ? (
+					<source
+						media="(prefers-color-scheme: dark)"
+						srcset={DarkIcon}
+					/>
+				) : (
+					""
+				)
+			}
+
+			{
+				LightIcon ? (
+					<source
+						media="(prefers-color-scheme: light)"
+						srcset={LightIcon}
+					/>
+				) : (
+					""
+				)
+			}
+
+			{
+				LightIcon ? (
+					<img width="28" alt={AltIcon ?? ""} src={LightIcon} />
+				) : (
+					""
+				)
+			}
+		</picture>
+
+		{Emoji}
+
+		<br />
+		{Text ?? ""}
+		<br />
+		<br />
+
+		<Fragment set:html={`</h3>`} />
+	</td>
+</tr>

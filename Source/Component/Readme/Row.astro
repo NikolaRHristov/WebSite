@@ -2,12 +2,17 @@
 import Bytes from "@Library/Bytes";
 import Chunks from "@Library/Chunks";
 import Request from "@Library/Request";
+import type { PackageCell } from "@Option/Cell";
 import Icon from "@Option/Icon";
 
 const Dark = "&color=black&labelColor=black&logoColor=white&logoWidth=0";
 const Light = "&color=white&labelColor=white&logoColor=black&logoWidth=0";
 
-const { Packages } = Astro.props;
+const { Package: Packages } = Astro.props;
+
+interface Props {
+	Package: Set<PackageCell>;
+}
 
 interface Badge {
 	Image: string;
@@ -36,8 +41,8 @@ let Items = new Set<PackagesRowItem>();
 for (const Package of Packages) {
 	if (Package.match(/GitHub:/)) {
 		const GitHub = Package.split(":")[1];
-		const Owner = GitHub.split("/")[0];
-		const Repository = GitHub.split("/")[1];
+		const Owner = GitHub?.split("/")[0];
+		const Repository = GitHub?.split("/")[1];
 
 		const _JSON = await Request(`GET /repos/${GitHub}`, {
 			owner: Owner,

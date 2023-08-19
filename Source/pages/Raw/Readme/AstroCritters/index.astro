@@ -1,17 +1,16 @@
 ---
-import Package from "@Component/Readme/Package.astro";
-import Related from "@Component/Readme/Related.astro";
-import type { PackageCell } from "@Option/Cell.js";
+import Heading from "@Component/Readme/Heading.astro";
+import Row from "@Component/Readme/Row.astro";
 ---
 
 <>
 	<table>
-		<Related />
-		<Package
-			Packages={new Set<PackageCell>([
-				"NPM:astro-compress",
-				"NPM:astro-rome",
-			])}
+		<Heading
+			DarkIcon="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/DarkAstro.svg"
+			LightIcon="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/LightAstro.svg"
+			Text="Related"
+			AltIcon="Astro"
 		/>
+		<Row Package={new Set(["NPM:astro-compress", "NPM:astro-rome"])} />
 	</table>
 </>

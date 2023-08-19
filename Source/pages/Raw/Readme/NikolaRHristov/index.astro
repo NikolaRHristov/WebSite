@@ -1,5 +1,7 @@
 ---
-import PackagesRow from "@Component/Readme/Package.astro";
+import Heading from "@Component/Readme/Heading.astro";
+import Row from "@Component/Readme/Row.astro";
+
 import type { PackageCell } from "@Option/Cell.js";
 
 const Packages = Astro.props["Packages"] ?? new Map<string, Set<PackageCell>>();
@@ -63,126 +65,48 @@ Packages.set(
 	</h1>
 
 	<table>
-		<tr>
-			<td colspan="4">
-				<center>
-					<Fragment set:html={`<h2 align="center">`} />
-
-					🔥 <p>Project</p>
-
-					<Fragment set:html={`</h2>`} />
-				</center>
-			</td>
-		</tr>
-		<PackagesRow Packages={Packages.get("Project")} />
+		<Heading Text="Project" Emoji="🔥" />
+		<Row Package={Packages.get("Project")} />
 	</table>
 
 	<table>
-		<tr>
-			<td colspan="4">
-				<center>
-					<Fragment set:html={`<h2 align="center">`} />
+		<Heading
+			Text="Astro"
+			DarkIcon="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/DarkAstro.svg"
+			LightIcon="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/LightAstro.svg"
+			AltIcon="Astro"
+		/>
 
-					<picture
-						><source
-							media="(prefers-color-scheme: dark)"
-							srcset="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/DarkAstro.svg"
-						/><source
-							media="(prefers-color-scheme: light)"
-							srcset="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/LightAstro.svg"
-						/><img
-							width="25"
-							alt="Astro"
-							src="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/LightAstro.svg"
-						/>
-					</picture>
-
-					<p>Astro</p>
-
-					<Fragment set:html={`</h2>`} />
-				</center>
-			</td>
-		</tr>
-		<PackagesRow Packages={Packages.get("Astro")} />
+		<Row Package={Packages.get("Astro")} />
 	</table>
 
 	<table>
-		<tr>
-			<td colspan="4">
-				<center>
-					<Fragment set:html={`<h2 align="center">`} />
+		<Heading
+			Text="NPM"
+			DarkIcon="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n.svg"
+			AltIcon="NPM"
+		/>
 
-					<picture
-						><source
-							media="(prefers-color-scheme: dark)"
-							srcset="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n.svg"
-						/><source
-							media="(prefers-color-scheme: light)"
-							srcset="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n.svg"
-						/>
-						<img
-							src="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n.svg"
-							width="22"
-							alt="NPM"
-						/></picture
-					>
-
-					<p>NPM</p>
-
-					<Fragment set:html={`</h2>`} />
-				</center>
-			</td>
-		</tr>
-		<PackagesRow Packages={Packages.get("NPM")} />
+		<Row Package={Packages.get("NPM")} />
 	</table>
 
 	<table>
-		<tr>
-			<td colspan="4">
-				<center>
-					<Fragment set:html={`<h2 align="center">`} />
+		<Heading
+			Text="Dotfiles"
+			DarkIcon="https://raw.githubusercontent.com/jglovier/dotfiles-logo/master/dotfiles-logo-icon.png"
+			AltIcon="Dotfiles"
+		/>
 
-					<img
-						src="https://raw.githubusercontent.com/jglovier/dotfiles-logo/master/dotfiles-logo-icon.png"
-						width="16"
-						alt="Dotfiles"
-					/>
-
-					<p>Dotfiles</p>
-
-					<Fragment set:html={`</h2>`} />
-				</center>
-			</td>
-		</tr>
-		<PackagesRow Packages={Packages.get("Dot")} />
+		<Row Package={Packages.get("Dot")} />
 	</table>
 
 	<table>
-		<tr>
-			<td colspan="4">
-				<center>
-					<Fragment set:html={`<h2 align="center">`} />
-
-					<picture
-						><source
-							media="(prefers-color-scheme: dark)"
-							srcset="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-Light-32px.png"
-						/><source
-							media="(prefers-color-scheme: light)"
-							srcset="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-32px.png"
-						/><img
-							width="25"
-							alt="GitHub"
-							src="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-32px.png"
-						/>
-					</picture>
-
-					<p>GitHub</p>
-
-					<Fragment set:html={`</h2>`} />
-				</center>
-			</td>
-		</tr>
-		<PackagesRow Packages={Packages.get("GitHub")} />
+		<Heading
+			Text="GitHub"
+			DarkIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-Light-32px.png"
+			LightIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-32px.png"
+			AltIcon="GitHub"
+		/>
+		<Row Package={Packages.get("GitHub")} />
 	</table>
 </>
