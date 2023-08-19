@@ -1,22 +1,22 @@
 ---
 interface Props {
-	Emoji?: string;
+	AltIcon?: string;
 	DarkIcon?: string;
+	Emoji?: string;
 	LightIcon?: string;
 	Text?: string;
-	AltIcon?: string;
 }
 
 let {
-	Emoji = null,
+	AltIcon = null,
 	DarkIcon = null,
+	Emoji = null,
 	LightIcon = null,
 	Text = null,
-	AltIcon = null,
 } = Astro.props;
 
-DarkIcon = DarkIcon ?? LightIcon;
 LightIcon = LightIcon ?? DarkIcon;
+DarkIcon = DarkIcon ?? LightIcon;
 ---
 
 <tr>
