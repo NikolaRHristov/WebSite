@@ -3,55 +3,6 @@ import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
 
 import type { PackageCell } from "@Option/Cell.js";
-
-const Packages = Astro.props["Packages"] ?? new Map<string, Set<PackageCell>>();
-
-Packages.set(
-	"Project",
-	new Set<PackageCell>([
-		"NPM:files-pipe",
-		"NPM:deploymentdelete",
-		"GitHub:AstroStarter/PACStack",
-		"cargo:innkeeper",
-		"GitHub:RoundedCorners/Application",
-	])
-);
-
-Packages.set(
-	"Astro",
-	new Set<PackageCell>([
-		"NPM:astro-compress",
-		// "NPM:astro-convert",
-		"NPM:astro-critters",
-		// "NPM:astro-dashboard",
-		// "NPM:astro-dead-links",
-		// "NPM:astro-networks",
-		"NPM:astro-rome",
-		// "NPM:astro-short-urls",
-		// "NPM:AstroStarter-template",
-	])
-);
-
-Packages.set("NPM", new Set<PackageCell>(["NPM:typescript-esbuild"]));
-
-Packages.set(
-	"Dot",
-	new Set<PackageCell>([
-		"GitHub:NikolaRHristov/dot",
-		"GitHub:NikolaRHristov/nvim",
-		"GitHub:NikolaRHristov/.oh-my-bash",
-		"GitHub:NikolaRHristov/.oh-my-posh",
-		"GitHub:NikolaRHristov/.oh-my-zsh",
-	])
-);
-
-Packages.set(
-	"GitHub",
-	new Set<PackageCell>([
-		"NPM:@yesmaintain/script",
-		// "NPM:github-history-slider",
-	])
-);
 ---
 
 <>
@@ -66,7 +17,15 @@ Packages.set(
 
 	<table>
 		<Heading Text="Project" Emoji="🔥" />
-		<Row Package={Packages.get("Project")} />
+		<Row
+			Packages={new Set<PackageCell>([
+				"NPM:files-pipe",
+				"NPM:deploymentdelete",
+				"GitHub:AstroStarter/PACStack",
+				"cargo:innkeeper",
+				"GitHub:RoundedCorners/Application",
+			])}
+		/>
 	</table>
 
 	<table>
@@ -77,7 +36,19 @@ Packages.set(
 			AltIcon="Astro"
 		/>
 
-		<Row Package={Packages.get("Astro")} />
+		<Row
+			Packages={new Set<PackageCell>([
+				"NPM:astro-compress",
+				// "NPM:astro-convert",
+				"NPM:astro-critters",
+				// "NPM:astro-dashboard",
+				// "NPM:astro-dead-links",
+				// "NPM:astro-networks",
+				"NPM:astro-rome",
+				// "NPM:astro-short-urls",
+				// "NPM:AstroStarter-template",
+			])}
+		/>
 	</table>
 
 	<table>
@@ -87,7 +58,7 @@ Packages.set(
 			AltIcon="NPM"
 		/>
 
-		<Row Package={Packages.get("NPM")} />
+		<Row Packages={new Set<PackageCell>(["NPM:typescript-esbuild"])} />
 	</table>
 
 	<table>
@@ -97,7 +68,15 @@ Packages.set(
 			AltIcon="Dotfiles"
 		/>
 
-		<Row Package={Packages.get("Dot")} />
+		<Row
+			Packages={new Set<PackageCell>([
+				"GitHub:NikolaRHristov/dot",
+				"GitHub:NikolaRHristov/nvim",
+				"GitHub:NikolaRHristov/.oh-my-bash",
+				"GitHub:NikolaRHristov/.oh-my-posh",
+				"GitHub:NikolaRHristov/.oh-my-zsh",
+			])}
+		/>
 	</table>
 
 	<table>
@@ -107,6 +86,11 @@ Packages.set(
 			LightIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-32px.png"
 			AltIcon="GitHub"
 		/>
-		<Row Package={Packages.get("GitHub")} />
+		<Row
+			Packages={new Set<PackageCell>([
+				"NPM:@yesmaintain/script",
+				// "NPM:github-history-slider",
+			])}
+		/>
 	</table>
 </>

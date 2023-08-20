@@ -8,10 +8,10 @@ import Icon from "@Option/Icon";
 const Dark = "&color=black&labelColor=black&logoColor=white&logoWidth=0";
 const Light = "&color=white&labelColor=white&logoColor=black&logoWidth=0";
 
-const { Package: Packages } = Astro.props;
+const { Packages } = Astro.props;
 
 interface Props {
-	Package: Set<PackageCell>;
+	Packages: Set<PackageCell>;
 }
 
 interface Badge {

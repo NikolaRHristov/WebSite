@@ -9,6 +9,12 @@ const {
 	Description = "CEO @Lightrix",
 } = Astro.props;
 
+interface Props {
+	Font: string[];
+	Title: string;
+	Description: string;
+}
+
 const Link = (Link = []) =>
 	Link.map(
 		(Link) => `<link
