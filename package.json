@@ -27,7 +27,7 @@
 		"@swup/body-class-plugin": "3.1.1",
 		"@swup/head-plugin": "2.1.1",
 		"@swup/preload-plugin": "3.2.2",
-		"@swup/scroll-plugin": "3.2.0",
+		"@swup/scroll-plugin": "3.3.0",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.4",
 		"@tailwindcss/typography": "0.5.9",
