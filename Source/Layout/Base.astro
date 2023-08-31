@@ -24,7 +24,7 @@ const Link = (Link: string[] = []) =>
 	).join("\n");
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js" dir="ltr">
 	<head>
 		<script>
@@ -90,7 +90,7 @@ const Link = (Link: string[] = []) =>
 		/>
 	</head>
 	<body>
-		<div id="nikolahristov-web" class="flex flex-col grow">
+		<div id="nikolahristov-web" class="flex grow flex-col">
 			<div id="main" class="gro bg-[#8e993c]">
 				<slot />
 			</div>
@@ -102,7 +102,7 @@ const Link = (Link: string[] = []) =>
 			</script>
 		</div>
 		<a
-			class="absolute top-0 left-0 hidden"
+			class="absolute left-0 top-0 hidden"
 			rel="me"
 			href="https://mastodon.social/@nikolahristov"></a>
 	</body>

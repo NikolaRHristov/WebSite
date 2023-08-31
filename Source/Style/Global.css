@@ -11,12 +11,12 @@ body {
 	@apply flex
 		flex-grow
 		flex-col
+		bg-white
 		tabular-nums
 		text-black
-		bg-white
+		antialiased
 		dark:bg-black
 		dark:text-white
-		antialiased
 		sm:subpixel-antialiased;
 
 	font-variant-ligatures: no-common-ligatures;
