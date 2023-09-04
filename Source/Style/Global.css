@@ -53,7 +53,8 @@ body {
 img {
 	@apply inline-block
 		select-none
-		align-top outline-none;
+		align-top
+		outline-none;
 }
 
 @media (min-width: 768px) {
