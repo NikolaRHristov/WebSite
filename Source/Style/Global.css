@@ -4,7 +4,8 @@ html {
 
 html,
 body {
-	height: 100%;
+	@apply h-full
+		w-full;
 }
 
 body {
@@ -20,6 +21,18 @@ body {
 		sm:subpixel-antialiased;
 
 	font-variant-ligatures: no-common-ligatures;
+
+	--swup-overlay-theme-color: white;
+	--swup-overlay-theme-duration: 0.2s;
+	--swup-overlay-theme-delay: 0s;
+	--swup-overlay-theme-scale: 1.2;
+	--swup-overlay-theme-skew: 0deg;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		--swup-overlay-theme-color: black;
+	}
 }
 
 *::selection,
