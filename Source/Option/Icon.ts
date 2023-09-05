@@ -10,6 +10,7 @@ import DarkPython from "@Asset/Image/Package/DarkPython.svg";
 import DarkRust from "@Asset/Image/Package/DarkRust.svg";
 import DarkTypeScript from "@Asset/Image/Package/DarkTypeScript.svg";
 import DarkWindowsTerminal from "@Asset/Image/Package/DarkWindowsTerminal.svg";
+
 import LightAstro from "@Asset/Image/Package/LightAstro.svg";
 import LightCSS3 from "@Asset/Image/Package/LightCSS3.svg";
 import LightGNUBash from "@Asset/Image/Package/LightGNUBash.svg";
