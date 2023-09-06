@@ -18,7 +18,12 @@ export default defineConfig({
 		Fetch(),
 		Rome({ Logger: 1 }),
 		Critters({ Logger: 1 }),
-		Compress({ Logger: 1 }),
+		Compress({
+			Logger: 1,
+			CSS: {
+				restructure: true,
+			},
+		}),
 	],
 	vite: {
 		build: {
