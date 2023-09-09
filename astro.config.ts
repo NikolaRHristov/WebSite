@@ -1,5 +1,5 @@
 import Fetch from "@astrojs/prefetch";
-// import Sitemap from "@astrojs/sitemap";
+import Sitemap from "@astrojs/sitemap";
 import Compress from "astro-compress";
 import Critters from "astro-critters";
 import Rome from "astro-rome";
@@ -14,7 +14,7 @@ export default defineConfig({
 	compressHTML: true,
 	integrations: [
 		import.meta.env.MODE === "production" ? Worker() : null,
-		// Sitemap(),
+		Sitemap(),
 		Fetch(),
 		Rome({ Logger: 1 }),
 		Critters({ Logger: 1 }),
