@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import Fetch from "@astrojs/prefetch";
+=======
+import PreFetch from "@astrojs/prefetch";
+>>>>>>> upstream/main
 import Sitemap from "@astrojs/sitemap";
 import Compress from "astro-compress";
 import Critters from "astro-critters";
@@ -15,7 +19,12 @@ export default defineConfig({
 	integrations: [
 		import.meta.env.MODE === "production" ? Worker() : null,
 		Sitemap(),
+<<<<<<< HEAD
 		Fetch(),
+=======
+		Critters({ Logger: 1 }),
+		PreFetch(),
+>>>>>>> upstream/main
 		Rome({ Logger: 1 }),
 		Critters({ Logger: 1 }),
 		Compress({
