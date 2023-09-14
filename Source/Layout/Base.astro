@@ -89,18 +89,16 @@ const Link = (Link: string[] = []) =>
 			href="https://webmention.io/nikolahristov.tech/xmlrpc"
 		/>
 	</head>
-	<body>
-		<div id="nikolahristov-web" class="flex grow flex-col">
-			<div id="main" class="grow bg-[#8e993c]">
-				<slot />
-			</div>
-			<div id="footer" class="shrink">
-				<Footer />
-			</div>
-			<script>
-				import "@Script/Firebase";
-			</script>
+	<body class="flex grow flex-col">
+		<div id="main" class="grow bg-[#8e993c]">
+			<slot />
 		</div>
+		<div id="footer" class="shrink">
+			<Footer />
+		</div>
+		<script>
+			import "@Script/Firebase";
+		</script>
 		<a
 			class="absolute left-0 top-0 hidden"
 			rel="me"
