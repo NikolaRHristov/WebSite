@@ -3,9 +3,9 @@ export default {
 		"./Public/**/*.html",
 		"./Source/**/*.{astro,js,jsx,ts,tsx,vue,svelte}",
 	],
-	
+
 	darkMode: "media",
-	
+
 	theme: {
 		container: {
 			center: true,
@@ -25,9 +25,9 @@ export default {
 			},
 		},
 	},
-	
+
 	variants: {},
-	
+
 	plugins: [
 		require("@tailwindcss/forms"),
 		require("@tailwindcss/typography"),
