@@ -1,8 +1,10 @@
-import Environment from "@Library/Environment.js";
-import { Octokit } from "@octokit/core";
 import type { OctokitResponse } from "@octokit/types";
 
-const octokit = new Octokit({
+import Environment from "@Library/Environment.js";
+
+import { Octokit } from "@octokit/core";
+
+const Fn = new Octokit({
 	auth: Environment.Token,
 });
 
@@ -18,7 +20,7 @@ export default async (
 
 		switch (Type) {
 			case "octokit":
-				return await octokit.request(Where, With);
+				return await Fn.request(Where, With);
 		}
 	} catch (_Error) {
 		console.log(`Could not ${Where}`);
