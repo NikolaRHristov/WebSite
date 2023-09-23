@@ -24,7 +24,7 @@ import LightRust from "@Asset/Image/Package/LightRust.svg";
 import LightTypeScript from "@Asset/Image/Package/LightTypeScript.svg";
 import LightWindowsTerminal from "@Asset/Image/Package/LightWindowsTerminal.svg";
 
-export interface Type {
+export default interface Type {
 	[key: string]: [ImageMetadata, ImageMetadata];
 }
 
