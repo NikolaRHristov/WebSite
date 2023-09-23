@@ -4,6 +4,7 @@ export default async (Bytes: number, Decimals = 2.0) => {
 	}
 
 	const K = 1024;
+
 	const I = Math.floor(Math.log(Bytes) / Math.log(K));
 
 	return `${parseFloat(

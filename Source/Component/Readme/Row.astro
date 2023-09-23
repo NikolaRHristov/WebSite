@@ -1,10 +1,7 @@
 ---
 import type { PackageCell } from "@Option/Cell";
 
-import Bytes from "@Library/Bytes";
-import Chunks from "@Library/Chunks";
 import Request from "@Library/Request";
-import Icon from "@Option/Icon";
 
 const Dark = "&color=black&labelColor=black&logoColor=white&logoWidth=0";
 const Light = "&color=white&labelColor=white&logoColor=black&logoWidth=0";
@@ -163,13 +160,17 @@ for (const Item of Items) {
 
 	for (const Name in Language) {
 		if (Object.prototype.hasOwnProperty.call(Language, Name)) {
-			let [Light, Dark] = Icon[Name] ?? [null, null];
+			let [Light, Dark] = (await import("@Option/Icon")).default[
+				Name
+			] ?? [null, null];
 
 			Item.Language.add({
 				Light,
 				Dark,
 				Name,
-				BoC: await Bytes(Language[Name]),
+				BoC: await (
+					await import("@Library/Bytes")
+				).default(Language[Name]),
 			});
 		}
 	}
@@ -177,88 +178,92 @@ for (const Item of Items) {
 ---
 
 {
-	[...Chunks(Array.from(Items), 2)].map((Row) => (
-		<tr>
-			{Row.map((Package) => {
-				let Span = Row.length > 1 ? 2 : 3;
-				Span -= Package.Badge.size >= 1 ? 1 : 0;
+	[...(await import("@Library/Chunks")).default(Array.from(Items), 2)].map(
+		(Row) => (
+			<tr>
+				{Row.map((Package) => {
+					let Span = Row.length > 1 ? 2 : 3;
+					Span -= Package.Badge.size >= 1 ? 1 : 0;
 
-				return (
-					<>
-						<td valign="top" colspan={Span}>
-							<br />
-
-							<a href={Package.Link} target="_blank">
-								<picture>
-									<source
-										media="(prefers-color-scheme: dark)"
-										srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}`}
-									/>
-									<source
-										media="(prefers-color-scheme: light)"
-										srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Light}`}
-									/>
-									<img
-										src={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}`}
-										alt="Stars"
-									/>
-								</picture>
-							</a>
-
-							<br />
-
-							<a href={Package.Link} target="_blank">
-								<b>{Package.Name}</b>
-							</a>
-
-							<br />
-
-							<b
-								set:html={Package.Description?.split(".")
-									?.join(".<br />")
-									?.split("!")
-									?.join("!<br />")
-									?.split("?")
-									?.join("?<br />")}
-							/>
-
-							<br />
-						</td>
-						{Package.Badge.size >= 1 ? (
+					return (
+						<>
 							<td valign="top" colspan={Span}>
 								<br />
 
-								{Array.from(Package.Badge).map((Badge) => (
-									<>
-										<a href={Badge.Link} target="_blank">
-											<picture>
-												<source
-													media="(prefers-color-scheme: dark)"
-													srcset={`${Badge.Image}${Dark}`}
-												/>
-												<source
-													media="(prefers-color-scheme: light)"
-													srcset={`${Badge.Image}${Light}`}
-												/>
-												<img
-													src={`${Badge.Image}${Dark}`}
-													alt={Badge.Alt}
-													title={Badge.Alt}
-												/>
-											</picture>
-										</a>
-										<br />
-									</>
-								))}
+								<a href={Package.Link} target="_blank">
+									<picture>
+										<source
+											media="(prefers-color-scheme: dark)"
+											srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}`}
+										/>
+										<source
+											media="(prefers-color-scheme: light)"
+											srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Light}`}
+										/>
+										<img
+											src={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}`}
+											alt="Stars"
+										/>
+									</picture>
+								</a>
+
+								<br />
+
+								<a href={Package.Link} target="_blank">
+									<b>{Package.Name}</b>
+								</a>
+
+								<br />
+
+								<b
+									set:html={Package.Description?.split(".")
+										?.join(".<br />")
+										?.split("!")
+										?.join("!<br />")
+										?.split("?")
+										?.join("?<br />")}
+								/>
 
 								<br />
 							</td>
-						) : (
-							""
-						)}
-					</>
-				);
-			})}
-		</tr>
-	))
+							{Package.Badge.size >= 1 ? (
+								<td valign="top" colspan={Span}>
+									<br />
+
+									{Array.from(Package.Badge).map((Badge) => (
+										<>
+											<a
+												href={Badge.Link}
+												target="_blank">
+												<picture>
+													<source
+														media="(prefers-color-scheme: dark)"
+														srcset={`${Badge.Image}${Dark}`}
+													/>
+													<source
+														media="(prefers-color-scheme: light)"
+														srcset={`${Badge.Image}${Light}`}
+													/>
+													<img
+														src={`${Badge.Image}${Dark}`}
+														alt={Badge.Alt}
+														title={Badge.Alt}
+													/>
+												</picture>
+											</a>
+											<br />
+										</>
+									))}
+
+									<br />
+								</td>
+							) : (
+								""
+							)}
+						</>
+					);
+				})}
+			</tr>
+		)
+	)
 }

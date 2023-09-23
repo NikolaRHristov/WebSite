@@ -24,21 +24,21 @@ import LightRust from "@Asset/Image/Package/LightRust.svg";
 import LightTypeScript from "@Asset/Image/Package/LightTypeScript.svg";
 import LightWindowsTerminal from "@Asset/Image/Package/LightWindowsTerminal.svg";
 
-export interface Icon {
+export interface Type {
 	[key: string]: [ImageMetadata, ImageMetadata];
 }
 
 export default {
-	"CSS": [LightCSS3, DarkCSS3],
-	"Shell": [LightGNUBash, DarkGNUBash],
-	"Go": [LightGo, DarkGo],
-	"JavaScript": [LightJavaScript, DarkJavaScript],
-	"Lua": [LightLua, DarkLua],
-	"MDX": [LightMDX, DarkMDX],
-	"PowerShell": [LightPowershell, DarkPowershell],
-	"Python": [LightPython, DarkPython],
-	"Rust": [LightRust, DarkRust],
-	"TypeScript": [LightTypeScript, DarkTypeScript],
-	"Batchfile": [LightWindowsTerminal, DarkWindowsTerminal],
-	"Astro": [LightAstro, DarkAstro],
-} satisfies Icon as Icon;
+	CSS: [LightCSS3, DarkCSS3],
+	Shell: [LightGNUBash, DarkGNUBash],
+	Go: [LightGo, DarkGo],
+	JavaScript: [LightJavaScript, DarkJavaScript],
+	Lua: [LightLua, DarkLua],
+	MDX: [LightMDX, DarkMDX],
+	PowerShell: [LightPowershell, DarkPowershell],
+	Python: [LightPython, DarkPython],
+	Rust: [LightRust, DarkRust],
+	TypeScript: [LightTypeScript, DarkTypeScript],
+	Batchfile: [LightWindowsTerminal, DarkWindowsTerminal],
+	Astro: [LightAstro, DarkAstro],
+} satisfies Type as Type;
