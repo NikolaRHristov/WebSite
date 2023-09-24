@@ -3,6 +3,8 @@ import type { PackageCell } from "@Option/Cell";
 
 import Request from "@Library/Request";
 
+export const { default: Icon } = await import("@Option/Icon.js");
+
 const Dark = "&color=black&labelColor=black&logoColor=white&logoWidth=0";
 const Light = "&color=white&labelColor=white&logoColor=black&logoWidth=0";
 
@@ -160,9 +162,7 @@ for (const Item of Items) {
 
 	for (const Name in Language) {
 		if (Object.prototype.hasOwnProperty.call(Language, Name)) {
-			let [Light, Dark] = (await import("@Option/Icon")).default[
-				Name
-			] ?? [null, null];
+			let [Light, Dark] = Icon[Name as keyof typeof Icon] ?? [null, null];
 
 			Item.Language.add({
 				Light,

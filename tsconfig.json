@@ -12,6 +12,7 @@
 			"@Option/*": ["Source/Option/*"],
 			"@Page/*": ["Source/pages/*"],
 			"@Script/*": ["Source/Script/*"],
+			"@Interface/*": ["Source/Interface/*"],
 			"@Style/*": ["Source/Style/*"]
 		},
 		"types": ["astro/client", "astro/env"]

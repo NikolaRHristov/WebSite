@@ -1,44 +1,52 @@
-import DarkAstro from "@Asset/Image/Package/DarkAstro.svg";
-import DarkCSS3 from "@Asset/Image/Package/DarkCSS3.svg";
-import DarkGNUBash from "@Asset/Image/Package/DarkGNUBash.svg";
-import DarkGo from "@Asset/Image/Package/DarkGo.svg";
-import DarkJavaScript from "@Asset/Image/Package/DarkJavaScript.svg";
-import DarkLua from "@Asset/Image/Package/DarkLua.svg";
-import DarkMDX from "@Asset/Image/Package/DarkMDX.svg";
-import DarkPowershell from "@Asset/Image/Package/DarkPowershell.svg";
-import DarkPython from "@Asset/Image/Package/DarkPython.svg";
-import DarkRust from "@Asset/Image/Package/DarkRust.svg";
-import DarkTypeScript from "@Asset/Image/Package/DarkTypeScript.svg";
-import DarkWindowsTerminal from "@Asset/Image/Package/DarkWindowsTerminal.svg";
-
-import LightAstro from "@Asset/Image/Package/LightAstro.svg";
-import LightCSS3 from "@Asset/Image/Package/LightCSS3.svg";
-import LightGNUBash from "@Asset/Image/Package/LightGNUBash.svg";
-import LightGo from "@Asset/Image/Package/LightGo.svg";
-import LightJavaScript from "@Asset/Image/Package/LightJavaScript.svg";
-import LightLua from "@Asset/Image/Package/LightLua.svg";
-import LightMDX from "@Asset/Image/Package/LightMDX.svg";
-import LightPowershell from "@Asset/Image/Package/LightPowershell.svg";
-import LightPython from "@Asset/Image/Package/LightPython.svg";
-import LightRust from "@Asset/Image/Package/LightRust.svg";
-import LightTypeScript from "@Asset/Image/Package/LightTypeScript.svg";
-import LightWindowsTerminal from "@Asset/Image/Package/LightWindowsTerminal.svg";
-
-export default interface Type {
-	[key: string]: [ImageMetadata, ImageMetadata];
-}
+import type Type from "../Interface/Icon.js";
 
 export default {
-	CSS: [LightCSS3, DarkCSS3],
-	Shell: [LightGNUBash, DarkGNUBash],
-	Go: [LightGo, DarkGo],
-	JavaScript: [LightJavaScript, DarkJavaScript],
-	Lua: [LightLua, DarkLua],
-	MDX: [LightMDX, DarkMDX],
-	PowerShell: [LightPowershell, DarkPowershell],
-	Python: [LightPython, DarkPython],
-	Rust: [LightRust, DarkRust],
-	TypeScript: [LightTypeScript, DarkTypeScript],
-	Batchfile: [LightWindowsTerminal, DarkWindowsTerminal],
-	Astro: [LightAstro, DarkAstro],
+	CSS: [
+		(await import("@Asset/Image/Package/LightCSS3.svg")).default,
+		(await import("@Asset/Image/Package/DarkCSS3.svg")).default,
+	],
+	Shell: [
+		(await import("@Asset/Image/Package/LightGNUBash.svg")).default,
+		(await import("@Asset/Image/Package/DarkGNUBash.svg")).default,
+	],
+	Go: [
+		(await import("@Asset/Image/Package/LightGo.svg")).default,
+		(await import("@Asset/Image/Package/DarkGo.svg")).default,
+	],
+	JavaScript: [
+		(await import("@Asset/Image/Package/LightJavaScript.svg")).default,
+		(await import("@Asset/Image/Package/DarkJavaScript.svg")).default,
+	],
+	Lua: [
+		(await import("@Asset/Image/Package/LightLua.svg")).default,
+		(await import("@Asset/Image/Package/DarkLua.svg")).default,
+	],
+	MDX: [
+		(await import("@Asset/Image/Package/LightMDX.svg")).default,
+		(await import("@Asset/Image/Package/DarkMDX.svg")).default,
+	],
+	PowerShell: [
+		(await import("@Asset/Image/Package/LightPowershell.svg")).default,
+		(await import("@Asset/Image/Package/DarkPowershell.svg")).default,
+	],
+	Python: [
+		(await import("@Asset/Image/Package/LightPython.svg")).default,
+		(await import("@Asset/Image/Package/DarkPython.svg")).default,
+	],
+	Rust: [
+		(await import("@Asset/Image/Package/LightRust.svg")).default,
+		(await import("@Asset/Image/Package/DarkRust.svg")).default,
+	],
+	TypeScript: [
+		(await import("@Asset/Image/Package/LightTypeScript.svg")).default,
+		(await import("@Asset/Image/Package/DarkTypeScript.svg")).default,
+	],
+	Batchfile: [
+		(await import("@Asset/Image/Package/LightWindowsTerminal.svg")).default,
+		(await import("@Asset/Image/Package/DarkWindowsTerminal.svg")).default,
+	],
+	Astro: [
+		(await import("@Asset/Image/Package/LightAstro.svg")).default,
+		(await import("@Asset/Image/Package/DarkAstro.svg")).default,
+	],
 } satisfies Type;
