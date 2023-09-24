@@ -22,11 +22,13 @@ const Link = (Link: string[] = []) =>
 			href="${Link}"
 		/>`
 	).join("\n");
+
+const { Head } = await import("astro-capo");
 ---
 
 <!doctype html>
 <html lang="en" class="no-js" dir="ltr">
-	<head>
+	<Head>
 		<script>
 			document.documentElement.classList.remove("no-js");
 			document.documentElement.classList.add("js");
@@ -88,7 +90,7 @@ const Link = (Link: string[] = []) =>
 			rel="pingback"
 			href="https://webmention.io/nikolahristov.tech/xmlrpc"
 		/>
-	</head>
+	</Head>
 	<body class="flex grow flex-col">
 		<div id="main" class="grow bg-[#8e993c]">
 			<slot />

@@ -41,4 +41,4 @@ export default {
 	TypeScript: [LightTypeScript, DarkTypeScript],
 	Batchfile: [LightWindowsTerminal, DarkWindowsTerminal],
 	Astro: [LightAstro, DarkAstro],
-} satisfies Type as Type;
+} satisfies Type;

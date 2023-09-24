@@ -1,24 +1,18 @@
-import Prefetch from "@astrojs/prefetch";
-import Sitemap from "@astrojs/sitemap";
-import Compress from "astro-compress";
-import Critters from "astro-critters";
-import Rome from "astro-rome";
-import { defineConfig } from "astro/config";
-import Worker from "astrojs-service-worker";
-
-export default defineConfig({
+export default (await import("astro/config")).defineConfig({
 	srcDir: "./Source",
 	publicDir: "./Public",
 	outDir: "./Target",
 	site: "https://nikolahristov.tech/",
 	compressHTML: true,
 	integrations: [
-		import.meta.env.MODE === "production" ? Worker() : null,
-		Sitemap(),
-		Prefetch(),
-		Rome({ Logger: 1 }),
-		Critters({ Logger: 1 }),
-		Compress({ Logger: 1 }),
+		import.meta.env.MODE === "production"
+			? (await import("astrojs-service-worker")).default()
+			: null,
+		(await import("@astrojs/sitemap")).default(),
+		(await import("@astrojs/prefetch")).default(),
+		await import("astro-rome").default({ Logger: 1 }),
+		await import("astro-critters").default({ Logger: 1 }),
+		await import("astro-compress").default({ Logger: 1 }),
 	],
 	vite: {
 		build: {
