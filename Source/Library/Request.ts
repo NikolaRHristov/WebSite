@@ -1,13 +1,5 @@
 import type { OctokitResponse } from "@octokit/types";
 
-import Environment from "@Library/Environment.js";
-
-import { Octokit } from "@octokit/core";
-
-const Fn = new Octokit({
-	auth: Environment.Token,
-});
-
 export default async (
 	Where: string,
 	// rome-ignore lint/suspicious/noExplicitAny:
@@ -20,7 +12,9 @@ export default async (
 
 		switch (Type) {
 			case "octokit":
-				return await Fn.request(Where, With);
+				return await new (await import("@octokit/core")).Octokit({
+					auth: (await import("@Library/Environment")).default.Token,
+				}).request(Where, With);
 		}
 	} catch (_Error) {
 		console.log(`Could not ${Where}`);
