@@ -26,7 +26,7 @@
 		"@astrojs/sitemap": "3.0.0",
 		"@octokit/core": "5.0.1",
 		"@swup/body-class-plugin": "3.1.2",
-		"@swup/head-plugin": "2.1.1",
+		"@swup/head-plugin": "2.1.2",
 		"@swup/overlay-theme": "2.0.0",
 		"@swup/preload-plugin": "3.2.4",
 		"@swup/scroll-plugin": "3.3.0",
