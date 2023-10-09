@@ -6,26 +6,14 @@ import Row from "@Component/Readme/Row.astro";
 ---
 
 <>
-	<h1>
-		<a href="https://holopin.io/@nikola" target="_blank"
-			><img
-				alt="@nikola's Holopin board"
-				src="https://holopin.io/api/user/board?user=nikola"
-			/>
-		</a>
-	</h1>
-
 	<table>
-		<Heading Text="Project" Emoji="🔥" />
-		<Row
-			Packages={new Set<PackageCell>([
-				"NPM:files-pipe",
-				"NPM:deployment-delete",
-				"GitHub:AstroStarter/PAC-STAC",
-				"cargo:innkeeper",
-				"GitHub:RoundedCorners/Application",
-			])}
+		<Heading
+			Text="NPM"
+			DarkIcon="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n.svg"
+			AltIcon="NPM"
 		/>
+
+		<Row Packages={new Set<PackageCell>(["NPM:typescript-esbuild"])} />
 	</table>
 
 	<table>
@@ -53,12 +41,30 @@ import Row from "@Component/Readme/Row.astro";
 
 	<table>
 		<Heading
-			Text="NPM"
-			DarkIcon="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n.svg"
-			AltIcon="NPM"
+			Text="GitHub"
+			DarkIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-Light-32px.png"
+			LightIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-32px.png"
+			AltIcon="GitHub"
 		/>
+		<Row
+			Packages={new Set<PackageCell>([
+				"NPM:@yesmaintain/script",
+				// "NPM:github-history-slider",
+			])}
+		/>
+	</table>
 
-		<Row Packages={new Set<PackageCell>(["NPM:typescript-esbuild"])} />
+	<table>
+		<Heading Text="Project" Emoji="🔥" />
+		<Row
+			Packages={new Set<PackageCell>([
+				"NPM:files-pipe",
+				"NPM:deployment-delete",
+				"GitHub:AstroStarter/PAC-STAC",
+				"cargo:innkeeper",
+				"GitHub:RoundedCorners/Application",
+			])}
+		/>
 	</table>
 
 	<table>
@@ -79,18 +85,12 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 	</table>
 
-	<table>
-		<Heading
-			Text="GitHub"
-			DarkIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-Light-32px.png"
-			LightIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-32px.png"
-			AltIcon="GitHub"
-		/>
-		<Row
-			Packages={new Set<PackageCell>([
-				"NPM:@yesmaintain/script",
-				// "NPM:github-history-slider",
-			])}
-		/>
-	</table>
+	<h1>
+		<a href="https://holopin.io/@nikola" target="_blank"
+			><img
+				alt="@nikola's Holopin board"
+				src="https://holopin.io/api/user/board?user=nikola"
+			/>
+		</a>
+	</h1>
 </>
