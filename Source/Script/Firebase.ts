@@ -1,4 +1,6 @@
-(await import("firebase/app")).initializeApp({
+import { initializeApp } from "firebase/app";
+
+initializeApp({
 	apiKey: "AIzaSyCiIOIiAvdRwC5n6AzX_F5WSivt9bvosTQ",
 	authDomain: "nikolahristov-web.firebaseapp.com",
 	projectId: "nikolahristov-web",
@@ -7,5 +9,3 @@
 	appId: "1:540449914377:web:bf0a39a757e9ebcd1ec2d8",
 	measurementId: "G-146FB9N18L",
 });
-
-export {};
