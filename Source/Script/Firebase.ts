@@ -7,3 +7,5 @@
 	appId: "1:540449914377:web:bf0a39a757e9ebcd1ec2d8",
 	measurementId: "G-146FB9N18L",
 });
+
+export {};
