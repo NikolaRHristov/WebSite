@@ -22,4 +22,5 @@ export default (await import("astro/config")).defineConfig({
 			preserveSymlinks: true,
 		},
 	},
-});
+	// biome-ignore lint/suspicious/noExplicitAny:
+}) as any;
