@@ -13,11 +13,12 @@ export default async (
 		switch (Type) {
 			case "octokit":
 				return await new (await import("@octokit/core")).Octokit({
-					auth: (await import("@Library/Environment")).default.Token,
+					auth: (
+						await import("@Library/Environment.js")
+					).default.parse(process.env).Token,
 				}).request(Where, With);
 		}
 	} catch (_Error) {
-		console.log(_Error);
 		console.log(`Could not ${Where}`);
 	}
 };
