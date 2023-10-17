@@ -17,6 +17,7 @@ export default async (
 				}).request(Where, With);
 		}
 	} catch (_Error) {
+		console.log(_Error);
 		console.log(`Could not ${Where}`);
 	}
 };
