@@ -9,6 +9,7 @@
 			"@Element/*": ["Source/Element/*"],
 			"@Layout/*": ["Source/Layout/*"],
 			"@Library/*": ["Source/Library/*"],
+			"@Type/*": ["Source/Type/*"],
 			"@Option/*": ["Source/Option/*"],
 			"@Page/*": ["Source/pages/*"],
 			"@Script/*": ["Source/Script/*"],

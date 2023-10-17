@@ -1,5 +1,5 @@
 ---
-import type { PackageCell } from "@Option/Cell.js";
+import type Cell from "@Type/Cell.js";
 
 import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
@@ -18,7 +18,7 @@ import Row from "@Component/Readme/Row.astro";
 	<table>
 		<Heading Text="Project" Emoji="🔥" />
 		<Row
-			Packages={new Set<PackageCell>([
+			Packages={new Set<Cell>([
 				"NPM:files-pipe",
 				"NPM:deployment-delete",
 				"GitHub:AstroStarter/PAC-STAC",
@@ -37,7 +37,7 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 
 		<Row
-			Packages={new Set<PackageCell>([
+			Packages={new Set<Cell>([
 				"NPM:astro-compress",
 				// "NPM:astro-convert",
 				"NPM:astro-critters",
@@ -58,7 +58,7 @@ import Row from "@Component/Readme/Row.astro";
 			AltIcon="NPM"
 		/>
 
-		<Row Packages={new Set<PackageCell>(["NPM:typescript-esbuild"])} />
+		<Row Packages={new Set<Cell>(["NPM:typescript-esbuild"])} />
 	</table>
 
 	<table>
@@ -69,7 +69,7 @@ import Row from "@Component/Readme/Row.astro";
 			AltIcon="GitHub"
 		/>
 		<Row
-			Packages={new Set<PackageCell>([
+			Packages={new Set<Cell>([
 				"NPM:@yesmaintain/script",
 				// "NPM:github-history-slider",
 			])}
@@ -84,7 +84,7 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 
 		<Row
-			Packages={new Set<PackageCell>([
+			Packages={new Set<Cell>([
 				"GitHub:NikolaRHristov/Dotfile",
 				"GitHub:NikolaRHristov/NVIM",
 				"GitHub:NikolaRHristov/Bash",
