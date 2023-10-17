@@ -7,13 +7,16 @@ import Row from "@Component/Readme/Row.astro";
 
 <>
 	<table>
-		<Heading
-			Text="NPM"
-			DarkIcon="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n.svg"
-			AltIcon="NPM"
+		<Heading Text="Project" Emoji="🔥" />
+		<Row
+			Packages={new Set<PackageCell>([
+				"NPM:files-pipe",
+				"NPM:deployment-delete",
+				"GitHub:AstroStarter/PAC-STAC",
+				"cargo:innkeeper",
+				"GitHub:RoundedCorners/Application",
+			])}
 		/>
-
-		<Row Packages={new Set<PackageCell>(["NPM:typescript-esbuild"])} />
 	</table>
 
 	<table>
@@ -41,6 +44,16 @@ import Row from "@Component/Readme/Row.astro";
 
 	<table>
 		<Heading
+			Text="NPM"
+			DarkIcon="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n.svg"
+			AltIcon="NPM"
+		/>
+
+		<Row Packages={new Set<PackageCell>(["NPM:typescript-esbuild"])} />
+	</table>
+
+	<table>
+		<Heading
 			Text="GitHub"
 			DarkIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-Light-32px.png"
 			LightIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-32px.png"
@@ -50,19 +63,6 @@ import Row from "@Component/Readme/Row.astro";
 			Packages={new Set<PackageCell>([
 				"NPM:@yesmaintain/script",
 				// "NPM:github-history-slider",
-			])}
-		/>
-	</table>
-
-	<table>
-		<Heading Text="Project" Emoji="🔥" />
-		<Row
-			Packages={new Set<PackageCell>([
-				"NPM:files-pipe",
-				"NPM:deployment-delete",
-				"GitHub:AstroStarter/PAC-STAC",
-				"cargo:innkeeper",
-				"GitHub:RoundedCorners/Application",
 			])}
 		/>
 	</table>
