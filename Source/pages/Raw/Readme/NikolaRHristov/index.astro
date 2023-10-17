@@ -1,8 +1,11 @@
 ---
-import type { PackageCell } from "@Option/Cell.js";
+export const { default: Heading } = await import(
+	"@Component/Readme/Heading.astro"
+);
 
-import Heading from "@Component/Readme/Heading.astro";
-import Row from "@Component/Readme/Row.astro";
+export const { default: Row } = await import("@Component/Readme/Row.astro");
+
+import type { PackageCell } from "@Option/Cell.js";
 ---
 
 <>
