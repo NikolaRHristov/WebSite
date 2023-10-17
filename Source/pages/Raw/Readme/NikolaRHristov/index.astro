@@ -1,11 +1,8 @@
 ---
-export const { default: Heading } = await import(
-	"@Component/Readme/Heading.astro"
-);
-
-export const { default: Row } = await import("@Component/Readme/Row.astro");
-
 import type { PackageCell } from "@Option/Cell.js";
+
+import Heading from "@Component/Readme/Heading.astro";
+import Row from "@Component/Readme/Row.astro";
 ---
 
 <>
@@ -97,7 +94,7 @@ import type { PackageCell } from "@Option/Cell.js";
 		/>
 	</table>
 
-	Generated from: <a
+	 Generated from: <a
 		href="https://github.com/NikolaRHristov/Website/blob/main/Source/pages/Raw/Readme/NikolaRHristov/index.astro"
 		target="_blank">
 		NikolaRHristov/Website/Source/pages/Raw/Readme/NikolaRHristov/index.astro
