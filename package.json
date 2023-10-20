@@ -24,15 +24,12 @@
 		"@astrojs/check": "0.2.1",
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "3.0.2",
-<<<<<<< HEAD
 		"@octokit/core": "5.0.1",
 		"@swup/body-class-plugin": "3.1.2",
 		"@swup/head-plugin": "2.1.2",
 		"@swup/overlay-theme": "2.0.0",
 		"@swup/preload-plugin": "3.2.6",
 		"@swup/scroll-plugin": "3.3.1",
-=======
->>>>>>> upstream/main
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.6",
 		"@tailwindcss/typography": "0.5.10",
