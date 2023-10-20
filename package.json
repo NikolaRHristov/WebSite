@@ -53,7 +53,11 @@
 		"postcss-url": "10.1.3",
 		"swup": "4.4.2",
 		"tailwindcss": "3.3.3",
+<<<<<<< HEAD
 		"typescript-esbuild": "0.2.21",
+=======
+		"typescript-esbuild": "0.2.20",
+>>>>>>> upstream/main
 		"zod": "3.22.4"
 	},
 	"publishConfig": {
