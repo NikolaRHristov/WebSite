@@ -1,6 +1,6 @@
 ---
 import Footer from "@Component/Footer.astro";
-import "@Style/Base.css";
+import "@Stylesheet/Base.css";
 
 const {
 	Font = [],
@@ -55,9 +55,9 @@ import { Head } from "astro-capo";
 			href="/site.webmanifest"
 			crossorigin="use-credentials"
 		/>
-
+	
 		<style is:global>
-			@import "@Style/Global.css";
+			@import "@Stylesheet/Global.css";
 		</style>
 
 		<slot name="styles" />
