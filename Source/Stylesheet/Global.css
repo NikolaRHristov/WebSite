@@ -4,29 +4,21 @@ html {
 
 html,
 body {
-<<<<<<< HEAD
 	@apply h-full
 		w-full;
-=======
-	height: 100%;
->>>>>>> upstream/main
 }
 
 body {
 	@apply flex
 		flex-grow
 		flex-col
-<<<<<<< HEAD
 		bg-white
 		tabular-nums
 		text-black
-=======
->>>>>>> upstream/main
 		antialiased
 		dark:bg-black
 		dark:text-white
 		sm:subpixel-antialiased;
-<<<<<<< HEAD
 
 	font-variant-ligatures: no-common-ligatures;
 
@@ -56,14 +48,11 @@ body {
 		@apply bg-white
 			text-amber-400;
 	}
-=======
->>>>>>> upstream/main
 }
 
 img {
 	@apply inline-block
 		select-none
-<<<<<<< HEAD
 		align-top
 		outline-none;
 }
@@ -79,7 +68,3 @@ img {
 		padding: 4px 0 !important;
 	}
 }
-=======
-		outline-none;
-}
->>>>>>> upstream/main
