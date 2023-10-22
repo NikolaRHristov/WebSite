@@ -55,9 +55,13 @@
 		"tailwindcss": "3.3.3",
 		"typescript": "5.2.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
 		"typescript-esbuild": "0.2.25",
 =======
 		"typescript-esbuild": "0.2.24",
+>>>>>>> upstream/main
+=======
+		"typescript-esbuild": "0.2.25",
 >>>>>>> upstream/main
 		"zod": "3.22.4"
 	},
