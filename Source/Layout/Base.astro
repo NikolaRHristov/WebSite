@@ -24,6 +24,7 @@ const Link = (Link: string[] = []) =>
 	).join("\n");
 
 import { Head } from "astro-capo";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -89,6 +90,7 @@ import { Head } from "astro-capo";
 			rel="pingback"
 			href="https://webmention.io/nikolahristov.tech/xmlrpc"
 		/>
+		<ViewTransitions />
 	</Head>
 	<body class="flex grow flex-col">
 		<div id="main" class="grow bg-[#8e993c]">
