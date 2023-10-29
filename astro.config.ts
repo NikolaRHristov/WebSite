@@ -25,4 +25,6 @@ export default (await import("astro/config")).defineConfig({
 			preserveSymlinks: true,
 		},
 	},
-});
+}) as typeof defineConfig;
+
+import type { defineConfig } from "astro/config";
