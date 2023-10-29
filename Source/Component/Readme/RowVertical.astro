@@ -247,14 +247,7 @@ const Site = Astro.url.origin;
 									<br />
 
 									<b
-										set:html={Package.Description?.split(
-											"."
-										)
-											?.join(".<br />")
-											?.split("!")
-											?.join("!<br />")
-											?.split("?")
-											?.join("?<br />")}
+										set:html={Package.Description}
 									/>
 
 									<br />
