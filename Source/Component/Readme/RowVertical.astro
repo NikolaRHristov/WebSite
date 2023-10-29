@@ -210,6 +210,10 @@ for (const Item of Items) {
 
 									{Array.from(Package.Badge).map((Badge) => (
 										<>
+											<Fragment
+												set:html={"&nbsp;&nbsp;"}
+											/>
+
 											<a
 												href={Badge.Link}
 												target="_blank">
