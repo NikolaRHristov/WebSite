@@ -23,7 +23,7 @@
 	"dependencies": {
 		"@astrojs/check": "0.3.0",
 		"@astrojs/prefetch": "0.4.1",
-		"@astrojs/sitemap": "3.0.2",
+		"@astrojs/sitemap": "3.0.3",
 		"@octokit/core": "5.0.1",
 		"@swup/body-class-plugin": "3.1.2",
 		"@swup/head-plugin": "2.1.2",
@@ -33,7 +33,7 @@
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.6",
 		"@tailwindcss/typography": "0.5.10",
-		"astro": "3.4.0",
+		"astro": "3.4.2",
 		"astro-capo": "0.0.1",
 		"astro-compress": "2.2.2",
 		"astro-critters": "2.0.11",
