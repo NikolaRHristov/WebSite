@@ -4,7 +4,7 @@ export default async (
 	Where: string,
 	// biome-ignore lint/suspicious/noExplicitAny:
 	With: any = {},
-	Type = "octokit",
+	Type = "octokit"
 	// biome-ignore lint/suspicious/noExplicitAny:
 ): Promise<OctokitResponse<any, number> | any> => {
 	try {
