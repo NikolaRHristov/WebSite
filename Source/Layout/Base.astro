@@ -88,6 +88,7 @@ import { ViewTransitions } from "astro:transitions";
 		/>
 		<ViewTransitions />
 	</Head>
+<<<<<<< HEAD
 	<body class="flex grow flex-col">
 		<div id="main" class="grow bg-[#8e993c]">
 			<slot />
@@ -102,5 +103,14 @@ import { ViewTransitions } from "astro:transitions";
 			class="absolute left-0 top-0 hidden"
 			rel="me"
 			href="https://mastodon.social/@nikolahristov"></a>
+=======
+	<body>
+		<div class="grow">
+			<slot />
+		</div>
+		<script>
+			import "@Script/Firebase";
+		</script>
+>>>>>>> upstream/main
 	</body>
 </html>
