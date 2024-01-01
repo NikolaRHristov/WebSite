@@ -16,9 +16,9 @@ body {
 		tabular-nums
 		text-black
 		antialiased
+		sm:subpixel-antialiased
 		dark:bg-black
-		dark:text-white
-		sm:subpixel-antialiased;
+		dark:text-white;
 
 	font-variant-ligatures: no-common-ligatures;
 
