@@ -21,7 +21,7 @@
 		"start": "astro dev"
 	},
 	"dependencies": {
-		"@astrojs/check": "0.3.4",
+		"@astrojs/check": "0.4.1",
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "3.0.4",
 		"@octokit/core": "5.0.2",
