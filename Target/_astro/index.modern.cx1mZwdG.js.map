@@ -1,0 +1,28 @@
+{
+	"version": 3,
+	"file": "index.modern.cx1mZwdG.js",
+	"sources": [
+		"../../node_modules/@swup/head-plugin/dist/index.modern.js"
+	],
+	"sourcesContent": [
+		"import e from\"@swup/plugin\";function t(){return t=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var s=arguments[t];for(var n in s)Object.prototype.hasOwnProperty.call(s,n)&&(e[n]=s[n])}return e},t.apply(this,arguments)}function s(e){return\"title\"!==e.localName&&!e.matches(\"[data-swup-theme]\")}function n(e,t){return e.outerHTML===t.outerHTML}function r(e){return e.matches(\"link[rel=stylesheet][href]\")}class i extends e{constructor(e={}){var i;super(),i=this,this.name=\"SwupHeadPlugin\",this.requires={swup:\">=4\"},this.defaults={persistTags:!1,persistAssets:!1,awaitAssets:!1,timeout:3e3},this.options=void 0,this.updateHead=async function(e,{page:{html:t}}){const o=(new DOMParser).parseFromString(t,\"text/html\"),{removed:a,added:l}=function(e,t,{shouldPersist:r=(()=>!1)}={}){const i=Array.from(e.children),o=Array.from(t.children),a=(l=i,o.reduce((e,t,s)=>(l.some(e=>n(t,e))||e.push({el:t,index:s}),e),[]));var l;const u=function(e,t){return e.reduce((e,s)=>(t.some(e=>n(s,e))||e.push({el:s}),e),[])}(i,o);return u.reverse().filter(({el:e})=>s(e)).filter(({el:e})=>!r(e)).forEach(({el:t})=>e.removeChild(t)),a.filter(({el:e})=>s(e)).forEach(({el:t,index:s=0})=>{e.insertBefore(t,e.children[s+1]||null)}),{removed:u.map(({el:e})=>e),added:a.map(({el:e})=>e)}}(document.head,o.head,{shouldPersist:e=>i.isPersistentTag(e)});i.swup.log(`Removed ${a.length} / added ${l.length} tags in head`);const u=(c=document.documentElement).lang!==(d=o.documentElement).lang?(c.lang=d.lang,c.lang):null;var c,d;if(u&&i.swup.log(`Updated lang attribute: ${u}`),i.options.awaitAssets){const e=function(e,t=0){return e.filter(r).map(e=>function(e,t=0){const s=t=>{(({href:e})=>Array.from(document.styleSheets).map(({href:e})=>e).includes(e))(e)?t():setTimeout(()=>s(t),10)};return new Promise(e=>{s(e),t>0&&setTimeout(e,t)})}(e,t))}(l,i.options.timeout);e.length&&(i.swup.log(`Waiting for ${e.length} assets to load`),await Promise.all(e))}},this.options=t({},this.defaults,e),this.options.persistAssets&&!this.options.persistTags&&(this.options.persistTags=\"link[rel=stylesheet], script[src], style\")}mount(){this.before(\"content:replace\",this.updateHead)}isPersistentTag(e){const{persistTags:t}=this.options;return\"function\"==typeof t?t(e):\"string\"==typeof t?e.matches(t):Boolean(t)}}export{i as default};\n//# sourceMappingURL=index.modern.js.map\n"
+	],
+	"names": [
+		"t",
+		"e",
+		"s",
+		"n",
+		"r",
+		"i",
+		"o",
+		"a",
+		"l",
+		"u",
+		"c",
+		"d"
+	],
+	"mappings": "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",
+	"x_google_ignoreList": [
+		0
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"version": 3,
+	"file": "index.modern.krbs8bWt.js",
+	"sources": [
+		"../../node_modules/@swup/body-class-plugin/dist/index.modern.js"
+	],
+	"sourcesContent": [
+		"import s from\"@swup/plugin\";function t(){return t=Object.assign?Object.assign.bind():function(s){for(var t=1;t<arguments.length;t++){var e=arguments[t];for(var i in e)Object.prototype.hasOwnProperty.call(e,i)&&(s[i]=e[i])}return s},t.apply(this,arguments)}class e extends s{constructor(s={}){super(),this.name=\"SwupBodyClassPlugin\",this.requires={swup:\">=4\"},this.defaults={prefix:\"\"},this.options=void 0,this.updateBodyClass=(s,{page:{html:t}})=>{this.updateClassNames(document.body,this.getBodyElement(t))},this.options=t({},this.defaults,s)}mount(){this.on(\"content:replace\",this.updateBodyClass)}getBodyElement(s){return(new DOMParser).parseFromString(s,\"text/html\").querySelector(\"body\")}updateClassNames(s,t){const e=[...s.classList].filter(s=>this.isValidClassName(s)),i=[...t.classList].filter(s=>this.isValidClassName(s));s.classList.remove(...e),s.classList.add(...i)}isValidClassName(s){return s&&s.startsWith(this.options.prefix)}}export{e as default};\n//# sourceMappingURL=index.modern.js.map\n"
+	],
+	"names": [
+		"t",
+		"s",
+		"i",
+		"e"
+	],
+	"mappings": "+CAA4B,SAASA,GAAG,CAAC,OAAOA,EAAE,OAAO,OAAO,OAAO,OAAO,KAAM,EAAC,SAASC,EAAE,CAAC,QAAQD,EAAE,EAAEA,EAAE,UAAU,OAAOA,IAAI,CAAC,IAAI,EAAE,UAAUA,CAAC,EAAE,QAAQE,KAAK,EAAE,OAAO,UAAU,eAAe,KAAK,EAAEA,CAAC,IAAID,EAAEC,CAAC,EAAE,EAAEA,CAAC,EAAE,CAAC,OAAOD,CAAC,EAAED,EAAE,MAAM,KAAK,SAAS,CAAC,CAAC,MAAMG,UAAUF,CAAC,CAAC,YAAY,EAAE,GAAG,CAAC,MAAK,EAAG,KAAK,KAAK,sBAAsB,KAAK,SAAS,CAAC,KAAK,KAAK,EAAE,KAAK,SAAS,CAAC,OAAO,EAAE,EAAE,KAAK,QAAQ,OAAO,KAAK,gBAAgB,CAACA,EAAE,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,IAAI,CAAC,KAAK,iBAAiB,SAAS,KAAK,KAAK,eAAe,CAAC,CAAC,CAAC,EAAE,KAAK,QAAQD,EAAE,CAAE,EAAC,KAAK,SAAS,CAAC,CAAC,CAAC,OAAO,CAAC,KAAK,GAAG,kBAAkB,KAAK,eAAe,CAAC,CAAC,eAAe,EAAE,CAAC,OAAO,IAAI,YAAW,gBAAgB,EAAE,WAAW,EAAE,cAAc,MAAM,CAAC,CAAC,iBAAiB,EAAEA,EAAE,CAAC,MAAMG,EAAE,CAAC,GAAG,EAAE,SAAS,EAAE,OAAOF,GAAG,KAAK,iBAAiBA,CAAC,CAAC,EAAEC,EAAE,CAAC,GAAGF,EAAE,SAAS,EAAE,OAAOC,GAAG,KAAK,iBAAiBA,CAAC,CAAC,EAAE,EAAE,UAAU,OAAO,GAAGE,CAAC,EAAE,EAAE,UAAU,IAAI,GAAGD,CAAC,CAAC,CAAC,iBAAiB,EAAE,CAAC,OAAO,GAAG,EAAE,WAAW,KAAK,QAAQ,MAAM,CAAC,CAAC",
+	"x_google_ignoreList": [
+		0
+	]
+}
