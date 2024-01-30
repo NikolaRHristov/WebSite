@@ -26,10 +26,14 @@ DarkIcon = DarkIcon ?? LightIcon;
 		<picture>
 			{
 				DarkIcon ? (
-					<source
-						media="(prefers-color-scheme: dark)"
-						srcset={DarkIcon}
-					/>
+					DarkIcon.indexOf("http") !== -1 ? (
+						<source
+							media="(prefers-color-scheme: dark)"
+							srcset={DarkIcon}
+						/>
+					) : (
+						DarkIcon
+					)
 				) : (
 					""
 				)
@@ -37,10 +41,14 @@ DarkIcon = DarkIcon ?? LightIcon;
 
 			{
 				LightIcon ? (
-					<source
-						media="(prefers-color-scheme: light)"
-						srcset={LightIcon}
-					/>
+					LightIcon.indexOf("http") !== -1 ? (
+						<source
+							media="(prefers-color-scheme: light)"
+							srcset={LightIcon}
+						/>
+					) : (
+						LightIcon
+					)
 				) : (
 					""
 				)
