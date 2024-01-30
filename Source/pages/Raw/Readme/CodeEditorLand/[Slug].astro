@@ -1,0 +1,24 @@
+---
+import Base from "@Layout/Base.astro";
+import "github-markdown-css";
+
+export const getStaticPaths = async () =>
+	["Cargo", "Environment", "NPM"].map((Slug) => ({
+		params: { Slug },
+	}));
+
+const Slug =
+	typeof Astro.params["Slug"] === "string" ? Astro.params["Slug"] : "";
+
+const Readme = (
+	await import(`../Raw/Readme/CodeEditorLand/${Slug}/index.astro`)
+).default;
+---
+
+<Base>
+	<div class="container">
+		<div class="markdown-body">
+			<Readme />
+		</div>
+	</div>
+</Base>

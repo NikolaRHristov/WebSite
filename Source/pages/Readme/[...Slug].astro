@@ -9,16 +9,16 @@ export const getStaticPaths = async () =>
 		"AstroCritters",
 		"AstroRome",
 		"CodeEditorLand",
+		"CodeEditorLand/NPM",
+		"CodeEditorLand/Environment",
+		"CodeEditorLand/Cargo",
 		"NikolaRHristov",
 		"RoundedCorners",
 	].map((Slug) => ({
 		params: { Slug },
 	}));
 
-const Slug =
-	typeof Astro.params["Slug"] === "string" ? Astro.params["Slug"] : "";
-
-console.log(Slug);
+const Slug = Astro.params["Slug"];
 
 const Readme = (await import(`../Raw/Readme/${Slug}/index.astro`)).default;
 ---
