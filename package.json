@@ -17,7 +17,7 @@
 		"url": "https://nikolahristov.tech"
 	},
 	"scripts": {
-		"prepublishOnly": "astro check ; astro build",
+		"prepublishOnly": "astro build",
 		"start": "astro dev"
 	},
 	"dependencies": {
@@ -30,9 +30,9 @@
 		"@swup/overlay-theme": "2.0.0",
 		"@swup/preload-plugin": "3.2.9",
 		"@swup/scroll-plugin": "3.3.1",
+		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
 		"@tailwindcss/typography": "0.5.10",
-		"@tailwindcss/aspect-ratio": "0.4.2",
 		"astro": "4.2.6",
 		"astro-capo": "0.0.1",
 		"astro-compress": "2.2.8",
