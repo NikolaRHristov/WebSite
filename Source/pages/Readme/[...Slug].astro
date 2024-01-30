@@ -18,15 +18,24 @@ export const getStaticPaths = async () =>
 		params: { Slug },
 	}));
 
-const Slug = Astro.params["Slug"];
+const Slug =
+	typeof Astro.params["Slug"] === "string" ? Astro.params["Slug"] : "";
 
-const Readme = (await import(`../Raw/Readme/${Slug}/index.astro`)).default;
+try {
+	await (
+		await import("fs/promises")
+	).access(
+		`../Raw/Readme/${Slug}/index.astro`,
+		(await import("fs/promises")).constants.R_OK
+	);
+} catch (error) {}
+// const Readme = (await import(`../Raw/Readme/${Slug}/index.astro`)).default;
 ---
 
 <Base>
 	<div class="container">
 		<div class="markdown-body">
-			<Readme />
+			<!-- <Readme /> -->
 		</div>
 	</div>
 </Base>
