@@ -6,17 +6,14 @@ export default (async (...Option: Parameters<Type>) => {
 	const Items = new Set<PackagesRowItem>();
 
 	for (const Package of Option[0]) {
-		let GitHub = "";
+		let GitHub = null;
 
 		try {
 			if (Match(Package, /GitHub:/)) {
 				GitHub =
 					typeof Package === "string"
 						? Package.split(":")[1]
-						: Object.keys(Package)
-								.entries()
-								.next()
-								.value.split(":")[1];
+						: Object.keys(Package).at(0)?.split(":")[1];
 
 				const Owner = GitHub?.split("/")[0];
 				const Repository = GitHub?.split("/")[1];
@@ -57,10 +54,7 @@ export default (async (...Option: Parameters<Type>) => {
 				const NPM =
 					typeof Package === "string"
 						? Package.split(":")[1]
-						: Object.keys(Package)
-								.entries()
-								.next()
-								.value.split(":")[1];
+						: Object.keys(Package).at(0)?.split(":")[1];
 
 				const JSONNPM = await (
 					await fetch(`https://registry.npmjs.org/${NPM}`)
