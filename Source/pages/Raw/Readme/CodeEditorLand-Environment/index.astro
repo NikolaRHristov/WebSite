@@ -30,8 +30,16 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 		<Row
 			Packages={new Set([
-				"GitHub:CodeEditorLand/NPMCommon",
-				"GitHub:CodeEditorLand/NPMIngress",
+				{
+					"GitHub:CodeEditorLand/NPMCommon": {
+						Name: "Common",
+					},
+				},
+				{
+					"GitHub:CodeEditorLand/NPMIngress": {
+						Name: "Ingress",
+					},
+				},
 			])}
 		/>
 	</table>

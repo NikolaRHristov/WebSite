@@ -10,6 +10,14 @@ import Row from "@Component/Readme/Row.astro";
 			DarkIcon="https://nikolahristov.tech/Image/GitHub/Cargo-Logo-Small.png"
 			Text="Cargo:"
 		/>
-		<Row Packages={new Set(["GitHub:CodeEditorLand/CargoMaintain"])} />
+		<Row
+			Packages={new Set([
+				{
+					"GitHub:CodeEditorLand/CargoMaintain": {
+						Name: "Maintain",
+					},
+				},
+			])}
+		/>
 	</table>
 </>
