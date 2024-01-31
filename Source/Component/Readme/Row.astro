@@ -16,11 +16,7 @@ const Light = "&color=white&labelColor=white&logoColor=black&logoWidth=0";
 
 const { Packages } = Astro.props;
 
-let Items = new Set<PackagesRowItem>();
-
-for (const Package of Packages) {
-	Items.add(await Parse(Package));
-}
+const Items = await Parse(Packages);
 
 for (const Item of Items) {
 	const Language =
