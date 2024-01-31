@@ -100,6 +100,7 @@ export default (async (...Option: Parameters<Type>) => {
 					]),
 				});
 			}
+
 			if (Match(Package, /cargo:/)) {
 				const Crate =
 					typeof Package === "string"
@@ -141,8 +142,6 @@ export default (async (...Option: Parameters<Type>) => {
 					GitHub,
 					Name: JSONCargo?.crate?.name ?? "",
 				});
-
-				break;
 			}
 		} catch (_Error) {
 			console.log(`Package: ${Package}`);
