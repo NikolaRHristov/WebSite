@@ -26,7 +26,11 @@ export default (async (...Option: Parameters<Type>) => {
 				if (JSONGitHub?.data) {
 					Items.add({
 						Link: JSONGitHub.data?.html_url ?? "",
-						Name: JSONGitHub.data?.name ?? "",
+						Name:
+							typeof Package === "object"
+								? Object.values(Package).at(0)?.Name ??
+								  JSONGitHub.data?.name
+								: JSONGitHub.data?.name ?? "",
 						GitHub: JSONGitHub.data?.full_name ?? "",
 						Description: JSONGitHub.data?.description ?? "",
 						Badge: new Set([
@@ -67,7 +71,11 @@ export default (async (...Option: Parameters<Type>) => {
 
 				Items.add({
 					Link: `https://github.com/${GitHub}`,
-					Name: GitHub.split("/")[1] ?? "",
+					Name:
+						typeof Package === "object"
+							? Object.values(Package).at(0)?.Name ??
+							  GitHub.split("/")[1]
+							: GitHub.split("/")[1] ?? "",
 					GitHub,
 					Description: JSONNPM?.description ?? "",
 					Badge: new Set([
@@ -115,6 +123,11 @@ export default (async (...Option: Parameters<Type>) => {
 
 				Items.add({
 					Link: JSONCargo?.crate?.repository ?? "",
+					Name:
+						typeof Package === "object"
+							? Object.values(Package).at(0)?.Name ??
+							  JSONCargo?.crate?.name
+							: JSONCargo?.crate?.name ?? "",
 					Badge: new Set([
 						{
 							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
@@ -134,7 +147,6 @@ export default (async (...Option: Parameters<Type>) => {
 					]),
 					Description: JSONCargo?.crate?.description ?? "",
 					GitHub,
-					Name: JSONCargo?.crate?.name ?? "",
 				});
 			}
 		} catch (_Error) {
