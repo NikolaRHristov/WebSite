@@ -12,10 +12,7 @@ interface Props {
 
 const Dark = "&color=black&labelColor=black&logoColor=white&logoWidth=0";
 const Light = "&color=white&labelColor=white&logoColor=black&logoWidth=0";
-
-const { Packages } = Astro.props;
-
-const Items = await Parse(Packages);
+const Items = await Parse(Astro.props.Packages);
 
 for (const Item of Items) {
 	const Language =
