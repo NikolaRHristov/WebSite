@@ -19,10 +19,8 @@ const { Packages } = Astro.props;
 let Items = new Set<PackagesRowItem>();
 
 for (const Package of Packages) {
-	await Parse(Package, Items);
+	Items.add(await Parse(Package));
 }
-
-console.log(Items);
 
 for (const Item of Items) {
 	const Language =

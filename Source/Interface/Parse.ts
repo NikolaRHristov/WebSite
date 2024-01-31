@@ -3,7 +3,7 @@
  *
  */
 export default interface Type {
-	(Package: Cell, Items: Set<PackagesRowItem>): Promise<void>;
+	(Package: Cell): Promise<PackagesRowItem>;
 }
 
 import type Cell from "@Type/Cell";

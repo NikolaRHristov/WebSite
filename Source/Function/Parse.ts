@@ -25,7 +25,7 @@ export default (async (...Option: Parameters<Type>) => {
 				});
 
 				if (JSONGitHub?.data) {
-					Option[1].add({
+					return {
 						Link: JSONGitHub.data?.html_url ?? "",
 						Name: JSONGitHub.data?.name ?? "",
 						GitHub: JSONGitHub.data?.full_name ?? "",
@@ -47,8 +47,9 @@ export default (async (...Option: Parameters<Type>) => {
 								Alt: "Downloads",
 							},
 						]),
-					});
+					};
 				}
+
 				break;
 			}
 
@@ -70,7 +71,7 @@ export default (async (...Option: Parameters<Type>) => {
 					?.replace("#readme", "")
 					?.replace(".git", "");
 
-				Option[1].add({
+				return {
 					Link: `https://github.com/${GitHub}`,
 					Name: GitHub.split("/")[1] ?? "",
 					GitHub,
@@ -97,9 +98,7 @@ export default (async (...Option: Parameters<Type>) => {
 							Alt: "Downloads",
 						},
 					]),
-				});
-
-				break;
+				};
 			}
 
 			case Match(Option[0], /cargo:/): {
@@ -120,7 +119,7 @@ export default (async (...Option: Parameters<Type>) => {
 					?.replace("#readme", "")
 					?.replace(".git", "");
 
-				Option[1].add({
+				return {
 					Link: JSONCargo?.crate?.repository ?? "",
 					Badge: new Set([
 						{
@@ -142,9 +141,7 @@ export default (async (...Option: Parameters<Type>) => {
 					Description: JSONCargo?.crate?.description ?? "",
 					GitHub,
 					Name: JSONCargo?.crate?.name ?? "",
-				});
-
-				break;
+				};
 			}
 
 			default:
@@ -154,6 +151,7 @@ export default (async (...Option: Parameters<Type>) => {
 		console.log(`Package: ${Option[0]}`);
 		console.log(_Error);
 	}
+
 }) satisfies Type as Type;
 
 import type Type from "@Interface/Parse.js";
