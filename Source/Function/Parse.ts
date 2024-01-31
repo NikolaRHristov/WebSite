@@ -155,8 +155,8 @@ export default (async (...Option: Parameters<Type>) => {
 					break;
 			}
 		} catch (_Error) {
-			console.log(`Package: ${Package}`);
-			console.log(_Error);
+			// console.log(`Package: ${Package}`);
+			// console.log(_Error);
 		}
 	}
 

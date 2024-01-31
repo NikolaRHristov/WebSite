@@ -8,10 +8,7 @@ export default ((...Option: Parameters<Type>) => {
 			return Option[0].match(Option[1]);
 
 		case typeof Option[0] === "object":
-			return Object.keys(Option[0])
-				.entries()
-				.next()
-				.value.match(Option[1]);
+			return Object.keys(Option[0]).at(0)?.match(Option[1]);
 
 		default:
 			return false;
