@@ -1,36 +1,14 @@
 ---
 import type PackageCell from "@Type/Cell";
+import type PackagesRowItem from "@Interface/PackagesRowItem";
 
 import Request from "@Library/Request";
 
 export const { default: Icon } = await import("@Option/Icon.js");
-
-export const { default: Match } = await import("@Function/Match.js");
+export const { default: Parse } = await import("@Function/Parse.js");
 
 interface Props {
 	Packages: Set<PackageCell>;
-}
-
-interface Badge {
-	Image: string;
-	Link: string;
-	Alt: string;
-}
-
-interface Language {
-	Light: ImageMetadata | null;
-	Dark: ImageMetadata | null;
-	Name: string;
-	BoC: string;
-}
-
-interface PackagesRowItem {
-	Name: string;
-	Link: string;
-	GitHub: string;
-	Description: string;
-	Badge: Set<Badge>;
-	Language?: Set<Language>;
 }
 
 const Dark = "&color=black&labelColor=black&logoColor=white&logoWidth=0";
@@ -41,125 +19,10 @@ const { Packages } = Astro.props;
 let Items = new Set<PackagesRowItem>();
 
 for (const Package of Packages) {
-	try {
-		if (Match(Package, /GitHub:/)) {
-			// const GitHub = Package.split(":")[1];
-			// const Owner = GitHub?.split("/")[0];
-			// const Repository = GitHub?.split("/")[1];
-
-			// const _JSON = await Request(`GET /repos/${GitHub}`, {
-			// 	owner: Owner,
-			// 	repo: Repository,
-			// });
-
-			// if (_JSON?.data) {
-			// 	Items.add({
-			// 		Link: _JSON.data?.html_url ?? "",
-			// 		Name: _JSON.data?.name ?? "",
-			// 		GitHub: _JSON.data?.full_name ?? "",
-			// 		Description: _JSON.data?.description ?? "",
-			// 		Badge: new Set([
-			// 			{
-			// 				Link: `https://github.com/${Owner}/${Repository}`,
-			// 				Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Updated`,
-			// 				Alt: "Last Update",
-			// 			},
-			// 			{
-			// 				Link: `https://github.com/${Owner}/${Repository}`,
-			// 				Image: `https://img.shields.io/github/issues/${Owner}/${Repository}?label=Issues`,
-			// 				Alt: "Issues",
-			// 			},
-			// 			{
-			// 				Link: `https://github.com/${Owner}/${Repository}`,
-			// 				Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Downloads`,
-			// 				Alt: "Downloads",
-			// 			},
-			// 		]),
-			// 	});
-			// }
-		}
-
-		if (Match(Package, /NPM:/)) {
-			// const _Package = Package.split(":")[1];
-			// const _JSON = await (
-			// 	await fetch(`https://registry.npmjs.org/${_Package}`)
-			// ).json();
-
-			// const GitHub = (_JSON?.homepage ?? "")
-			// 	?.replace(/(git\+)?http?s:\/\/github.com\//, "")
-			// 	?.replace("#readme", "")
-			// 	?.replace(".git", "");
-
-			// Items.add({
-			// 	Link: `https://github.com/${GitHub}`,
-			// 	Name: GitHub.split("/")[1] ?? "",
-			// 	GitHub,
-			// 	Description: _JSON?.description ?? "",
-			// 	Badge: new Set([
-			// 		{
-			// 			Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
-			// 			Link: `https://github.com/${GitHub}/actions/workflows/Node.yml`,
-			// 			Alt: "Build",
-			// 		},
-			// 		{
-			// 			Link: `https://npmjs.org/${_JSON.name}?activeTab=dependencies`,
-			// 			Image: `https://img.shields.io/librariesio/release/npm/${_JSON.name}?logo=dependabot&label=`,
-			// 			Alt: "Dependencies",
-			// 		},
-			// 		{
-			// 			Link: `https://npmjs.org/${_JSON.name}`,
-			// 			Image: `https://img.shields.io/npm/v/${_JSON.name}?label=Version&logo=npm`,
-			// 			Alt: "Version",
-			// 		},
-			// 		{
-			// 			Link: `https://npmjs.org/${_JSON.name}`,
-			// 			Image: `https://img.shields.io/npm/dt/${_JSON.name}?label=Downloads&logo=npm`,
-			// 			Alt: "Downloads",
-			// 		},
-			// 	]),
-			// });
-		}
-
-		if (Match(Package, /cargo:/)) {
-			// const Crate = Package.split(":")[1];
-			// const _JSON = await (
-			// 	await fetch(`https://crates.io/api/v1/crates/${Crate}`)
-			// ).json();
-
-			// const GitHub = (_JSON?.crate?.repository ?? "")
-			// 	?.replace(/(git\+)?http?s:\/\/github.com\//, "")
-			// 	?.replace("#readme", "")
-			// 	?.replace(".git", "");
-
-			// Items.add({
-			// 	Link: _JSON?.crate?.repository ?? "",
-			// 	Badge: new Set([
-			// 		{
-			// 			Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
-			// 			Link: `https://github.com/${GitHub}/actions/workflows/Rust.yml`,
-			// 			Alt: "Build",
-			// 		},
-			// 		{
-			// 			Link: `https://crates.io/${_JSON?.crate?.name}`,
-			// 			Image: `https://img.shields.io/crates/v/${_JSON?.crate?.name}?label=Version`,
-			// 			Alt: "Version",
-			// 		},
-			// 		{
-			// 			Link: `https://crates.io/${_JSON?.crate?.name}`,
-			// 			Image: `https://img.shields.io/crates/d/${_JSON?.crate?.name}?label=Downloads`,
-			// 			Alt: "Downloads",
-			// 		},
-			// 	]),
-			// 	Description: _JSON?.crate?.description ?? "",
-			// 	GitHub,
-			// 	Name: _JSON?.crate?.name ?? "",
-			// });
-		}
-	} catch (_Error) {
-		console.log(`Package: ${Package}`);
-		console.log(_Error);
-	}
+	await Parse(Package, Items);
 }
+
+console.log(Items);
 
 for (const Item of Items) {
 	const Language =
