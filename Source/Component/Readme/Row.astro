@@ -1,8 +1,6 @@
 ---
 import type PackageCell from "@Type/Cell";
 
-import Request from "@Library/Request";
-
 export const { default: Icon } = await import("@Option/Icon.js");
 export const { default: Parse } = await import("@Function/Parse.js");
 
@@ -16,28 +14,6 @@ const Light = "&color=white&labelColor=white&logoColor=black&logoWidth=0";
 const { Packages } = Astro.props;
 
 const Items = await Parse(Packages);
-
-for (const Item of Items) {
-	const Language =
-		(await Request(`GET /repos/${Item.GitHub}/languages`))?.data ?? [];
-
-	Item.Language = new Set();
-
-	for (const Name in Language) {
-		if (Object.prototype.hasOwnProperty.call(Language, Name)) {
-			let [Light, Dark] = Icon[Name as keyof typeof Icon] ?? [null, null];
-
-			Item.Language.add({
-				Light,
-				Dark,
-				Name,
-				BoC: await (
-					await import("@Library/Bytes")
-				).default(Language[Name]),
-			});
-		}
-	}
-}
 ---
 
 {
