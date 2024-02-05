@@ -8,7 +8,11 @@ import Row from "@Component/Readme/Row.astro";
 		<Heading Emoji="📔" Text="Knowledge Base:" />
 		<Row
 			Packages={new Set([
-				"GitHub:CodeEditorLand/KnowledgeBase",
+				{
+					"GitHub:CodeEditorLand/KnowledgeBase": {
+						Name: "Knowledge Base",
+					},
+				},
 				"GitHub:CodeEditorLand/Land",
 				"GitHub:CodeEditorLand/Cargo",
 				"GitHub:CodeEditorLand/NPM",
