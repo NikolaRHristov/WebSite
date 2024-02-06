@@ -26,7 +26,20 @@ import Row from "@Component/Readme/Row.astro";
 			DarkIcon="https://nikolahristov.tech/Image/GitHub/Cargo-Logo-Small.png"
 			Text="Cargo:"
 		/>
-		<Row Packages={new Set(["GitHub:CodeEditorLand/CargoMaintain"])} />
+		<Row
+			Packages={new Set([
+				{
+					"GitHub:CodeEditorLand/CargoDocument": {
+						Name: "Document",
+					},
+				},
+				{
+					"GitHub:CodeEditorLand/CargoMaintain": {
+						Name: "Maintain",
+					},
+				},
+			])}
+		/>
 	</table>
 	<table>
 		<Heading
