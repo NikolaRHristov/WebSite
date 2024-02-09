@@ -16,7 +16,7 @@ import Row from "@Component/Readme/Row.astro";
 	</h1>
 
 	<table>
-		<Heading Text="Project" Emoji="🔥" />
+		<Heading Text="Project:" Emoji="🔥" />
 		<Row
 			Packages={new Set<Cell>([
 				"NPM:files-pipe",
@@ -28,9 +28,27 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 	</table>
 
+	
+	<table>
+		<Heading Text="Code Editor Land:" Emoji="🌄" />
+		<Row
+			Packages={new Set([
+				{
+					"GitHub:CodeEditorLand/CodeEditorLand": {
+						Name: "CodeEditorLand",
+					},
+				},
+				"GitHub:CodeEditorLand/Land",
+				"GitHub:CodeEditorLand/Cargo",
+				"GitHub:CodeEditorLand/NPM",
+				"GitHub:CodeEditorLand/Stream",
+			])}
+		/>
+	</table>
+
 	<table>
 		<Heading
-			Text="Astro"
+			Text="Astro:"
 			DarkIcon="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/DarkAstro.svg"
 			LightIcon="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/LightAstro.svg"
 			AltIcon="Astro"
@@ -53,7 +71,7 @@ import Row from "@Component/Readme/Row.astro";
 
 	<table>
 		<Heading
-			Text="NPM"
+			Text="NPM:"
 			DarkIcon="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n.svg"
 			AltIcon="NPM"
 		/>
@@ -62,7 +80,7 @@ import Row from "@Component/Readme/Row.astro";
 
 	<table>
 		<Heading
-			Text="GitHub"
+			Text="GitHub:"
 			DarkIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-Light-32px.png"
 			LightIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/main/.github/Image/GitHub-Mark-32px.png"
 			AltIcon="GitHub"
@@ -77,7 +95,7 @@ import Row from "@Component/Readme/Row.astro";
 
 	<table>
 		<Heading
-			Text="Dotfile"
+			Text="Dotfile:"
 			DarkIcon="https://raw.githubusercontent.com/jglovier/dotfiles-logo/master/dotfiles-logo-icon.png"
 			AltIcon="Dotfile"
 		/>

@@ -5,7 +5,7 @@ import Row from "@Component/Readme/Row.astro";
 
 <>
 	<table>
-		<Heading Emoji="🌄" Text="CodeEditorLand:" />
+		<Heading Emoji="🌄" Text="Code Editor Land:" />
 		<Row
 			Packages={new Set([
 				{
@@ -20,6 +20,7 @@ import Row from "@Component/Readme/Row.astro";
 			])}
 		/>
 	</table>
+
 	<table>
 		<Heading
 			LightIcon="https://nikolahristov.tech/Image/GitHub/Cargo-Logo-Small.png"
@@ -29,18 +30,24 @@ import Row from "@Component/Readme/Row.astro";
 		<Row
 			Packages={new Set([
 				{
+					"GitHub:CodeEditorLand/CargoDocument": {
+						Name: "Document",
+					},
+				},
+				{
 					"GitHub:CodeEditorLand/CargoMaintain": {
 						Name: "Maintain",
 					},
 				},
 				{
-					"GitHub:CodeEditorLand/CargoDocument": {
-						Name: "Document",
+					"GitHub:CodeEditorLand/CargoRuntime": {
+						Name: "Runtime",
 					},
 				},
 			])}
 		/>
 	</table>
+
 	<table>
 		<Heading
 			LightIcon="https://nikolahristov.tech/Image/GitHub/Npm-logo.svg"
