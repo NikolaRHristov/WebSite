@@ -36,7 +36,7 @@ export default (async (...Option: Parameters<Type>) => {
 						Badge: new Set([
 							{
 								Link: `https://github.com/${Owner}/${Repository}`,
-								Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Updated`,
+								Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Update`,
 								Alt: "Last Update",
 							},
 							{
@@ -46,8 +46,8 @@ export default (async (...Option: Parameters<Type>) => {
 							},
 							{
 								Link: `https://github.com/${Owner}/${Repository}`,
-								Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Downloads`,
-								Alt: "Downloads",
+								Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Leaks`,
+								Alt: "Leaks",
 							},
 						]),
 					});
@@ -96,7 +96,7 @@ export default (async (...Option: Parameters<Type>) => {
 						},
 						{
 							Link: `https://npmjs.org/${JSONNPM.name}`,
-							Image: `https://img.shields.io/npm/dt/${JSONNPM.name}?label=Downloads&logo=npm`,
+							Image: `https://img.shields.io/npm/dt/${JSONNPM.name}?label=Leaks&logo=npm`,
 							Alt: "Downloads",
 						},
 					]),
@@ -141,7 +141,7 @@ export default (async (...Option: Parameters<Type>) => {
 						},
 						{
 							Link: `https://crates.io/${JSONCargo?.crate?.name}`,
-							Image: `https://img.shields.io/crates/d/${JSONCargo?.crate?.name}?label=Downloads`,
+							Image: `https://img.shields.io/crates/d/${JSONCargo?.crate?.name}?label=Leaks`,
 							Alt: "Downloads",
 						},
 					]),
