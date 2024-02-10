@@ -19,11 +19,27 @@ import Row from "@Component/Readme/Row.astro";
 		<Heading Text="Project:" Emoji="🔥" />
 		<Row
 			Packages={new Set<Cell>([
-				"NPM:files-pipe",
-				"NPM:deployment-delete",
+				{
+					"NPM:files-pipe": {
+						Name: "Files Pipe",
+					},
+				},
+				{
+					"NPM:deployment-delete": {
+						Name: "Deployment Delete",
+					},
+				},
 				"GitHub:AstroStarter/PAC-STAC",
-				"cargo:innkeeper",
-				"GitHub:RoundedCorners/Application",
+				{
+					"cargo:innkeeper": {
+						Name: "Inn",
+					},
+				},
+				{
+					"GitHub:RoundedCorners/Application": {
+						Name: "Rounded Corners",
+					},
+				},
 			])}
 		/>
 	</table>
@@ -75,7 +91,11 @@ import Row from "@Component/Readme/Row.astro";
 					},
 				},
 				// "NPM:astro-short-urls",
-				"GitHub:Playform/AstroStarterTemplate",
+				{
+					"GitHub:Playform/AstroStarterTemplate": {
+						Name: "Astro Starter Template",
+					},
+				},
 			])}
 		/>
 	</table>
@@ -98,7 +118,11 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 		<Row
 			Packages={new Set<Cell>([
-				"NPM:@yesmaintain/script",
+				{
+					"NPM:@yesmaintain/script": {
+						Name: "Maintain",
+					},
+				},
 				// "NPM:github-history-slider",
 			])}
 		/>
