@@ -8,9 +8,22 @@ import Row from "@Component/Readme/Row.astro";
 		<Heading
 			DarkIcon="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/DarkAstro.svg"
 			LightIcon="https://raw.githubusercontent.com/astro-community/AstroCompress/main/.github/Image/LightAstro.svg"
-			Text="Related"
+			Text="Related:"
 			AltIcon="Astro"
 		/>
-		<Row Packages={new Set(["NPM:astro-compress", "NPM:astro-critters"])} />
+		<Row
+			Packages={new Set([
+				{
+					"NPM:astro-compress": {
+						Name: "Compress",
+					},
+				},
+				{
+					"NPM:astro-critters": {
+						Name: "Critters",
+					},
+				},
+			])}
+		/>
 	</table>
 </>

@@ -28,7 +28,6 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 	</table>
 
-	
 	<table>
 		<Heading Text="Code Editor Land:" Emoji="🌄" />
 		<Row
@@ -55,14 +54,30 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 		<Row
 			Packages={new Set<Cell>([
-				"NPM:astro-compress",
+				{
+					"NPM:astro-compress": {
+						Name: "Compress",
+					},
+				},
 				// "NPM:astro-convert",
-				"NPM:astro-critters",
+				{
+					"NPM:astro-critters": {
+						Name: "Critters",
+					},
+				},
 				// "NPM:astro-dashboard",
 				// "NPM:astro-dead-links",
 				// "NPM:astro-networks",
-				"NPM:astro-rome",
-				"NPM:astro-biome",
+				{
+					"NPM:astro-rome": {
+						Name: "Rome",
+					},
+				},
+				{
+					"NPM:astro-biome": {
+						Name: "Biome",
+					},
+				},
 				// "NPM:astro-short-urls",
 				"GitHub:Playform/AstroStarterTemplate",
 			])}
@@ -110,7 +125,7 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 	</table>
 
-	 Generated from: <a
+	Generated from: <a
 		href="https://github.com/NikolaRHristov/Website/blob/main/Source/pages/Raw/Readme/NikolaRHristov/index.astro"
 		target="_blank">
 		NikolaRHristov/Website/Source/pages/Raw/Readme/NikolaRHristov/index.astro

@@ -16,9 +16,11 @@ const ee = "modulepreload",
 					if (!!o)
 						for (let s = a.length - 1; s >= 0; s--) {
 							const f = a[s];
-							if (f.href === c && (!u || f.rel === "stylesheet")) return;
+							if (f.href === c && (!u || f.rel === "stylesheet"))
+								return;
 						}
-					else if (document.querySelector(`link[href="${c}"]${i}`)) return;
+					else if (document.querySelector(`link[href="${c}"]${i}`))
+						return;
 					const h = document.createElement("link");
 					if (
 						((h.rel = u ? "stylesheet" : ee),
@@ -30,7 +32,11 @@ const ee = "modulepreload",
 						return new Promise((s, f) => {
 							h.addEventListener("load", s),
 								h.addEventListener("error", () =>
-									f(new Error(`Unable to preload CSS for ${c}`)),
+									f(
+										new Error(
+											`Unable to preload CSS for ${c}`,
+										),
+									),
 								);
 						});
 				}),
@@ -40,12 +46,16 @@ const ee = "modulepreload",
 			.then(() => t())
 			.catch((a) => {
 				const c = new Event("vite:preloadError", { cancelable: !0 });
-				if (((c.payload = a), window.dispatchEvent(c), !c.defaultPrevented))
+				if (
+					((c.payload = a),
+					window.dispatchEvent(c),
+					!c.defaultPrevented)
+				)
 					throw a;
 			});
 	};
 (
-	await y(() => import("./index.esm.Ncty-K-E.js"), __vite__mapDeps([]))
+	await y(() => import("./index.esm.GbjdRH-V.js"), __vite__mapDeps([]))
 ).initializeApp({
 	apiKey: "AIzaSyCiIOIiAvdRwC5n6AzX_F5WSivt9bvosTQ",
 	authDomain: "nikolahristov-web.firebaseapp.com",
@@ -172,7 +182,8 @@ async function le(e, t, n, o, r, a, c, u) {
 		document.dispatchEvent(i) &&
 			(await i.loader(),
 			i.defaultPrevented ||
-				(se(oe), i.navigationType !== "traverse" && k({ scrollX, scrollY }))),
+				(se(oe),
+				i.navigationType !== "traverse" && k({ scrollX, scrollY }))),
 		i
 	);
 }
@@ -188,7 +199,8 @@ const fe = history.pushState.bind(history),
 			A({ ...history.state, ...e }, ""));
 	},
 	I = !!document.startViewTransition,
-	x = () => !!document.querySelector('[name="astro-view-transitions-enabled"]'),
+	x = () =>
+		!!document.querySelector('[name="astro-view-transitions-enabled"]'),
 	U = (e, t) => e.pathname === t.pathname && e.search === t.search;
 let _,
 	g,
@@ -252,7 +264,9 @@ async function he(e, t) {
 	}
 }
 function K() {
-	const e = document.querySelector('[name="astro-view-transitions-fallback"]');
+	const e = document.querySelector(
+		'[name="astro-view-transitions-fallback"]',
+	);
 	return e ? e.getAttribute("content") : "animate";
 }
 function we() {
@@ -285,11 +299,17 @@ const z = (e, t, n, o, r) => {
 		if (n.history === "replace") {
 			const i = history.state;
 			A(
-				{ ...n.state, index: i.index, scrollX: i.scrollX, scrollY: i.scrollY },
+				{
+					...n.state,
+					index: i.index,
+					scrollX: i.scrollX,
+					scrollY: i.scrollY,
+				},
 				"",
 				e.href,
 			);
-		} else fe({ ...n.state, index: ++v, scrollX: 0, scrollY: 0 }, "", e.href);
+		} else
+			fe({ ...n.state, index: ++v, scrollX: 0, scrollY: 0 }, "", e.href);
 	if (
 		((_ = e),
 		a || (scrollTo({ left: 0, top: 0, behavior: "instant" }), (u = !0)),
@@ -322,7 +342,9 @@ function pe(e) {
 				o.setAttribute("href", n.getAttribute("href")),
 				t.push(
 					new Promise((r) => {
-						["load", "error"].forEach((a) => o.addEventListener(a, r)),
+						["load", "error"].forEach((a) =>
+							o.addEventListener(a, r),
+						),
 							document.head.append(o);
 					}),
 				);
@@ -336,14 +358,19 @@ async function M(e, t, n, o) {
 			if (E) return E;
 			if (s.matches("link[rel=stylesheet]")) {
 				const b = s.getAttribute("href");
-				return f.head.querySelector(`link[rel=stylesheet][href="${b}"]`);
+				return f.head.querySelector(
+					`link[rel=stylesheet][href="${b}"]`,
+				);
 			}
 			return null;
 		},
 		a = () => {
 			const s = document.activeElement;
 			if (s?.closest(`[${p}]`)) {
-				if (s instanceof HTMLInputElement || s instanceof HTMLTextAreaElement) {
+				if (
+					s instanceof HTMLInputElement ||
+					s instanceof HTMLTextAreaElement
+				) {
 					const f = s.selectionStart,
 						w = s.selectionEnd;
 					return { activeElement: s, start: f, end: w };
@@ -354,13 +381,16 @@ async function M(e, t, n, o) {
 		c = ({ activeElement: s, start: f, end: w }) => {
 			s &&
 				(s.focus(),
-				(s instanceof HTMLInputElement || s instanceof HTMLTextAreaElement) &&
+				(s instanceof HTMLInputElement ||
+					s instanceof HTMLTextAreaElement) &&
 					((s.selectionStart = f), (s.selectionEnd = w)));
 		},
 		u = (s) => {
 			const f = document.documentElement,
 				w = [...f.attributes].filter(
-					({ name: l }) => (f.removeAttribute(l), l.startsWith("data-astro-")),
+					({ name: l }) => (
+						f.removeAttribute(l), l.startsWith("data-astro-")
+					),
 				);
 			[...s.newDocument.documentElement.attributes, ...w].forEach(
 				({ name: l, value: d }) => f.setAttribute(l, d),
@@ -399,7 +429,9 @@ async function M(e, t, n, o) {
 		}
 		const w = document.getAnimations();
 		document.documentElement.setAttribute(j, s);
-		const b = document.getAnimations().filter((l) => !w.includes(l) && !f(l));
+		const b = document
+			.getAnimations()
+			.filter((l) => !w.includes(l) && !f(l));
 		return Promise.all(b.map((l) => l.finished));
 	}
 	if (!L)
@@ -435,9 +467,10 @@ async function G(e, t, n, o, r) {
 			const w =
 				i.sourceElement instanceof HTMLFormElement
 					? i.sourceElement
-					: i.sourceElement instanceof HTMLElement && "form" in i.sourceElement
-					? i.sourceElement.form
-					: i.sourceElement?.closest("form");
+					: i.sourceElement instanceof HTMLElement &&
+						  "form" in i.sourceElement
+					  ? i.sourceElement.form
+					  : i.sourceElement?.closest("form");
 			h.body =
 				w?.attributes.getNamedItem("enctype")?.value ===
 				"application/x-www-form-urlencoded"
@@ -453,9 +486,12 @@ async function G(e, t, n, o, r) {
 			(s.redirected && (i.to = new URL(s.redirected)),
 			(H ??= new DOMParser()),
 			(i.newDocument = H.parseFromString(s.html, s.mediaType)),
-			i.newDocument.querySelectorAll("noscript").forEach((w) => w.remove()),
-			!i.newDocument.querySelector('[name="astro-view-transitions-enabled"]') &&
-				!i.formData)
+			i.newDocument
+				.querySelectorAll("noscript")
+				.forEach((w) => w.remove()),
+			!i.newDocument.querySelector(
+				'[name="astro-view-transitions-enabled"]',
+			) && !i.formData)
 		) {
 			i.preventDefault();
 			return;
@@ -535,7 +571,10 @@ function Ee() {
 			e,
 			(t) => {
 				T(t.target, "tap") &&
-					R(t.target.href, { with: "fetch", ignoreSlowConnection: !0 });
+					R(t.target.href, {
+						with: "fetch",
+						ignoreSlowConnection: !0,
+					});
 			},
 			{ passive: !0 },
 		);
@@ -573,7 +612,8 @@ function ve() {
 	let e;
 	O(() => {
 		for (const t of document.getElementsByTagName("a"))
-			S.has(t) || (T(t, "viewport") && (S.add(t), (e ??= Te()), e.observe(t)));
+			S.has(t) ||
+				(T(t, "viewport") && (S.add(t), (e ??= Te()), e.observe(t)));
 	});
 }
 function Te() {
@@ -587,7 +627,9 @@ function Te() {
 				  e.set(
 						r,
 						setTimeout(() => {
-							n.unobserve(r), e.delete(r), R(r.href, { with: "link" });
+							n.unobserve(r),
+								e.delete(r),
+								R(r.href, { with: "link" });
 						}, 300),
 				  ))
 				: a && (clearTimeout(a), e.delete(r));
@@ -605,7 +647,9 @@ function R(e, t) {
 	if (!Le(e, n)) return;
 	if ((Q.add(e), (t?.with ?? "link") === "link")) {
 		const r = document.createElement("link");
-		(r.rel = "prefetch"), r.setAttribute("href", e), document.head.append(r);
+		(r.rel = "prefetch"),
+			r.setAttribute("href", e),
+			document.head.append(r);
 	} else
 		fetch(e).catch((r) => {
 			console.log(`[astro] Failed to prefetch ${e}`), console.error(r);
@@ -617,7 +661,8 @@ function Le(e, t) {
 		const n = new URL(e, location.href);
 		return (
 			location.origin === n.origin &&
-			(location.pathname !== n.pathname || location.search !== n.search) &&
+			(location.pathname !== n.pathname ||
+				location.search !== n.search) &&
 			!Q.has(e)
 		);
 	} catch {}
@@ -629,10 +674,10 @@ function T(e, t) {
 	return n === "false"
 		? !1
 		: t === "tap" && (n != null || P) && Z()
-		? !0
-		: (n == null && P) || n === ""
-		? t === J
-		: n === t;
+		  ? !0
+		  : (n == null && P) || n === ""
+			  ? t === J
+			  : n === t;
 }
 function Z() {
 	if ("connection" in navigator) {
@@ -653,7 +698,9 @@ function O(e) {
 	});
 }
 function Se() {
-	const e = document.querySelector('[name="astro-view-transitions-fallback"]');
+	const e = document.querySelector(
+		'[name="astro-view-transitions-fallback"]',
+	);
 	return e ? e.getAttribute("content") : "animate";
 }
 function V(e) {
@@ -686,7 +733,8 @@ function V(e) {
 			e.defaultPrevented ||
 			(e.preventDefault(),
 			F(o, {
-				history: t.dataset.astroHistory === "replace" ? "replace" : "auto",
+				history:
+					t.dataset.astroHistory === "replace" ? "replace" : "auto",
 				sourceElement: t,
 			}));
 	}),
@@ -698,7 +746,10 @@ function V(e) {
 			r = new FormData(n, o);
 		let a = o?.getAttribute("formaction") ?? n.action ?? location.pathname;
 		const c = o?.getAttribute("formmethod") ?? n.method;
-		if (c === "dialog" || location.origin !== new URL(a, location.href).origin)
+		if (
+			c === "dialog" ||
+			location.origin !== new URL(a, location.href).origin
+		)
 			return;
 		const u = { sourceElement: o ?? n };
 		if (c === "get") {
@@ -723,4 +774,4 @@ function __vite__mapDeps(indexes) {
 	}
 	return indexes.map((i) => __vite__mapDeps.viteFileDeps[i]);
 }
-//# sourceMappingURL=hoisted.DkWbqo0H.js.map
+//# sourceMappingURL=hoisted.2EWcggBC.js.map
