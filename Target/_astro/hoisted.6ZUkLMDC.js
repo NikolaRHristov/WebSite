@@ -66,7 +66,7 @@ const ee = "modulepreload",
 	measurementId: "G-146FB9N18L",
 });
 new (
-	await y(() => import("./Swup.modern.8vDA2Thw.js"), __vite__mapDeps([]))
+	await y(() => import("./Swup.modern.JcE7Iy6b.js"), __vite__mapDeps([]))
 ).default({
 	containers: ["#footer", "#main", "#header"],
 	plugins: [
@@ -84,13 +84,13 @@ new (
 		).default(),
 		new (
 			await y(
-				() => import("./index.modern.EZFh2nyh.js"),
+				() => import("./index.modern.CL8Dkeka.js"),
 				__vite__mapDeps([3, 1, 4]),
 			)
 		).default(),
 		new (
 			await y(
-				() => import("./index.modern.LsBxkWe8.js"),
+				() => import("./index.modern.OWNnm9MS.js"),
 				__vite__mapDeps([5, 1, 4]),
 			)
 		).default(),
@@ -766,12 +766,12 @@ function __vite__mapDeps(indexes) {
 			"_astro/index.modern.grwuNUiy.js",
 			"_astro/index.modern.kBZUKyzZ.js",
 			"_astro/index.modern.cx1mZwdG.js",
-			"_astro/index.modern.EZFh2nyh.js",
-			"_astro/Swup.modern.8vDA2Thw.js",
-			"_astro/index.modern.LsBxkWe8.js",
+			"_astro/index.modern.CL8Dkeka.js",
+			"_astro/Swup.modern.JcE7Iy6b.js",
+			"_astro/index.modern.OWNnm9MS.js",
 			"_astro/index.modern.krbs8bWt.js",
 		];
 	}
 	return indexes.map((i) => __vite__mapDeps.viteFileDeps[i]);
 }
-//# sourceMappingURL=hoisted.2EWcggBC.js.map
+//# sourceMappingURL=hoisted.6ZUkLMDC.js.map
