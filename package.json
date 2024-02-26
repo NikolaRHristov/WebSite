@@ -24,7 +24,7 @@
 		"@astrojs/check": "0.5.5",
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "3.1.1",
-		"@octokit/core": "5.1.0",
+		"@octokit/core": "6.0.1",
 		"@swup/body-class-plugin": "3.2.0",
 		"@swup/head-plugin": "2.2.0",
 		"@swup/overlay-theme": "2.0.0",
