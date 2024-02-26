@@ -21,11 +21,7 @@
 		"start": "astro dev"
 	},
 	"dependencies": {
-<<<<<<< HEAD
 		"@astrojs/check": "0.5.6",
-=======
-		"@astrojs/check": "0.5.5",
->>>>>>> 83c0df9df3fec65e7f81fa2049c3fc148e73cbb7
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "3.1.1",
 		"@octokit/core": "6.0.1",
@@ -37,22 +33,14 @@
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
 		"@tailwindcss/typography": "0.5.10",
-<<<<<<< HEAD
 		"astro": "4.4.5",
-=======
-		"astro": "4.4.4",
->>>>>>> 83c0df9df3fec65e7f81fa2049c3fc148e73cbb7
 		"astro-biome": "0.0.6",
 		"astro-capo": "0.0.1",
 		"astro-compress": "2.2.11",
 		"astro-critters": "2.1.2",
 		"astrojs-service-worker": "2.0.0",
 		"autoprefixer": "10.4.17",
-<<<<<<< HEAD
 		"cssnano": "6.0.5",
-=======
-		"cssnano": "6.0.4",
->>>>>>> 83c0df9df3fec65e7f81fa2049c3fc148e73cbb7
 		"cssnano-preset-advanced": "6.0.5",
 		"dotenv": "16.4.5",
 		"firebase": "10.8.0",
