@@ -28,50 +28,28 @@ import Row from "@Component/Readme/Row.astro";
 			])}
 		/>
 	</table>
-
 	<table>
 		<Heading
-			LightIcon="https://nikolahristov.tech/Image/GitHub/Cargo-Logo-Small.png"
-			DarkIcon="https://nikolahristov.tech/Image/GitHub/Cargo-Logo-Small.png"
-			Text="Cargo:"
+			LightIcon="https://nikolahristov.tech/Image/GitHub/Tauri-Logo-Color.svg"
+			DarkIcon="https://nikolahristov.tech/Image/GitHub/Tauri-Logo-Color.svg"
+			Text="Tauri:"
 		/>
 		<Row
 			Packages={new Set([
+				"GitHub:CodeEditorLand/FoundationTauri",
 				{
-					"GitHub:CodeEditorLand/FoundationLandCargoDocument": {
-						Name: "Document",
+					"GitHub:CodeEditorLand/FoundationTauriCargo": {
+						Name: "Cargo",
 					},
 				},
 				{
-					"GitHub:CodeEditorLand/FoundationLandCargoMaintain": {
-						Name: "Maintain",
+					"GitHub:CodeEditorLand/FoundationTauriNPM": {
+						Name: "NPM",
 					},
 				},
 				{
-					"GitHub:CodeEditorLand/FoundationLandCargoRuntime": {
-						Name: "Runtime",
-					},
-				},
-			])}
-		/>
-	</table>
-
-	<table>
-		<Heading
-			LightIcon="https://nikolahristov.tech/Image/GitHub/Npm-logo.svg"
-			DarkIcon="https://nikolahristov.tech/Image/GitHub/Npm-logo.svg"
-			Text="NPM:"
-		/>
-		<Row
-			Packages={new Set([
-				{
-					"GitHub:CodeEditorLand/FoundationLandNPMCommon": {
-						Name: "Common",
-					},
-				},
-				{
-					"GitHub:CodeEditorLand/FoundationLandNPMIngress": {
-						Name: "Ingress",
+					"GitHub:CodeEditorLand/FoundationTauriComponent": {
+						Name: "Component",
 					},
 				},
 			])}
