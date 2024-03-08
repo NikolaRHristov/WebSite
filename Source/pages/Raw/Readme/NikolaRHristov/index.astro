@@ -48,11 +48,23 @@ import Row from "@Component/Readme/Row.astro";
 		<Heading Text="Code Editor Land:" Emoji="🌄" />
 		<Row
 			Packages={new Set([
-				"GitHub:CodeEditorLand/Property",
+				"GitHub:CodeEditorLand/Foundation",
 				"GitHub:CodeEditorLand/Editor",
-				"GitHub:CodeEditorLand/Cargo",
-				"GitHub:CodeEditorLand/NPM",
-				"GitHub:CodeEditorLand/Stream",
+				{
+					"GitHub:CodeEditorLand/FoundationLandCargo": {
+						Name: "Cargo",
+					},
+				},
+				{
+					"GitHub:CodeEditorLand/FoundationLandNPM": {
+						Name: "NPM",
+					},
+				},
+				{
+					"GitHub:CodeEditorLand/FoundationLandComponent": {
+						Name: "Component",
+					},
+				},
 			])}
 		/>
 	</table>
