@@ -1,0 +1,17 @@
+---
+import Heading from "@Component/Readme/Heading.astro";
+import Row from "@Component/Readme/Row.astro";
+---
+
+<>
+	<table>
+		<Heading
+			LightIcon="https://nikolahristov.tech/Image/GitHub/Npm-logo.svg"
+			DarkIcon="https://nikolahristov.tech/Image/GitHub/Npm-logo.svg"
+			Text="NPM:"
+		/>
+		<Row
+			Packages={new Set([])}
+		/>
+	</table>
+</>
