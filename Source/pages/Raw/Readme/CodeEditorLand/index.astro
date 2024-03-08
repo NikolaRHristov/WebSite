@@ -8,11 +8,23 @@ import Row from "@Component/Readme/Row.astro";
 		<Heading Emoji="🌄" Text="Code Editor Land:" />
 		<Row
 			Packages={new Set([
-				"GitHub:CodeEditorLand/Property",
+				"GitHub:CodeEditorLand/Foundation",
 				"GitHub:CodeEditorLand/Editor",
-				"GitHub:CodeEditorLand/Cargo",
-				"GitHub:CodeEditorLand/NPM",
-				"GitHub:CodeEditorLand/Stream",
+				{
+					"GitHub:CodeEditorLand/FoundationLandCargo": {
+						Name: "Cargo",
+					},
+				},
+				{
+					"GitHub:CodeEditorLand/FoundationLandNPM": {
+						Name: "NPM",
+					},
+				},
+				{
+					"GitHub:CodeEditorLand/FoundationLandComponent": {
+						Name: "Component",
+					},
+				},
 			])}
 		/>
 	</table>
@@ -26,17 +38,17 @@ import Row from "@Component/Readme/Row.astro";
 		<Row
 			Packages={new Set([
 				{
-					"GitHub:CodeEditorLand/CargoDocument": {
+					"GitHub:CodeEditorLand/FoundationLandCargoDocument": {
 						Name: "Document",
 					},
 				},
 				{
-					"GitHub:CodeEditorLand/CargoMaintain": {
+					"GitHub:CodeEditorLand/FoundationLandCargoMaintain": {
 						Name: "Maintain",
 					},
 				},
 				{
-					"GitHub:CodeEditorLand/CargoRuntime": {
+					"GitHub:CodeEditorLand/FoundationLandCargoRuntime": {
 						Name: "Runtime",
 					},
 				},
@@ -53,12 +65,12 @@ import Row from "@Component/Readme/Row.astro";
 		<Row
 			Packages={new Set([
 				{
-					"GitHub:CodeEditorLand/NPMCommon": {
+					"GitHub:CodeEditorLand/FoundationLandNPMCommon": {
 						Name: "Common",
 					},
 				},
 				{
-					"GitHub:CodeEditorLand/NPMIngress": {
+					"GitHub:CodeEditorLand/FoundationLandNPMIngress": {
 						Name: "Ingress",
 					},
 				},
