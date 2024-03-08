@@ -10,9 +10,11 @@ import Row from "@Component/Readme/Row.astro";
 			DarkIcon="https://nikolahristov.tech/Image/GitHub/Cargo-Logo-Small.png"
 			Text="Cargo:"
 		/>
-		<Row
-			Packages={new Set([])}
-		/>
+		<Row Packages={new Set([])} />
+	</table>
+	<table>
+		<Heading Emoji="🔩" Text="Component:" />
+		<Row Packages={new Set([])} />
 	</table>
 	<table>
 		<Heading
@@ -20,8 +22,6 @@ import Row from "@Component/Readme/Row.astro";
 			DarkIcon="https://nikolahristov.tech/Image/GitHub/Npm-logo.svg"
 			Text="NPM:"
 		/>
-		<Row
-			Packages={new Set([])}
-		/>
+		<Row Packages={new Set([])} />
 	</table>
 </>
