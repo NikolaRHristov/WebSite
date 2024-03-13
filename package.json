@@ -21,7 +21,7 @@
 		"start": "astro dev"
 	},
 	"dependencies": {
-		"@astrojs/check": "0.5.7",
+		"@astrojs/check": "0.5.8",
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "3.1.1",
 		"@octokit/core": "6.0.1",
@@ -33,10 +33,10 @@
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
 		"@tailwindcss/typography": "0.5.10",
-		"astro": "4.5.1",
-		"astro-biome": "0.0.7",
+		"astro": "4.5.2",
+		"astro-biome": "0.0.8",
 		"astro-capo": "0.0.1",
-		"astro-compress": "2.2.13",
+		"astro-compress": "2.2.14",
 		"astro-critters": "2.1.4",
 		"astrojs-service-worker": "2.0.0",
 		"autoprefixer": "10.4.18",
@@ -54,10 +54,13 @@
 		"swup": "4.6.0",
 		"tailwindcss": "3.4.1",
 		"typescript": "5.4.2",
-		"typescript-esbuild": "0.3.12",
+		"typescript-esbuild": "0.4.0",
 		"zod": "3.22.4"
 	},
 	"publishConfig": {
 		"access": "public"
+	},
+	"devDependencies": {
+		"@astrojs/db": "0.8.1"
 	}
 }
