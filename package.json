@@ -61,6 +61,6 @@
 		"access": "public"
 	},
 	"devDependencies": {
-		"@astrojs/db": "0.8.1"
+		"@astrojs/db": "0.8.2"
 	}
 }
