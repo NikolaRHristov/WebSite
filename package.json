@@ -33,7 +33,7 @@
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
 		"@tailwindcss/typography": "0.5.10",
-		"astro": "4.5.2",
+		"astro": "4.5.3",
 		"astro-biome": "0.0.8",
 		"astro-capo": "0.0.1",
 		"astro-compress": "2.2.14",
@@ -61,6 +61,6 @@
 		"access": "public"
 	},
 	"devDependencies": {
-		"@astrojs/db": "0.8.1"
+		"@astrojs/db": "0.8.2"
 	}
 }
