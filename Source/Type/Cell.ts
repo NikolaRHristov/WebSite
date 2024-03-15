@@ -8,5 +8,5 @@ export type Type =
 
 export type { Type as default };
 
-import type TypeCell from "@Type/Type.js";
 import type Info from "@Interface/Info.js";
+import type TypeCell from "@Type/Type.js";

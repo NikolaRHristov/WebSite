@@ -48,12 +48,12 @@ const ee = "modulepreload",
 								h.addEventListener("error", () =>
 									d(
 										new Error(
-											`Unable to preload CSS for ${c}`,
-										),
-									),
+											`Unable to preload CSS for ${c}`
+										)
+									)
 								);
 						});
-				}),
+				})
 			);
 		}
 		return r
@@ -87,31 +87,31 @@ new (
 		new (
 			await y(
 				() => import("./index.modern.B7ehEGeJ.js"),
-				__vite__mapDeps([0, 1]),
+				__vite__mapDeps([0, 1])
 			)
 		).default(),
 		new (
 			await y(
 				() => import("./index.modern.FjGODCox.js"),
-				__vite__mapDeps([2, 1]),
+				__vite__mapDeps([2, 1])
 			)
 		).default(),
 		new (
 			await y(
 				() => import("./index.modern.CC9knchV.js"),
-				__vite__mapDeps([3, 1, 4]),
+				__vite__mapDeps([3, 1, 4])
 			)
 		).default(),
 		new (
 			await y(
 				() => import("./index.modern.B6PK6e63.js"),
-				__vite__mapDeps([5, 1, 4]),
+				__vite__mapDeps([5, 1, 4])
 			)
 		).default(),
 		new (
 			await y(
 				() => import("./index.modern.aa8fLSdp.js"),
-				__vite__mapDeps([6, 1]),
+				__vite__mapDeps([6, 1])
 			)
 		).default(),
 	],
@@ -178,7 +178,7 @@ class ce extends X {
 			t.navigationType,
 			t.sourceElement,
 			t.info,
-			t.newDocument,
+			t.newDocument
 		),
 			(this.direction = t.direction),
 			(this.viewTransition = n),
@@ -243,10 +243,10 @@ let H,
 	E = 0;
 history.state
 	? ((E = history.state.index),
-	  scrollTo({ left: history.state.scrollX, top: history.state.scrollY }))
+		scrollTo({ left: history.state.scrollX, top: history.state.scrollY }))
 	: x() &&
-	  (A({ index: E, scrollX, scrollY }, ""),
-	  (history.scrollRestoration = "manual"));
+		(A({ index: E, scrollX, scrollY }, ""),
+		(history.scrollRestoration = "manual"));
 async function me(e, t) {
 	try {
 		const n = await fetch(e, t),
@@ -257,14 +257,14 @@ async function me(e, t) {
 					html: await n.text(),
 					redirected: n.redirected ? n.url : void 0,
 					mediaType: r,
-			  };
+				};
 	} catch {
 		return null;
 	}
 }
 function K() {
 	const e = document.querySelector(
-		'[name="astro-view-transitions-fallback"]',
+		'[name="astro-view-transitions-fallback"]'
 	);
 	return e ? e.getAttribute("content") : "animate";
 }
@@ -305,7 +305,7 @@ const z = (e, t, n, o, r) => {
 					scrollY: i.scrollY,
 				},
 				"",
-				e.href,
+				e.href
 			);
 		} else
 			de({ ...n.state, index: ++E, scrollX: 0, scrollY: 0 }, "", e.href);
@@ -331,8 +331,8 @@ function we(e) {
 		if (
 			!document.querySelector(
 				`[${p}="${n.getAttribute(
-					p,
-				)}"], link[rel=stylesheet][href="${n.getAttribute("href")}"]`,
+					p
+				)}"], link[rel=stylesheet][href="${n.getAttribute("href")}"]`
 			)
 		) {
 			const o = document.createElement("link");
@@ -342,10 +342,10 @@ function we(e) {
 				t.push(
 					new Promise((r) => {
 						["load", "error"].forEach((a) =>
-							o.addEventListener(a, r),
+							o.addEventListener(a, r)
 						),
 							document.head.append(o);
-					}),
+					})
 				);
 		}
 	return t;
@@ -358,7 +358,7 @@ async function M(e, t, n, o) {
 			if (s.matches("link[rel=stylesheet]")) {
 				const b = s.getAttribute("href");
 				return d.head.querySelector(
-					`link[rel=stylesheet][href="${b}"]`,
+					`link[rel=stylesheet][href="${b}"]`
 				);
 			}
 			return null;
@@ -389,10 +389,10 @@ async function M(e, t, n, o) {
 				w = [...d.attributes].filter(
 					({ name: l }) => (
 						d.removeAttribute(l), l.startsWith("data-astro-")
-					),
+					)
 				);
 			[...s.newDocument.documentElement.attributes, ...w].forEach(
-				({ name: l, value: f }) => d.setAttribute(l, f),
+				({ name: l, value: f }) => d.setAttribute(l, f)
 			);
 			for (const l of document.scripts)
 				for (const f of s.newDocument.scripts)
@@ -471,8 +471,8 @@ async function G(e, t, n, o, r) {
 					? i.sourceElement
 					: i.sourceElement instanceof HTMLElement &&
 						  "form" in i.sourceElement
-					  ? i.sourceElement.form
-					  : i.sourceElement?.closest("form");
+						? i.sourceElement.form
+						: i.sourceElement?.closest("form");
 			h.body =
 				w?.attributes.getNamedItem("enctype")?.value ===
 				"application/x-www-form-urlencoded"
@@ -492,7 +492,7 @@ async function G(e, t, n, o, r) {
 				.querySelectorAll("noscript")
 				.forEach((w) => w.remove()),
 			!i.newDocument.querySelector(
-				'[name="astro-view-transitions-enabled"]',
+				'[name="astro-view-transitions-enabled"]'
 			) && !i.formData)
 		) {
 			i.preventDefault();
@@ -573,7 +573,7 @@ const C = () => {
 						(n = scrollX),
 						(e = window.setInterval(r, 50)));
 				},
-				{ passive: !0 },
+				{ passive: !0 }
 			);
 		}
 	for (const e of document.scripts) e.dataset.astroExec = "";
@@ -604,7 +604,7 @@ function ve() {
 						ignoreSlowConnection: !0,
 					});
 			},
-			{ passive: !0 },
+			{ passive: !0 }
 		);
 }
 function ge() {
@@ -614,7 +614,7 @@ function ge() {
 		(o) => {
 			T(o.target, "hover") && t(o);
 		},
-		{ passive: !0 },
+		{ passive: !0 }
 	),
 		document.body.addEventListener("focusout", n, { passive: !0 }),
 		O(() => {
@@ -652,14 +652,14 @@ function Ee() {
 				a = e.get(r);
 			o.isIntersecting
 				? (a && clearTimeout(a),
-				  e.set(
+					e.set(
 						r,
 						setTimeout(() => {
 							n.unobserve(r),
 								e.delete(r),
 								R(r.href, { with: "link" });
-						}, 300),
-				  ))
+						}, 300)
+					))
 				: a && (clearTimeout(a), e.delete(r));
 		}
 	});
@@ -702,10 +702,10 @@ function T(e, t) {
 	return n === "false"
 		? !1
 		: t === "tap" && (n != null || D) && Z()
-		  ? !0
-		  : (n == null && D) || n === ""
-			  ? t === J
-			  : n === t;
+			? !0
+			: (n == null && D) || n === ""
+				? t === J
+				: n === t;
 }
 function Z() {
 	if ("connection" in navigator) {
@@ -727,7 +727,7 @@ function O(e) {
 }
 function Le() {
 	const e = document.querySelector(
-		'[name="astro-view-transitions-fallback"]',
+		'[name="astro-view-transitions-fallback"]'
 	);
 	return e ? e.getAttribute("content") : "animate";
 }

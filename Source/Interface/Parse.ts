@@ -8,4 +8,3 @@ export default interface Type {
 
 import type PackagesRowItem from "@Interface/PackagesRowItem";
 import type Cell from "@Type/Cell";
-
