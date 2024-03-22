@@ -53,7 +53,12 @@ export default (async (...Option: Parameters<Type>) => {
 					});
 				}
 			}
+		} catch (_Error) {
+			console.log(`Package GitHub: ${Package}`);
+			console.log(_Error);
+		}
 
+		try {
 			if (Match(Package, /NPM:/)) {
 				const NPM =
 					typeof Package === "string"
@@ -102,15 +107,17 @@ export default (async (...Option: Parameters<Type>) => {
 					]),
 				});
 			}
+		} catch (_Error) {
+			console.log(`Package NPM: ${Package}`);
+			console.log(_Error);
+		}
 
+		try {
 			if (Match(Package, /cargo:/)) {
 				const Crate =
 					typeof Package === "string"
 						? Package.split(":")[1]
-						: Object.keys(Package)
-								.entries()
-								.next()
-								.value.split(":")[1];
+						: Object.keys(Package).at(0)?.split(":")[1];
 
 				const JSONCargo = await (
 					await fetch(`https://crates.io/api/v1/crates/${Crate}`)
@@ -150,7 +157,7 @@ export default (async (...Option: Parameters<Type>) => {
 				});
 			}
 		} catch (_Error) {
-			console.log(`Package: ${Package}`);
+			console.log(`Package cargo: ${Package}`);
 			console.log(_Error);
 		}
 	}
