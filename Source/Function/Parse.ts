@@ -35,18 +35,18 @@ export default (async (...Option: Parameters<Type>) => {
 						Description: JSONGitHub.data?.description ?? "",
 						Badge: new Set([
 							{
-								Link: `https://github.com/${Owner}/${Repository}`,
-								Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Update`,
+								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
+								Image: `HTTPS://IMG.Shields.IO/github/last-commit/${Owner}/${Repository}?label=Last%20Update`,
 								Alt: "Last Update",
 							},
 							{
-								Link: `https://github.com/${Owner}/${Repository}`,
-								Image: `https://img.shields.io/github/issues/${Owner}/${Repository}?label=Issues`,
+								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
+								Image: `HTTPS://IMG.Shields.IO/github/issues/${Owner}/${Repository}?label=Issues`,
 								Alt: "Issues",
 							},
 							{
-								Link: `https://github.com/${Owner}/${Repository}`,
-								Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Leaks`,
+								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
+								Image: `HTTPS://IMG.Shields.IO/github/downloads/${Owner}/${Repository}/total?label=Leaks`,
 								Alt: "Leaks",
 							},
 						]),
@@ -75,7 +75,7 @@ export default (async (...Option: Parameters<Type>) => {
 					?.replace(".git", "");
 
 				Items.add({
-					Link: `https://github.com/${GitHub}`,
+					Link: `HTTPS://GitHub.Com/${GitHub}`,
 					Name:
 						typeof Package === "object"
 							? Object.values(Package).at(0)?.Name ??
@@ -85,23 +85,23 @@ export default (async (...Option: Parameters<Type>) => {
 					Description: JSONNPM?.description ?? "",
 					Badge: new Set([
 						{
-							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
-							Link: `https://github.com/${GitHub}/actions/workflows/Node.yml`,
+							Image: `HTTPS://IMG.Shields.IO/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
+							Link: `HTTPS://GitHub.Com/${GitHub}/actions/workflows/Node.yml`,
 							Alt: "Build",
 						},
 						{
 							Link: `https://npmjs.org/${JSONNPM.name}?activeTab=dependencies`,
-							Image: `https://img.shields.io/librariesio/release/npm/${JSONNPM.name}?logo=dependabot&label=`,
+							Image: `HTTPS://IMG.Shields.IO/librariesio/release/npm/${JSONNPM.name}?logo=dependabot&label=`,
 							Alt: "Dependencies",
 						},
 						{
 							Link: `https://npmjs.org/${JSONNPM.name}`,
-							Image: `https://img.shields.io/npm/v/${JSONNPM.name}?label=Version&logo=npm`,
+							Image: `HTTPS://IMG.Shields.IO/npm/v/${JSONNPM.name}?label=Version&logo=npm`,
 							Alt: "Version",
 						},
 						{
 							Link: `https://npmjs.org/${JSONNPM.name}`,
-							Image: `https://img.shields.io/npm/dt/${JSONNPM.name}?label=Leaks&logo=npm`,
+							Image: `HTTPS://IMG.Shields.IO/npm/dt/${JSONNPM.name}?label=Leaks&logo=npm`,
 							Alt: "Downloads",
 						},
 					]),
@@ -137,18 +137,18 @@ export default (async (...Option: Parameters<Type>) => {
 							: JSONCargo?.crate?.name ?? "",
 					Badge: new Set([
 						{
-							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
-							Link: `https://github.com/${GitHub}/actions/workflows/Rust.yml`,
+							Image: `HTTPS://IMG.Shields.IO/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
+							Link: `HTTPS://GitHub.Com/${GitHub}/actions/workflows/Rust.yml`,
 							Alt: "Build",
 						},
 						{
 							Link: `https://crates.io/${JSONCargo?.crate?.name}`,
-							Image: `https://img.shields.io/crates/v/${JSONCargo?.crate?.name}?label=Version`,
+							Image: `HTTPS://IMG.Shields.IO/crates/v/${JSONCargo?.crate?.name}?label=Version`,
 							Alt: "Version",
 						},
 						{
 							Link: `https://crates.io/${JSONCargo?.crate?.name}`,
-							Image: `https://img.shields.io/crates/d/${JSONCargo?.crate?.name}?label=Leaks`,
+							Image: `HTTPS://IMG.Shields.IO/crates/d/${JSONCargo?.crate?.name}?label=Leaks`,
 							Alt: "Downloads",
 						},
 					]),

@@ -2,19 +2,19 @@
 	"name": "@website/nikolahristov_tech",
 	"version": "0.0.1",
 	"private": false,
-	"homepage": "https://github.com/NikolaRHristov/Website#readme",
+	"homepage": "HTTPS://GitHub.Com/NikolaRHristov/Website#readme",
 	"bugs": {
-		"url": "https://github.com/NikolaRHristov/Website/issues"
+		"url": "HTTPS://GitHub.Com/NikolaRHristov/Website/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NikolaRHristov/Website.git"
+		"url": "git+HTTPS://GitHub.Com/NikolaRHristov/Website.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
 		"name": "Nikola R. Hristov",
 		"email": "Nikola@Playform.Cloud",
-		"url": "https://nikolahristov.tech"
+		"url": "HTTPS://NikolaHristov.Tech"
 	},
 	"scripts": {
 		"prepublishOnly": "astro build",
