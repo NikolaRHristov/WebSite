@@ -66,7 +66,7 @@ export default (async (...Option: Parameters<Type>) => {
 						: Object.keys(Package).at(0)?.split(":")[1];
 
 				const JSONNPM = await (
-					await fetch(`https://registry.npmjs.org/${NPM}`)
+					await fetch(`HTTPS://Registry.NPMJS.Org/${NPM}`)
 				).json();
 
 				GitHub = (JSONNPM?.repository?.url ?? "")
