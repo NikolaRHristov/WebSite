@@ -57,7 +57,7 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@astrojs/db": "0.9.3"
+		"@astrojs/db": "0.9.4"
 	},
 	"publishConfig": {
 		"access": "public"
