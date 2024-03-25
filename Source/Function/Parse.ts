@@ -90,17 +90,17 @@ export default (async (...Option: Parameters<Type>) => {
 							Alt: "Build",
 						},
 						{
-							Link: `https://npmjs.org/${JSONNPM.name}?activeTab=dependencies`,
+							Link: `HTTPS://NPMJS.Org/${JSONNPM.name}?activeTab=dependencies`,
 							Image: `HTTPS://IMG.Shields.IO/librariesio/release/npm/${JSONNPM.name}?logo=dependabot&label=`,
 							Alt: "Dependencies",
 						},
 						{
-							Link: `https://npmjs.org/${JSONNPM.name}`,
+							Link: `HTTPS://NPMJS.Org/${JSONNPM.name}`,
 							Image: `HTTPS://IMG.Shields.IO/npm/v/${JSONNPM.name}?label=Version&logo=npm`,
 							Alt: "Version",
 						},
 						{
-							Link: `https://npmjs.org/${JSONNPM.name}`,
+							Link: `HTTPS://NPMJS.Org/${JSONNPM.name}`,
 							Image: `HTTPS://IMG.Shields.IO/npm/dt/${JSONNPM.name}?label=Leaks&logo=npm`,
 							Alt: "Downloads",
 						},
@@ -120,7 +120,7 @@ export default (async (...Option: Parameters<Type>) => {
 						: Object.keys(Package).at(0)?.split(":")[1];
 
 				const JSONCargo = await (
-					await fetch(`https://crates.io/api/v1/crates/${Crate}`)
+					await fetch(`HTTPS://Crates.IO/api/v1/crates/${Crate}`)
 				).json();
 
 				GitHub = (JSONCargo?.crate?.repository ?? "")
@@ -142,12 +142,12 @@ export default (async (...Option: Parameters<Type>) => {
 							Alt: "Build",
 						},
 						{
-							Link: `https://crates.io/${JSONCargo?.crate?.name}`,
+							Link: `HTTPS://Crates.IO/${JSONCargo?.crate?.name}`,
 							Image: `HTTPS://IMG.Shields.IO/crates/v/${JSONCargo?.crate?.name}?label=Version`,
 							Alt: "Version",
 						},
 						{
-							Link: `https://crates.io/${JSONCargo?.crate?.name}`,
+							Link: `HTTPS://Crates.IO/${JSONCargo?.crate?.name}`,
 							Image: `HTTPS://IMG.Shields.IO/crates/d/${JSONCargo?.crate?.name}?label=Leaks`,
 							Alt: "Downloads",
 						},
