@@ -36,17 +36,17 @@ export default (async (...Option: Parameters<Type>) => {
 						Badge: new Set([
 							{
 								Link: `https://github.com/${Owner}/${Repository}`,
-								Image: `https://IMG.Shields.IO/github/last-commit/${Owner}/${Repository}?label=Last%20Update`,
+								Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Update`,
 								Alt: "Last Update",
 							},
 							{
 								Link: `https://github.com/${Owner}/${Repository}`,
-								Image: `https://IMG.Shields.IO/github/issues/${Owner}/${Repository}?label=Issues`,
+								Image: `https://img.shields.io/github/issues/${Owner}/${Repository}?label=Issues`,
 								Alt: "Issues",
 							},
 							{
 								Link: `https://github.com/${Owner}/${Repository}`,
-								Image: `https://IMG.Shields.IO/github/downloads/${Owner}/${Repository}/total?label=Leaks`,
+								Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Leaks`,
 								Alt: "Leaks",
 							},
 						]),
@@ -66,7 +66,7 @@ export default (async (...Option: Parameters<Type>) => {
 						: Object.keys(Package).at(0)?.split(":")[1];
 
 				const JSONNPM = await (
-					await fetch(`https://Registry.NPMJS.Org/${NPM}`)
+					await fetch(`https://registry.npmjs.org/${NPM}`)
 				).json();
 
 				GitHub = (JSONNPM?.repository?.url ?? "")
@@ -85,23 +85,23 @@ export default (async (...Option: Parameters<Type>) => {
 					Description: JSONNPM?.description ?? "",
 					Badge: new Set([
 						{
-							Image: `https://IMG.Shields.IO/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
+							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
 							Link: `https://github.com/${GitHub}/actions/workflows/Node.yml`,
 							Alt: "Build",
 						},
 						{
 							Link: `https://NPMJS.Org/${JSONNPM.name}?activeTab=dependencies`,
-							Image: `https://IMG.Shields.IO/librariesio/release/npm/${JSONNPM.name}?logo=dependabot&label=`,
+							Image: `https://img.shields.io/librariesio/release/npm/${JSONNPM.name}?logo=dependabot&label=`,
 							Alt: "Dependencies",
 						},
 						{
 							Link: `https://NPMJS.Org/${JSONNPM.name}`,
-							Image: `https://IMG.Shields.IO/npm/v/${JSONNPM.name}?label=Version&logo=npm`,
+							Image: `https://img.shields.io/npm/v/${JSONNPM.name}?label=Version&logo=npm`,
 							Alt: "Version",
 						},
 						{
 							Link: `https://NPMJS.Org/${JSONNPM.name}`,
-							Image: `https://IMG.Shields.IO/npm/dt/${JSONNPM.name}?label=Leaks&logo=npm`,
+							Image: `https://img.shields.io/npm/dt/${JSONNPM.name}?label=Leaks&logo=npm`,
 							Alt: "Downloads",
 						},
 					]),
@@ -137,18 +137,18 @@ export default (async (...Option: Parameters<Type>) => {
 							: JSONCargo?.crate?.name ?? "",
 					Badge: new Set([
 						{
-							Image: `https://IMG.Shields.IO/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
+							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
 							Link: `https://github.com/${GitHub}/actions/workflows/Rust.yml`,
 							Alt: "Build",
 						},
 						{
 							Link: `https://Crates.IO/${JSONCargo?.crate?.name}`,
-							Image: `https://IMG.Shields.IO/crates/v/${JSONCargo?.crate?.name}?label=Version`,
+							Image: `https://img.shields.io/crates/v/${JSONCargo?.crate?.name}?label=Version`,
 							Alt: "Version",
 						},
 						{
 							Link: `https://Crates.IO/${JSONCargo?.crate?.name}`,
-							Image: `https://IMG.Shields.IO/crates/d/${JSONCargo?.crate?.name}?label=Leaks`,
+							Image: `https://img.shields.io/crates/d/${JSONCargo?.crate?.name}?label=Leaks`,
 							Alt: "Downloads",
 						},
 					]),
