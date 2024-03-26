@@ -45,7 +45,11 @@ import Row from "@Component/Readme/Row.astro";
 	</table>
 
 	<table>
-		<Heading Text="Code Editor Land:" Emoji="🏝️" />
+		<Heading
+			Text="Land:"
+			LightIcon="https://nikolahristov.tech/Image/GitHub/Land-Logo.svg"
+			DarkIcon="https://nikolahristov.tech/Image/GitHub/Land-Logo.svg"
+		/>
 		<Row
 			Packages={new Set([
 				"GitHub:CodeEditorLand/Foundation",
@@ -118,7 +122,12 @@ import Row from "@Component/Readme/Row.astro";
 			DarkIcon="https://Raw.GitHubUserContent.Com/npm/logos/master/npm%20square/n.svg"
 			AltIcon="NPM"
 		/>
-		<Row Packages={new Set<Cell>(["NPM:typescript-document", "NPM:typescript-esbuild"])} />
+		<Row
+			Packages={new Set<Cell>([
+				"NPM:typescript-document",
+				"NPM:typescript-esbuild",
+			])}
+		/>
 	</table>
 
 	<table>
