@@ -2,4 +2,4 @@
 
 NikolaHristov.tech main website.
 
-[nikolahristov.tech]: HTTPS://NikolaHristov.Tech
+[nikolahristov.tech]: https://nikolahristov.tech

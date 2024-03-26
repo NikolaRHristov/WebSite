@@ -2,7 +2,7 @@ export default (await import("astro/config")).defineConfig({
 	srcDir: "./Source",
 	publicDir: "./Public",
 	outDir: "./Target",
-	site: "HTTPS://NikolaHristov.Tech/",
+	site: "https://nikolahristov.tech/",
 	compressHTML: true,
 	integrations: [
 		import.meta.env.MODE === "production"
