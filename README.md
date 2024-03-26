@@ -1,5 +1,5 @@
-# [nikolahristov.tech] 👨🏻
+# [NikolaHristov.Tech] 👨🏻
 
 NikolaHristov.tech main website.
 
-[nikolahristov.tech]: https://nikolahristov.tech
+[NikolaHristov.Tech]: HTTPS://NikolaHristov.Tech
