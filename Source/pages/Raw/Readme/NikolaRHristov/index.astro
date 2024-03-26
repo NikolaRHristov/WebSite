@@ -83,33 +83,28 @@ import Row from "@Component/Readme/Row.astro";
 		<Row
 			Packages={new Set<Cell>([
 				{
+					"NPM:astro-biome": {
+						Name: "Biome",
+					},
+				},
+				{
 					"NPM:astro-compress": {
 						Name: "Compress",
 					},
 				},
-				// "NPM:astro-convert",
 				{
 					"NPM:astro-critters": {
 						Name: "Critters",
 					},
 				},
-				// "NPM:astro-dashboard",
-				// "NPM:astro-dead-link",
-				// "NPM:astro-network",
 				{
 					"NPM:astro-rome": {
 						Name: "Rome",
 					},
 				},
 				{
-					"NPM:astro-biome": {
-						Name: "Biome",
-					},
-				},
-				// "NPM:astro-short-urls",
-				{
 					"GitHub:Playform/AstroStarterTemplate": {
-						Name: "Astro Starter Template",
+						Name: "Starter Template",
 					},
 				},
 			])}
@@ -124,8 +119,16 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 		<Row
 			Packages={new Set<Cell>([
-				"NPM:typescript-document",
-				"NPM:typescript-esbuild",
+				{
+					"NPM:typescript-document": {
+						Name: "TypeScript Document",
+					},
+				},
+				{
+					"NPM:typescript-esbuild": {
+						Name: "TypeScript ESBuild",
+					},
+				},
 			])}
 		/>
 	</table>

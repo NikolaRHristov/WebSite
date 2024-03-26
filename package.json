@@ -22,7 +22,7 @@
 	},
 	"dependencies": {
 		"@astrojs/prefetch": "0.4.1",
-		"@astrojs/sitemap": "3.1.1",
+		"@astrojs/sitemap": "3.1.2",
 		"@octokit/core": "6.0.1",
 		"@swup/body-class-plugin": "3.2.0",
 		"@swup/head-plugin": "2.2.0",
@@ -32,10 +32,10 @@
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
 		"@tailwindcss/typography": "0.5.11",
-		"astro": "4.5.9",
-		"astro-biome": "0.0.9",
+		"astro": "4.5.10",
+		"astro-biome": "0.0.10",
 		"astro-capo": "0.0.1",
-		"astro-compress": "2.2.18",
+		"astro-compress": "2.2.19",
 		"astro-critters": "2.1.6",
 		"astrojs-service-worker": "2.0.0",
 		"autoprefixer": "10.4.19",
@@ -57,7 +57,7 @@
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@astrojs/db": "0.9.4"
+		"@astrojs/db": "0.9.5"
 	},
 	"publishConfig": {
 		"access": "public"
