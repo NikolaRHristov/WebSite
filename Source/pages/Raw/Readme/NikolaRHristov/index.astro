@@ -29,7 +29,6 @@ import Row from "@Component/Readme/Row.astro";
 						Name: "Delete Deployment",
 					},
 				},
-				// "GitHub:AstroStarter/PAC-STAC",
 				{
 					"cargo:innkeeper": {
 						Name: "Inn",
@@ -46,9 +45,9 @@ import Row from "@Component/Readme/Row.astro";
 
 	<table>
 		<Heading
-			Text="Land:"
-			LightIcon="https://nikolahristov.tech/Image/GitHub/Land-Logo.svg"
 			DarkIcon="https://nikolahristov.tech/Image/GitHub/Land-Logo.svg"
+			LightIcon="https://nikolahristov.tech/Image/GitHub/Land-Logo.svg"
+			Text="Land:"
 		/>
 		<Row
 			Packages={new Set([
@@ -75,10 +74,10 @@ import Row from "@Component/Readme/Row.astro";
 
 	<table>
 		<Heading
-			Text="Astro:"
+			AltIcon="Astro"
 			DarkIcon="https://Raw.GitHubUserContent.Com/Playform/AstroCompress/main/.github/Image/DarkAstro.svg"
 			LightIcon="https://Raw.GitHubUserContent.Com/Playform/AstroCompress/main/.github/Image/LightAstro.svg"
-			AltIcon="Astro"
+			Text="Astro:"
 		/>
 		<Row
 			Packages={new Set<Cell>([
@@ -113,9 +112,9 @@ import Row from "@Component/Readme/Row.astro";
 
 	<table>
 		<Heading
-			Text="NPM:"
-			DarkIcon="https://Raw.GitHubUserContent.Com/npm/logos/master/npm%20square/n.svg"
 			AltIcon="NPM"
+			DarkIcon="https://Raw.GitHubUserContent.Com/npm/logos/master/npm%20square/n.svg"
+			Text="NPM:"
 		/>
 		<Row
 			Packages={new Set<Cell>([
@@ -135,10 +134,10 @@ import Row from "@Component/Readme/Row.astro";
 
 	<table>
 		<Heading
-			Text="GitHub:"
+			AltIcon="GitHub"
 			DarkIcon="https://Raw.GitHubUserContent.Com/NikolaRHristov/NikolaRHristov/Current/.github/Image/GitHub-Mark-Light-32px.png"
 			LightIcon="https://Raw.GitHubUserContent.Com/NikolaRHristov/NikolaRHristov/Current/.github/Image/GitHub-Mark-32px.png"
-			AltIcon="GitHub"
+			Text="GitHub:"
 		/>
 		<Row
 			Packages={new Set<Cell>([
@@ -147,16 +146,15 @@ import Row from "@Component/Readme/Row.astro";
 						Name: "Maintain",
 					},
 				},
-				// "NPM:github-history-slider",
 			])}
 		/>
 	</table>
 
 	<table>
 		<Heading
-			Text="Dotfile:"
-			DarkIcon="https://Raw.GitHubUserContent.Com/jglovier/dotfiles-logo/master/dotfiles-logo-icon.png"
 			AltIcon="Dotfile"
+			DarkIcon="https://Raw.GitHubUserContent.Com/jglovier/dotfiles-logo/master/dotfiles-logo-icon.png"
+			Text="Dotfile:"
 		/>
 		<Row
 			Packages={new Set<Cell>([
