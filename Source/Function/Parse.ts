@@ -120,7 +120,7 @@ export default (async (...Option: Parameters<Type>) => {
 						: Object.keys(Package).at(0)?.split(":")[1];
 
 				const JSONCargo = await (
-					await fetch(`https://Crates.IO/api/v1/crates/${Crate}`)
+					await fetch(`https://crates.io/api/v1/crates/${Crate}`)
 				).json();
 
 				GitHub = (JSONCargo?.crate?.repository ?? "")
@@ -142,12 +142,12 @@ export default (async (...Option: Parameters<Type>) => {
 							Alt: "Build",
 						},
 						{
-							Link: `https://Crates.IO/${JSONCargo?.crate?.name}`,
+							Link: `https://crates.io/${JSONCargo?.crate?.name}`,
 							Image: `https://img.shields.io/crates/v/${JSONCargo?.crate?.name}?label=Version`,
 							Alt: "Version",
 						},
 						{
-							Link: `https://Crates.IO/${JSONCargo?.crate?.name}`,
+							Link: `https://crates.io/${JSONCargo?.crate?.name}`,
 							Image: `https://img.shields.io/crates/d/${JSONCargo?.crate?.name}?label=Leaks`,
 							Alt: "Downloads",
 						},
