@@ -1,5 +1,3 @@
-# [NikolaHristov.Tech] 👨🏻
+# 👨🏻 [Website]
 
-NikolaHristov.tech main website.
-
-[NikolaHristov.Tech]: https://NikolaHristov.Tech
+[Website]: https://NikolaHristov.Tech

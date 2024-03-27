@@ -90,17 +90,17 @@ export default (async (...Option: Parameters<Type>) => {
 							Alt: "Build",
 						},
 						{
-							Link: `https://NPMJS.Org/${JSONNPM.name}?activeTab=dependencies`,
+							Link: `https://npmjs.org/${JSONNPM.name}?activeTab=dependencies`,
 							Image: `https://img.shields.io/librariesio/release/npm/${JSONNPM.name}?logo=dependabot&label=`,
 							Alt: "Dependencies",
 						},
 						{
-							Link: `https://NPMJS.Org/${JSONNPM.name}`,
+							Link: `https://npmjs.org/${JSONNPM.name}`,
 							Image: `https://img.shields.io/npm/v/${JSONNPM.name}?label=Version&logo=npm`,
 							Alt: "Version",
 						},
 						{
-							Link: `https://NPMJS.Org/${JSONNPM.name}`,
+							Link: `https://npmjs.org/${JSONNPM.name}`,
 							Image: `https://img.shields.io/npm/dt/${JSONNPM.name}?label=Leaks&logo=npm`,
 							Alt: "Downloads",
 						},
