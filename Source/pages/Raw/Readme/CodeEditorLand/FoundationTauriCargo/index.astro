@@ -10,18 +10,15 @@ import Row from "@Component/Readme/Row.astro";
 			DarkIcon="https://nikolahristov.tech/Image/GitHub/Cargo-Logo-Small.png"
 			Text="Cargo:"
 		/>
+
 		<Row Packages={new Set([])} />
 	</table>
-	<table>
-		<Heading Emoji="🔩" Text="Service:" />
-		<Row Packages={new Set([])} />
-	</table>
-	<table>
-		<Heading
-			LightIcon="https://nikolahristov.tech/Image/GitHub/NPM-Logo.svg"
-			DarkIcon="https://nikolahristov.tech/Image/GitHub/NPM-Logo.svg"
-			Text="NPM:"
-		/>
-		<Row Packages={new Set([])} />
-	</table>
+
+	<a
+		href="https://fossa.app/projects/git%2Bgithub.com%2FCodeEditorLand%2FFoundationTauriCargo?ref=badge_large&issueType=license"
+		><img
+			src="https://fossa.app/api/projects/git%2Bgithub.com%2FCodeEditorLand%2FFoundationTauriCargo.svg?type=large&issueType=license"
+			alt="FOSSA Status"
+		/></a
+	>
 </>
