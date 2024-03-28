@@ -87,7 +87,7 @@ export default [
 	"ashphy/ashphy.github.io",
 	"astahmer/astahmer.dev",
 	"astranoto/soluter",
-	"Playform/AstroCompress",
+	"Playform/CompressAstro",
 	"Playform/AstroCritters",
 	"Playform/AstroRome",
 	"AstroNvim/astronvim.com",
