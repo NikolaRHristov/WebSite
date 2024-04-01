@@ -2,7 +2,7 @@
 	"name": "@website/nikolahristov_tech",
 	"version": "0.0.1",
 	"private": false,
-	"homepage": "https://github.com/NikolaRHristov/Website#readme",
+	"homepage": "https://github.com/NikolaRHristov/Website#ReadMe",
 	"bugs": {
 		"url": "https://github.com/NikolaRHristov/Website/issues"
 	},
@@ -35,7 +35,7 @@
 		"astro": "4.5.12",
 		"@playform/biome-astro": "0.0.3",
 		"astro-capo": "0.0.1",
-		"@playform/compress-astro": "0.0.1",
+		"@playform/compress-astro": "0.0.2",
 		"@playform/critters-astro": "0.0.2",
 		"astrojs-service-worker": "2.0.0",
 		"autoprefixer": "10.4.19",
