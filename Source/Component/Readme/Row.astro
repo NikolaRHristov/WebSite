@@ -5,14 +5,14 @@ export const { default: Icon } = await import("@Option/Icon.js");
 export const { default: Parse } = await import("@Function/Parse.js");
 
 interface Props {
-	Packages: Set<PackageCell>;
+	Package: Set<PackageCell>;
 }
 
 const Dark = "&color=black&labelColor=black&logoColor=white&logoWidth=0";
 
 const Light = "&color=white&labelColor=white&logoColor=black&logoWidth=0";
 
-const Items = await Parse(Astro.props.Packages);
+const Items = await Parse(Astro.props.Package);
 ---
 
 {

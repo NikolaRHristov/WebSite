@@ -4,26 +4,26 @@ import "github-markdown-css";
 
 export const getStaticPaths = async () =>
 	[
-		"BiomeAstro",
-		"CompressAstro",
-		"CrittersAstro",
-		"RomeAstro",
+		"Playform/BiomeAstro",
+		// "Playform/CompressAstro",
+		// "Playform/CrittersAstro",
+		// "Playform/RomeAstro",
 
-		"CodeEditorLand-Foundation",
-		"CodeEditorLand-FoundationLand",
-		"CodeEditorLand-FoundationLandCargo",
-		"CodeEditorLand-FoundationLandNPM",
+		// "CodeEditorLand/Foundation",
+		// "CodeEditorLand/FoundationLand",
+		// "CodeEditorLand/FoundationLandCargo",
+		// "CodeEditorLand/FoundationLandNPM",
 
-		"CodeEditorLand-FoundationOXC",
-		"CodeEditorLand-FoundationOXCCargo",
-		"CodeEditorLand-FoundationOXCNPM",
+		// "CodeEditorLand/FoundationOXC",
+		// "CodeEditorLand/FoundationOXCCargo",
+		// "CodeEditorLand/FoundationOXCNPM",
 
-		"CodeEditorLand-FoundationTauri",
-		"CodeEditorLand-FoundationTauriCargo",
-		"CodeEditorLand-FoundationTauriNPM",
-		// "CodeEditorLand-FoundationLandService",
-		"NikolaRHristov",
-		"RoundWindows",
+		// "CodeEditorLand/FoundationTauri",
+		// "CodeEditorLand/FoundationTauriCargo",
+		// "CodeEditorLand/FoundationTauriNPM",
+
+		// "NikolaRHristov/NikolaRHristov",
+		// "RoundWindows",
 	].map((Slug) => ({
 		params: { Slug },
 	}));
@@ -31,13 +31,15 @@ export const getStaticPaths = async () =>
 const Slug =
 	typeof Astro.params["Slug"] === "string" ? Astro.params["Slug"] : "";
 
-const Readme = (await import(`../Raw/Readme/${Slug}/index.astro`)).default;
+// const Readme = (await import(`../Raw/Readme/${Slug}/index.astro`)).default;
+
+console.log(`../Raw/Readme/${Slug}/index.astro`)
 ---
 
 <Base>
 	<div class="container">
 		<div class="markdown-body">
-			<Readme />
+			<!-- <Readme /> -->
 		</div>
 	</div>
 </Base>
