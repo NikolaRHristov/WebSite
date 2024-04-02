@@ -1,5 +1,6 @@
 ---
-import Footer from "@Component/Footer.astro";
+const Footer = (await import("@Component/Footer.astro")).default;
+
 import "@Stylesheet/Base.css";
 
 const {

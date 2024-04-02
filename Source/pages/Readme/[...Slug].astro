@@ -1,5 +1,6 @@
 ---
-import Base from "@Layout/Base.astro";
+const Base = (await import("@Layout/Base.astro")).default;
+
 import "github-markdown-css";
 
 export const getStaticPaths = async () =>
@@ -33,7 +34,7 @@ const Slug =
 
 // const Readme = (await import(`../Raw/Readme/${Slug}/index.astro`)).default;
 
-console.log(`../Raw/Readme/${Slug}/index.astro`)
+console.log(`../Raw/Readme/${Slug}/index.astro`);
 ---
 
 <Base>

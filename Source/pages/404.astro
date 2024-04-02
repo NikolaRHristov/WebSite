@@ -1,5 +1,6 @@
 ---
-import Base from "@Layout/Base.astro";
+const Base = (await import("@Layout/Base.astro")).default;
+
 import "@Stylesheet/Component/Article.css";
 ---
 
