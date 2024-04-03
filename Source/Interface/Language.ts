@@ -3,7 +3,7 @@
  *
  */
 
-export default interface Type {
+export default interface Interface {
 	Light: ImageMetadata | null;
 	Dark: ImageMetadata | null;
 	Name: string;

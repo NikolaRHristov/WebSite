@@ -2,7 +2,7 @@
  * @module Match
  *
  */
-export default interface Type {
+export default interface Interface {
 	(
 		Package: Cell,
 		Match: string | RegExp,

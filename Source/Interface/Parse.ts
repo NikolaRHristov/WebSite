@@ -2,7 +2,7 @@
  * @module Parse
  *
  */
-export default interface Type {
+export default interface Interface {
 	(Packages: Set<Cell>): Promise<Set<PackagesRowItem>>;
 }
 
