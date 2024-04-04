@@ -24,8 +24,8 @@
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "3.1.2",
 		"@octokit/core": "6.1.1",
-		"@playform/build": "0.0.2",
-		"@playform/compress": "0.0.1",
+		"@playform/build": "0.0.5",
+		"@playform/compress": "0.0.2",
 		"@playform/format": "0.0.1",
 		"@playform/inline": "0.0.1",
 		"@swup/body-class-plugin": "3.2.0",
@@ -36,7 +36,7 @@
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
 		"@tailwindcss/typography": "0.5.12",
-		"astro": "4.5.15",
+		"astro": "4.5.16",
 		"astro-capo": "0.0.1",
 		"astrojs-service-worker": "2.0.0",
 		"autoprefixer": "10.4.19",
@@ -53,11 +53,11 @@
 		"postcss-url": "10.1.3",
 		"swup": "4.6.1",
 		"tailwindcss": "3.4.3",
-		"typescript": "5.4.3",
+		"typescript": "5.4.4",
 		"zod": "3.22.4"
 	},
 	"devDependencies": {
-		"@astrojs/db": "0.10.0"
+		"@astrojs/db": "0.10.1"
 	},
 	"publishConfig": {
 		"access": "public"
