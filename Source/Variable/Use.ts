@@ -669,7 +669,7 @@ export default [
 	"nhutdm/nhutduong.com",
 	"nic-nevell/nebulix",
 	"nigar-11/FinEdge",
-	"NikolaRHristov/ConvertAstro",
+	"NikolaRHristov/Convert",
 	"NikolaRHristov/DeadLinkAstros",
 	"nip10/portfolio-2023",
 	"Nizar-MC-full/pnpmLock",
