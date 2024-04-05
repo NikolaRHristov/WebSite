@@ -1,5 +1,5 @@
 ---
-const Base = (await import("@Layout/Base.astro")).default;
+import Base from "@Layout/Base.astro";
 
 import "github-markdown-css";
 
@@ -32,14 +32,12 @@ const Slug =
 	typeof Astro.params["Slug"] === "string" ? Astro.params["Slug"] : "";
 
 const Readme = (await import(`../Raw/Readme/${Slug}/index.astro`)).default;
-
-console.log(`../Raw/Readme/${Slug}/index.astro`);
 ---
 
 <Base>
 	<div class="container">
 		<div class="markdown-body">
-			<!-- <Readme /> -->
+			<Readme />
 		</div>
 	</div>
 </Base>
