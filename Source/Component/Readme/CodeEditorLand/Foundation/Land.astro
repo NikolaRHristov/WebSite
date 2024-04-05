@@ -3,32 +3,34 @@ import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
 ---
 
-<table>
-	<Heading
-		LightIcon="https://nikolahristov.tech/Image/GitHub/Land-Logo.svg"
-		DarkIcon="https://nikolahristov.tech/Image/GitHub/Land-Logo.svg"
-		Text="Land:"
-	/>
+<>
+	<table>
+		<Heading
+			LightIcon="https://nikolahristov.tech/Image/GitHub/Land-Logo.svg"
+			DarkIcon="https://nikolahristov.tech/Image/GitHub/Land-Logo.svg"
+			Text="Land:"
+		/>
 
-	<Row
-		Package={new Set([
-			"GitHub:CodeEditorLand/Foundation",
-			"GitHub:CodeEditorLand/Editor",
-			{
-				"GitHub:CodeEditorLand/FoundationLandCargo": {
-					Name: "Cargo",
+		<Row
+			Package={new Set([
+				"GitHub:CodeEditorLand/Foundation",
+				"GitHub:CodeEditorLand/Editor",
+				{
+					"GitHub:CodeEditorLand/FoundationLandCargo": {
+						Name: "Cargo",
+					},
 				},
-			},
-			{
-				"GitHub:CodeEditorLand/FoundationLandNPM": {
-					Name: "NPM",
+				{
+					"GitHub:CodeEditorLand/FoundationLandNPM": {
+						Name: "NPM",
+					},
 				},
-			},
-			{
-				"GitHub:CodeEditorLand/FoundationLandService": {
-					Name: "Service",
+				{
+					"GitHub:CodeEditorLand/FoundationLandService": {
+						Name: "Service",
+					},
 				},
-			},
-		])}
-	/>
-</table>
+			])}
+		/>
+	</table>
+</>

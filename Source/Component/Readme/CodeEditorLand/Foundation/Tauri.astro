@@ -3,35 +3,37 @@ import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
 ---
 
-<table>
-	<Heading
-		DarkIcon="https://nikolahristov.tech/Image/GitHub/Tauri-Glyph-Color.svg"
-		LightIcon="https://nikolahristov.tech/Image/GitHub/Tauri-Glyph-Color.svg"
-		Text="Tauri:"
-	/>
+<>
+	<table>
+		<Heading
+			DarkIcon="https://nikolahristov.tech/Image/GitHub/Tauri-Glyph-Color.svg"
+			LightIcon="https://nikolahristov.tech/Image/GitHub/Tauri-Glyph-Color.svg"
+			Text="Tauri:"
+		/>
 
-	<Row
-		Package={new Set([
-			{
-				"GitHub:CodeEditorLand/FoundationTauri": {
-					Name: "Tauri",
+		<Row
+			Package={new Set([
+				{
+					"GitHub:CodeEditorLand/FoundationTauri": {
+						Name: "Tauri",
+					},
 				},
-			},
-			{
-				"GitHub:CodeEditorLand/FoundationTauriCargo": {
-					Name: "Cargo",
+				{
+					"GitHub:CodeEditorLand/FoundationTauriCargo": {
+						Name: "Cargo",
+					},
 				},
-			},
-			{
-				"GitHub:CodeEditorLand/FoundationTauriNPM": {
-					Name: "NPM",
+				{
+					"GitHub:CodeEditorLand/FoundationTauriNPM": {
+						Name: "NPM",
+					},
 				},
-			},
-			{
-				"GitHub:CodeEditorLand/FoundationTauriService": {
-					Name: "Service",
+				{
+					"GitHub:CodeEditorLand/FoundationTauriService": {
+						Name: "Service",
+					},
 				},
-			},
-		])}
-	/>
-</table>
+			])}
+		/>
+	</table>
+</>
