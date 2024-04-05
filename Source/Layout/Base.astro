@@ -1,5 +1,5 @@
 ---
-const Footer = (await import("@Component/Footer.astro")).default;
+import Footer from "@Component/Footer.astro";
 
 import "@Stylesheet/Base.css";
 
@@ -17,11 +17,11 @@ interface Props {
 
 const Link = (Link: string[] = []) =>
 	Link.map(
-		(Link) => `<link rel="stylesheet" type="text/css" href="${Link}" />`,
+		(Link) => `<link rel="stylesheet" type="text/css" href="${Link}" />`
 	).join("\n");
 
-const { Head } = await import("astro-capo");
-const { ViewTransitions } = await import("astro:transitions");
+import { Head } from "astro-capo";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
