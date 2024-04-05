@@ -1,15 +1,11 @@
 ---
-import Heading from "@Component/Readme/Heading.astro";
+import Cargo from "@Component/Readme/Heading/Cargo.astro";
 import Row from "@Component/Readme/Row.astro";
 ---
 
 <>
 	<table>
-		<Heading
-			LightIcon="https://nikolahristov.tech/Image/GitHub/Cargo-Logo-Small.png"
-			DarkIcon="https://nikolahristov.tech/Image/GitHub/Cargo-Logo-Small.png"
-			Text="Cargo:"
-		/>
+		<Cargo />
 
 		<Row
 			Package={new Set([
