@@ -1,0 +1,37 @@
+---
+import Heading from "@Component/Readme/Heading.astro";
+import Row from "@Component/Readme/Row.astro";
+---
+
+<table>
+	<Heading
+		DarkIcon="https://nikolahristov.tech/Image/GitHub/OXC-Logo-Square.png"
+		LightIcon="https://nikolahristov.tech/Image/GitHub/OXC-Logo-Square.png"
+		Text="OXC:"
+	/>
+
+	<Row
+		Package={new Set([
+			{
+				"GitHub:CodeEditorLand/FoundationOXC": {
+					Name: "OXC",
+				},
+			},
+			{
+				"GitHub:CodeEditorLand/FoundationOXCCargo": {
+					Name: "Cargo",
+				},
+			},
+			{
+				"GitHub:CodeEditorLand/FoundationOXCNPM": {
+					Name: "NPM",
+				},
+			},
+			{
+				"GitHub:CodeEditorLand/FoundationOXCService": {
+					Name: "Service",
+				},
+			},
+		])}
+	/>
+</table>
