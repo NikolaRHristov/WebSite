@@ -71,7 +71,7 @@ export default (async (...Option: Parameters<Type>) => {
 
 				GitHub = (JSONNPM?.repository?.url ?? "")
 					?.replace(/(git\+)?http?s:\/\/github.com\//, "")
-					?.replace("#ReadMe", "")
+					?.replace("#readme", "")
 					?.replace(".git", "");
 
 				Items.add({
@@ -125,7 +125,7 @@ export default (async (...Option: Parameters<Type>) => {
 
 				GitHub = (JSONCargo?.crate?.repository ?? "")
 					?.replace(/(git\+)?http?s:\/\/github.com\//, "")
-					?.replace("#ReadMe", "")
+					?.replace("#readme", "")
 					?.replace(".git", "");
 
 				Items.add({
