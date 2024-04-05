@@ -1,18 +1,9 @@
 ---
-import Heading from "@Component/Readme/Heading.astro";
-import Row from "@Component/Readme/Row.astro";
+import Cargo from "@Component/Readme/CodeEditorLand/Foundation/OXC/Cargo.astro";
 ---
 
 <>
-	<table>
-		<Heading
-			LightIcon="https://nikolahristov.tech/Image/GitHub/Cargo-Logo-Small.png"
-			DarkIcon="https://nikolahristov.tech/Image/GitHub/Cargo-Logo-Small.png"
-			Text="Cargo:"
-		/>
-
-		<Row Package={new Set([])} />
-	</table>
+	<Cargo />
 
 	<a
 		href="https://fossa.app/projects/git%2Bgithub.com%2FCodeEditorLand%2FFoundationOXCCargo?ref=badge_large&issueType=license"
