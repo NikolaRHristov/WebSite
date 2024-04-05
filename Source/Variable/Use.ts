@@ -89,7 +89,6 @@ export default [
 	"astranoto/soluter",
 	"Playform/Compress",
 	"Playform/Inline",
-	"Playform/RomeAstro",
 	"AstroNvim/astronvim.com",
 	"atown93/atown93.github.io",
 	"atridadl/atri.dad",

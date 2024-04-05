@@ -7,7 +7,7 @@ export const getStaticPaths = async () =>
 	[
 		"Playform/Compress",
 		"Playform/Inline",
-		"Playform/RomeAstro",
+		"Playform/Format",
 
 		"CodeEditorLand/Foundation",
 		"CodeEditorLand/FoundationLand",
@@ -31,7 +31,7 @@ export const getStaticPaths = async () =>
 const Slug =
 	typeof Astro.params["Slug"] === "string" ? Astro.params["Slug"] : "";
 
-const Readme = (await import(`../Raw/Readme/${Slug}/index.astro`)).default;
+const Readme = (await import(`./../Raw/Readme/${Slug}/index.astro`)).default;
 ---
 
 <Base>
