@@ -1,4 +1,4 @@
-import type Type from "../Interface/Icon.js";
+import type Type from "@Interface/Icon.js";
 
 export default {
 	CSS: [
