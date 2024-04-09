@@ -2,7 +2,7 @@
  * @module Parse
  *
  */
-export default (async (...Option: Parameters<Type>) => {
+export default (async (...Option: Parameters<Interface>) => {
 	const Items = new Set<PackagesRowItem>();
 
 	for (const Package of Option[0]) {
@@ -29,7 +29,7 @@ export default (async (...Option: Parameters<Type>) => {
 						Name:
 							typeof Package === "object"
 								? Object.values(Package).at(0)?.Name ??
-								  JSONGitHub.data?.name
+									JSONGitHub.data?.name
 								: JSONGitHub.data?.name ?? "",
 						GitHub: JSONGitHub.data?.full_name ?? "",
 						Description: JSONGitHub.data?.description ?? "",
@@ -79,7 +79,7 @@ export default (async (...Option: Parameters<Type>) => {
 					Name:
 						typeof Package === "object"
 							? Object.values(Package).at(0)?.Name ??
-							  GitHub.split("/")[1]
+								GitHub.split("/")[1]
 							: GitHub.split("/")[1] ?? "",
 					GitHub,
 					Description: JSONNPM?.description ?? "",
@@ -133,7 +133,7 @@ export default (async (...Option: Parameters<Type>) => {
 					Name:
 						typeof Package === "object"
 							? Object.values(Package).at(0)?.Name ??
-							  JSONCargo?.crate?.name
+								JSONCargo?.crate?.name
 							: JSONCargo?.crate?.name ?? "",
 					Badge: new Set([
 						{
@@ -163,10 +163,10 @@ export default (async (...Option: Parameters<Type>) => {
 	}
 
 	return Items;
-}) satisfies Type as Type;
+}) satisfies Interface as Interface;
 
 import type PackagesRowItem from "@Interface/PackagesRowItem";
-import type Type from "@Interface/Parse.js";
+import type Interface from "@Interface/Parse.js";
 
 export const { default: Match } = await import("@Function/Match.js");
 

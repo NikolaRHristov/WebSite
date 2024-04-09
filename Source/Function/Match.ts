@@ -2,7 +2,7 @@
  * @module Match
  *
  */
-export default ((...Option: Parameters<Type>) => {
+export default ((...Option: Parameters<Interface>) => {
 	switch (true) {
 		case typeof Option[0] === "string":
 			return Option[0].match(Option[1]);
@@ -13,6 +13,6 @@ export default ((...Option: Parameters<Type>) => {
 		default:
 			return false;
 	}
-}) satisfies Type as Type;
+}) satisfies Interface as Interface;
 
-import type Type from "@Interface/Match.js";
+import type Interface from "@Interface/Match.js";

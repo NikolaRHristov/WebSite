@@ -1,5 +1,3 @@
-import type Type from "@Interface/Icon.js";
-
 export default {
 	CSS: [
 		(await import("@Asset/Image/Package/LightCSS3.svg")).default,
@@ -49,4 +47,6 @@ export default {
 		(await import("@Asset/Image/Package/LightAstro.svg")).default,
 		(await import("@Asset/Image/Package/DarkAstro.svg")).default,
 	],
-} satisfies Type;
+} satisfies Interface;
+
+import type Interface from "@Interface/Icon.js";

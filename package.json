@@ -17,10 +17,11 @@
 		"url": "https://nikolahristov.tech"
 	},
 	"scripts": {
-		"prepublishOnly": "astro build",
-		"Start": "astro dev"
+		"Start": "astro dev",
+		"prepublishOnly": "astro build"
 	},
 	"dependencies": {
+		"@astrojs/db": "0.10.1",
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "3.1.2",
 		"@octokit/core": "6.1.1",
@@ -54,8 +55,7 @@
 		"swup": "4.6.1",
 		"tailwindcss": "3.4.3",
 		"typescript": "5.4.4",
-		"zod": "3.22.4",
-		"@astrojs/db": "0.10.1"
+		"zod": "3.22.4"
 	},
 	"publishConfig": {
 		"access": "public"
