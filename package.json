@@ -55,7 +55,12 @@
 		"swup": "4.6.1",
 		"tailwindcss": "3.4.3",
 		"typescript": "5.4.5",
+<<<<<<< HEAD
 		"zod": "3.22.4"
+=======
+		"zod": "3.22.4",
+		"@astrojs/db": "0.10.3"
+>>>>>>> c948f059e4706ffb17ee8d552b39d1d54b1ded40
 	},
 	"publishConfig": {
 		"access": "public"
