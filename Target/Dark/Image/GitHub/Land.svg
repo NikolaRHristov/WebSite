@@ -1,4 +1,1 @@
-<svg width="470" height="401" viewBox="0 0 470 401" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="251.319" height="155.193" rx="22.8472" transform="matrix(-0.93358 0.358368 0 1 235 0.814819)" fill="#EAEAEA"/>
-<rect width="251.319" height="155.193" rx="22.8472" transform="matrix(-0.93358 0.358368 0 1 470 155.306)" fill="#EAEAEA"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="401" fill="none"><rect width="251.319" height="155.193" fill="#EAEAEA" rx="22.847" transform="matrix(-.93358 .35837 0 1 235 .815)"/><rect width="251.319" height="155.193" fill="#EAEAEA" rx="22.847" transform="matrix(-.93358 .35837 0 1 470 155.306)"/></svg>
