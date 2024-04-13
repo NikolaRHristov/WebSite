@@ -21,7 +21,7 @@
 		"prepublishOnly": "astro build"
 	},
 	"dependencies": {
-		"@astrojs/db": "0.10.3",
+		"@astrojs/db": "0.10.4",
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "3.1.2",
 		"@octokit/core": "6.1.2",
@@ -37,7 +37,7 @@
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
 		"@tailwindcss/typography": "0.5.12",
-		"astro": "4.6.0",
+		"astro": "4.6.1",
 		"astro-capo": "0.0.1",
 		"astrojs-service-worker": "2.0.0",
 		"autoprefixer": "10.4.19",
