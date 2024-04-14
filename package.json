@@ -8,7 +8,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/NikolaRHristov/Website.git"
+		"url": "git+HTTPS://github.com/NikolaRHristov/Website.git"
 	},
 	"license": "SEE LICENSE IN LICENSE",
 	"author": {
