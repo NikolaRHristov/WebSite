@@ -1,3 +1,3 @@
-# 👨🏻 [Website]
+# 👨🏻 [Website.]
 
 [Website]: https://nikolahristov.tech
