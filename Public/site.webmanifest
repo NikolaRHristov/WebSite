@@ -1,10 +1,10 @@
 {
-	"background_color": "#ffffff",
+	"background_color": "#eaeaea",
 	"categories": [],
 	"display": "minimal-ui",
 	"name": "Nikola",
 	"orientation": "landscape",
 	"short_name": "nikolahristov",
 	"start_url": "/",
-	"theme_color": "#ffffff"
+	"theme_color": "#eaeaea"
 }
