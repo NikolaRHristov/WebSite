@@ -22,22 +22,22 @@ import Row from "@Component/Readme/Row.astro";
 			Package={new Set<Cell>([
 				{
 					"NPM:@playform/pipe": {
-						Name: "Pipe",
+						Name: "Pipe.",
 					},
 				},
 				{
 					"NPM:@playform/delete": {
-						Name: "Delete",
+						Name: "Delete.",
 					},
 				},
 				{
 					"cargo:prun": {
-						Name: "Run",
+						Name: "Run.",
 					},
 				},
 				{
 					"GitHub:RoundWindows/Application": {
-						Name: "Round",
+						Name: "Round.",
 					},
 				},
 			])}
@@ -53,21 +53,29 @@ import Row from "@Component/Readme/Row.astro";
 
 		<Row
 			Package={new Set([
-				"GitHub:CodeEditorLand/Foundation",
-				"GitHub:CodeEditorLand/Editor",
+				{
+					"GitHub:CodeEditorLand/Foundation": {
+						Name: "Foundation.",
+					},
+				},
+				{
+					"GitHub:CodeEditorLand/Editor": {
+						Name: "Editor.",
+					},
+				},
 				{
 					"GitHub:CodeEditorLand/FoundationLandCargo": {
-						Name: "Cargo",
+						Name: "Cargo.",
 					},
 				},
 				{
 					"GitHub:CodeEditorLand/FoundationLandNPM": {
-						Name: "NPM",
+						Name: "NPM.",
 					},
 				},
 				{
 					"GitHub:CodeEditorLand/FoundationLandService": {
-						Name: "Service",
+						Name: "Service.",
 					},
 				},
 			])}

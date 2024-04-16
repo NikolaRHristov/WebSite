@@ -26,6 +26,44 @@ const Items = await Parse(Astro.props.Package);
 
 						return (
 							<>
+								{Package.Badge.size >= 1 ? (
+									<td valign="top" colspan={Span}>
+										<br />
+
+										{Array.from(Package.Badge).map(
+											(Badge) => (
+												<>
+													<a
+														href={Badge.Link}
+														target="_blank">
+														<picture>
+															<source
+																media="(prefers-color-scheme: dark)"
+																srcset={`${Badge.Image}${Dark}`}
+															/>
+															<source
+																media="(prefers-color-scheme: light)"
+																srcset={`${Badge.Image}${Light}`}
+															/>
+															<img
+																src={`${Badge.Image}${Dark}`}
+																alt={Badge.Alt}
+																title={
+																	Badge.Alt
+																}
+															/>
+														</picture>
+													</a>
+													<br />
+												</>
+											)
+										)}
+
+										<br />
+									</td>
+								) : (
+									""
+								)}
 								<td valign="top" colspan={Span}>
 									<br />
 
@@ -67,44 +105,6 @@ const Items = await Parse(Astro.props.Package);
 
 									<br />
 								</td>
-								{Package.Badge.size >= 1 ? (
-									<td valign="top" colspan={Span}>
-										<br />
-
-										{Array.from(Package.Badge).map(
-											(Badge) => (
-												<>
-													<a
-														href={Badge.Link}
-														target="_blank">
-														<picture>
-															<source
-																media="(prefers-color-scheme: dark)"
-																srcset={`${Badge.Image}${Dark}`}
-															/>
-															<source
-																media="(prefers-color-scheme: light)"
-																srcset={`${Badge.Image}${Light}`}
-															/>
-															<img
-																src={`${Badge.Image}${Dark}`}
-																alt={Badge.Alt}
-																title={
-																	Badge.Alt
-																}
-															/>
-														</picture>
-													</a>
-													<br />
-												</>
-											)
-										)}
-
-										<br />
-									</td>
-								) : (
-									""
-								)}
 							</>
 						);
 					})}

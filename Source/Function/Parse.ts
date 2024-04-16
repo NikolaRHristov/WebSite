@@ -6,7 +6,7 @@ export default (async (...Option: Parameters<Interface>) => {
 	const Items = new Set<PackagesRowItem>();
 
 	for (const Package of Option[0]) {
-		let GitHub = null;
+		let GitHub = undefined;
 
 		try {
 			if (Match(Package, /GitHub:/)) {
@@ -35,19 +35,19 @@ export default (async (...Option: Parameters<Interface>) => {
 						Description: JSONGitHub.data?.description ?? "",
 						Badge: new Set([
 							{
-								Link: `https://github.com/${Owner}/${Repository}`,
-								Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Last%20Update`,
-								Alt: "Last Update",
+								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
+								Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Update`,
+								Alt: "Update",
 							},
 							{
-								Link: `https://github.com/${Owner}/${Repository}`,
-								Image: `https://img.shields.io/github/issues/${Owner}/${Repository}?label=Issues`,
-								Alt: "Issues",
+								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
+								Image: `https://img.shields.io/github/issues/${Owner}/${Repository}?label=Issue`,
+								Alt: "Issue",
 							},
 							{
-								Link: `https://github.com/${Owner}/${Repository}`,
-								Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Leaks`,
-								Alt: "Leaks",
+								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
+								Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Download`,
+								Alt: "Download",
 							},
 						]),
 					});
@@ -66,7 +66,7 @@ export default (async (...Option: Parameters<Interface>) => {
 						: Object.keys(Package).at(0)?.split(":")[1];
 
 				const JSONNPM = await (
-					await fetch(`https://registry.npmjs.org/${NPM}`)
+					await fetch(`HTTPS://Registry.NPMJS.Org/${NPM}`)
 				).json();
 
 				GitHub = (JSONNPM?.repository?.url ?? "")
@@ -75,7 +75,7 @@ export default (async (...Option: Parameters<Interface>) => {
 					?.replace(".git", "");
 
 				Items.add({
-					Link: `https://github.com/${GitHub}`,
+					Link: `HTTPS://GitHub.Com/${GitHub}`,
 					Name:
 						typeof Package === "object"
 							? Object.values(Package).at(0)?.Name ??
@@ -86,23 +86,23 @@ export default (async (...Option: Parameters<Interface>) => {
 					Badge: new Set([
 						{
 							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
-							Link: `https://github.com/${GitHub}/actions/workflows/Node.yml`,
+							Link: `HTTPS://GitHub.Com/${GitHub}/actions/workflows/Node.yml`,
 							Alt: "Build",
 						},
 						{
-							Link: `https://npmjs.org/${JSONNPM.name}?activeTab=dependencies`,
+							Link: `HTTPS://NPMJS.Org/${JSONNPM.name}?activeTab=dependencies`,
 							Image: `https://img.shields.io/librariesio/release/npm/${JSONNPM.name}?logo=dependabot&label=`,
-							Alt: "Dependencies",
+							Alt: "Dependency",
 						},
 						{
-							Link: `https://npmjs.org/${JSONNPM.name}`,
+							Link: `HTTPS://NPMJS.Org/${JSONNPM.name}`,
 							Image: `https://img.shields.io/npm/v/${JSONNPM.name}?label=Version&logo=npm`,
 							Alt: "Version",
 						},
 						{
-							Link: `https://npmjs.org/${JSONNPM.name}`,
-							Image: `https://img.shields.io/npm/dt/${JSONNPM.name}?label=Leaks&logo=npm`,
-							Alt: "Downloads",
+							Link: `HTTPS://NPMJS.Org/${JSONNPM.name}`,
+							Image: `https://img.shields.io/npm/dt/${JSONNPM.name}?label=Download&logo=npm`,
+							Alt: "Download",
 						},
 					]),
 				});
@@ -120,7 +120,7 @@ export default (async (...Option: Parameters<Interface>) => {
 						: Object.keys(Package).at(0)?.split(":")[1];
 
 				const JSONCargo = await (
-					await fetch(`https://crates.io/api/v1/crates/${Crate}`)
+					await fetch(`HTTPS://Crates.IO/api/v1/crates/${Crate}`)
 				).json();
 
 				GitHub = (JSONCargo?.crate?.repository ?? "")
@@ -138,18 +138,18 @@ export default (async (...Option: Parameters<Interface>) => {
 					Badge: new Set([
 						{
 							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
-							Link: `https://github.com/${GitHub}/actions/workflows/Rust.yml`,
+							Link: `HTTPS://GitHub.Com/${GitHub}/actions/workflows/Rust.yml`,
 							Alt: "Build",
 						},
 						{
-							Link: `https://crates.io/${JSONCargo?.crate?.name}`,
+							Link: `HTTPS://Crates.IO/crates/${JSONCargo?.crate?.name}`,
 							Image: `https://img.shields.io/crates/v/${JSONCargo?.crate?.name}?label=Version`,
 							Alt: "Version",
 						},
 						{
-							Link: `https://crates.io/${JSONCargo?.crate?.name}`,
-							Image: `https://img.shields.io/crates/d/${JSONCargo?.crate?.name}?label=Leaks`,
-							Alt: "Downloads",
+							Link: `HTTPS://Crates.IO/crates/${JSONCargo?.crate?.name}`,
+							Image: `https://img.shields.io/crates/d/${JSONCargo?.crate?.name}?label=Download`,
+							Alt: "Download",
 						},
 					]),
 					Description: JSONCargo?.crate?.description ?? "",
