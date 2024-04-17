@@ -22,11 +22,15 @@ const Items = await Parse(Astro.props.Package);
 				<tr>
 					{Row.map((Package) => {
 						let Span = Row.length > 1 ? 2 : 3;
-						Span -= Package.Badge.size >= 1 ? 1 : 0;
+						let Length = Array.from(Package.Badge).filter(
+							(Badge) => !Badge.Float
+						).length;
+
+						Span -= Length >= 1 ? 1 : 0;
 
 						return (
 							<>
-								{Package.Badge.size >= 1 ? (
+								{Length >= 1 ? (
 									<td valign="top" colspan={Span}>
 										<br />
 

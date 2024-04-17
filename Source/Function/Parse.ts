@@ -33,7 +33,7 @@ export default (async (...Option: Parameters<Interface>) => {
 								: JSONGitHub.data?.name ?? "",
 						GitHub: JSONGitHub.data?.full_name ?? "",
 						Description: JSONGitHub.data?.description ?? "",
-						Badge: new Set([
+						Badge: new Set<Badge>([
 							{
 								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
 								Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Update`,
@@ -48,6 +48,7 @@ export default (async (...Option: Parameters<Interface>) => {
 								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
 								Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Download`,
 								Alt: "Download",
+								Float: true,
 							},
 						]),
 					});
@@ -83,7 +84,7 @@ export default (async (...Option: Parameters<Interface>) => {
 							: GitHub.split("/")[1] ?? "",
 					GitHub,
 					Description: JSONNPM?.description ?? "",
-					Badge: new Set([
+					Badge: new Set<Badge>([
 						{
 							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
 							Link: `HTTPS://GitHub.Com/${GitHub}/actions/workflows/Node.yml`,
@@ -103,6 +104,8 @@ export default (async (...Option: Parameters<Interface>) => {
 							Link: `HTTPS://NPMJS.Org/${JSONNPM.name}`,
 							Image: `https://img.shields.io/npm/dt/${JSONNPM.name}?label=Download&logo=npm`,
 							Alt: "Download",
+
+							Float: true,
 						},
 					]),
 				});
@@ -135,7 +138,7 @@ export default (async (...Option: Parameters<Interface>) => {
 							? Object.values(Package).at(0)?.Name ??
 								JSONCargo?.crate?.name
 							: JSONCargo?.crate?.name ?? "",
-					Badge: new Set([
+					Badge: new Set<Badge>([
 						{
 							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
 							Link: `HTTPS://GitHub.Com/${GitHub}/actions/workflows/Rust.yml`,
@@ -150,6 +153,8 @@ export default (async (...Option: Parameters<Interface>) => {
 							Link: `HTTPS://Crates.IO/crates/${JSONCargo?.crate?.name}`,
 							Image: `https://img.shields.io/crates/d/${JSONCargo?.crate?.name}?label=Download`,
 							Alt: "Download",
+
+							Float: true,
 						},
 					]),
 					Description: JSONCargo?.crate?.description ?? "",
@@ -165,6 +170,7 @@ export default (async (...Option: Parameters<Interface>) => {
 	return Items;
 }) satisfies Interface as Interface;
 
+import type Badge from "@Interface/Badge";
 import type PackagesRowItem from "@Interface/PackagesRowItem";
 import type Interface from "@Interface/Parse.js";
 
