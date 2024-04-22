@@ -1,5 +1,6 @@
 .article {
 	@apply prose
+		prose-slate
 		mx-auto
 		dark:prose-invert
 		prose-h1:font-black;
