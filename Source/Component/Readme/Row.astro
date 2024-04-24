@@ -1,5 +1,6 @@
 ---
 import type PackageCell from "@Type/Cell";
+import Badge, { Dark, Light } from "@Component/Readme/Badge.astro";
 
 export const { default: Icon } = await import("@Option/Icon.js");
 export const { default: Parse } = await import("@Function/Parse.js");
@@ -7,10 +8,6 @@ export const { default: Parse } = await import("@Function/Parse.js");
 interface Props {
 	Package: Set<PackageCell>;
 }
-
-const Dark = "&color=black&labelColor=black&logoColor=white&logoWidth=0";
-
-const Light = "&color=white&labelColor=white&logoColor=black&logoWidth=0";
 
 const Items = await Parse(Astro.props.Package);
 ---
@@ -34,40 +31,22 @@ const Items = await Parse(Astro.props.Package);
 									<td valign="top" colspan={Span}>
 										<br />
 
-										{Array.from(Package.Badge).map(
-											(Badge) => (
+										{Array.from(Package.Badge)
+											.filter((Badge) => !Badge.Float)
+											.map((_Badge) => (
 												<>
-													<a
-														href={Badge.Link}
-														target="_blank">
-														<picture>
-															<source
-																media="(prefers-color-scheme: dark)"
-																srcset={`${Badge.Image}${Dark}`}
-															/>
-															<source
-																media="(prefers-color-scheme: light)"
-																srcset={`${Badge.Image}${Light}`}
-															/>
-															<img
-																src={`${Badge.Image}${Dark}`}
-																alt={Badge.Alt}
-																title={
-																	Badge.Alt
-																}
-															/>
-														</picture>
-													</a>
+													<Badge Badge={_Badge} />
+
 													<br />
 												</>
-											)
-										)}
+											))}
 
 										<br />
 									</td>
 								) : (
 									""
 								)}
+
 								<td valign="top" colspan={Span}>
 									<br />
 
@@ -90,22 +69,19 @@ const Items = await Parse(Astro.props.Package);
 
 									<br />
 
+									{Array.from(Package.Badge)
+										.filter((Badge) => Badge.Float)
+										.map((_Badge) => (
+											<>
+												<Badge Badge={_Badge} />
+
+												<br />
+											</>
+										))}
+
 									<a href={Package.Link} target="_blank">
 										<b>{Package.Name}</b>
 									</a>
-
-									<br />
-
-									<b
-										set:html={Package.Description?.split(
-											"."
-										)
-											?.join(".<br />")
-											?.split("!")
-											?.join("!<br />")
-											?.split("?")
-											?.join("?<br />")}
-									/>
 
 									<br />
 								</td>

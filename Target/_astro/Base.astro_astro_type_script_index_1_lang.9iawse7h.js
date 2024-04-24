@@ -1,17 +1,13 @@
-function __vite__mapDeps(indexes) {
-	if (!__vite__mapDeps.viteFileDeps) {
-		__vite__mapDeps.viteFileDeps = [
-			"_astro/index.modern.B7ehEGeJ.js",
-			"_astro/index.modern.CkIAsQri.js",
-			"_astro/index.modern.FjGODCox.js",
-			"_astro/index.modern.Dp50zjzP.js",
-			"_astro/Swup.modern.DSkug2J8.js",
-			"_astro/index.modern.CZr5Eu0Z.js",
-			"_astro/index.modern.aa8fLSdp.js",
-		];
-	}
-	return indexes.map((i) => __vite__mapDeps.viteFileDeps[i]);
-}
+const __vite__fileDeps = [
+		"_astro/index.modern.B7ehEGeJ.js",
+		"_astro/index.modern.CkIAsQri.js",
+		"_astro/index.modern.FjGODCox.js",
+		"_astro/index.modern.Dp50zjzP.js",
+		"_astro/Swup.modern.DSkug2J8.js",
+		"_astro/index.modern.CZr5Eu0Z.js",
+		"_astro/index.modern.aa8fLSdp.js",
+	],
+	__vite__mapDeps = (i) => i.map((i) => __vite__fileDeps[i]);
 import { _ } from "./preload-helper.ygWHROA3.js";
 new (await _(() => import("./Swup.modern.DSkug2J8.js"), [])).default({
 	containers: ["#footer", "#main", "#header"],

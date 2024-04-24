@@ -26,13 +26,8 @@ export default (async (...Option: Parameters<Interface>) => {
 				if (JSONGitHub?.data) {
 					Items.add({
 						Link: JSONGitHub.data?.html_url ?? "",
-						Name:
-							typeof Package === "object"
-								? Object.values(Package).at(0)?.Name ??
-									JSONGitHub.data?.name
-								: JSONGitHub.data?.name ?? "",
+						Name: JSONGitHub.data?.description ?? "",
 						GitHub: JSONGitHub.data?.full_name ?? "",
-						Description: JSONGitHub.data?.description ?? "",
 						Badge: new Set<Badge>([
 							{
 								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
@@ -77,13 +72,8 @@ export default (async (...Option: Parameters<Interface>) => {
 
 				Items.add({
 					Link: `HTTPS://GitHub.Com/${GitHub}`,
-					Name:
-						typeof Package === "object"
-							? Object.values(Package).at(0)?.Name ??
-								GitHub.split("/")[1]
-							: GitHub.split("/")[1] ?? "",
+					Name: JSONNPM?.description ?? "",
 					GitHub,
-					Description: JSONNPM?.description ?? "",
 					Badge: new Set<Badge>([
 						{
 							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
@@ -133,11 +123,7 @@ export default (async (...Option: Parameters<Interface>) => {
 
 				Items.add({
 					Link: JSONCargo?.crate?.repository ?? "",
-					Name:
-						typeof Package === "object"
-							? Object.values(Package).at(0)?.Name ??
-								JSONCargo?.crate?.name
-							: JSONCargo?.crate?.name ?? "",
+					Name: JSONCargo?.crate?.description ?? "",
 					Badge: new Set<Badge>([
 						{
 							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
@@ -157,7 +143,6 @@ export default (async (...Option: Parameters<Interface>) => {
 							Float: true,
 						},
 					]),
-					Description: JSONCargo?.crate?.description ?? "",
 					GitHub,
 				});
 			}

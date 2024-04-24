@@ -6,7 +6,7 @@ export default interface Interface {
 	Name: string;
 	Link: string;
 	GitHub: string;
-	Description: string;
+	Description?: string;
 	Badge: Set<Badge>;
 	Language?: Set<Language>;
 }

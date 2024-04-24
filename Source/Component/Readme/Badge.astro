@@ -1,0 +1,28 @@
+---
+import type Badge from "@Interface/Badge.js";
+
+interface Props {
+	Badge: Badge;
+}
+
+const { Link, Image, Alt } = Astro.props.Badge;
+
+export const Dark = "&color=black&labelColor=black&logoColor=white&logoWidth=0";
+
+export const Light =
+	"&color=white&labelColor=white&logoColor=black&logoWidth=0";
+---
+
+<a href={Link} target="_blank">
+	<picture>
+		<source
+			media="(prefers-color-scheme: dark)"
+			srcset={`${Image}${Dark}`}
+		/>
+		<source
+			media="(prefers-color-scheme: light)"
+			srcset={`${Image}${Light}`}
+		/>
+		<img src={`${Image}${Dark}`} alt={Alt} title={Alt} />
+	</picture>
+</a>
