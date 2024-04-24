@@ -53,5 +53,5 @@ jobs:
             - uses: pozil/auto-assign-issue@v1.14.0
               with:
                   repo-token: ${{ secrets.GITHUB_TOKEN }}
-                  assignees: NikolaHristovO1
+                  assignees: NikolaRHristov
                   numOfAssignee: 1
