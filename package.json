@@ -21,7 +21,7 @@
 		"prepublishOnly": "astro build"
 	},
 	"dependencies": {
-		"@astrojs/db": "0.10.5",
+		"@astrojs/db": "0.10.6",
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "3.1.4",
 		"@octokit/core": "6.1.2",
@@ -36,15 +36,15 @@
 		"@swup/scroll-plugin": "3.3.2",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/forms": "0.5.7",
-		"@tailwindcss/typography": "0.5.12",
-		"astro": "4.6.3",
+		"@tailwindcss/typography": "0.5.13",
+		"astro": "4.7.0",
 		"astro-capo": "0.0.1",
 		"astrojs-service-worker": "2.0.0",
 		"autoprefixer": "10.4.19",
-		"cssnano": "6.1.2",
-		"cssnano-preset-advanced": "6.1.2",
+		"cssnano": "7.0.1",
+		"cssnano-preset-advanced": "7.0.1",
 		"dotenv": "16.4.5",
-		"firebase": "10.11.0",
+		"firebase": "10.11.1",
 		"github-markdown-css": "5.5.1",
 		"postcss": "8.4.38",
 		"postcss-combine-duplicated-selectors": "10.0.3",
@@ -55,7 +55,7 @@
 		"swup": "4.6.1",
 		"tailwindcss": "3.4.3",
 		"typescript": "5.4.5",
-		"zod": "3.23.3"
+		"zod": "3.23.4"
 	},
 	"publishConfig": {
 		"access": "public"
