@@ -3,8 +3,7 @@
 This **[Astro integration][astro-integration]** brings compression utilities to
 your Astro project.
 
-[CSS][csso] / [HTML][html-minifier-terser] / [JavaScript][terser] /
-[Image][sharp] / [SVG][svgo]
+[CSS][csso] ⁄ [HTML][html-minifier-terser] ⁄ [JavaScript][terser] ⁄ [Image][sharp] ⁄ [SVG][svgo]
 
 > **Note**
 >
