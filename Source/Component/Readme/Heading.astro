@@ -23,8 +23,12 @@ DarkIcon = DarkIcon ?? LightIcon;
 	<td colspan="4">
 		<Fragment set:html={`<h3 align="center">`} />
 
+		<span>
+			
 		<picture>
 			{
+
+				
 				DarkIcon ? (
 					<source
 						media="(prefers-color-scheme: dark)"
@@ -57,8 +61,10 @@ DarkIcon = DarkIcon ?? LightIcon;
 
 		{Emoji}
 
-		<br />
+		</span>
+
 		{Text ?? ""}
+
 		<br />
 
 		<Fragment set:html={`</h3>`} />
