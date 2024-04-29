@@ -1,3 +1,3 @@
-# 👨🏻 [Website] —
+# 👨🏻 [WebSite] —
 
-[Website]: https://nikolahristov.tech
+[WebSite]: https://nikolahristov.tech
