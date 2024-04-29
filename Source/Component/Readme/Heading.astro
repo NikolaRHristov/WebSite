@@ -24,43 +24,39 @@ DarkIcon = DarkIcon ?? LightIcon;
 		<Fragment set:html={`<h3 align="center">`} />
 
 		<span>
-			
-		<picture>
-			{
+			<picture>
+				{
+					DarkIcon ? (
+						<source
+							media="(prefers-color-scheme: dark)"
+							srcset={DarkIcon}
+						/>
+					) : (
+						""
+					)
+				}
 
-				
-				DarkIcon ? (
-					<source
-						media="(prefers-color-scheme: dark)"
-						srcset={DarkIcon}
-					/>
-				) : (
-					""
-				)
-			}
+				{
+					LightIcon ? (
+						<source
+							media="(prefers-color-scheme: light)"
+							srcset={LightIcon}
+						/>
+					) : (
+						""
+					)
+				}
 
-			{
-				LightIcon ? (
-					<source
-						media="(prefers-color-scheme: light)"
-						srcset={LightIcon}
-					/>
-				) : (
-					""
-				)
-			}
+				{
+					LightIcon ? (
+						<img width="28" alt={AltIcon ?? ""} src={LightIcon} />
+					) : (
+						""
+					)
+				}
+			</picture>
 
-			{
-				LightIcon ? (
-					<img width="28" alt={AltIcon ?? ""} src={LightIcon} />
-				) : (
-					""
-				)
-			}
-		</picture>
-
-		{Emoji}
-
+			{Emoji}
 		</span>
 
 		{Text ?? ""}
