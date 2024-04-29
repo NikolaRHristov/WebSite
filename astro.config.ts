@@ -12,7 +12,10 @@ export default (await import("astro/config")).defineConfig({
 		(await import("@playform/inline")).default({ Logger: 1 }),
 		(await import("@astrojs/prefetch")).default(),
 		(await import("@playform/format")).default({ Logger: 1 }),
-		(await import("@playform/compress")).default({ Logger: 1,  }),
+		(await import("@playform/compress")).default({
+			Logger: 1,
+			Exclude: [(File: string) => File.indexOf("Raw") !== -1],
+		}),
 	],
 	experimental: {
 		directRenderScript: true,
