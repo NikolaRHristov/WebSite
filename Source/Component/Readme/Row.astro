@@ -54,14 +54,14 @@ const Items = await Parse(Astro.props.Package);
 										<picture>
 											<source
 												media="(prefers-color-scheme: dark)"
-												srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}&logoColor=black`}
+												srcset={`https://img.shields.io/github/stars/${Package.GitHub}?style=flat&label=Star&logo=github${Dark}`}
 											/>
 											<source
 												media="(prefers-color-scheme: light)"
-												srcset={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Light}&logoColor=black`}
+												srcset={`https://img.shields.io/github/stars/${Package.GitHub}?style=flat&label=Star&logo=github${Light}`}
 											/>
 											<img
-												src={`https://img.shields.io/github/stars/${Package.GitHub}?label=stars&logo=github${Dark}&logoColor=black`}
+												src={`https://img.shields.io/github/stars/${Package.GitHub}?style=flat&label=Star&logo=github${Dark}`}
 												alt="Star"
 											/>
 										</picture>

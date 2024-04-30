@@ -3,7 +3,7 @@ export default (await import("astro/config")).defineConfig({
 	publicDir: "./Public",
 	outDir: "./Target",
 	site: "https://nikolahristov.tech/",
-	compressHTML: true,
+	compressHTML: false,
 	integrations: [
 		import.meta.env.MODE === "production"
 			? (await import("astrojs-service-worker")).default()
