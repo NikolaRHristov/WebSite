@@ -45,7 +45,7 @@ body {
 @media (prefers-color-scheme: dark) {
 	*::selection,
 	::selection {
-		@apply bg-[#eaeaea]]
+		@apply bg-[#eaeaea]
 			text-amber-400;
 	}
 }
