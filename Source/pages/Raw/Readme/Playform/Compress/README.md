@@ -1,4 +1,3 @@
-
 # 🗜️ — [Compress] —
 
 This **[Astro integration][astro-integration]** brings compression utilities to
