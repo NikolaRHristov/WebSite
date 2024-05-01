@@ -12,17 +12,17 @@ body {
 	@apply flex
 		flex-grow
 		flex-col
-		bg-white
+		bg-[#eaeaea]
 		tabular-nums
-		text-black
+		text-[#151515]
 		antialiased
 		sm:subpixel-antialiased
-		dark:bg-black
-		dark:text-white;
+		dark:bg-[#151515]
+		dark:text-[#eaeaea];
 
 	font-variant-ligatures: no-common-ligatures;
 
-	--swup-overlay-theme-color: white;
+	--swup-overlay-theme-color: #eaeaea;
 	--swup-overlay-theme-duration: 0.2s;
 	--swup-overlay-theme-delay: 0s;
 	--swup-overlay-theme-scale: 1.2;
@@ -31,7 +31,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
 	body {
-		--swup-overlay-theme-color: black;
+		--swup-overlay-theme-color: #151515;
 	}
 }
 
@@ -39,13 +39,13 @@ body {
 ::selection {
 	text-shadow: none;
 	@apply bg-amber-400
-		text-black;
+		text-[#151515];
 }
 
 @media (prefers-color-scheme: dark) {
 	*::selection,
 	::selection {
-		@apply bg-white
+		@apply bg-[#eaeaea]]
 			text-amber-400;
 	}
 }
