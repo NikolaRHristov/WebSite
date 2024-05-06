@@ -1,4 +1,4 @@
-# 🗻 — [Format] —
+# 🗻 [Format] —
 
 This **[Astro integration][astro-integration]** brings Biome tools to your Astro
 project.
