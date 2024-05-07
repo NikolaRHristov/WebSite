@@ -155,9 +155,9 @@ export default (async (...Option: Parameters<Interface>) => {
 	return Items;
 }) satisfies Interface as Interface;
 
-import type Badge from "@Interface/Badge";
-import type PackagesRowItem from "@Interface/PackagesRowItem";
-import type Interface from "@Interface/Parse.js";
+import type Badge from "../Interface/Badge";
+import type PackagesRowItem from "../Interface/PackagesRowItem";
+import type Interface from "../Interface/Parse.js";
 
 export const { default: Match } = await import("@Function/Match.js");
 

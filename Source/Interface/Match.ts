@@ -9,4 +9,4 @@ export default interface Interface {
 	): false | RegExpMatchArray | null | undefined;
 }
 
-import type Cell from "@Type/Cell";
+import type Cell from "../Type/Cell";

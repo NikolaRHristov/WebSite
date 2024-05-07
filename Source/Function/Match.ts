@@ -15,4 +15,4 @@ export default ((...Option: Parameters<Interface>) => {
 	}
 }) satisfies Interface as Interface;
 
-import type Interface from "@Interface/Match.js";
+import type Interface from "../Interface/Match.js";

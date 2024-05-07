@@ -11,5 +11,5 @@ export default interface Interface {
 	Language?: Set<Language>;
 }
 
-import type Badge from "@Interface/Badge";
-import type Language from "@Interface/Language";
+import type Badge from "../Interface/Badge";
+import type Language from "../Interface/Language";
