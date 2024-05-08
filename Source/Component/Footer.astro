@@ -1,5 +1,6 @@
 ---
 import GitHub from "@Asset/Image/Footer/GitHub.svg";
+import DarkGitHub from "@Asset/Dark/Image/Footer/GitHub.svg";
 ---
 
 <footer class="Footer flex">
@@ -14,6 +15,10 @@ import GitHub from "@Asset/Image/Footer/GitHub.svg";
 					<source
 						media="(prefers-color-scheme: light)"
 						srcset={GitHub.src}
+					/>
+					<source
+						media="(prefers-color-scheme: dark)"
+						srcset={DarkGitHub.src}
 					/>
 					<img alt="GitHub" src={GitHub.src} />
 				</picture>
