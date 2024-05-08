@@ -5,6 +5,7 @@ export default (await import("astro/config")).defineConfig({
 	site: "https://nikolahristov.tech/",
 	compressHTML: true,
 	integrations: [
+		// @ts-ignore
 		import.meta.env.MODE === "production"
 			? (await import("astrojs-service-worker")).default()
 			: null,
@@ -15,11 +16,6 @@ export default (await import("astro/config")).defineConfig({
 		(await import("@playform/compress")).default({
 			Logger: 1,
 			Exclude: [(File: string) => File.indexOf("Raw") !== -1],
-			Image: {
-				sharp: {
-					
-				}
-			}
 		}),
 	],
 	experimental: {

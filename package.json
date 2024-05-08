@@ -24,7 +24,7 @@
 		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "3.1.4",
 		"@octokit/core": "6.1.2",
-		"@playform/build": "0.0.7",
+		"@playform/build": "0.0.8",
 		"@playform/compress": "0.0.3",
 		"@playform/format": "0.0.2",
 		"@playform/inline": "0.0.2",
@@ -54,7 +54,7 @@
 		"swup": "4.6.1",
 		"tailwindcss": "3.4.3",
 		"typescript": "5.4.5",
-		"zod": "3.23.6"
+		"zod": "3.23.7"
 	},
 	"publishConfig": {
 		"access": "public"
