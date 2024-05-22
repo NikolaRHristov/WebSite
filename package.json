@@ -22,7 +22,7 @@
 	},
 	"dependencies": {
 		"@astrojs/prefetch": "0.4.1",
-		"@astrojs/sitemap": "3.1.4",
+		"@astrojs/sitemap": "3.1.5",
 		"@octokit/core": "6.1.2",
 		"@playform/build": "0.0.8",
 		"@playform/compress": "0.0.4",
