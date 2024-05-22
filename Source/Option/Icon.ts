@@ -47,10 +47,6 @@ export default {
 		(await import("@Asset/Image/Package/LightAstro.svg")).default,
 		(await import("@Asset/Image/Package/DarkAstro.svg")).default,
 	],
-<<<<<<< HEAD
 } satisfies Interface as Interface;
-=======
-} satisfies Interface;
->>>>>>> 67559b9fde7610cff06abe4c16f497fff3c07285
 
 import type Interface from "../Interface/Icon.js";
