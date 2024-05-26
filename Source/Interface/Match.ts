@@ -5,7 +5,7 @@
 export default interface Interface {
 	(
 		Package: Cell,
-		Match: string | RegExp
+		Match: string | RegExp,
 	): false | RegExpMatchArray | null | undefined;
 }
 

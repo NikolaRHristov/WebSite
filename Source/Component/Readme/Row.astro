@@ -20,7 +20,7 @@ const Items = await Parse(Astro.props.Package);
 					{Row.map((Package) => {
 						let Span = Row.length > 1 ? 2 : 3;
 						let Length = Array.from(Package.Badge).filter(
-							(Badge) => !Badge.Float
+							(Badge) => !Badge.Float,
 						).length;
 
 						Span -= Length >= 1 ? 1 : 0;
@@ -89,6 +89,6 @@ const Items = await Parse(Astro.props.Package);
 						);
 					})}
 				</tr>
-			)
+			),
 	)
 }
