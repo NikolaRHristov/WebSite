@@ -1,6 +1,7 @@
 .Header {
 	.bar {
 		border-radius: 5px;
+
 		@apply h-5 w-full bg-[#a9b5c6];
 	}
 }
