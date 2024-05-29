@@ -16,6 +16,10 @@ export default (await import("astro/config")).defineConfig({
 		(await import("@playform/compress")).default({
 			Logger: 1,
 			Exclude: [(File: string) => File.indexOf("Raw") !== -1],
+			CSS: {
+				// @ts-expect-error
+				lightningcss: false,
+			},
 		}),
 	],
 	experimental: {
