@@ -25,7 +25,7 @@
 		"@astrojs/sitemap": "3.1.5",
 		"@octokit/core": "6.1.2",
 		"@playform/build": "0.0.11",
-		"@playform/compress": "0.0.12",
+		"@playform/compress": "0.0.13",
 		"@playform/format": "0.0.5",
 		"@playform/inline": "0.0.7",
 		"@swup/body-class-plugin": "3.2.0",
