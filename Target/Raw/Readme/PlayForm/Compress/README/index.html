@@ -1,7 +1,12 @@
 <!DOCTYPE html><script type="module" src="/_astro/page.CY1iZwUD.js"></script><h1 id="️compress">🗜️ <a href="HTTPS://NPMJS.Org/@playform/compress">Compress</a> —</h1>
 <p>This <strong><a href="HTTPS://docs.astro.build/en/guides/integrations-guide/">Astro integration</a></strong> brings compression utilities to
 your Astro project.</p>
-<p><a href="HTTPS://NPMJS.Org/csso">CSS</a> ⁄ <a href="HTTPS://NPMJS.Org/html-minifier-terser">HTML</a> ⁄ <a href="HTTPS://NPMJS.Org/terser">JavaScript</a> ⁄ <a href="HTTPS://NPMJS.Org/sharp">Image</a> ⁄ <a href="HTTPS://NPMJS.Org/svgo">SVG</a></p>
+<p>🎁 <a href="HTTPS://NPMJS.Org/csso">CSS (csso)</a> —</p>
+<p>🎁 <a href="HTTPS://NPMJS.Org/lightningcss">CSS (lightningcss)</a> —</p>
+<p>🎁 <a href="HTTPS://NPMJS.Org/html-minifier-terser">HTML (html-minifier-terser)</a> —</p>
+<p>🎁 <a href="HTTPS://NPMJS.Org/sharp">Image (sharp)</a> —</p>
+<p>🎁 <a href="HTTPS://NPMJS.Org/terser">JavaScript (terser)</a> —</p>
+<p>🎁 <a href="HTTPS://NPMJS.Org/svgo">SVG (svgo)</a> —</p>
 <blockquote>
 <p><strong>Note</strong></p>
 <p><code>Compress</code> will not compress your requests, only your statically generated
@@ -73,11 +78,29 @@ and image files in the Astro <code>outDir</code> folder.</p>
 <p>You can override any of the default options from the configurations of:</p>
 <ul>
 <li><a href="https://github.com/css/csso#minifysource-options">csso</a></li>
+<li><a href="https://github.com/parcel-bundler/lightningcss/blob/master/node/index.d.ts#L8">lightningcss</a></li>
 <li><a href="https://github.com/terser/html-minifier-terser#options-quick-reference">html-minifier-terser</a></li>
 <li><a href="https://sharp.pixelplumbing.com/api-output#jpeg">sharp</a></li>
 <li><a href="https://github.com/svg/svgo#configuration">svgo</a></li>
 <li><a href="https://github.com/terser/terser#minify-options-structure">terser</a></li>
 </ul>
+<p><strong><code>astro.config.ts</code></strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">	integrations: [</span></span>
+<span class="line"><span style="color:#E1E4E8">		(</span><span style="color:#F97583">await</span><span style="color:#F97583"> import</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"@playform/compress"</span><span style="color:#E1E4E8">)).</span><span style="color:#B392F0">default</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">			CSS: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			HTML: {</span></span>
+<span class="line"><span style="color:#9ECBFF">				"html-minifier-terser"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#E1E4E8">					removeAttributeQuotes: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">				},</span></span>
+<span class="line"><span style="color:#E1E4E8">			},</span></span>
+<span class="line"><span style="color:#E1E4E8">			Image: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			JavaScript: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			SVG: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">		}),</span></span>
+<span class="line"><span style="color:#E1E4E8">	],</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span></code></pre>
 <p>or disable them entirely:</p>
 <p><strong><code>astro.config.ts</code></strong></p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> {</span></span>
