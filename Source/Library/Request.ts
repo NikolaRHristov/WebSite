@@ -17,6 +17,9 @@ export default async (
 						await import("@Library/Environment.js")
 					).default.parse(process.env).Token,
 				}).request(Where, With);
+
+			default:
+				throw new Error(`Could not ${Where}`);
 		}
 	} catch (_Error) {
 		console.log(`Could not ${Where}`);

@@ -4,21 +4,11 @@ html {
 
 html,
 body {
-	@apply h-full
-		w-full;
+	@apply h-full w-full;
 }
 
 body {
-	@apply flex
-		flex-grow
-		flex-col
-		bg-[#eaeaea]
-		tabular-nums
-		text-[#151515]
-		antialiased
-		sm:subpixel-antialiased
-		dark:bg-[#151515]
-		dark:text-[#eaeaea];
+	@apply flex flex-grow flex-col bg-[#eaeaea] tabular-nums text-[#151515] antialiased sm:subpixel-antialiased dark:bg-[#151515] dark:text-[#eaeaea];
 
 	font-variant-ligatures: no-common-ligatures;
 
@@ -39,23 +29,18 @@ body {
 ::selection {
 	text-shadow: none;
 
-	@apply bg-amber-400
-		text-[#151515];
+	@apply bg-amber-400 text-[#151515];
 }
 
 @media (prefers-color-scheme: dark) {
 	*::selection,
 	::selection {
-		@apply bg-[#eaeaea]
-			text-amber-400;
+		@apply bg-[#eaeaea] text-amber-400;
 	}
 }
 
 img {
-	@apply inline-block
-		select-none
-		align-top
-		outline-none;
+	@apply inline-block select-none align-top outline-none;
 }
 
 @media (min-width: 768px) {

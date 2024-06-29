@@ -1,13 +1,8 @@
 .article {
-	@apply prose
-		prose-slate
-		mx-auto
-		dark:prose-invert
-		prose-h1:font-black;
+	@apply prose prose-slate mx-auto dark:prose-invert prose-h1:font-black;
 
 	.data-footnote-backref {
-		@apply font-sans
-			no-underline;
+		@apply font-sans no-underline;
 	}
 
 	a,
@@ -34,16 +29,7 @@
 	}
 
 	a {
-		@apply ease-apple
-			decoration-blue-600
-			outline-none
-			outline-offset-4
-			transition-all
-			duration-150
-			hover:text-blue-600
-			focus-visible:decoration-transparent
-			focus-visible:outline-4
-			focus-visible:outline-blue-500;
+		@apply ease-apple decoration-blue-600 outline-none outline-offset-4 transition-all duration-150 hover:text-blue-600 focus-visible:decoration-transparent focus-visible:outline-4 focus-visible:outline-blue-500;
 	}
 
 	@media (prefers-color-scheme: dark) {

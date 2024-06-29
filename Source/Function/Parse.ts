@@ -6,10 +6,10 @@ export default (async (...Option: Parameters<Interface>) => {
 	const Items = new Set<PackagesRowItem>();
 
 	for (const Package of Option[0]) {
-		let GitHub = undefined;
+		let GitHub: string | undefined;
 
 		try {
-			if (Match(Package, /GitHub:/)) {
+			if (Match(Package, Regex.GitHub)) {
 				GitHub =
 					typeof Package === "string"
 						? Package.split(":")[1]
@@ -55,7 +55,7 @@ export default (async (...Option: Parameters<Interface>) => {
 		}
 
 		try {
-			if (Match(Package, /NPM:/)) {
+			if (Match(Package, Regex.NPM)) {
 				const NPM =
 					typeof Package === "string"
 						? Package.split(":")[1]
@@ -66,7 +66,7 @@ export default (async (...Option: Parameters<Interface>) => {
 				).json();
 
 				GitHub = (JSONNPM?.repository?.url ?? "")
-					?.replace(/(git\+)?http?s:\/\/github.com\//, "")
+					?.replace(Regex.GitHubURL, "")
 					?.replace("#readme", "")
 					?.replace(".git", "");
 
@@ -106,7 +106,7 @@ export default (async (...Option: Parameters<Interface>) => {
 		}
 
 		try {
-			if (Match(Package, /cargo:/)) {
+			if (Match(Package, Regex.cargo)) {
 				const Crate =
 					typeof Package === "string"
 						? Package.split(":")[1]
@@ -117,7 +117,7 @@ export default (async (...Option: Parameters<Interface>) => {
 				).json();
 
 				GitHub = (JSONCargo?.crate?.repository ?? "")
-					?.replace(/(git\+)?http?s:\/\/github.com\//, "")
+					?.replace(Regex.GitHubURL, "")
 					?.replace("#readme", "")
 					?.replace(".git", "");
 
@@ -155,10 +155,17 @@ export default (async (...Option: Parameters<Interface>) => {
 	return Items;
 }) satisfies Interface as Interface;
 
-import type Badge from "../Interface/Badge";
-import type PackagesRowItem from "../Interface/PackagesRowItem";
+import type Badge from "../Interface/Badge.js";
+import type PackagesRowItem from "../Interface/PackagesRowItem.js";
 import type Interface from "../Interface/Parse.js";
 
 export const { default: Match } = await import("@Function/Match.js");
 
 export const { default: Request } = await import("@Library/Request");
+
+export const Regex = {
+	GitHub: /GitHub:/,
+	NPM: /NPM:/,
+	cargo: /cargo:/,
+	GitHubURL: /(git\+)?http?s:\/\/github.com\//,
+};
