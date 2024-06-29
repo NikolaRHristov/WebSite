@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2049" height="2049" fill="none"><path fill="#EAEAEA" fill-opacity=".21" d="M2048.5.5H.5v2048h2048z"/><rect width="1005.28" height="620.771" fill="#151515" fill-opacity=".21" rx="91.389" transform="matrix(-.93358 .35837 0 1 1024.5 223.759)"/><rect width="1005.28" height="620.771" fill="#151515" fill-opacity=".21" rx="91.389" transform="matrix(-.93358 .35837 0 1 1964.5 841.722)"/></svg>
+<svg width="2049" height="2049" viewBox="0 0 2049 2049" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<rect width="2048" height="2048" transform="matrix(-1 0 0 1 2048.5 0.5)" fill="#EAEAEA" fill-opacity="0.21" />
+	<rect width="1005.28" height="620.771" rx="91.3889" transform="matrix(-0.93358 0.358368 0 1 1024.5 223.759)"
+		fill="#151515" fill-opacity="0.21" />
+	<rect width="1005.28" height="620.771" rx="91.3889" transform="matrix(-0.93358 0.358368 0 1 1964.5 841.722)"
+		fill="#151515" fill-opacity="0.21" />
+</svg>
