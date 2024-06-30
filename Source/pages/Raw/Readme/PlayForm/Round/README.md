@@ -1,12 +1,12 @@
 <p align="center">
-  <img width="64" height="64" src="./src-tauri/src/Image/icon.ico" alt="Round Windows" />
+  <img width="64" height="64" src="https://nikolahristov.tech/Image/GitHub/Round/icon.ico" alt="Round" />
 </p>
 
 # Round
 
 Rounds the corners of your Windows screen.
 
-![Round Windows](./.github/cover.png)
+![Round](https://nikolahristov.tech/Image/GitHub/Round/Cover.png)
 
 ## Getting started
 
