@@ -1,0 +1,40 @@
+<!DOCTYPE html><script type="module" src="/_astro/page.CY1iZwUD.js"></script><p align="center">
+  <img width="64" height="64" src="https://nikolahristov.tech/Image/GitHub/Round/icon.ico" alt="Round">
+</p>
+<h1 id="round">Round</h1>
+<p>Rounds the corners of your Windows screen.</p>
+<p><img src="https://nikolahristov.tech/Image/GitHub/Round/Cover.png?v=05aa2" alt="Round"></p>
+<h2 id="getting-started">Getting started</h2>
+<p><code>Round</code> sets up a system tray application using the Tauri framework. It creates
+a window for each monitor available on the system, sets up a menu for the system
+tray, and handles events from the menu.</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>The code imports several crates:</p>
+<ul>
+<li><code>regex</code> - provides support for regular expressions</li>
+<li><code>serde_json</code>- is a JSON serialization/deserialization library</li>
+<li><code>tauri</code> - is the main framework for building cross-platform desktop apps in
+Rust</li>
+<li><code>tauri_plugin_store</code> - provides a key-value store for persisting application
+data</li>
+</ul>
+<h2 id="options">Options</h2>
+<p>The app has several menu items:</p>
+<ul>
+<li>➕ <strong>Increase Size</strong></li>
+<li>➖ <strong>Decrease Size</strong></li>
+<li>↩️ <strong>Reset</strong></li>
+<li>🌑 <strong>Dark</strong></li>
+<li>☀️ <strong>Light</strong></li>
+<li>👨🏻 <strong>Show</strong></li>
+<li>🥷🏽 <strong>Hide</strong></li>
+<li>❌ <strong>Exit</strong></li>
+</ul>
+<p>Clicking on <strong>Increase Size</strong> or <strong>Decrease Size</strong> increases or decreases the
+roundness of the windows, respectively.</p>
+<p><strong>Reset</strong> sets the corner radius back to the default value of <em>23px</em>.</p>
+<p><strong>Dark</strong> and <strong>Light</strong> switch the app between dark and light mode.</p>
+<p><strong>Show</strong> and <strong>Hide</strong> show or hide all windows, respectively.</p>
+<p><strong>Exit</strong> closes the app.</p>
+<h2 id="changelog">Changelog</h2>
+<p>See <a href="CHANGELOG.md">CHANGELOG.md</a> for a history of changes to this app.</p>
