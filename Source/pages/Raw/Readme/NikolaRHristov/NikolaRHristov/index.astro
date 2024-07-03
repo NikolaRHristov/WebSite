@@ -3,6 +3,9 @@ import type Cell from "../../../../../Type/Cell.js";
 
 import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
+
+import Land from "@Component/Readme/CodeEditorLand/Dependency/Land.astro";
+import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astro";
 ---
 
 <>
@@ -28,24 +31,9 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 	</table>
 
-	<table>
-		<Heading
-			DarkIcon="https://nikolahristov.tech/Dark/Image/GitHub/Land.svg"
-			LightIcon="https://nikolahristov.tech/Image/GitHub/Land.svg"
-			Text="Land —"
-		/>
+	<Land />
 
-		<Row
-			Package={new Set([
-				"GitHub:CodeEditorLand/Dependency",
-				"GitHub:CodeEditorLand/Editor",
-				"GitHub:CodeEditorLand/DependencyLandCargo",
-				"GitHub:CodeEditorLand/DependencyLandCargo",
-				"GitHub:CodeEditorLand/DependencyLandNPM",
-				"GitHub:CodeEditorLand/DependencyLandDependency",
-			])}
-		/>
-	</table>
+	<EcoSystem />
 
 	<table>
 		<Heading

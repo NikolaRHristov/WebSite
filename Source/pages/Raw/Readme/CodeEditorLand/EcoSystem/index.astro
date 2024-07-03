@@ -1,0 +1,13 @@
+---
+import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astro";
+
+const Readme = (
+	await import("@Page/Raw/Readme/CodeEditorLand/EcoSystem/README.md")
+).rawContent();
+---
+
+<>
+	<EcoSystem />
+
+	<Fragment set:html={Readme} />
+</>
