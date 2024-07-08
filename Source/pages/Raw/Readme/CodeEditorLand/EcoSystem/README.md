@@ -17,6 +17,16 @@ pnpm install
 Build the `EcoSystem`:
 
 ```sh
+# Build TypeScript and package.json packages
+pnpm run prepublishOnly
+
+# Build Debug releases for cargo
+cargo build
+
+# Build Production releases for cargo
+cargo build --release
+
+# Build the Tauri application
 pnpm run tauri build
 ```
 
