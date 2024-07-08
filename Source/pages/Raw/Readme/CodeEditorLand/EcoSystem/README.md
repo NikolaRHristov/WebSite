@@ -33,6 +33,7 @@ pnpm run tauri build
 Run the `EcoSystem`:
 
 ```sh
+# Runs the development version of the application
 pnpm run tauri dev
 ```
 
