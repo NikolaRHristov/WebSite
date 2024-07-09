@@ -17,7 +17,7 @@ pnpm install
 Build the `EcoSystem`:
 
 ```sh
-# Build TypeScript and package.json packages
+# Build TypeScript and workspace packages
 pnpm run prepublishOnly
 
 # Build Debug releases for cargo
