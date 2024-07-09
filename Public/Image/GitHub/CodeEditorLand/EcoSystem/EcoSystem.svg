@@ -25,15 +25,13 @@
 	<g transform="translate(973.1823231660433 2906.1483301227336) rotate(0 58.571380615234375 16.09999999999991)"><text
 			x="58.571380615234375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">📣
-			Echo</text></g>
+			dominant-baseline="alphabetic">📣 Echo</text></g>
 	<g transform="translate(941.7538563691683 3049.442649792867) rotate(0 89.99984741210938 23)"><text
 			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">WebSocket
-			library</text><text x="89.99984741210938" y="41.400390625" font-family="Helvetica, Segoe UI Emoji"
-			font-size="20px" fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">in Rust</text></g>
+			dominant-baseline="alphabetic">WebSocket library</text><text x="89.99984741210938" y="41.400390625"
+			font-family="Helvetica, Segoe UI Emoji" font-size="20px" fill="#ffffff" text-anchor="middle"
+			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">in Rust</text></g>
 	<g stroke-linecap="round"
 		transform="translate(809.4676014863559 2842.9103127131375) rotate(0 222.28610229492182 222.28610229492188)">
 		<path
@@ -43,10 +41,10 @@
 	<g transform="translate(1442.523139131876 2942.9737560124904) rotate(0 228.7578125 32.200000000000045)"><text
 			x="228.7578125" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">Allows for
-			concurrent communication</text><text x="228.7578125" y="57.96054687499999"
-			font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff" text-anchor="middle"
-			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">between the two</text></g>
+			dominant-baseline="alphabetic">Allows for concurrent communication</text><text x="228.7578125"
+			y="57.96054687499999" font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff"
+			text-anchor="middle" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">between the
+			two</text></g>
 	<g transform="translate(941.7538563691683 3205.856303139338) rotate(0 89.99984741210938 11.5)"><text
 			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
 			fill="#f08c00" text-anchor="middle" style="white-space: pre;" direction="ltr"
@@ -54,8 +52,8 @@
 	<g transform="translate(1625.5046315668562 122.93314985245001) rotate(0 58.571380615234375 16.100000000000023)">
 		<text x="58.571380615234375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">🌬️
-			Wind</text></g>
+			dominant-baseline="alphabetic">🌬️ Wind</text>
+	</g>
 	<g transform="translate(1594.0761647699812 214.3078904893664) rotate(0 89.99984741210938 32.19999999999999)"><text
 			x="89.99984741210938" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
@@ -71,8 +69,7 @@
 	<g transform="translate(2094.5260378173916 155.94876128908209) rotate(0 105.0546875 16.100000000000023)"><text
 			x="105.0546875" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">Binds
-			Everything</text></g>
+			dominant-baseline="alphabetic">Binds Everything</text></g>
 	<g transform="translate(1594.0761647699812 365.4941105312774) rotate(0 89.99984741210938 11.5)"><text
 			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
 			fill="#f08c00" text-anchor="middle" style="white-space: pre;" direction="ltr"
@@ -80,8 +77,8 @@
 	<g transform="translate(178.57896872064714 126.74269303821404) rotate(0 58.571380615234375 16.100000000000023)">
 		<text x="58.571380615234375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">🌌
-			Sky</text></g>
+			dominant-baseline="alphabetic">🌌 Sky</text>
+	</g>
 	<g transform="translate(147.42451428610173 218.11743367513043) rotate(0 89.99984741210938 32.19999999999999)"><text
 			x="89.99984741210938" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
@@ -97,8 +94,7 @@
 	<g transform="translate(621.3369157114962 171.18693403213763) rotate(0 108.1650390625 16.100000000000023)"><text
 			x="108.1650390625" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">Renders the
-			view</text></g>
+			dominant-baseline="alphabetic">Renders the view</text></g>
 	<g transform="translate(146.87648956144255 369.3036537170413) rotate(0 89.99984741210938 11.5)"><text
 			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
 			fill="#f08c00" text-anchor="middle" style="white-space: pre;" direction="ltr"
@@ -112,8 +108,7 @@
 	<g transform="translate(944.0394093476839 1122.8087196955603) rotate(0 87.71429443359375 16.099999999999994)"><text
 			x="87.71429443359375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">⛰️
-			Mountain</text></g>
+			dominant-baseline="alphabetic">⛰️ Mountain</text></g>
 	<g transform="translate(936.6109730683871 1231.0983829558838) rotate(0 95.14273071289061 32.19999999999999)"><text
 			x="95.14273071289061" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
@@ -123,8 +118,8 @@
 	<g transform="translate(1398.4366562794733 1146.0563606087965) rotate(0 150.20605468750003 16.099999999999994)">
 		<text x="150.2060546875" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">Bundles all of it
-			together</text></g>
+			dominant-baseline="alphabetic">Bundles all of it together</text>
+	</g>
 	<g transform="translate(941.7538563691683 1402.8556753491594) rotate(0 89.99984741210938 11.5)"><text
 			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
 			fill="#f08c00" text-anchor="middle" style="white-space: pre;" direction="ltr"
@@ -132,15 +127,13 @@
 	<g transform="translate(1631.853644153662 3989.8974470505927) rotate(0 58.571380615234375 16.09999999999991)"><text
 			x="58.571380615234375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">☀️
-			Sun</text></g>
+			dominant-baseline="alphabetic">☀️ Sun</text></g>
 	<g transform="translate(1600.425177356787 4129.37376922123) rotate(0 89.99984741210938 32.200000000000045)"><text
 			x="89.99984741210938" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">Async
-			Rust</text><text x="89.99984741210938" y="57.96054687499999" font-family="Helvetica, Segoe UI Emoji"
-			font-size="28px" fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">Library</text></g>
+			dominant-baseline="alphabetic">Async Rust</text><text x="89.99984741210938" y="57.96054687499999"
+			font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff" text-anchor="middle"
+			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Library</text></g>
 	<g stroke-linecap="round"
 		transform="translate(1447.5681216927242 3918.716866145058) rotate(0 242.8569030761721 242.8569030761721)">
 		<path
@@ -154,20 +147,17 @@
 	<g transform="translate(2055.0111342590008 4040.6907587600417) rotate(0 188.0224609375 16.09999999999991)"><text
 			x="188.0224609375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">Writes files onto
-			the file system</text></g>
+			dominant-baseline="alphabetic">Writes files onto the file system</text></g>
 	<g transform="translate(217.90475802951403 3980.3263750019814) rotate(0 58.571380615234375 16.09999999999991)"><text
 			x="58.571380615234375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">🌊
-			River</text></g>
+			dominant-baseline="alphabetic">🌊 River</text></g>
 	<g transform="translate(186.47629123263903 4130.1359491257435) rotate(0 89.99984741210938 32.200000000000045)"><text
 			x="89.99984741210938" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">Async
-			Rust</text><text x="89.99984741210938" y="57.96054687499999" font-family="Helvetica, Segoe UI Emoji"
-			font-size="28px" fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">Library</text></g>
+			dominant-baseline="alphabetic">Async Rust</text><text x="89.99984741210938" y="57.96054687499999"
+			font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff" text-anchor="middle"
+			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Library</text></g>
 	<g stroke-linecap="round"
 		transform="translate(32.8570556640625 3918.716866145058) rotate(0 243.6190829806859 243.61908298068602)">
 		<path
@@ -181,8 +171,7 @@
 	<g transform="translate(651.557160978107 4041.278794706842) rotate(0 147.8408203125 16.09999999999991)"><text
 			x="147.8408203125" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
 			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
-			dominant-baseline="alphabetic">Loads files into
-			memory</text></g>
+			dominant-baseline="alphabetic">Loads files into memory</text></g>
 	<g stroke-linecap="round">
 		<g transform="translate(1130.0132742767903 1590.547744266571) rotate(0 -7.105427357601002e-15 130.15869140625)">
 			<path d="M0 0 C0 43.39, 0 216.93, 0 260.32 M0 0 C0 43.39, 0 216.93, 0 260.32" stroke="#1971c2"
