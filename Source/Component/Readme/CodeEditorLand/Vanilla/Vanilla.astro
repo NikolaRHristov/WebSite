@@ -1,0 +1,17 @@
+---
+import Heading from "@Component/Readme/Heading.astro";
+import Row from "@Component/Readme/Row.astro";
+---
+
+<>
+	<table>
+		<Heading Emoji="📜" Text="Vanilla —" />
+
+		<Row
+			Package={new Set([
+				"GitHub:Microsoft/VSCode",
+				"GitHub:CodeEditorLand/Editor",
+			])}
+		/>
+	</table>
+</>
