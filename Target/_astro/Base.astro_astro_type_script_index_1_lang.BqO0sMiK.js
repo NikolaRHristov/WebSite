@@ -1,13 +1,17 @@
-const __vite__fileDeps = [
-		"_astro/index.modern.DpLP8u1C.js",
-		"_astro/index.modern.CkIAsQri.js",
-		"_astro/index.modern.FjGODCox.js",
-		"_astro/index.modern.Bx-MFMb0.js",
-		"_astro/Swup.modern.n9Bn8Xxq.js",
-		"_astro/index.modern.PWxKrMuO.js",
-		"_astro/index.modern.aa8fLSdp.js",
-	],
-	__vite__mapDeps = (i) => i.map((i) => __vite__fileDeps[i]);
+const __vite__mapDeps = (
+	i,
+	m = __vite__mapDeps,
+	d = m.f ||
+		(m.f = [
+			"_astro/index.modern.DpLP8u1C.js",
+			"_astro/index.modern.CkIAsQri.js",
+			"_astro/index.modern.FjGODCox.js",
+			"_astro/index.modern.Bx-MFMb0.js",
+			"_astro/Swup.modern.n9Bn8Xxq.js",
+			"_astro/index.modern.PWxKrMuO.js",
+			"_astro/index.modern.aa8fLSdp.js",
+		]),
+) => i.map((i) => d[i]);
 import { _ } from "./preload-helper.BiBI96sQ.js";
 new (
 	await _(async () => {
