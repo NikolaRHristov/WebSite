@@ -17,7 +17,7 @@
 		"url": "https://nikolahristov.tech"
 	},
 	"scripts": {
-		"Start": "astro dev",
+		"Run": "astro dev",
 		"prepublishOnly": "astro build"
 	},
 	"dependencies": {
