@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-	"compilerOptions": {
-		"baseUrl": "./",
-=======
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
 		"baseUrl": "./",
@@ -10,7 +6,6 @@
 		"noEmit": true,
 		"outDir": "Target",
 		"rootDir": ".",
->>>>>>> Fork/Current
 		"types": ["astro/client", "astro/env"]
 	},
 	"extends": "@playform/build/tsconfig",

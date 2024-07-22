@@ -8,35 +8,20 @@ body {
 }
 
 body {
-<<<<<<< HEAD
 	@apply flex flex-grow flex-col bg-[#eaeaea] tabular-nums text-[#151515] antialiased sm:subpixel-antialiased dark:bg-[#151515] dark:text-[#eaeaea];
 
 	font-variant-ligatures: no-common-ligatures;
 
 	--swup-overlay-theme-color: #eaeaea;
-	--swup-overlay-theme-duration: 0.2s;
-	--swup-overlay-theme-delay: 0s;
-	--swup-overlay-theme-scale: 1.2;
-=======
-	@apply flex flex-grow flex-col bg-white tabular-nums text-black antialiased sm:subpixel-antialiased dark:bg-black dark:text-white;
-
-	font-variant-ligatures: no-common-ligatures;
-
-	--swup-overlay-theme-color: white;
 	--swup-overlay-theme-duration: 0.21s;
 	--swup-overlay-theme-delay: 0s;
 	--swup-overlay-theme-scale: 0.21;
->>>>>>> Fork/Current
 	--swup-overlay-theme-skew: 0deg;
 }
 
 @media (prefers-color-scheme: dark) {
 	body {
-<<<<<<< HEAD
 		--swup-overlay-theme-color: #151515;
-=======
-		--swup-overlay-theme-color: black;
->>>>>>> Fork/Current
 	}
 }
 
@@ -44,28 +29,19 @@ body {
 ::selection {
 	text-shadow: none;
 
-<<<<<<< HEAD
 	@apply bg-amber-400 text-[#151515];
-=======
-	@apply bg-amber-400 text-black;
->>>>>>> Fork/Current
 }
 
 @media (prefers-color-scheme: dark) {
 	*::selection,
 	::selection {
-<<<<<<< HEAD
 		@apply bg-[#eaeaea] text-amber-400;
-=======
-		@apply bg-orange-400 text-white;
->>>>>>> Fork/Current
 	}
 }
 
 img {
 	@apply inline-block select-none align-top outline-none;
 }
-<<<<<<< HEAD
 
 @media (min-width: 768px) {
 	h1,
@@ -78,5 +54,3 @@ img {
 		padding: 4px 0 !important;
 	}
 }
-=======
->>>>>>> Fork/Current
