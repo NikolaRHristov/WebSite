@@ -1,7 +1,7 @@
 {
 	"name": "@website/nikolahristov_tech",
 	"version": "0.0.1",
-	"private": false,
+	"private": true,
 	"homepage": "HTTPS://GitHub.Com/NikolaRHristov/Website#readme",
 	"bugs": {
 		"url": "HTTPS://GitHub.Com/NikolaRHristov/Website/issues"
@@ -56,7 +56,7 @@
 		"zod": "*"
 	},
 	"publishConfig": {
-		"access": "public",
+		"access": "restricted",
 		"provenance": true
 	}
 }
