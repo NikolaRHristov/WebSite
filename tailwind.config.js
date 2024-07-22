@@ -1,3 +1,5 @@
+import { fontFamily } from "tailwindcss/defaultTheme";
+
 export default {
 	content: [
 		"./Public/**/*.html",
@@ -14,6 +16,12 @@ export default {
 			transitionTimingFunction: {
 				apple: "cubic-bezier(0.21, 0.1, 0.21, 1)",
 			},
+<<<<<<< HEAD
+=======
+			fontFamily: {
+				sans: ["Albert Sans", ...fontFamily.sans],
+			},
+>>>>>>> Fork/Current
 			typography: {
 				DEFAULT: {
 					css: {
@@ -22,6 +30,10 @@ export default {
 						},
 					},
 				},
+			},
+			colors: {
+				backgroundLight: "var(--background-light)",
+				backgroundDark: "var(--background-dark)",
 			},
 		},
 	},

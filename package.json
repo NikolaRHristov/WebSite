@@ -56,7 +56,7 @@
 		"zod": "*"
 	},
 	"publishConfig": {
-		"provenance": true,
-		"access": "public"
+		"access": "public",
+		"provenance": true
 	}
 }
