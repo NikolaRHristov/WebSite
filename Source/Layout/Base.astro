@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import Footer from "@Component/Footer.astro";
 
 import "@Stylesheet/Base.css";
@@ -12,15 +13,26 @@ const {
 
 interface Props {
 	Font?: string[];
+=======
+import "@Stylesheet/Base.css";
+
+// TODO Place your title and description here
+const { Title = "", Description = "" } = Astro.props;
+
+interface Props {
+>>>>>>> Fork/Current
 	Title?: string;
 	Description?: string;
 }
 
+<<<<<<< HEAD
 const Link = (Link: string[] = []) =>
 	Link.map(
 		(Link) => `<link rel="stylesheet" type="text/css" href="${Link}" />`,
 	).join("\n");
 
+=======
+>>>>>>> Fork/Current
 import { Head } from "astro-capo";
 import { ViewTransitions } from "astro:transitions";
 ---
@@ -38,7 +50,12 @@ import { ViewTransitions } from "astro:transitions";
 		<meta charset="utf-8" />
 		<meta name="description" content={Description} />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<<<<<<< HEAD
 		<meta name="theme-color" content="#eaeaea" />
+=======
+		<!-- TODO Define your color theme in hex here -->
+		<meta name="theme-color" content="" />
+>>>>>>> Fork/Current
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="twitter:dnt" content="on" />
 
@@ -59,6 +76,7 @@ import { ViewTransitions } from "astro:transitions";
 			@import "@Stylesheet/Global.css";
 		</style>
 
+<<<<<<< HEAD
 		<slot name="styles" />
 
 		<Fragment set:html={Link(Font.map((Font: any) => Font))} />
@@ -182,5 +200,17 @@ import { ViewTransitions } from "astro:transitions";
 			class="absolute left-0 top-0 hidden"
 			rel="me"
 			href="https://mastodon.social/@nikolahristov"></a>
+=======
+		<!-- Favicon -->
+		<ViewTransitions />
+	</Head>
+	<body>
+		<div class="grow">
+			<slot />
+		</div>
+		<script>
+			import "@Script/Firebase";
+		</script>
+>>>>>>> Fork/Current
 	</body>
 </html>
