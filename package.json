@@ -2,7 +2,18 @@
 	"name": "@website/nikolahristov_tech",
 	"version": "0.0.1",
 	"private": true,
+<<<<<<< HEAD
 	"homepage": "HTTPS://GitHub.Com/NikolaRHristov/Website#readme",
+=======
+	"description": "📄 Starter —",
+	"keywords": [
+		"astro",
+		"starter",
+		"skeleton",
+		"playform"
+	],
+	"homepage": "HTTPS://GitHub.Com/PlayForm/Starter#readme",
+>>>>>>> Fork/Current
 	"bugs": {
 		"url": "HTTPS://GitHub.Com/NikolaRHristov/Website/issues"
 	},
