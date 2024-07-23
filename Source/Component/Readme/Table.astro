@@ -1,0 +1,14 @@
+---
+const { Open } = Astro.props;
+---
+
+<>
+	{Open ? (<>
+		<table>
+	</>) : ""}
+	
+		<slot />
+		{Open ? (<>
+		</table>
+	</>) : ""}
+</>
