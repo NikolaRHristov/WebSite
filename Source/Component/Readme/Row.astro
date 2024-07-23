@@ -29,7 +29,7 @@ const Items = await Parse(Astro.props.Package);
 							<>
 								{Length >= 1 ? (
 									<td valign="top" colspan={Span}>
-										<br />
+										
 
 										{Array.from(Package.Badge)
 											.filter((Badge) => !Badge.Float)
@@ -41,7 +41,7 @@ const Items = await Parse(Astro.props.Package);
 												</>
 											))}
 
-										<br />
+										
 									</td>
 								) : (
 									""
