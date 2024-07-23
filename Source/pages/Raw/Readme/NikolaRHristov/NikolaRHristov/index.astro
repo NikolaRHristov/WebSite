@@ -18,6 +18,25 @@ import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astr
 		</a>
 	</h1>
 
+	<EcoSystem />
+
+	<Land />
+
+	<table>
+		<Heading
+			AltIcon="NPM"
+			DarkIcon="https://nikolahristov.tech/Image/GitHub/n.svg"
+			Text="NPM —"
+		/>
+
+		<Row
+			Package={new Set<Cell>([
+				"NPM:@playform/document",
+				"NPM:@playform/build",
+			])}
+		/>
+	</table>
+
 	<table>
 		<Heading Text="Project —" Emoji="🔥" />
 
@@ -30,10 +49,6 @@ import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astr
 			])}
 		/>
 	</table>
-
-	<Land />
-
-	<EcoSystem />
 
 	<table>
 		<Heading
@@ -49,21 +64,6 @@ import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astr
 				"NPM:@playform/compress",
 				"NPM:@playform/inline",
 				"GitHub:PlayForm/Starter",
-			])}
-		/>
-	</table>
-
-	<table>
-		<Heading
-			AltIcon="NPM"
-			DarkIcon="https://nikolahristov.tech/Image/GitHub/n.svg"
-			Text="NPM —"
-		/>
-
-		<Row
-			Package={new Set<Cell>([
-				"NPM:@playform/document",
-				"NPM:@playform/build",
 			])}
 		/>
 	</table>
