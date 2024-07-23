@@ -3,6 +3,7 @@ import type Cell from "../../../../../Type/Cell.js";
 
 import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
+import Table from "@Component/Readme/Table.astro";
 
 import Land from "@Component/Readme/CodeEditorLand/Dependency/Land.astro";
 import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astro";
@@ -18,7 +19,7 @@ import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astr
 		</a>
 	</h1>
 
-	<table>
+	<Table>
 		<EcoSystem Open="true" />
 
 		<Land Open="true" />
@@ -35,7 +36,7 @@ import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astr
 				"NPM:@playform/build",
 			])}
 		/>
-		
+
 		<Heading Text="Project —" Emoji="🔥" />
 
 		<Row
@@ -46,9 +47,7 @@ import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astr
 				"GitHub:PlayForm/Round",
 			])}
 		/>
-	</table>
 
-	<table>
 		<Heading
 			AltIcon="Astro"
 			DarkIcon="https://nikolahristov.tech/Dark/Image/GitHub/Astro.svg"
@@ -64,9 +63,7 @@ import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astr
 				"GitHub:PlayForm/Starter",
 			])}
 		/>
-	</table>
 
-	<table>
 		<Heading
 			AltIcon="GitHub"
 			DarkIcon="https://raw.githubusercontent.com/NikolaRHristov/NikolaRHristov/Current/.github/Image/GitHub-Mark-Light-32px.png"
@@ -75,9 +72,7 @@ import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astr
 		/>
 
 		<Row Package={new Set<Cell>(["NPM:@playform/maintain"])} />
-	</table>
 
-	<table>
 		<Heading
 			AltIcon="Dotfile"
 			DarkIcon="https://raw.githubusercontent.com/jglovier/dotfiles-logo/master/dotfiles-logo-icon.png"
@@ -93,7 +88,7 @@ import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astr
 				"GitHub:NikolaRHristov/ZSH",
 			])}
 		/>
-	</table>
+	</Table>
 
 	Generated from: <a
 		href="https://github.com/NikolaRHristov/Website/blob/Current/Source/pages/Raw/Readme/NikolaRHristov/NikolaRHristov/index.astro"

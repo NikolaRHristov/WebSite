@@ -1,10 +1,13 @@
 ---
 import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
+import Table from "@Component/Readme/Table.astro";
+
+const { Open } = Astro.props;
 ---
 
 <>
-	<table>
+	<Table {Open}>
 		<Heading
 			DarkIcon="https://nikolahristov.tech/Dark/Image/GitHub/Land.svg"
 			LightIcon="https://nikolahristov.tech/Image/GitHub/Land.svg"
@@ -21,5 +24,5 @@ import Row from "@Component/Readme/Row.astro";
 				"GitHub:CodeEditorLand/DependencyLandDependency",
 			])}
 		/>
-	</table>
+	</Table>
 </>
