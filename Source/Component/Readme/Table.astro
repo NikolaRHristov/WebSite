@@ -3,12 +3,9 @@ const { Open } = Astro.props;
 ---
 
 <>
-	{Open ? (<>
-		<table>
-	</>) : ""}
-	
-		<slot />
-		{Open ? (<>
-		</table>
-	</>) : ""}
+	{!Open ? <Fragment set:html={"<table>"} /> : ""}
+
+	<slot />
+
+	{!Open ? <Fragment set:html={"</table>"} /> : ""}
 </>
