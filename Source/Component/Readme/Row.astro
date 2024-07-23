@@ -29,8 +29,6 @@ const Items = await Parse(Astro.props.Package);
 							<>
 								{Length >= 1 ? (
 									<td valign="top" colspan={Span}>
-										
-
 										{Array.from(Package.Badge)
 											.filter((Badge) => !Badge.Float)
 											.map((_Badge) => (
@@ -40,16 +38,12 @@ const Items = await Parse(Astro.props.Package);
 													<br />
 												</>
 											))}
-
-										
 									</td>
 								) : (
 									""
 								)}
 
 								<td valign="top" colspan={Span}>
-									<br />
-
 									<a href={Package.Link} target="_blank">
 										<picture>
 											<source
@@ -82,8 +76,6 @@ const Items = await Parse(Astro.props.Package);
 									<a href={Package.Link} target="_blank">
 										<b>{Package.Name}</b>
 									</a>
-
-									<br />
 								</td>
 							</>
 						);
