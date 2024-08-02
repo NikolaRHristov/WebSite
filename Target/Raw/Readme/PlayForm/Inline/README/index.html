@@ -1,0 +1,123 @@
+<!DOCTYPE html><script type="module" src="/_astro/page.RuxDLo8Z.js"></script><h1 id="inline">🦔 <a href="HTTPS://NPMJS.Org/@playform/inline">Inline</a> —</h1>
+<p>This <strong><a href="HTTPS://docs.astro.build/en/guides/integrations-guide/">Astro integration</a></strong> brings <a href="HTTPS://github.com/GoogleChromeLabs/critters">critters</a> to
+your Astro project.</p>
+<p>Critters is a plugin that inlines your app’s <a href="HTTPS://www.smashingmagazine.com/2015/08/understanding-critical-css/">critical CSS</a> and lazy-loads the rest.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p><code>Inline</code> will not inline your requests, only your statically generated build
+and pre-rendered routes.</p>
+</blockquote>
+<h2 id="installation">Installation</h2>
+<p>There are two ways to add integrations to your project. Let’s try the most
+convenient option first!</p>
+<h3 id="astro-add-command"><code>astro add</code> command</h3>
+<p>Astro includes a CLI tool for adding first party integrations: <code>astro add</code>. This
+command will:</p>
+<ol>
+<li>(Optionally) Install all necessary dependencies and peer dependencies</li>
+<li>(Also optionally) Update your <code>astro.config.*</code> file to apply this integration</li>
+</ol>
+<p>To install <code>Inline</code>, run the following from your project directory and follow
+the prompts:</p>
+<p>Using NPM:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> astro</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> @playform/inline</span></span>
+<span class="line"></span></code></pre>
+<p>Using Yarn:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">yarn</span><span style="color:#9ECBFF"> astro</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> @playform/inline</span></span>
+<span class="line"></span></code></pre>
+<p>Using PNPM:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">pnpx</span><span style="color:#9ECBFF"> astro</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> @playform/inline</span></span>
+<span class="line"></span></code></pre>
+<h3 id="install-dependencies-manually">Install dependencies manually</h3>
+<p>First, install the <code>Inline</code> integration like so:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -D</span><span style="color:#79B8FF"> -E</span><span style="color:#9ECBFF"> @playform/inline</span></span>
+<span class="line"></span></code></pre>
+<p>Then, apply this integration to your <code>astro.config.*</code> file using the
+<code>integrations</code> property:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">	integrations: [(</span><span style="color:#F97583">await</span><span style="color:#F97583"> import</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"@playform/inline"</span><span style="color:#E1E4E8">)).</span><span style="color:#B392F0">default</span><span style="color:#E1E4E8">()],</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span></code></pre>
+<h2 id="getting-started">Getting started</h2>
+<p>Critters will now automatically inline the critical CSS of your HTML files.</p>
+<h3 id="default-inlining">Default Inlining</h3>
+<p>You can override any of the default options from the configuration of:</p>
+<ul>
+<li><a href="https://github.com/GoogleChromeLabs/critters#usage">critters</a></li>
+</ul>
+<p>or disable them entirely:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">	integrations: [</span></span>
+<span class="line"><span style="color:#E1E4E8">		(</span><span style="color:#F97583">await</span><span style="color:#F97583"> import</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"@playform/inline"</span><span style="color:#E1E4E8">)).</span><span style="color:#B392F0">default</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">			Critters: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">		}),</span></span>
+<span class="line"><span style="color:#E1E4E8">	],</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span></code></pre>
+<h3 id="add-multiple-paths">Add Multiple Paths</h3>
+<p>You can add multiple paths to inline by specifying an array as the <code>Path</code>
+variable.</p>
+<p><strong><code>astro.config.ts</code></strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">	integrations: [</span></span>
+<span class="line"><span style="color:#E1E4E8">		(</span><span style="color:#F97583">await</span><span style="color:#F97583"> import</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"@playform/inline"</span><span style="color:#E1E4E8">)).</span><span style="color:#B392F0">default</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">			Path: [</span><span style="color:#9ECBFF">"./Target"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"./Build"</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#E1E4E8">		}),</span></span>
+<span class="line"><span style="color:#E1E4E8">	],</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span></code></pre>
+<h3 id="input-output-mapping">Input-Output Mapping</h3>
+<p>You can also provide a map of paths for different input output directories.</p>
+<p><strong><code>astro.config.ts</code></strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">	integrations: [</span></span>
+<span class="line"><span style="color:#E1E4E8">		(</span><span style="color:#F97583">await</span><span style="color:#F97583"> import</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"@playform/inline"</span><span style="color:#E1E4E8">)).</span><span style="color:#B392F0">default</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">			Path: </span><span style="color:#F97583">new</span><span style="color:#B392F0"> Map</span><span style="color:#E1E4E8">([[</span><span style="color:#9ECBFF">"./Source"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"./Target"</span><span style="color:#E1E4E8">]]),</span></span>
+<span class="line"><span style="color:#E1E4E8">		}),</span></span>
+<span class="line"><span style="color:#E1E4E8">	],</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span></code></pre>
+<p>Or an array of the two.</p>
+<p><strong><code>astro.config.ts</code></strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">	integrations: [</span></span>
+<span class="line"><span style="color:#E1E4E8">		(</span><span style="color:#F97583">await</span><span style="color:#F97583"> import</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"@playform/inline"</span><span style="color:#E1E4E8">)).</span><span style="color:#B392F0">default</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">			Path: [</span></span>
+<span class="line"><span style="color:#6A737D">				// Inline Target</span></span>
+<span class="line"><span style="color:#9ECBFF">				"./Target"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#6A737D">				// Inline Target one more time into a different directory</span></span>
+<span class="line"><span style="color:#F97583">				new</span><span style="color:#B392F0"> Map</span><span style="color:#E1E4E8">([[</span><span style="color:#9ECBFF">"./Target"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"./TargetInline"</span><span style="color:#E1E4E8">]]),</span></span>
+<span class="line"><span style="color:#E1E4E8">			],</span></span>
+<span class="line"><span style="color:#E1E4E8">		}),</span></span>
+<span class="line"><span style="color:#E1E4E8">	],</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span></code></pre>
+<h3 id="file-filtering">File Filtering</h3>
+<p>You can filter files to exclude specific ones from inlining. A filter can be an
+array of regular expressions or a single match. You can also use functions to
+match on file names:</p>
+<p><strong><code>astro.config.ts</code></strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">	integrations: [</span></span>
+<span class="line"><span style="color:#E1E4E8">		(</span><span style="color:#F97583">await</span><span style="color:#F97583"> import</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"@playform/inline"</span><span style="color:#E1E4E8">)).</span><span style="color:#B392F0">default</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">			Exclude: [</span></span>
+<span class="line"><span style="color:#9ECBFF">				"File.html"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">				(</span><span style="color:#FFAB70">File</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> string</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> File </span><span style="color:#F97583">===</span><span style="color:#9ECBFF"> "./Target/index.html"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">			],</span></span>
+<span class="line"><span style="color:#E1E4E8">		}),</span></span>
+<span class="line"><span style="color:#E1E4E8">	],</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span></code></pre>
+<h3 id="controlling-logging">Controlling Logging</h3>
+<p>You can control the logging level by setting the <code>Logger</code> parameter. The default
+value is <code>2</code>, but you can set it to <code>0</code> if you don’t want to see debug messages:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="ts"><code><span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> default</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">	integrations: [</span></span>
+<span class="line"><span style="color:#E1E4E8">		(</span><span style="color:#F97583">await</span><span style="color:#F97583"> import</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"@playform/inline"</span><span style="color:#E1E4E8">)).</span><span style="color:#B392F0">default</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">			Logger: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">		}),</span></span>
+<span class="line"><span style="color:#E1E4E8">	],</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span>
+<span class="line"></span></code></pre>
+<h2 id="changelog">Changelog</h2>
+<p>See <a href="CHANGELOG.md">CHANGELOG.md</a> for a history of changes to this integration.</p>
