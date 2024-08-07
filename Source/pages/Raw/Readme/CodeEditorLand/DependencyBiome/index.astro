@@ -1,10 +1,11 @@
 ---
 import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
+import Table from "@Component/Readme/Table.astro";
 ---
 
 <>
-	<table>
+	<Table>
 		<Heading
 			LightIcon="https://nikolahristov.tech/Image/GitHub/Cargo.png"
 			DarkIcon="https://nikolahristov.tech/Image/GitHub/Cargo.png"
@@ -12,15 +13,11 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 
 		<Row Package={new Set([])} />
-	</table>
 
-	<table>
 		<Heading Emoji="🔩" Text="Service —" />
 
 		<Row Package={new Set([])} />
-	</table>
 
-	<table>
 		<Heading
 			LightIcon="https://nikolahristov.tech/Image/GitHub/NPM.svg"
 			DarkIcon="https://nikolahristov.tech/Image/GitHub/NPM.svg"
@@ -28,7 +25,7 @@ import Row from "@Component/Readme/Row.astro";
 		/>
 
 		<Row Package={new Set([])} />
-	</table>
+	</Table>
 
 	<a
 		href="https://fossa.app/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependencyTauri?ref=badge_large&issueType=license"

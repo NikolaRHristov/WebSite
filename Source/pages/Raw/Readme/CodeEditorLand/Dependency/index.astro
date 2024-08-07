@@ -4,6 +4,7 @@ import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astr
 import Tauri from "@Component/Readme/CodeEditorLand/Dependency/Tauri.astro";
 import OXC from "@Component/Readme/CodeEditorLand/Dependency/OXC.astro";
 import Biome from "@Component/Readme/CodeEditorLand/Dependency/Biome.astro";
+import Table from "@Component/Readme/Table.astro";
 ---
 
 <>
@@ -15,15 +16,17 @@ import Biome from "@Component/Readme/CodeEditorLand/Dependency/Biome.astro";
 		/></a
 	>
 
-	<Land />
+	<Table>
+		<EcoSystem Open={true} />
 
-	<EcoSystem />
+		<Land Open={true} />
 
-	<Tauri />
+		<Tauri Open={true} />
 
-	<OXC />
+		<OXC Open={true} />
 
-	<Biome />
+		<Biome Open={true} />
+	</Table>
 
 	<a
 		href="https://fossa.app/projects/git%2Bgithub.com%2FCodeEditorLand%2FDependency?ref=badge_large&issueType=license"
