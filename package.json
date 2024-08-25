@@ -17,7 +17,7 @@
 		"url": "HTTPS://PlayForm.Cloud"
 	},
 	"scripts": {
-		"Run": "astro dev --host",
+		"Run": "astro dev --host ",
 		"prepublishOnly": "astro build"
 	},
 	"dependencies": {
