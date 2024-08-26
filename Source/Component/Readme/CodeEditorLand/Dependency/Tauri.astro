@@ -1,10 +1,13 @@
 ---
 import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
+import Table from "@Component/Readme/Table.astro";
+
+const { Open } = Astro.props;
 ---
 
 <>
-	<table>
+	<Table {Open}>
 		<Heading
 			DarkIcon="https://nikolahristov.tech/Glyph/Image/GitHub/Tauri.svg"
 			LightIcon="https://nikolahristov.tech/Glyph/Image/GitHub/Tauri.svg"
@@ -19,5 +22,5 @@ import Row from "@Component/Readme/Row.astro";
 				"GitHub:CodeEditorLand/DependencyTauriService",
 			])}
 		/>
-	</table>
+	</Table>
 </>

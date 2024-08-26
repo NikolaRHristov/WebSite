@@ -1,10 +1,13 @@
 ---
 import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
+import Table from "@Component/Readme/Table.astro";
+
+const { Open } = Astro.props;
 ---
 
 <>
-	<table>
+	<Table {Open}>
 		<Heading
 			DarkIcon="https://nikolahristov.tech/Image/GitHub/OXC.png"
 			LightIcon="https://nikolahristov.tech/Image/GitHub/OXC.png"
@@ -19,5 +22,5 @@ import Row from "@Component/Readme/Row.astro";
 				"GitHub:CodeEditorLand/DependencyOXCService",
 			])}
 		/>
-	</table>
+	</Table>
 </>
