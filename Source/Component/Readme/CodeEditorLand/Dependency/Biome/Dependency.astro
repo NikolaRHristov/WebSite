@@ -1,0 +1,22 @@
+---
+import Dependency from "@Component/Readme/Heading/Dependency.astro";
+import Row from "@Component/Readme/Row.astro";
+---
+
+<>
+	<table>
+		<Dependency />
+
+		<Row
+			Package={new Set([
+				"GitHub:CodeEditorLand/Biome",
+				"GitHub:CodeEditorLand/BiomeIntelliJ",
+				"GitHub:CodeEditorLand/BiomeLand",
+				"GitHub:CodeEditorLand/DiscordUtilsBot",
+				"GitHub:CodeEditorLand/PreCommit",
+				"GitHub:CodeEditorLand/Resources",
+				"GitHub:CodeEditorLand/SetupBiome",
+			])}
+		/>
+	</table>
+</>

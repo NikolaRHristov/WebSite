@@ -1,0 +1,31 @@
+---
+import Dependency from "@Component/Readme/Heading/Dependency.astro";
+import Row from "@Component/Readme/Row.astro";
+---
+
+<>
+	<table>
+		<Dependency />
+
+		<Row
+			Package={new Set([
+				"GitHub:CodeEditorLand/AriaQuery",
+				"GitHub:CodeEditorLand/BenchJavascriptLinter",
+				"GitHub:CodeEditorLand/BenchJavascriptParserWrittenInRust",
+				"GitHub:CodeEditorLand/BenchMarkFiles",
+				"GitHub:CodeEditorLand/BenchNodeJSResolver",
+				"GitHub:CodeEditorLand/EslintPluginOxlint",
+				"GitHub:CodeEditorLand/JavascriptParserInRust",
+				"GitHub:CodeEditorLand/JsonStripComments",
+				"GitHub:CodeEditorLand/MirrorsOxlint",
+				"GitHub:CodeEditorLand/Oxc",
+				"GitHub:CodeEditorLand/OxcAssets",
+				"GitHub:CodeEditorLand/OxcFuzzParser",
+				"GitHub:CodeEditorLand/OxcIntellijPlugin",
+				"GitHub:CodeEditorLand/OxcResolver",
+				"GitHub:CodeEditorLand/UniCodeId",
+				"GitHub:CodeEditorLand/UniCodeIdStart",
+			])}
+		/>
+	</table>
+</>
