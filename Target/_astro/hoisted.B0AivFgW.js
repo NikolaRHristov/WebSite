@@ -12,7 +12,7 @@ const __vite__mapDeps = (
 			"_astro/index.modern.aa8fLSdp.js",
 		]),
 ) => i.map((i) => d[i]);
-import { i as U } from "./index.D6rU_tt3.js";
+import { i as U } from "./index.B1fp56SV.js";
 const B = "modulepreload",
 	W = function (t) {
 		return "/" + t;
@@ -67,7 +67,7 @@ const B = "modulepreload",
 	};
 (
 	await b(async () => {
-		const { initializeApp: t } = await import("./index.esm.WPJ9Gp6O.js");
+		const { initializeApp: t } = await import("./index.esm.C4IwMFMF.js");
 		return { initializeApp: t };
 	}, [])
 ).initializeApp({
@@ -750,4 +750,4 @@ function M(t) {
 		t.preventDefault(), N(i, d);
 	}),
 	U({ prefetchAll: !0 }));
-//# sourceMappingURL=hoisted.Cb4F_YLZ.js.map
+//# sourceMappingURL=hoisted.B0AivFgW.js.map
