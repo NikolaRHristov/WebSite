@@ -19,7 +19,7 @@ export default (await import("astro/config")).defineConfig({
 		}),
 	],
 	experimental: {
-		// directRenderScript: true,
+		directRenderScript: true,
 		clientPrerender: true,
 		globalRoutePriority: true,
 		serverIslands: true,
