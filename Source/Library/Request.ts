@@ -8,8 +8,6 @@ export default async (
 	// biome-ignore lint/suspicious/noExplicitAny:
 ): Promise<OctokitResponse<any, number> | any> => {
 	try {
-		console.log(`Successfully ${Where}`);
-
 		switch (Type) {
 			case "octokit":
 				return await new (await import("@octokit/core")).Octokit({
@@ -19,9 +17,10 @@ export default async (
 				}).request(Where, With);
 
 			default:
-				throw new Error(`Could not ${Where}`);
+				throw new Error(`Cannot ${Where}.`);
 		}
 	} catch (_Error) {
-		console.log(`Could not ${Where}`);
+		console.log(`Cannot ${Where}.`);
+		console.log(_Error);
 	}
 };
