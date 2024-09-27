@@ -3,6 +3,9 @@ import Footer from "@Component/Footer.astro";
 
 import "@Stylesheet/Base.css";
 
+import { Head } from "astro-capo";
+import { ViewTransitions } from "astro:transitions";
+
 const {
 	Font = [],
 	Title = "Nikola Hristov",
@@ -20,9 +23,6 @@ const Link = (Link: string[] = []) =>
 	Link.map(
 		(Link) => `<link rel="stylesheet" type="text/css" href="${Link}" />`,
 	).join("\n");
-
-import { Head } from "astro-capo";
-import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>

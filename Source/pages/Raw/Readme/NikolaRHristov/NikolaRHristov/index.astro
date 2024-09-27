@@ -1,17 +1,14 @@
 ---
-import type Cell from "../../../../../Type/Cell.js";
-
+import Land from "@Component/Readme/CodeEditorLand/Dependency/Land.astro";
+import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astro";
 import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
 import Table from "@Component/Readme/Table.astro";
 
-import Land from "@Component/Readme/CodeEditorLand/Dependency/Land.astro";
-import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astro";
+import type Cell from "../../../../../Type/Cell.js";
 ---
 
 <>
-	
-
 	<Table>
 		<tr>
 			<td colspan="4">
@@ -25,7 +22,7 @@ import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astr
 				</h1>
 			</td>
 		</tr>
-		
+
 		<Land Open="true" />
 
 		<EcoSystem Open="true" />

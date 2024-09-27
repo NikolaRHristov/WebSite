@@ -117,40 +117,42 @@ export default (async (...Option: Parameters<Interface>) => {
 						: Object.keys(Package).at(0)?.split(":")[1];
 
 				const JSONCargo = await (
-					await fetch(`HTTPS://Crates.IO/api/v1/crates/${Crate}`)
+					await fetch(`https://crates.io/api/v1/crates/${Crate}`)
 				).json();
 
 				console.log(JSONCargo);
 
-				GitHub = (JSONCargo?.crate?.repository ?? "")
-					?.replace(Regex.GitHubURL, "")
-					?.replace("#readme", "")
-					?.replace(".git", "");
+				if (!JSONCargo.errors) {
+					GitHub = (JSONCargo?.crate?.repository ?? "")
+						?.replace(Regex.GitHubURL, "")
+						?.replace("#readme", "")
+						?.replace(".git", "");
 
-				Items.add({
-					Link: JSONCargo?.crate?.repository ?? "",
-					Name: JSONCargo?.crate?.description ?? "",
-					Badge: new Set<Badge>([
-						{
-							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
-							Link: `HTTPS://GitHub.Com/${GitHub}/actions/workflows/Rust.yml`,
-							Alt: "Build",
-						},
-						{
-							Link: `HTTPS://Crates.IO/crates/${JSONCargo?.crate?.name}`,
-							Image: `https://img.shields.io/crates/v/${JSONCargo?.crate?.name}?label=Version&logo=rust`,
-							Alt: "Version",
-						},
-						{
-							Link: `HTTPS://Crates.IO/crates/${JSONCargo?.crate?.name}`,
-							Image: `https://img.shields.io/crates/d/${JSONCargo?.crate?.name}?label=Download&logo=rust`,
-							Alt: "Download",
+					Items.add({
+						Link: JSONCargo?.crate?.repository ?? "",
+						Name: JSONCargo?.crate?.description ?? "",
+						Badge: new Set<Badge>([
+							{
+								Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
+								Link: `HTTPS://GitHub.Com/${GitHub}/actions/workflows/Rust.yml`,
+								Alt: "Build",
+							},
+							{
+								Link: `https://crates.io/crates/${JSONCargo?.crate?.name}`,
+								Image: `https://img.shields.io/crates/v/${JSONCargo?.crate?.name}?label=Version&logo=rust`,
+								Alt: "Version",
+							},
+							{
+								Link: `https://crates.io/crates/${JSONCargo?.crate?.name}`,
+								Image: `https://img.shields.io/crates/d/${JSONCargo?.crate?.name}?label=Download&logo=rust`,
+								Alt: "Download",
 
-							Float: true,
-						},
-					]),
-					GitHub,
-				});
+								Float: true,
+							},
+						]),
+						GitHub,
+					});
+				}
 			}
 		} catch (_Error) {
 			console.log(`Package cargo: ${Package}`);

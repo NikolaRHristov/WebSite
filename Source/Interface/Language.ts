@@ -1,3 +1,5 @@
+import type { ImageMetadata } from "astro";
+
 /**
  * @module Parse
  *
@@ -9,5 +11,3 @@ export default interface Interface {
 	Name: string;
 	BoC: string;
 }
-
-import type { ImageMetadata } from "astro";

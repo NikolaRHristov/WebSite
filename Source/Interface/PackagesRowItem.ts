@@ -1,3 +1,6 @@
+import type Badge from "../Interface/Badge.js";
+import type Language from "../Interface/Language.js";
+
 /**
  * @module Parse
  *
@@ -15,6 +18,3 @@ export default interface Interface {
 
 	Language?: Set<Language>;
 }
-
-import type Badge from "../Interface/Badge.js";
-import type Language from "../Interface/Language.js";

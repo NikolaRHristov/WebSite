@@ -1,3 +1,5 @@
+import type Interface from "../Interface/Match.js";
+
 /**
  * @module Match
  *
@@ -14,5 +16,3 @@ export default ((...Option: Parameters<Interface>) => {
 			return false;
 	}
 }) satisfies Interface as Interface;
-
-import type Interface from "../Interface/Match.js";

@@ -1,20 +1,33 @@
 import type { OctokitResponse } from "@octokit/types";
 
+/**
+ * @module Request
+ *
+ */
 export default async (
 	Where: string,
-	// biome-ignore lint/suspicious/noExplicitAny:
-	With: any = {},
+	With = {},
 	Type = "octokit",
 	// biome-ignore lint/suspicious/noExplicitAny:
 ): Promise<OctokitResponse<any, number> | any> => {
 	try {
 		switch (Type) {
-			case "octokit":
+			case "octokit": {
 				return await new (await import("@octokit/core")).Octokit({
 					auth: (
 						await import("@Library/Environment.js")
 					).default.parse(process.env).Token,
-				}).request(Where, With);
+				}).request(
+					Where,
+					(await import("deepmerge-ts")).deepmerge(With, {
+						headers: {
+							"If-None-Match": (await import("etag")).default(
+								Where,
+							),
+						},
+					}),
+				);
+			}
 
 			default:
 				throw new Error(`Cannot ${Where}.`);
