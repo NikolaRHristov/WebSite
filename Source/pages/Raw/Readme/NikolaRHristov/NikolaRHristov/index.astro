@@ -1,6 +1,5 @@
 ---
-import Land from "@Component/Readme/CodeEditorLand/Dependency/Land.astro";
-import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astro";
+import Land from "@Component/Readme/CodeEditorLand/Land.astro";
 import Heading from "@Component/Readme/Heading.astro";
 import Row from "@Component/Readme/Row.astro";
 import Table from "@Component/Readme/Table.astro";
@@ -23,9 +22,7 @@ import type Cell from "../../../../../Type/Cell.js";
 			</td>
 		</tr>
 
-		<Land Open="true" />
-
-		<EcoSystem Open="true" />
+		<Land Open={true} />
 
 		<Heading
 			AltIcon="NPM"

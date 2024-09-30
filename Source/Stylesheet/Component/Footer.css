@@ -11,7 +11,7 @@
 
 	a {
 		text-underline-position: under;
-		--text-shadow-color: #eaeaea;
+		--text-shadow-color: theme("colors.white");
 		text-shadow:
 			-1px 1px var(--text-shadow-color),
 			-1px 2px var(--text-shadow-color),
@@ -33,11 +33,5 @@
 
 	.icon {
 		@apply h-5 w-5;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		a {
-			--text-shadow-color: #151515;
-		}
 	}
 }

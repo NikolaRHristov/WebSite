@@ -51,7 +51,7 @@ run the Tauri app [`Mountain`](./Target/release/Mountain.exe)
 graph TD
     A[Top Repo: EcoSystem]
 
-    subgraph Elements
+    subgraph Element
         subgraph Sky
             D[Astro Website: Sky]
             subgraph Public

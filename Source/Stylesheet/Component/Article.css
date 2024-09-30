@@ -8,7 +8,7 @@
 	a,
 	.underline {
 		text-underline-position: under;
-		--text-shadow-color: white;
+		--text-shadow-color: theme("colors.white");
 		text-shadow:
 			-1px 1px var(--text-shadow-color),
 			-1px 2px var(--text-shadow-color),

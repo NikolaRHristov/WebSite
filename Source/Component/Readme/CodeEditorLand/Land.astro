@@ -8,16 +8,26 @@ const { Open } = Astro.props;
 
 <>
 	<Table {Open}>
-		<Heading Emoji="🌿" Text="EcoSystem —" />
+		<Heading
+			DarkIcon="https://playform.cloud/Dark/Image/GitHub/Land.svg"
+			LightIcon="https://playform.cloud/Image/GitHub/Land.svg"
+			Text="Land —"
+		/>
 
 		<Row
 			Package={new Set([
+				"GitHub:CodeEditorLand/Dependency",
+				"GitHub:CodeEditorLand/DependencyLandCargo",
+				"GitHub:CodeEditorLand/DependencyLandDependency",
+				"GitHub:CodeEditorLand/DependencyLandNPM",
 				"GitHub:CodeEditorLand/Echo",
 				"GitHub:CodeEditorLand/EcoSystem",
+				"GitHub:CodeEditorLand/Editor",
 				"GitHub:CodeEditorLand/Element",
 				"GitHub:CodeEditorLand/Mountain",
 				"GitHub:CodeEditorLand/River",
 				"GitHub:CodeEditorLand/Sky",
+				"GitHub:CodeEditorLand/Sublet",
 				"GitHub:CodeEditorLand/Sun",
 				"GitHub:CodeEditorLand/Wind",
 			])}
