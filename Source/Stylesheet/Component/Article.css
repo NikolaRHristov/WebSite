@@ -1,5 +1,5 @@
 .article {
-	@apply prose prose-slate dark:prose-invert prose-h1:font-black mx-auto;
+	@apply prose prose-slate prose-h1:font-black mx-auto;
 
 	.data-footnote-backref {
 		@apply font-sans no-underline;

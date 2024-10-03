@@ -60,11 +60,9 @@ const Link = (Link: string[] = []) =>
 			@import "@Stylesheet/Global.css";
 		</style>
 
-		<slot name="styles" />
+		<slot name="Head" />
 
 		<Fragment set:html={Link(Font.map((Font: any) => Font))} />
-
-		<slot name="scripts" />
 
 		<!-- Favicon -->
 		<link
