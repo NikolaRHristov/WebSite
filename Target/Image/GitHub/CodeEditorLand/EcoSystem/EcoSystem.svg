@@ -1,3 +1,310 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2441.056" height="4415.955" class="excalidraw-svg"><defs><style>@font-face{font-family:&quot;Virgil&quot;;src:url(https://excalidraw.com/Virgil.woff2)}@font-face{font-family:&quot;Cascadia&quot;;src:url(https://excalidraw.com/Cascadia.woff2)}@font-face{font-family:&quot;Assistant&quot;;src:url(https://excalidraw.com/Assistant-Regular.woff2)}</style></defs><path fill="#1e1e1e" d="M0 0h2441.056v4415.955H0z"/><text x="58.571" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(973.182 2906.148)">📣 Echo</text><text x="90" y="18.4" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="20" style="white-space:pre" text-anchor="middle" transform="translate(941.754 3049.443)">WebSocket library</text><text x="90" y="41.4" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="20" style="white-space:pre" text-anchor="middle" transform="translate(941.754 3049.443)">in Rust</text><path fill="none" stroke="#f08c00" stroke-linecap="round" stroke-width="4" d="M841.468 2842.91h380.57m-380.57 0h380.57m0 0c21.34 0 32 10.67 32 32m-32-32c21.34 0 32 10.67 32 32m0 0v380.57m0-380.57v380.57m0 0c0 21.34-10.66 32-32 32m32-32c0 21.34-10.66 32-32 32m0 0h-380.57m380.57 0h-380.57m0 0c-21.33 0-32-10.66-32-32m32 32c-21.33 0-32-10.66-32-32m0 0v-380.57m0 380.57v-380.57m0 0c0-21.33 10.67-32 32-32m-32 32c0-21.33 10.67-32 32-32"/><text x="228.758" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(1442.523 2942.974)">Allows for concurrent communication</text><text x="228.758" y="57.961" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(1442.523 2942.974)">between the
-			two</text><text x="90" y="18.4" fill="#f08c00" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="20" style="white-space:pre" text-anchor="middle" transform="translate(941.754 3205.856)">tokio::tungstenite</text><text x="58.571" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(1625.505 122.933)">🌬️ Wind</text><text x="90" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(1594.076 214.308)">TypeScript</text><text x="90" y="57.961" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(1594.076 214.308)">Application</text><path fill="none" stroke="#f08c00" stroke-linecap="round" stroke-width="4" d="M1479.568 10h409.02m-409.02 0h409.02m0 0c21.33 0 32 10.67 32 32m-32-32c21.33 0 32 10.67 32 32m0 0v409.02m0-409.02v409.02m0 0c0 21.33-10.67 32-32 32m32-32c0 21.33-10.67 32-32 32m0 0h-409.02m409.02 0h-409.02m0 0c-21.33 0-32-10.67-32-32m32 32c-21.33 0-32-10.67-32-32m0 0V42m0 409.02V42m0 0c0-21.33 10.67-32 32-32m-32 32c0-21.33 10.67-32 32-32"/><text x="105.055" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(2094.526 155.949)">Binds everything</text><text x="90" y="18.4" fill="#f08c00" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="20" style="white-space:pre" text-anchor="middle" transform="translate(1594.076 365.494)">solid-js</text><text x="58.571" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(178.579 126.743)">🌌 Sky</text><text x="90" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(147.425 218.117)">Astro</text><text x="90" y="57.961" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(147.425 218.117)">Application</text><path fill="none" stroke="#f08c00" stroke-linecap="round" stroke-width="4" d="M42 17.873h400.89m-400.89 0h400.89m0 0c21.33 0 32 10.67 32 32m-32-32c21.33 0 32 10.67 32 32m0 0v400.89m0-400.89v400.89m0 0c0 21.33-10.67 32-32 32m32-32c0 21.33-10.67 32-32 32m0 0H42m400.89 0H42m0 0c-21.33 0-32-10.67-32-32m32 32c-21.33 0-32-10.67-32-32m0 0V49.873m0 400.89V49.873m0 0c0-21.33 10.67-32 32-32m-32 32c0-21.33 10.67-32 32-32"/><text x="108.165" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(621.337 171.187)">Renders the view</text><text x="90" y="18.4" fill="#f08c00" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="20" style="white-space:pre" text-anchor="middle" transform="translate(146.876 369.304)">astro</text><path fill="none" stroke="#f08c00" stroke-linecap="round" stroke-width="4" d="M836.897 1036.441h389.71m-389.71 0h389.71m0 0c21.34 0 32 10.67 32 32m-32-32c21.34 0 32 10.67 32 32m0 0v389.71m0-389.71v389.71m0 0c0 21.34-10.66 32-32 32m32-32c0 21.34-10.66 32-32 32m0 0h-389.71m389.71 0h-389.71m0 0c-21.33 0-32-10.66-32-32m32 32c-21.33 0-32-10.66-32-32m0 0v-389.71m0 389.71v-389.71m0 0c0-21.33 10.67-32 32-32m-32 32c0-21.33 10.67-32 32-32"/><text x="87.714" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(944.04 1122.809)">⛰️ Mountain</text><text x="95.143" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(936.611 1231.098)">Tauri</text><text x="95.143" y="57.961" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(936.611 1231.098)">Application</text><text x="150.206" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(1398.437 1146.056)">Bundles all of it together</text><text x="90" y="18.4" fill="#f08c00" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="20" style="white-space:pre" text-anchor="middle" transform="translate(941.754 1402.856)">tauri</text><text x="58.571" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(1631.854 3989.897)">☀️ Sun</text><text x="90" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(1600.425 4129.374)">Async Rust</text><text x="90" y="57.961" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(1600.425 4129.374)">Library</text><path fill="none" stroke="#f08c00" stroke-linecap="round" stroke-width="4" d="M1479.568 3918.717h421.71m-421.71 0h421.71m0 0c21.34 0 32 10.67 32 32m-32-32c21.34 0 32 10.67 32 32m0 0v421.71m0-421.71v421.71m0 0c0 21.34-10.66 32-32 32m32-32c0 21.34-10.66 32-32 32m0 0h-421.71m421.71 0h-421.71m0 0c-21.33 0-32-10.66-32-32m32 32c-21.33 0-32-10.66-32-32m0 0v-421.71m0 421.71v-421.71m0 0c0-21.33 10.67-32 32-32m-32 32c0-21.33 10.67-32 32-32"/><text x="90" y="18.4" fill="#f08c00" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="20" style="white-space:pre" text-anchor="middle" transform="translate(1600.425 4285.167)">tokio::fs</text><text x="188.022" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(2055.011 4040.69)">Writes files onto the file system</text><text x="58.571" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(217.905 3980.326)">🌊 River</text><text x="90" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(186.476 4130.136)">Async Rust</text><text x="90" y="57.961" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(186.476 4130.136)">Library</text><path fill="none" stroke="#f08c00" stroke-linecap="round" stroke-width="4" d="M64.857 3918.717h423.24m-423.24 0h423.24m0 0c21.33 0 32 10.67 32 32m-32-32c21.33 0 32 10.67 32 32m0 0v423.24m0-423.24v423.24m0 0c0 21.33-10.67 32-32 32m32-32c0 21.33-10.67 32-32 32m0 0H64.857m423.24 0H64.857m0 0c-21.33 0-32-10.67-32-32m32 32c-21.33 0-32-10.67-32-32m0 0v-423.24m0 423.24v-423.24m0 0c0-21.33 10.67-32 32-32m-32 32c0-21.33 10.67-32 32-32"/><text x="90" y="18.4" fill="#f08c00" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="20" style="white-space:pre" text-anchor="middle" transform="translate(186.476 4280.13)">dashmap</text><text x="147.841" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(651.557 4041.279)">Loads files into memory</text><path fill="none" stroke="#1971c2" stroke-linecap="round" stroke-width="4" d="M1130.013 1590.548v260.32m0-260.32v260.32m-8.55-23.49c3.37 9.24 6.73 18.49 8.55 23.49m-8.55-23.49c2.14 5.86 4.27 11.73 8.55 23.49m8.55-23.49c-3.37 9.24-6.73 18.49-8.55 23.49m8.55-23.49c-2.14 5.86-4.27 11.73-8.55 23.49m-216.794 3.807v-259.05m0 259.05v-259.05m8.55 23.49c-2.24-6.14-4.47-12.29-8.55-23.49m8.55 23.49c-1.72-4.72-3.44-9.44-8.55-23.49m-8.55 23.49c2.24-6.14 4.47-12.29 8.55-23.49m-8.55 23.49c1.72-4.72 3.44-9.44 8.55-23.49m-259.192 391.719h755.45m-755.45 0h755.45m0 0c21.34 0 32 10.67 32 32m-32-32c21.34 0 32 10.67 32 32m0 0v296.75m0-296.75v296.75m0 0c0 21.33-10.66 32-32 32m32-32c0 21.33-10.66 32-32 32m0 0h-755.45m755.45 0h-755.45m0 0c-21.33 0-32-10.67-32-32m32 32c-21.33 0-32-10.67-32-32m0 0v-296.75m0 296.75v-296.75m0 0c0-21.33 10.67-32 32-32m-32 32c0-21.33 10.67-32 32-32"/><text x="246.395" y="25.761" fill="#fff" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" text-anchor="middle" transform="translate(785.36 2087.22)">Implements The
-			Worker Stealer Pattern</text><path fill="none" stroke="#1971c2" stroke-linecap="round" stroke-width="4" d="M898.386 2481.976v214.6m0-214.6v214.6m-8.55-23.49c3.26 8.96 6.52 17.92 8.55 23.49m-8.55-23.49c2.54 6.98 5.08 13.95 8.55 23.49m8.55-23.49c-3.26 8.96-6.52 17.92-8.55 23.49m8.55-23.49c-2.54 6.98-5.08 13.95-8.55 23.49m223.333-1.266v-219.68m0 219.68v-219.68m8.55 23.49c-2.62-7.2-5.24-14.4-8.55-23.49m8.55 23.49c-2.92-8.02-5.84-16.03-8.55-23.49m-8.55 23.49c2.62-7.2 5.24-14.4 8.55-23.49m-8.55 23.49c2.92-8.02 5.84-16.03 8.55-23.49"/><text y="25.761" fill="#f08c00" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" transform="translate(727.442 2230.854)">Async</text><text y="25.761" fill="#f08c00" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" transform="translate(953.933 2230.854)">Concurrent</text><text y="25.761" fill="#f08c00" dominant-baseline="alphabetic" font-family="Helvetica, Segoe UI Emoji" font-size="28" style="white-space:pre" transform="translate(1242.686 2230.854)">Parallel</text><path fill="none" stroke="#f08c00" stroke-linecap="round" stroke-width="2" d="M489.288 609.999c48.72 48.29 244.39 241.23 293.01 289.76m-291.32-290.41c48.64 48.34 242.53 243.17 290.69 291.46M1536.3 611.042c-47.18 47.2-237.27 237.55-284.7 284.87m283.56-282.74c-46.71 46.77-233.79 233.74-281.2 280.88m293.983 2852.312c-48.47-48.52-241.15-244.22-289.38-292.96m291 292.45c-48.58-48.29-242.91-242.75-291.46-291.19M504.37 3743.442c47.14-46.96 235.62-235.95 282.92-283.28m-283.99 282.66c46.94-47.23 235.73-237.3 283.16-284.28"/></svg>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2441.0560561340008 4415.95503210643"
+	width="2441.0560561340008" height="4415.95503210643" class="excalidraw-svg">
+	<!-- svg-source:excalidraw -->
+
+	<defs>
+		<style class="style-fonts">
+			@font-face {
+				font-family: "Virgil";
+				src: url("https://excalidraw.com/Virgil.woff2");
+			}
+
+			@font-face {
+				font-family: "Cascadia";
+				src: url("https://excalidraw.com/Cascadia.woff2");
+			}
+
+			@font-face {
+				font-family: "Assistant";
+				src: url("https://excalidraw.com/Assistant-Regular.woff2");
+			}
+		</style>
+
+	</defs>
+	<rect x="0" y="0" width="2441.0560561340008" height="4415.95503210643" fill="#1e1e1e" />
+	<g transform="translate(973.1823231660433 2906.1483301227336) rotate(0 58.571380615234375 16.09999999999991)"><text
+			x="58.571380615234375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">📣 Echo</text></g>
+	<g transform="translate(941.7538563691683 3049.442649792867) rotate(0 89.99984741210938 23)"><text
+			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">WebSocket library</text><text x="89.99984741210938" y="41.400390625"
+			font-family="Helvetica, Segoe UI Emoji" font-size="20px" fill="#ffffff" text-anchor="middle"
+			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">in Rust</text></g>
+	<g stroke-linecap="round"
+		transform="translate(809.4676014863559 2842.9103127131375) rotate(0 222.28610229492182 222.28610229492188)">
+		<path
+			d="M32 0 C124.28 0, 216.55 0, 412.57 0 M32 0 C165.1 0, 298.2 0, 412.57 0 M412.57 0 C433.91 0, 444.57 10.67, 444.57 32 M412.57 0 C433.91 0, 444.57 10.67, 444.57 32 M444.57 32 C444.57 136.93, 444.57 241.87, 444.57 412.57 M444.57 32 C444.57 129.86, 444.57 227.73, 444.57 412.57 M444.57 412.57 C444.57 433.91, 433.91 444.57, 412.57 444.57 M444.57 412.57 C444.57 433.91, 433.91 444.57, 412.57 444.57 M412.57 444.57 C319.51 444.57, 226.45 444.57, 32 444.57 M412.57 444.57 C292.83 444.57, 173.08 444.57, 32 444.57 M32 444.57 C10.67 444.57, 0 433.91, 0 412.57 M32 444.57 C10.67 444.57, 0 433.91, 0 412.57 M0 412.57 C0 288.99, 0 165.41, 0 32 M0 412.57 C0 309.99, 0 207.4, 0 32 M0 32 C0 10.67, 10.67 0, 32 0 M0 32 C0 10.67, 10.67 0, 32 0"
+			stroke="#f08c00" stroke-width="4" fill="none" />
+	</g>
+	<g transform="translate(1442.523139131876 2942.9737560124904) rotate(0 228.7578125 32.200000000000045)"><text
+			x="228.7578125" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">Allows for concurrent communication</text><text x="228.7578125"
+			y="57.96054687499999" font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff"
+			text-anchor="middle" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">between the
+			two</text></g>
+	<g transform="translate(941.7538563691683 3205.856303139338) rotate(0 89.99984741210938 11.5)"><text
+			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
+			fill="#f08c00" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">tokio::tungstenite</text></g>
+	<g transform="translate(1625.5046315668562 122.93314985245001) rotate(0 58.571380615234375 16.100000000000023)">
+		<text x="58.571380615234375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">🌬️ Wind</text>
+	</g>
+	<g transform="translate(1594.0761647699812 214.3078904893664) rotate(0 89.99984741210938 32.19999999999999)"><text
+			x="89.99984741210938" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">TypeScript</text><text x="89.99984741210938" y="57.96054687499999"
+			font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff" text-anchor="middle"
+			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Application</text></g>
+	<g stroke-linecap="round"
+		transform="translate(1447.5681216927242 10) rotate(0 236.50789048936645 236.50789048936642)">
+		<path
+			d="M32 0 C192.71 0, 353.42 0, 441.02 0 M32 0 C188.86 0, 345.72 0, 441.02 0 M441.02 0 C462.35 0, 473.02 10.67, 473.02 32 M441.02 0 C462.35 0, 473.02 10.67, 473.02 32 M473.02 32 C473.02 154.47, 473.02 276.94, 473.02 441.02 M473.02 32 C473.02 116.85, 473.02 201.69, 473.02 441.02 M473.02 441.02 C473.02 462.35, 462.35 473.02, 441.02 473.02 M473.02 441.02 C473.02 462.35, 462.35 473.02, 441.02 473.02 M441.02 473.02 C347.35 473.02, 253.69 473.02, 32 473.02 M441.02 473.02 C297.01 473.02, 153.01 473.02, 32 473.02 M32 473.02 C10.67 473.02, 0 462.35, 0 441.02 M32 473.02 C10.67 473.02, 0 462.35, 0 441.02 M0 441.02 C0 358.82, 0 276.63, 0 32 M0 441.02 C0 358.81, 0 276.6, 0 32 M0 32 C0 10.67, 10.67 0, 32 0 M0 32 C0 10.67, 10.67 0, 32 0"
+			stroke="#f08c00" stroke-width="4" fill="none" />
+	</g>
+	<g transform="translate(2094.5260378173916 155.94876128908209) rotate(0 105.0546875 16.100000000000023)"><text
+			x="105.0546875" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">Binds everything</text></g>
+	<g transform="translate(1594.0761647699812 365.4941105312774) rotate(0 89.99984741210938 11.5)"><text
+			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
+			fill="#f08c00" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">solid-js</text></g>
+	<g transform="translate(178.57896872064714 126.74269303821404) rotate(0 58.571380615234375 16.100000000000023)">
+		<text x="58.571380615234375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">🌌 Sky</text>
+	</g>
+	<g transform="translate(147.42451428610173 218.11743367513043) rotate(0 89.99984741210938 32.19999999999999)"><text
+			x="89.99984741210938" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">Astro</text><text x="89.99984741210938" y="57.96054687499999"
+			font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff" text-anchor="middle"
+			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Application</text></g>
+	<g stroke-linecap="round"
+		transform="translate(10 17.873101128472513) rotate(0 232.44433254665785 232.44433254665785)">
+		<path
+			d="M32 0 C123.44 0, 214.88 0, 432.89 0 M32 0 C142.28 0, 252.55 0, 432.89 0 M432.89 0 C454.22 0, 464.89 10.67, 464.89 32 M432.89 0 C454.22 0, 464.89 10.67, 464.89 32 M464.89 32 C464.89 150.07, 464.89 268.14, 464.89 432.89 M464.89 32 C464.89 168.88, 464.89 305.76, 464.89 432.89 M464.89 432.89 C464.89 454.22, 454.22 464.89, 432.89 464.89 M464.89 432.89 C464.89 454.22, 454.22 464.89, 432.89 464.89 M432.89 464.89 C327.43 464.89, 221.98 464.89, 32 464.89 M432.89 464.89 C320.75 464.89, 208.62 464.89, 32 464.89 M32 464.89 C10.67 464.89, 0 454.22, 0 432.89 M32 464.89 C10.67 464.89, 0 454.22, 0 432.89 M0 432.89 C0 303.04, 0 173.18, 0 32 M0 432.89 C0 329.87, 0 226.86, 0 32 M0 32 C0 10.67, 10.67 0, 32 0 M0 32 C0 10.67, 10.67 0, 32 0"
+			stroke="#f08c00" stroke-width="4" fill="none" />
+	</g>
+	<g transform="translate(621.3369157114962 171.18693403213763) rotate(0 108.1650390625 16.100000000000023)"><text
+			x="108.1650390625" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">Renders the view</text></g>
+	<g transform="translate(146.87648956144255 369.3036537170413) rotate(0 89.99984741210938 11.5)"><text
+			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
+			fill="#f08c00" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">astro</text></g>
+	<g stroke-linecap="round"
+		transform="translate(804.8965565644808 1036.441235739087) rotate(0 226.85714721679688 226.85714721679688)">
+		<path
+			d="M32 0 C138.87 0, 245.73 0, 421.71 0 M32 0 C142.58 0, 253.16 0, 421.71 0 M421.71 0 C443.05 0, 453.71 10.67, 453.71 32 M421.71 0 C443.05 0, 453.71 10.67, 453.71 32 M453.71 32 C453.71 177.89, 453.71 323.77, 453.71 421.71 M453.71 32 C453.71 140.95, 453.71 249.9, 453.71 421.71 M453.71 421.71 C453.71 443.05, 443.05 453.71, 421.71 453.71 M453.71 421.71 C453.71 443.05, 443.05 453.71, 421.71 453.71 M421.71 453.71 C306.21 453.71, 190.71 453.71, 32 453.71 M421.71 453.71 C322.03 453.71, 222.34 453.71, 32 453.71 M32 453.71 C10.67 453.71, 0 443.05, 0 421.71 M32 453.71 C10.67 453.71, 0 443.05, 0 421.71 M0 421.71 C0 305.13, 0 188.54, 0 32 M0 421.71 C0 305.32, 0 188.93, 0 32 M0 32 C0 10.67, 10.67 0, 32 0 M0 32 C0 10.67, 10.67 0, 32 0"
+			stroke="#f08c00" stroke-width="4" fill="none" />
+	</g>
+	<g transform="translate(944.0394093476839 1122.8087196955603) rotate(0 87.71429443359375 16.099999999999994)"><text
+			x="87.71429443359375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">⛰️ Mountain</text></g>
+	<g transform="translate(936.6109730683871 1231.0983829558838) rotate(0 95.14273071289061 32.19999999999999)"><text
+			x="95.14273071289061" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">Tauri</text><text x="95.14273071289061" y="57.96054687499999"
+			font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff" text-anchor="middle"
+			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Application</text></g>
+	<g transform="translate(1398.4366562794733 1146.0563606087965) rotate(0 150.20605468750003 16.099999999999994)">
+		<text x="150.2060546875" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">Bundles all of it together</text>
+	</g>
+	<g transform="translate(941.7538563691683 1402.8556753491594) rotate(0 89.99984741210938 11.5)"><text
+			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
+			fill="#f08c00" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">tauri</text></g>
+	<g transform="translate(1631.853644153662 3989.8974470505927) rotate(0 58.571380615234375 16.09999999999991)"><text
+			x="58.571380615234375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">☀️ Sun</text></g>
+	<g transform="translate(1600.425177356787 4129.37376922123) rotate(0 89.99984741210938 32.200000000000045)"><text
+			x="89.99984741210938" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">Async Rust</text><text x="89.99984741210938" y="57.96054687499999"
+			font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff" text-anchor="middle"
+			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Library</text></g>
+	<g stroke-linecap="round"
+		transform="translate(1447.5681216927242 3918.716866145058) rotate(0 242.8569030761721 242.8569030761721)">
+		<path
+			d="M32 0 C147.59 0, 263.17 0, 453.71 0 M32 0 C171.7 0, 311.4 0, 453.71 0 M453.71 0 C475.05 0, 485.71 10.67, 485.71 32 M453.71 0 C475.05 0, 485.71 10.67, 485.71 32 M485.71 32 C485.71 168.83, 485.71 305.66, 485.71 453.71 M485.71 32 C485.71 189.31, 485.71 346.62, 485.71 453.71 M485.71 453.71 C485.71 475.05, 475.05 485.71, 453.71 485.71 M485.71 453.71 C485.71 475.05, 475.05 485.71, 453.71 485.71 M453.71 485.71 C329.95 485.71, 206.19 485.71, 32 485.71 M453.71 485.71 C327.83 485.71, 201.94 485.71, 32 485.71 M32 485.71 C10.67 485.71, 0 475.05, 0 453.71 M32 485.71 C10.67 485.71, 0 475.05, 0 453.71 M0 453.71 C0 363.27, 0 272.82, 0 32 M0 453.71 C0 347.33, 0 240.95, 0 32 M0 32 C0 10.67, 10.67 0, 32 0 M0 32 C0 10.67, 10.67 0, 32 0"
+			stroke="#f08c00" stroke-width="4" fill="none" />
+	</g>
+	<g transform="translate(1600.425177356787 4285.166506449381) rotate(0 89.99984741210938 11.5)"><text
+			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
+			fill="#f08c00" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">tokio::fs</text></g>
+	<g transform="translate(2055.0111342590008 4040.6907587600417) rotate(0 188.0224609375 16.09999999999991)"><text
+			x="188.0224609375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">Writes files onto the file system</text></g>
+	<g transform="translate(217.90475802951403 3980.3263750019814) rotate(0 58.571380615234375 16.09999999999991)"><text
+			x="58.571380615234375" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">🌊 River</text></g>
+	<g transform="translate(186.47629123263903 4130.1359491257435) rotate(0 89.99984741210938 32.200000000000045)"><text
+			x="89.99984741210938" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">Async Rust</text><text x="89.99984741210938" y="57.96054687499999"
+			font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff" text-anchor="middle"
+			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Library</text></g>
+	<g stroke-linecap="round"
+		transform="translate(32.8570556640625 3918.716866145058) rotate(0 243.6190829806859 243.61908298068602)">
+		<path
+			d="M32 0 C182.95 0, 333.89 0, 455.24 0 M32 0 C163.29 0, 294.57 0, 455.24 0 M455.24 0 C476.57 0, 487.24 10.67, 487.24 32 M455.24 0 C476.57 0, 487.24 10.67, 487.24 32 M487.24 32 C487.24 142.31, 487.24 252.62, 487.24 455.24 M487.24 32 C487.24 117.45, 487.24 202.89, 487.24 455.24 M487.24 455.24 C487.24 476.57, 476.57 487.24, 455.24 487.24 M487.24 455.24 C487.24 476.57, 476.57 487.24, 455.24 487.24 M455.24 487.24 C315.92 487.24, 176.6 487.24, 32 487.24 M455.24 487.24 C368 487.24, 280.76 487.24, 32 487.24 M32 487.24 C10.67 487.24, 0 476.57, 0 455.24 M32 487.24 C10.67 487.24, 0 476.57, 0 455.24 M0 455.24 C0 308.48, 0 161.73, 0 32 M0 455.24 C0 301.64, 0 148.05, 0 32 M0 32 C0 10.67, 10.67 0, 32 0 M0 32 C0 10.67, 10.67 0, 32 0"
+			stroke="#f08c00" stroke-width="4" fill="none" />
+	</g>
+	<g transform="translate(186.47629123263903 4280.130666218107) rotate(0 89.99984741210938 11.5)"><text
+			x="89.99984741210938" y="18.400390625" font-family="Helvetica, Segoe UI Emoji" font-size="20px"
+			fill="#f08c00" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">dashmap</text></g>
+	<g transform="translate(651.557160978107 4041.278794706842) rotate(0 147.8408203125 16.09999999999991)"><text
+			x="147.8408203125" y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">Loads files into memory</text></g>
+	<g stroke-linecap="round">
+		<g transform="translate(1130.0132742767903 1590.547744266571) rotate(0 -7.105427357601002e-15 130.15869140625)">
+			<path d="M0 0 C0 43.39, 0 216.93, 0 260.32 M0 0 C0 43.39, 0 216.93, 0 260.32" stroke="#1971c2"
+				stroke-width="4" fill="none" />
+		</g>
+		<g transform="translate(1130.0132742767903 1590.547744266571) rotate(0 -7.105427357601002e-15 130.15869140625)">
+			<path
+				d="M-8.55 236.83 C-5.18 246.07, -1.82 255.32, 0 260.32 M-8.55 236.83 C-6.41 242.69, -4.28 248.56, 0 260.32"
+				stroke="#1971c2" stroke-width="4" fill="none" />
+		</g>
+		<g transform="translate(1130.0132742767903 1590.547744266571) rotate(0 -7.105427357601002e-15 130.15869140625)">
+			<path d="M8.55 236.83 C5.18 246.07, 1.82 255.32, 0 260.32 M8.55 236.83 C6.41 242.69, 4.28 248.56, 0 260.32"
+				stroke="#1971c2" stroke-width="4" fill="none" />
+		</g>
+	</g>
+	<mask />
+	<g stroke-linecap="round">
+		<g transform="translate(913.2187409533061 1854.6746702648347) rotate(0 0 -129.52382405598956)">
+			<path d="M0 0 C0 -43.17, 0 -215.87, 0 -259.05 M0 0 C0 -43.17, 0 -215.87, 0 -259.05" stroke="#1971c2"
+				stroke-width="4" fill="none" />
+		</g>
+		<g transform="translate(913.2187409533061 1854.6746702648347) rotate(0 0 -129.52382405598956)">
+			<path
+				d="M8.55 -235.56 C6.31 -241.7, 4.08 -247.85, 0 -259.05 M8.55 -235.56 C6.83 -240.28, 5.11 -245, 0 -259.05"
+				stroke="#1971c2" stroke-width="4" fill="none" />
+		</g>
+		<g transform="translate(913.2187409533061 1854.6746702648347) rotate(0 0 -129.52382405598956)">
+			<path
+				d="M-8.55 -235.56 C-6.31 -241.7, -4.08 -247.85, 0 -259.05 M-8.55 -235.56 C-6.83 -240.28, -5.11 -245, 0 -259.05"
+				stroke="#1971c2" stroke-width="4" fill="none" />
+		</g>
+	</g>
+	<mask />
+	<g stroke-linecap="round"
+		transform="translate(622.0266733311323 1987.3442525712273) rotate(0 409.7270304501454 180.3752363901291)">
+		<path
+			d="M32 0 C220.44 0, 408.89 0, 787.45 0 M32 0 C195.86 0, 359.73 0, 787.45 0 M787.45 0 C808.79 0, 819.45 10.67, 819.45 32 M787.45 0 C808.79 0, 819.45 10.67, 819.45 32 M819.45 32 C819.45 102.85, 819.45 173.71, 819.45 328.75 M819.45 32 C819.45 123.6, 819.45 215.19, 819.45 328.75 M819.45 328.75 C819.45 350.08, 808.79 360.75, 787.45 360.75 M819.45 328.75 C819.45 350.08, 808.79 360.75, 787.45 360.75 M787.45 360.75 C626.06 360.75, 464.66 360.75, 32 360.75 M787.45 360.75 C575.15 360.75, 362.84 360.75, 32 360.75 M32 360.75 C10.67 360.75, 0 350.08, 0 328.75 M32 360.75 C10.67 360.75, 0 350.08, 0 328.75 M0 328.75 C0 249.25, 0 169.74, 0 32 M0 328.75 C0 235.38, 0 142.02, 0 32 M0 32 C0 10.67, 10.67 0, 32 0 M0 32 C0 10.67, 10.67 0, 32 0"
+			stroke="#1971c2" stroke-width="4" fill="none" />
+	</g>
+	<g transform="translate(785.3591725312776 2087.2194889613565) rotate(0 246.39453125 80.5)"><text x="246.39453125"
+			y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff"
+			text-anchor="middle" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Implements The
+			Worker Stealer Pattern</text><text x="246.39453125" y="57.96054687499999"
+			font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff" text-anchor="middle"
+			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic" /><text x="246.39453125"
+			y="90.160546875" font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff"
+			text-anchor="middle" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic" /><text
+			x="246.39453125" y="122.36054687499998" font-family="Helvetica, Segoe UI Emoji" font-size="28px"
+			fill="#ffffff" text-anchor="middle" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic" /><text x="246.39453125" y="154.56054687499997"
+			font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#ffffff" text-anchor="middle"
+			style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic" /></g>
+	<g stroke-linecap="round">
+		<g
+			transform="translate(898.3856992312345 2481.976238190182) rotate(0 -7.105427357601002e-15 107.3016357421875)">
+			<path d="M0 0 C0 35.77, 0 178.84, 0 214.6 M0 0 C0 35.77, 0 178.84, 0 214.6" stroke="#1971c2"
+				stroke-width="4" fill="none" />
+		</g>
+		<g
+			transform="translate(898.3856992312345 2481.976238190182) rotate(0 -7.105427357601002e-15 107.3016357421875)">
+			<path
+				d="M-8.55 191.11 C-5.29 200.07, -2.03 209.03, 0 214.6 M-8.55 191.11 C-6.01 198.09, -3.47 205.06, 0 214.6"
+				stroke="#1971c2" stroke-width="4" fill="none" />
+		</g>
+		<g
+			transform="translate(898.3856992312345 2481.976238190182) rotate(0 -7.105427357601002e-15 107.3016357421875)">
+			<path d="M8.55 191.11 C5.29 200.07, 2.03 209.03, 0 214.6 M8.55 191.11 C6.01 198.09, 3.47 205.06, 0 214.6"
+				stroke="#1971c2" stroke-width="4" fill="none" />
+		</g>
+	</g>
+	<mask />
+	<g stroke-linecap="round">
+		<g
+			transform="translate(1121.7185498094984 2695.3095715235154) rotate(0 7.105427357601002e-15 -109.84127468532972)">
+			<path d="M0 0 C0 -36.61, 0 -183.07, 0 -219.68 M0 0 C0 -36.61, 0 -183.07, 0 -219.68" stroke="#1971c2"
+				stroke-width="4" fill="none" />
+		</g>
+		<g
+			transform="translate(1121.7185498094984 2695.3095715235154) rotate(0 7.105427357601002e-15 -109.84127468532972)">
+			<path
+				d="M8.55 -196.19 C5.93 -203.39, 3.31 -210.59, 0 -219.68 M8.55 -196.19 C5.63 -204.21, 2.71 -212.22, 0 -219.68"
+				stroke="#1971c2" stroke-width="4" fill="none" />
+		</g>
+		<g
+			transform="translate(1121.7185498094984 2695.3095715235154) rotate(0 7.105427357601002e-15 -109.84127468532972)">
+			<path
+				d="M-8.55 -196.19 C-5.93 -203.39, -3.31 -210.59, 0 -219.68 M-8.55 -196.19 C-5.63 -204.21, -2.71 -212.22, 0 -219.68"
+				stroke="#1971c2" stroke-width="4" fill="none" />
+		</g>
+	</g>
+	<mask />
+	<g transform="translate(727.4422617239859 2230.854428972516) rotate(0 38.1240234375 16.100000000000023)"><text x="0"
+			y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#f08c00"
+			text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Async</text>
+	</g>
+	<g transform="translate(953.9333912812776 2230.854428972516) rotate(0 69.2548828125 16.100000000000023)"><text x="0"
+			y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#f08c00"
+			text-anchor="start" style="white-space: pre;" direction="ltr"
+			dominant-baseline="alphabetic">Concurrent</text></g>
+	<g transform="translate(1242.6862395885696 2230.854428972516) rotate(0 46.689453125 16.100000000000023)"><text x="0"
+			y="25.760546874999996" font-family="Helvetica, Segoe UI Emoji" font-size="28px" fill="#f08c00"
+			text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Parallel</text>
+	</g>
+	<g stroke-linecap="round">
+		<g transform="translate(490.2678825041245 609.2588790028486) rotate(0 145.71432495117188 145.71432495117185)">
+			<path
+				d="M-0.98 0.74 C47.74 49.03, 243.41 241.97, 292.03 290.5 M0.71 0.09 C49.35 48.43, 243.24 243.26, 291.4 291.55"
+				stroke="#f08c00" stroke-width="2" fill="none" />
+		</g>
+	</g>
+	<mask />
+	<g stroke-linecap="round">
+		<g transform="translate(1535.700840675384 611.9717563447499) rotate(0 -141.7144165039063 141.71441650390625)">
+			<path
+				d="M0.6 -0.93 C-46.58 46.27, -236.67 236.62, -284.1 283.94 M-0.54 1.2 C-47.25 47.97, -234.33 234.94, -281.74 282.08"
+				stroke="#f08c00" stroke-width="2" fill="none" />
+		</g>
+	</g>
+	<mask />
+	<g stroke-linecap="round">
+		<g transform="translate(1549.053128193617 3745.354418745631) rotate(0 -145.71432495117188 -145.71432495117188)">
+			<path
+				d="M-1.11 1.01 C-49.58 -47.51, -242.26 -243.21, -290.49 -291.95 M0.51 0.5 C-48.07 -47.79, -242.4 -242.25, -290.95 -290.69"
+				stroke="#f08c00" stroke-width="2" fill="none" />
+		</g>
+	</g>
+	<mask />
+	<g stroke-linecap="round">
+		<g transform="translate(503.6201700223575 3742.64154140373) rotate(0 141.7144165039063 -141.71441650390625)">
+			<path
+				d="M0.75 0.8 C47.89 -46.16, 236.37 -235.15, 283.67 -282.48 M-0.32 0.18 C46.62 -47.05, 235.41 -237.12, 282.84 -284.1"
+				stroke="#f08c00" stroke-width="2" fill="none" />
+		</g>
+	</g>
+	<mask />
+</svg>

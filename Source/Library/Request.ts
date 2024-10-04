@@ -17,16 +17,7 @@ export default async (
 					auth: (
 						await import("@Library/Environment.js")
 					).default.parse(process.env).Token,
-				}).request(
-					Where,
-					(await import("deepmerge-ts")).deepmerge(With, {
-						headers: {
-							"If-None-Match": (await import("etag")).default(
-								Where,
-							),
-						},
-					}),
-				);
+				}).request(Where, With);
 			}
 
 			default:
