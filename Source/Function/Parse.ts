@@ -165,7 +165,7 @@ export default (async (...Option: Parameters<Interface>) => {
 
 export const { default: Match } = await import("@Function/Match.js");
 
-export const { default: Request } = await import("@Library/Request");
+export const { default: Request } = await import("@Function/Request.js");
 
 export const Regex = {
 	GitHub: /GitHub:/,

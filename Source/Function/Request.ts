@@ -15,7 +15,7 @@ export default async (
 			case "octokit": {
 				return await new (await import("@octokit/core")).Octokit({
 					auth: (
-						await import("@Library/Environment.js")
+						await import("@Variable/Environment.js")
 					).default.parse(process.env).Token,
 				}).request(
 					Where,

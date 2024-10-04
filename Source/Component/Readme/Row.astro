@@ -14,7 +14,7 @@ const Items = await Parse(Astro.props.Package);
 ---
 
 {
-	[...(await import("@Library/Chunks")).default(Array.from(Items), 2)].map(
+	[...(await import("@Function/Chunks.js")).default(Array.from(Items), 2)].map(
 		(Row) =>
 			Row && (
 				<tr>
