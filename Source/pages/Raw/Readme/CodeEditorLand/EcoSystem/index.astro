@@ -1,13 +1,13 @@
 ---
-import EcoSystem from "@Component/Readme/CodeEditorLand/EcoSystem/EcoSystem.astro";
+import Land from "@Component/Readme/CodeEditorLand/Land/Land.astro";
 
 const Readme = (
-	await import("@Page/Raw/Readme/CodeEditorLand/EcoSystem/README.md")
+	await import("@Page/Raw/Readme/CodeEditorLand/Land/README.md")
 ).rawContent();
 ---
 
 <>
-	<EcoSystem />
+	<Land />
 
 	<Fragment set:html={Readme} />
 </>

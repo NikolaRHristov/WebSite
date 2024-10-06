@@ -1,11 +1,11 @@
-# 🌿 [EcoSystem] —
+# 🏞️ [Land] —
 
 ## 🚀 Installation
 
 Clone the repository:
 
 ```sh
-git clone ssh://git@github.com/CodeEditorLand/EcoSystem.git --depth=1 --recurse-submodules --shallow-submodules
+git clone ssh://git@github.com/CodeEditorLand/Land.git --depth=1 --recurse-submodules --shallow-submodules
 ```
 
 Install the necessary dependencies using `pnpm`:
@@ -14,7 +14,7 @@ Install the necessary dependencies using `pnpm`:
 pnpm install
 ```
 
-Build the `EcoSystem`:
+Build the `Land`:
 
 ```sh
 # Build TypeScript and workspace packages
@@ -30,7 +30,7 @@ cargo build --release
 pnpm run tauri build
 ```
 
-Run the `EcoSystem`:
+Run the `Land`:
 
 ```sh
 # Runs the development version of the application
@@ -43,13 +43,13 @@ First run the [`Sun`](./Target/release/Sun.exe) binary then the
 [`River`](./Target/release/River.exe) to startup the necessary websockets. Then
 run the Tauri app [`Mountain`](./Target/release/Mountain.exe)
 
-![EcoSystem](https://playform.cloud/Image/GitHub/CodeEditorLand/EcoSystem/EcoSystem.svg?9.07.2024)
+![Land](https://playform.cloud/Image/GitHub/CodeEditorLand/Land/Land.svg?9.07.2024)
 
 ## Graph
 
 ```mermaid
 graph TD
-    A[Top Repo: EcoSystem]
+    A[Top Repo: Land]
 
     subgraph Element
         subgraph Sky
@@ -114,7 +114,7 @@ sequenceDiagram
     participant Cargo
 
     User->>GitHub: Clone repository
-    Note right of GitHub: git clone ssh://git@github.com/CodeEditorLand/EcoSystem.git --depth=1 --recurse-submodules --shallow-submodules
+    Note right of GitHub: git clone ssh://git@github.com/CodeEditorLand/Land.git --depth=1 --recurse-submodules --shallow-submodules
 
     User->>PNPM: Install dependencies
     Note right of PNPM: pnpm install
@@ -127,7 +127,7 @@ sequenceDiagram
     Note over Cargo: Mountain creates the final binary
 ```
 
-[EcoSystem]: https://github.com/CodeEditorLand/EcoSystem
+[Land]: https://github.com/CodeEditorLand/Land
 
 ## Changelog
 
