@@ -8,7 +8,7 @@ export default (await import("astro/config")).defineConfig({
 	compressHTML: true,
 	prefetch: true,
 	build: {
-		concurrency: 9999
+		concurrency: 9999,
 	},
 	integrations: [
 		// @ts-ignore
