@@ -4,7 +4,7 @@ import Footer from "@Component/Footer.astro";
 import "@Stylesheet/Base.css";
 
 import { Head } from "astro-capo";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 const {
 	Font = [],
@@ -161,7 +161,7 @@ const Link = (Link: string[] = []) =>
 			rel="pingback"
 			href="https://webmention.io/nikolahristov.tech/xmlrpc"
 		/>
-		<ViewTransitions />
+		<ClientRouter />
 	</Head>
 	<body class="flex grow flex-col">
 		<div id="main" class="grow">
