@@ -4,7 +4,7 @@ import type Interface from "../Interface/Match.js";
  * @module Match
  *
  */
-export default ((...Option: Parameters<Interface>) => {
+export default ((...Option) => {
 	switch (true) {
 		case typeof Option[0] === "string":
 			return Option[0].match(Option[1]);

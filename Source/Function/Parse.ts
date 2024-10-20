@@ -6,7 +6,7 @@ import type Interface from "../Interface/Parse.js";
  * @module Parse
  *
  */
-export default (async (...Option: Parameters<Interface>) => {
+export default (async (...Option) => {
 	const Items = new Set<PackagesRowItem>();
 
 	for (const Package of Option[0]) {
