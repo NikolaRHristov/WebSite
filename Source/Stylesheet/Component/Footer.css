@@ -28,7 +28,7 @@
 			3px 1px var(--text-shadow-color),
 			3px 2px var(--text-shadow-color);
 
-		@apply ease-apple relative text-base font-medium underline decoration-blue-600 outline-none outline-offset-4 transition-all duration-150 hover:text-blue-600 focus-visible:z-10 focus-visible:decoration-transparent focus-visible:outline-4 focus-visible:outline-blue-500 sm:text-sm;
+		@apply ease-apple relative text-base font-medium underline decoration-blue-600 outline-none outline-offset-4 transition-all duration-150 hover:text-blue-950 focus-visible:z-10 focus-visible:decoration-transparent focus-visible:outline-4 focus-visible:outline-blue-950 sm:text-sm;
 	}
 
 	.icon {
