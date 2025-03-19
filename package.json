@@ -21,7 +21,7 @@
 		"prepublishOnly": "astro build"
 	},
 	"dependencies": {
-		"@astrojs/sitemap": "3.2.1",
+		"@astrojs/sitemap": "3.3.0",
 		"@octokit/core": "6.1.4",
 		"@playform/build": "0.2.1",
 		"@playform/compress": "0.1.7",
