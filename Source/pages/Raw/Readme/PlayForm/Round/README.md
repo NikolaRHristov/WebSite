@@ -1,12 +1,12 @@
 <p align="center">
-  <img width="64" height="64" src="https://PlayForm.LTD/Image/GitHub/Round/icon.ico" alt="Round" />
+  <img width="64" height="64" src="https://PlayForm.Cloud/Image/GitHub/Round/icon.ico" alt="Round" />
 </p>
 
 # Round
 
 Rounds the corners of your Windows screen.
 
-![`Round`](https://PlayForm.LTD/Image/GitHub/Round/Cover.png)
+![`Round`](https://PlayForm.Cloud/Image/GitHub/Round/Cover.png)
 
 ## Getting started
 
