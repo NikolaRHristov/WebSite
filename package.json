@@ -39,7 +39,7 @@
 		"deepmerge-ts": "7.1.5",
 		"dotenv": "16.5.0",
 		"etag": "1.8.1",
-		"firebase": "11.6.1",
+		"firebase": "11.7.1",
 		"github-markdown-css": "5.8.1",
 		"postcss": "8.5.3",
 		"postcss-combine-duplicated-selectors": "10.0.3",
