@@ -1,9 +1,10 @@
 ---
-import Biome from "@Component/Readme/CodeEditorLand/Dependency/Biome.astro";
-import OXC from "@Component/Readme/CodeEditorLand/Dependency/OXC.astro";
-import Tauri from "@Component/Readme/CodeEditorLand/Dependency/Tauri.astro";
 import Land from "@Component/Readme/CodeEditorLand/Land.astro";
 import Table from "@Component/Readme/Table.astro";
+
+const Readme = (
+	await import("@Page/Raw/Readme/CodeEditorLand/Land/README.md")
+).rawContent();
 ---
 
 <>
@@ -17,12 +18,6 @@ import Table from "@Component/Readme/Table.astro";
 
 	<Table>
 		<Land Open={true} />
-
-		<Tauri Open={true} />
-
-		<OXC Open={true} />
-
-		<Biome Open={true} />
 	</Table>
 
 	<a
@@ -32,4 +27,6 @@ import Table from "@Component/Readme/Table.astro";
 			alt="FOSSA Status"
 		/></a
 	>
+
+	<Fragment set:html={Readme} />
 </>
