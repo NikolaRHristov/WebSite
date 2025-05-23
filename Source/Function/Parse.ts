@@ -35,17 +35,17 @@ export default (async (...Option) => {
 						GitHub: JSONGitHub.data?.full_name ?? "",
 						Badge: new Set<Badge>([
 							{
-								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
+								Link: `https://GitHub.Com/${Owner}/${Repository}`,
 								Image: `https://img.shields.io/github/last-commit/${Owner}/${Repository}?label=Update`,
 								Alt: "Update",
 							},
 							{
-								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
+								Link: `https://GitHub.Com/${Owner}/${Repository}`,
 								Image: `https://img.shields.io/github/issues/${Owner}/${Repository}?label=Issue`,
 								Alt: "Issue",
 							},
 							{
-								Link: `HTTPS://GitHub.Com/${Owner}/${Repository}`,
+								Link: `https://GitHub.Com/${Owner}/${Repository}`,
 								Image: `https://img.shields.io/github/downloads/${Owner}/${Repository}/total?label=Download`,
 								Alt: "Download",
 								Float: true,
@@ -67,7 +67,7 @@ export default (async (...Option) => {
 						: Object.keys(Package).at(0)?.split(":")[1];
 
 				const JSONNPM = await (
-					await fetch(`HTTPS://Registry.NPMJS.Org/${NPM}`)
+					await fetch(`https://Registry.NPMJS.Org/${NPM}`)
 				).json();
 
 				GitHub = (JSONNPM?.repository?.url ?? "")
@@ -76,27 +76,27 @@ export default (async (...Option) => {
 					?.replace(".git", "");
 
 				Items.add({
-					Link: `HTTPS://GitHub.Com/${GitHub}`,
+					Link: `https://GitHub.Com/${GitHub}`,
 					Name: JSONNPM?.description ?? "",
 					GitHub,
 					Badge: new Set<Badge>([
 						{
 							Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Node.yml?branch=main&label=Build&logo=node.js`,
-							Link: `HTTPS://GitHub.Com/${GitHub}/actions/workflows/Node.yml`,
+							Link: `https://GitHub.Com/${GitHub}/actions/workflows/Node.yml`,
 							Alt: "Build",
 						},
 						{
-							Link: `HTTPS://NPMJS.Org/${JSONNPM.name}?activeTab=dependencies`,
+							Link: `https://NPMJS.Org/${JSONNPM.name}?activeTab=dependencies`,
 							Image: `https://img.shields.io/librariesio/release/npm/${JSONNPM.name}?logo=dependabot&label=`,
 							Alt: "Dependency",
 						},
 						{
-							Link: `HTTPS://NPMJS.Org/${JSONNPM.name}`,
+							Link: `https://NPMJS.Org/${JSONNPM.name}`,
 							Image: `https://img.shields.io/npm/v/${JSONNPM.name}?label=Version&logo=npm`,
 							Alt: "Version",
 						},
 						{
-							Link: `HTTPS://NPMJS.Org/${JSONNPM.name}`,
+							Link: `https://NPMJS.Org/${JSONNPM.name}`,
 							Image: `https://img.shields.io/npm/d18m/${JSONNPM.name}?label=Download&logo=npm`,
 							Alt: "Download",
 
@@ -135,7 +135,7 @@ export default (async (...Option) => {
 						Badge: new Set<Badge>([
 							{
 								Image: `https://img.shields.io/github/actions/workflow/status/${GitHub}/Rust.yml?branch=main&label=Build`,
-								Link: `HTTPS://GitHub.Com/${GitHub}/actions/workflows/Rust.yml`,
+								Link: `https://GitHub.Com/${GitHub}/actions/workflows/Rust.yml`,
 								Alt: "Build",
 							},
 							{

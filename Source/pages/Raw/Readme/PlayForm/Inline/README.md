@@ -70,7 +70,7 @@ Critters will now automatically inline the critical CSS of your HTML files.
 
 You can override any of the default options from the configuration of:
 
-- [`critters`](HTTPS://GitHub.Com/GoogleChromeLabs/critters#usage)
+- [`critters`](https://GitHub.Com/GoogleChromeLabs/critters#usage)
 
 or disable them entirely:
 
@@ -172,11 +172,11 @@ export default {
 };
 ```
 
-[Inline]: HTTPS://NPMJS.Org/@playform/inline
-[critters]: HTTPS://github.com/GoogleChromeLabs/critters
-[astro-integration]: HTTPS://docs.astro.build/en/guides/integrations-guide/
+[Inline]: https://NPMJS.Org/@playform/inline
+[critters]: https://github.com/GoogleChromeLabs/critters
+[astro-integration]: https://docs.astro.build/en/guides/integrations-guide/
 [critical CSS]:
-	HTTPS://www.smashingmagazine.com/2015/08/understanding-critical-css/
+	https://www.smashingmagazine.com/2015/08/understanding-critical-css/
 
 ## Changelog
 

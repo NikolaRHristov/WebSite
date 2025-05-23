@@ -110,12 +110,12 @@ SVG compression is supported, as well via [svgo].
 
 You can override any of the default options from the configurations of:
 
-- [`csso`](HTTPS://GitHub.Com/css/csso#minifysource-options)
-- [`lightningcss`](HTTPS://GitHub.Com/parcel-bundler/lightningcss/blob/master/node/index.d.ts#L8)
-- [`html-minifier-terser`](HTTPS://GitHub.Com/terser/html-minifier-terser#options-quick-reference)
+- [`csso`](https://GitHub.Com/css/csso#minifysource-options)
+- [`lightningcss`](https://GitHub.Com/parcel-bundler/lightningcss/blob/master/node/index.d.ts#L8)
+- [`html-minifier-terser`](https://GitHub.Com/terser/html-minifier-terser#options-quick-reference)
 - [`sharp`](https://sharp.pixelplumbing.com/api-output#jpeg)
-- [`svgo`](HTTPS://GitHub.Com/svg/svgo#configuration)
-- [`terser`](HTTPS://GitHub.Com/terser/terser#minify-options-structure)
+- [`svgo`](https://GitHub.Com/svg/svgo#configuration)
+- [`terser`](https://GitHub.Com/terser/terser#minify-options-structure)
 
 **`astro.config.ts`**
 
@@ -156,7 +156,7 @@ export default {
 ```
 
 You can see the full option map here:
-[`Source/Interface/Option.ts`](HTTPS://GitHub.Com/PlayForm/Compress/blob/main/Source/Interface/Option.ts)
+[`Source/Interface/Option.ts`](https://GitHub.Com/PlayForm/Compress/blob/main/Source/Interface/Option.ts)
 
 ### Output
 
@@ -265,14 +265,14 @@ export default {
 };
 ```
 
-[Compress]: HTTPS://NPMJS.Org/@playform/compress
-[csso]: HTTPS://NPMJS.Org/csso
-[lightningcss]: HTTPS://NPMJS.Org/lightningcss
-[html-minifier-terser]: HTTPS://NPMJS.Org/html-minifier-terser
-[terser]: HTTPS://NPMJS.Org/terser
-[sharp]: HTTPS://NPMJS.Org/sharp
-[svgo]: HTTPS://NPMJS.Org/svgo
-[astro-integration]: HTTPS://docs.astro.build/en/guides/integrations-guide/
+[Compress]: https://NPMJS.Org/@playform/compress
+[csso]: https://NPMJS.Org/csso
+[lightningcss]: https://NPMJS.Org/lightningcss
+[html-minifier-terser]: https://NPMJS.Org/html-minifier-terser
+[terser]: https://NPMJS.Org/terser
+[sharp]: https://NPMJS.Org/sharp
+[svgo]: https://NPMJS.Org/svgo
+[astro-integration]: https://docs.astro.build/en/guides/integrations-guide/
 
 ## Changelog
 

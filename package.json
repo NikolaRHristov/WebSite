@@ -2,9 +2,9 @@
 	"name": "@website/nikolahristov_tech",
 	"version": "0.0.1",
 	"private": true,
-	"homepage": "HTTPS://GitHub.Com/NikolaRHristov/Website#readme",
+	"homepage": "https://GitHub.Com/NikolaRHristov/Website#readme",
 	"bugs": {
-		"url": "HTTPS://GitHub.Com/NikolaRHristov/Website/issues"
+		"url": "https://GitHub.Com/NikolaRHristov/Website/issues"
 	},
 	"repository": {
 		"type": "git",
@@ -14,7 +14,7 @@
 	"author": {
 		"name": "Source ✍🏻 Open 👐🏻",
 		"email": "Source/Open@PlayForm.Cloud",
-		"url": "HTTPS://PlayForm.Cloud"
+		"url": "https://PlayForm.Cloud"
 	},
 	"scripts": {
 		"Run": "astro dev --host",

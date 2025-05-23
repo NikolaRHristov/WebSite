@@ -127,7 +127,7 @@ sequenceDiagram
     Note over Cargo: Mountain creates the final binary
 ```
 
-[Land]: HTTPS://github.com/CodeEditorLand/Land
+[Land]: https://github.com/CodeEditorLand/Land
 
 ## Changelog
 
