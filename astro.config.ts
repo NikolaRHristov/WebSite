@@ -6,7 +6,7 @@ export default defineConfig({
 	srcDir: "./Source",
 	publicDir: "./Public",
 	outDir: "./Target",
-	site: On ? "HTTP://localhost" : "https://NikolaHristov.Tech",
+	site: On ? "http://localhost" : "https://NikolaHristov.Tech",
 	compressHTML: true,
 	prefetch: {
 		defaultStrategy: "hover",

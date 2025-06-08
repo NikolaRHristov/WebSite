@@ -369,7 +369,7 @@ focused on Path A (`Cocoon` sidecar).
 Stay updated with our progress! See [`CHANGELOG.md`](CHANGELOG.md) for a history
 of changes.
 
-## Funding & Acknowledgements 🙏
+## Funding & Acknowledgements 🙏🏻
 
 Land is proud to be an open-source endeavor. Our journey is significantly
 supported by:
