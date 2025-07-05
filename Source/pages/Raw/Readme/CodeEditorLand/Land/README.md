@@ -1,11 +1,28 @@
-<table><tr>
-<td colspan="1"> <h3 align="center"> <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Land.svg">
-<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Land.svg">
-<img width="28" alt="Land Logo" src="https://PlayForm.Cloud/Image/GitHub/Land.svg">
-</picture> </h3> </td> <td colspan="3" valign="top"> <h3 align="center"> Land 🏞️
-</h3> </td>
-</tr></table>
+<table>
+	<tr>
+		<td align="left" valign="middle">
+			<h3 align="left">
+				<picture>
+					<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Land.svg">
+					<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Land.svg">
+					<img width="28" alt="Land Logo" src="https://PlayForm.Cloud/Image/GitHub/Land.svg">
+				</picture>
+			</h3>
+		</td>
+		<td align="left" valign="middle">
+			<h3 align="left"> Land 🏞️</h3>
+		</td>
+		<td align="left" valign="middle" width="190">
+			<h3 align="left">
+				<picture>
+					<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Tauri/Made.svg">
+					<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Tauri/Made.svg">
+					<img width="160" alt="Made With Tauri" src="https://PlayForm.Cloud/Image/GitHub/Tauri/Made.svg">
+				</picture>
+			</h3>
+		</td>
+	</tr>
+</table>
 
 ---
 
