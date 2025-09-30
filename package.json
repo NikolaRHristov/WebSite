@@ -37,7 +37,7 @@
 		"cssnano": "7.1.1",
 		"cssnano-preset-advanced": "7.0.9",
 		"deepmerge-ts": "7.1.5",
-		"dotenv": "17.2.2",
+		"dotenv": "17.2.3",
 		"etag": "1.8.1",
 		"firebase": "12.3.0",
 		"github-markdown-css": "5.8.1",
