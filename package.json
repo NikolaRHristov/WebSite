@@ -23,7 +23,7 @@
 	"dependencies": {
 		"@astrojs/sitemap": "3.6.0",
 		"@octokit/core": "7.0.6",
-		"@playform/build": "0.2.5",
+		"@playform/build": "0.2.6",
 		"@playform/compress": "0.2.0",
 		"@playform/format": "0.0.8",
 		"@playform/inline": "0.1.2",
