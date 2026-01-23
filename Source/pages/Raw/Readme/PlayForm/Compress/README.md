@@ -15,6 +15,8 @@ to your Astro project.
 
 [`SVG (svgo)`][svgo] 🎁
 
+[`JSON`][JSON] 🎁
+
 > **Note**
 >
 > `Compress` will not compress your requests, only your statically generated
@@ -79,10 +81,10 @@ export default {
 
 ## Getting started
 
-The utility will now automatically compress all your CSS, HTML, SVG, JavaScript
-and image files in the Astro `outDir` folder.
+The utility will now automatically compress all your CSS, HTML, SVG, JavaScript,
+JSON and image files in the Astro `outDir` folder.
 
-The following image file types will be compressed via [sharp]:
+The following image file types will be compressed via [`sharp`][sharp]:
 
 - avci
 - avcs
@@ -104,18 +106,18 @@ The following image file types will be compressed via [sharp]:
 - tiff
 - webp
 
-SVG compression is supported, as well via [svgo].
+SVG compression is supported, as well via [`svgo`][svgo].
 
 ### Default Compression
 
 You can override any of the default options from the configurations of:
 
-- [`csso`](https://GitHub.Com/css/csso#minifysource-options)
-- [`lightningcss`](https://GitHub.Com/parcel-bundler/lightningcss/blob/master/node/index.d.ts#L8)
-- [`html-minifier-terser`](https://GitHub.Com/terser/html-minifier-terser#options-quick-reference)
+- [`csso`](HTTPS://GitHub.Com/css/csso#minifysource-options)
+- [`lightningcss`](HTTPS://GitHub.Com/parcel-bundler/lightningcss/blob/master/node/index.d.ts#L8)
+- [`html-minifier-terser`](HTTPS://GitHub.Com/terser/html-minifier-terser#options-quick-reference)
 - [`sharp`](https://sharp.pixelplumbing.com/api-output#jpeg)
-- [`svgo`](https://GitHub.Com/svg/svgo#configuration)
-- [`terser`](https://GitHub.Com/terser/terser#minify-options-structure)
+- [`svgo`](HTTPS://GitHub.Com/svg/svgo#configuration)
+- [`terser`](HTTPS://GitHub.Com/terser/terser#minify-options-structure)
 
 **`astro.config.ts`**
 
@@ -131,6 +133,7 @@ export default {
 			},
 			Image: false,
 			JavaScript: false,
+			JSON: false,
 			SVG: false,
 		}),
 	],
@@ -149,6 +152,7 @@ export default {
 			HTML: false,
 			Image: false,
 			JavaScript: false,
+			JSON: false,
 			SVG: false,
 		}),
 	],
@@ -156,7 +160,7 @@ export default {
 ```
 
 You can see the full option map here:
-[`Source/Interface/Option.ts`](https://GitHub.Com/PlayForm/Compress/blob/main/Source/Interface/Option.ts)
+[`Source/Interface/Option.ts`](HTTPS://GitHub.Com/PlayForm/Compress/blob/main/Source/Interface/Option.ts)
 
 ### Output
 
@@ -265,14 +269,16 @@ export default {
 };
 ```
 
-[Compress]: https://NPMJS.Org/@playform/compress
-[csso]: https://NPMJS.Org/csso
-[lightningcss]: https://NPMJS.Org/lightningcss
-[html-minifier-terser]: https://NPMJS.Org/html-minifier-terser
-[terser]: https://NPMJS.Org/terser
-[sharp]: https://NPMJS.Org/sharp
-[svgo]: https://NPMJS.Org/svgo
-[astro-integration]: https://docs.astro.build/en/guides/integrations-guide/
+[Compress]: HTTPS://NPMJS.Org/@playform/compress
+[csso]: HTTPS://NPMJS.Org/csso
+[lightningcss]: HTTPS://NPMJS.Org/lightningcss
+[html-minifier-terser]: HTTPS://NPMJS.Org/html-minifier-terser
+[terser]: HTTPS://NPMJS.Org/terser
+[sharp]: HTTPS://NPMJS.Org/sharp
+[svgo]: HTTPS://NPMJS.Org/svgo
+[JSON]:
+	HTTPS://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+[astro-integration]: HTTPS://docs.astro.build/en/guides/integrations-guide/
 
 ## Changelog
 

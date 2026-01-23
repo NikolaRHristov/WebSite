@@ -2,27 +2,42 @@
 	<tr>
 		<td align="left" valign="middle">
 			<h3 align="left">
-				<picture>
-					<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Land.svg">
-					<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Land.svg">
-					<img width="28" alt="Land Logo" src="https://PlayForm.Cloud/Image/GitHub/Land.svg">
-				</picture>
+				<a href="https://Editor.Land" target="_blank">
+					<picture>
+						<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Land.svg">
+						<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Land.svg">
+						<img width="28" alt="Land Logo" src="https://PlayForm.Cloud/Image/GitHub/Land.svg">
+					</picture>
+				</a>
 			</h3>
 		</td>
 		<td align="left" valign="middle">
-			<h3 align="left"> Land 🏞️</h3>
+			<h3 align="left">
+				<a href="https://Editor.Land" target="_blank">
+					Land
+				</a>
+			</h3>
+		</td>
+		<td align="left" valign="middle">
+			<h3 align="left">
+				🏞️
+			</h3>
+		</td>
+		<td align="left" valign="middle">
+			<h3 align="left"> + </h3>
 		</td>
 		<td align="left" valign="middle" width="190">
 			<h3 align="left">
-				<picture>
-					<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Made/Tauri.svg">
-					<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Made/Tauri.svg">
-					<img width="160" alt="Made With Tauri" src="https://PlayForm.Cloud/Image/GitHub/Made/Tauri.svg">
-				</picture>
+				<a href="https://Tauri.App" target="_blank">
+					<picture>
+						<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Made/Tauri.svg">
+						<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Made/Tauri.svg">
+						<img width="160" alt="Made With Tauri" src="https://PlayForm.Cloud/Image/GitHub/Made/Tauri.svg">
+					</picture>
+				</a>
 			</h3>
 		</td>
-	</tr>
-</table>
+	</tr></table>
 
 ---
 
@@ -37,8 +52,8 @@ engineered with **Rust** and **Tauri** for the native backend (`Mountain`) and
 
 Our vision is to deliver a lightning-fast and deeply reliable editing experience
 by leveraging declarative, effects-based programming across the entire
-application. This architecture ensures that all side effects—from filesystem
-operations to UI updates and network requests—are handled in a structured,
+application. This architecture ensures that all side effects from filesystem
+operations to UI updates and network requests are handled in a structured,
 testable, and composable way.
 
 ---
@@ -84,7 +99,7 @@ concert to deliver a modern editing experience.
 
 To understand how these components interact, please refer to the detailed
 workflow descriptions in
-[`docs/Workflow.md`](https://github.com/CodeEditorLand/Land/tree/Current/docs/Workflow.md).
+[`Documentation/GitHub/Workflow.md`](https://github.com/CodeEditorLand/Land/tree/Current/Documentation/GitHub/Workflow.md).
 The following provides a table of contents for these essential processes.
 
 ### Table of Contents
@@ -173,8 +188,6 @@ development and versioning.
 | :---------- | :-------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <h3>👨🏻‍🏭</h3> | [`Land/Element/Common`][Common]                                 | **The Abstract Core Library (Rust).** This is the architectural heart of the native backend. It contains no concrete logic, only `trait` definitions, the `ActionEffect` system, and shared Data Transfer Objects (DTOs). All other Rust components depend on it.                    |
 | <h3>📣</h3> | [`Land/Element/Echo`][Echo]                                     | **The High-Performance Task Scheduler (Rust).** A complete Rust library that provides a structured concurrency runtime. It features a high-performance, work-stealing queue and is designed to be the core execution engine for all asynchronous tasks within `Mountain`.            |
-| <h3>🌊</h3> | [`Land/Element/River`][River]                                   | **Filesystem Read Library (Rust).** A native Rust library providing efficient, asynchronous filesystem _read_ operations. It is used by `Mountain`'s handlers to implement the `FsReader` trait from `Common`.                                                                       |
-| <h3>☀️</h3> | [`Land/Element/Sun`][Sun]                                       | **Filesystem Write Library (Rust).** A native Rust library providing efficient, asynchronous filesystem _write_ operations. It is used by `Mountain`'s handlers to implement the `FsWriter` trait from `Common`.                                                                     |
 | <h3>🌿</h3> | [`Land/Element/Vine`][Vine]                                     | **The gRPC Protocol & Implementation.** This element contains the **`.proto`** file defining the gRPC contract between `Mountain` and `Cocoon`. It also includes the generated code and the concrete Rust server/client implementations within the `Mountain` and `Cocoon` projects. |
 | <h3>⛰️</h3> | [`Land/Element/Mountain`][Mountain]                             | **The Native Backend Application (Rust).** This is the main Tauri application. It **implements** the traits from `Common`, manages the application window, orchestrates native OS operations, hosts the gRPC server, and manages the lifecycle of all sidecar processes.             |
 | <h3>💻</h3> | [`Land/Element/Dependency/Microsoft/Dependency/Editor`][Editor] | **The VS Code Source Submodule.** Contains a specific version of the Microsoft VS Code source code. This is a critical dependency used by `Rest` to build `Cocoon`'s runtime and by `Wind` to leverage VS Code's core UI components and services.                                    |
@@ -198,9 +211,7 @@ development and versioning.
 [Mountain]: https://github.com/CodeEditorLand/Mountain
 [Output]: https://github.com/CodeEditorLand/Output
 [Rest]: https://github.com/CodeEditorLand/Rest
-[River]: https://github.com/CodeEditorLand/River
 [Sky]: https://github.com/CodeEditorLand/Sky
-[Sun]: https://github.com/CodeEditorLand/Sun
 [Track]: https://github.com/CodeEditorLand/Track
 [Vine]: https://github.com/CodeEditorLand/Vine
 [Wind]: https://github.com/CodeEditorLand/Wind
@@ -421,10 +432,18 @@ This project is funded through
 <table>
 	<thead>
 		<tr>
-			<th align="left"><strong>Land</strong></th>
-			<th align="left"><strong>PlayForm</strong></th>
-			<th align="left"><strong>NLnet</strong></th>
-			<th align="left"><strong>NGI0 Commons Fund</strong></th>
+			<th align="left">
+			<strong>Land</strong>
+			</th>
+			<th align="left">
+			<strong>PlayForm</strong>
+			</th>
+			<th align="left">
+			<strong>NLnet</strong>
+			</th>
+			<th align="left">
+			<strong>NGI0 Commons Fund</strong>
+			</th>
 		</tr>
 	</thead>
 	<tbody>

@@ -1,11 +1,43 @@
-<!DOCTYPE html><meta charset="utf-8"><script type="module" src="/_astro/page.CJWc3nMu.js"></script><table><tbody><tr>
-<td colspan="1"> <h3 align="center"> <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Land.svg">
-<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Land.svg">
-<img width="28" alt="Land Logo" src="https://PlayForm.Cloud/Image/GitHub/Land.svg">
-</picture> </h3> </td> <td colspan="3" valign="top"> <h3 align="center"> Land 🏞️
-</h3> </td>
-</tr></tbody></table>
+<!DOCTYPE html><meta charset="utf-8"><script type="module" src="/_astro/page.DbT-jYsL.js"></script><table>
+	<tbody><tr>
+		<td align="left" valign="middle">
+			<h3 align="left">
+				<a href="https://Editor.Land" target="_blank">
+					<picture>
+						<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Land.svg">
+						<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Land.svg">
+						<img width="28" alt="Land Logo" src="https://PlayForm.Cloud/Image/GitHub/Land.svg">
+					</picture>
+				</a>
+			</h3>
+		</td>
+		<td align="left" valign="middle">
+			<h3 align="left">
+				<a href="https://Editor.Land" target="_blank">
+					Land
+				</a>
+			</h3>
+		</td>
+		<td align="left" valign="middle">
+			<h3 align="left">
+				🏞️
+			</h3>
+		</td>
+		<td align="left" valign="middle">
+			<h3 align="left"> + </h3>
+		</td>
+		<td align="left" valign="middle" width="190">
+			<h3 align="left">
+				<a href="https://Tauri.App" target="_blank">
+					<picture>
+						<source media="(prefers-color-scheme: dark)" srcset="https://PlayForm.Cloud/Dark/Image/GitHub/Made/Tauri.svg">
+						<source media="(prefers-color-scheme: light)" srcset="https://PlayForm.Cloud/Image/GitHub/Made/Tauri.svg">
+						<img width="160" alt="Made With Tauri" src="https://PlayForm.Cloud/Image/GitHub/Made/Tauri.svg">
+					</picture>
+				</a>
+			</h3>
+		</td>
+	</tr></tbody></table>
 <hr>
 <h1 id="land️the-next-generation-code-editor"><strong>Land</strong> 🏞️ The Next-Generation Code Editor</h1>
 <p>Welcome to <strong>Land</strong>! We are building a high-performance, resource-efficient, and
@@ -16,8 +48,8 @@ engineered with <strong>Rust</strong> and <strong>Tauri</strong> for the native 
 <code>Cocoon</code>).</p>
 <p>Our vision is to deliver a lightning-fast and deeply reliable editing experience
 by leveraging declarative, effects-based programming across the entire
-application. This architecture ensures that all side effects—from filesystem
-operations to UI updates and network requests—are handled in a structured,
+application. This architecture ensures that all side effects from filesystem
+operations to UI updates and network requests are handled in a structured,
 testable, and composable way.</p>
 <hr>
 <h2 id="key-features--architectural-highlights">Key Features &#x26; Architectural Highlights 🔐</h2>
@@ -80,7 +112,7 @@ concert to deliver a modern editing experience.</p>
 <h2 id="architectural-workflows">Architectural Workflows 📄</h2>
 <p>To understand how these components interact, please refer to the detailed
 workflow descriptions in
-<a href="https://github.com/CodeEditorLand/Land/tree/Current/docs/Workflow.md"><code>docs/Workflow.md</code></a>.
+<a href="https://github.com/CodeEditorLand/Land/tree/Current/Documentation/GitHub/Workflow.md"><code>Documentation/GitHub/Workflow.md</code></a>.
 The following provides a table of contents for these essential processes.</p>
 <h3 id="table-of-contents">Table of Contents</h3>
 <ol>
@@ -268,17 +300,7 @@ development and versioning.</p>
 
 
 
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th align="left"></th><th align="left">Path</th><th align="left">Component / Purpose</th></tr></thead><tbody><tr><td align="left"><h3>👨🏻‍🏭</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Common"><code>Land/Element/Common</code></a></td><td align="left"><strong>The Abstract Core Library (Rust).</strong> This is the architectural heart of the native backend. It contains no concrete logic, only <code>trait</code> definitions, the <code>ActionEffect</code> system, and shared Data Transfer Objects (DTOs). All other Rust components depend on it.</td></tr><tr><td align="left"><h3>📣</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Echo"><code>Land/Element/Echo</code></a></td><td align="left"><strong>The High-Performance Task Scheduler (Rust).</strong> A complete Rust library that provides a structured concurrency runtime. It features a high-performance, work-stealing queue and is designed to be the core execution engine for all asynchronous tasks within <code>Mountain</code>.</td></tr><tr><td align="left"><h3>🌊</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/River"><code>Land/Element/River</code></a></td><td align="left"><strong>Filesystem Read Library (Rust).</strong> A native Rust library providing efficient, asynchronous filesystem <em>read</em> operations. It is used by <code>Mountain</code>’s handlers to implement the <code>FsReader</code> trait from <code>Common</code>.</td></tr><tr><td align="left"><h3>☀️</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Sun"><code>Land/Element/Sun</code></a></td><td align="left"><strong>Filesystem Write Library (Rust).</strong> A native Rust library providing efficient, asynchronous filesystem <em>write</em> operations. It is used by <code>Mountain</code>’s handlers to implement the <code>FsWriter</code> trait from <code>Common</code>.</td></tr><tr><td align="left"><h3>🌿</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Vine"><code>Land/Element/Vine</code></a></td><td align="left"><strong>The gRPC Protocol &#x26; Implementation.</strong> This element contains the <strong><code>.proto</code></strong> file defining the gRPC contract between <code>Mountain</code> and <code>Cocoon</code>. It also includes the generated code and the concrete Rust server/client implementations within the <code>Mountain</code> and <code>Cocoon</code> projects.</td></tr><tr><td align="left"><h3>⛰️</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Mountain"><code>Land/Element/Mountain</code></a></td><td align="left"><strong>The Native Backend Application (Rust).</strong> This is the main Tauri application. It <strong>implements</strong> the traits from <code>Common</code>, manages the application window, orchestrates native OS operations, hosts the gRPC server, and manages the lifecycle of all sidecar processes.</td></tr><tr><td align="left"><h3>💻</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Editor"><code>Land/Element/Dependency/Microsoft/Dependency/Editor</code></a></td><td align="left"><strong>The VS Code Source Submodule.</strong> Contains a specific version of the Microsoft VS Code source code. This is a critical dependency used by <code>Rest</code> to build <code>Cocoon</code>’s runtime and by <code>Wind</code> to leverage VS Code’s core UI components and services.</td></tr><tr><td align="left"><h3>⛱️</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Rest"><code>Land/Element/Rest</code></a></td><td align="left"><strong>The JS Bundler Configuration.</strong> This element contains the build scripts and configurations (e.g., for <code>esbuild</code>) used to bundle the necessary VS Code platform code from the <code>Dependency</code> submodule for <code>Cocoon</code> to consume.</td></tr><tr><td align="left"><h3>⚫</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Output"><code>Land/Element/Output</code></a></td><td align="left"><strong>The Bundled JS Output.</strong> This directory is the destination for the bundled JavaScript artifacts created by the <code>Rest</code> build process. It is the code that <code>Cocoon</code> actually loads at runtime.</td></tr><tr><td align="left"><h3>🦋</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Cocoon"><code>Land/Element/Cocoon</code></a></td><td align="left"><strong>The Node.js Extension Host (TypeScript).</strong> A sidecar process that runs standard VS Code extensions. It is built entirely with <code>Effect-TS</code> and provides a high-fidelity <code>vscode</code> API, proxying privileged calls to <code>Mountain</code> via gRPC.</td></tr><tr><td align="left"><h3>🍃</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Wind"><code>Land/Element/Wind</code></a></td><td align="left"><strong>The UI Service Layer (TypeScript).</strong> A complete, <code>Effect-TS</code> native re-implementation of the VS Code workbench services. It runs in the Tauri webview and manages the entire state and logic of the user interface.</td></tr><tr><td align="left"><h3>🍩</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Worker"><code>Land/Element/Worker</code></a></td><td align="left"><strong>Web Worker Implementations.</strong> This element holds the source code for any dedicated web workers used by the <code>Wind</code>/<code>Sky</code> frontend for computationally intensive tasks.</td></tr><tr><td align="left"><h3>🌌</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Sky"><code>Land/Element/Sky</code></a></td><td align="left"><strong>The UI Component Layer (Astro).</strong> This project contains the actual UI components that render the editor, side bar, status bar, etc. It is driven by the state managed in the <code>Wind</code> service layer.</td></tr><tr><td align="left"><h3>🌫️</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Mist"><code>Land/Element/Mist</code></a></td><td align="left"><strong>WebSocket Communication Logic.</strong> This component handles WebSocket communication. It can be implemented either as a native module within <code>Mountain</code> or as a separate sidecar.</td></tr><tr><td align="left"><h3>💪🏻</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Maintain"><code>Land/Element/Maintain</code></a></td><td align="left"><strong>Project Maintenance &#x26; CI/CD.</strong> Contains development utilities, <code>GritQL</code> queries for automated refactoring, CI/CD pipeline configurations, and other maintenance scripts.</td></tr><tr><td align="left"><h3>🌳</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Grove"><code>Land/Element/Grove</code></a></td><td align="left"><strong>(Future Vision) The Native Rust Extension Host.</strong> A planned project to build a high-performance, secure extension host in Rust, capable of running extensions compiled to WASM or statically linked as a Rust library.</td></tr></tbody></table>
+<table><thead><tr><th align="left"></th><th align="left">Path</th><th align="left">Component / Purpose</th></tr></thead><tbody><tr><td align="left"><h3>👨🏻‍🏭</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Common"><code>Land/Element/Common</code></a></td><td align="left"><strong>The Abstract Core Library (Rust).</strong> This is the architectural heart of the native backend. It contains no concrete logic, only <code>trait</code> definitions, the <code>ActionEffect</code> system, and shared Data Transfer Objects (DTOs). All other Rust components depend on it.</td></tr><tr><td align="left"><h3>📣</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Echo"><code>Land/Element/Echo</code></a></td><td align="left"><strong>The High-Performance Task Scheduler (Rust).</strong> A complete Rust library that provides a structured concurrency runtime. It features a high-performance, work-stealing queue and is designed to be the core execution engine for all asynchronous tasks within <code>Mountain</code>.</td></tr><tr><td align="left"><h3>🌿</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Vine"><code>Land/Element/Vine</code></a></td><td align="left"><strong>The gRPC Protocol &#x26; Implementation.</strong> This element contains the <strong><code>.proto</code></strong> file defining the gRPC contract between <code>Mountain</code> and <code>Cocoon</code>. It also includes the generated code and the concrete Rust server/client implementations within the <code>Mountain</code> and <code>Cocoon</code> projects.</td></tr><tr><td align="left"><h3>⛰️</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Mountain"><code>Land/Element/Mountain</code></a></td><td align="left"><strong>The Native Backend Application (Rust).</strong> This is the main Tauri application. It <strong>implements</strong> the traits from <code>Common</code>, manages the application window, orchestrates native OS operations, hosts the gRPC server, and manages the lifecycle of all sidecar processes.</td></tr><tr><td align="left"><h3>💻</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Editor"><code>Land/Element/Dependency/Microsoft/Dependency/Editor</code></a></td><td align="left"><strong>The VS Code Source Submodule.</strong> Contains a specific version of the Microsoft VS Code source code. This is a critical dependency used by <code>Rest</code> to build <code>Cocoon</code>’s runtime and by <code>Wind</code> to leverage VS Code’s core UI components and services.</td></tr><tr><td align="left"><h3>⛱️</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Rest"><code>Land/Element/Rest</code></a></td><td align="left"><strong>The JS Bundler Configuration.</strong> This element contains the build scripts and configurations (e.g., for <code>esbuild</code>) used to bundle the necessary VS Code platform code from the <code>Dependency</code> submodule for <code>Cocoon</code> to consume.</td></tr><tr><td align="left"><h3>⚫</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Output"><code>Land/Element/Output</code></a></td><td align="left"><strong>The Bundled JS Output.</strong> This directory is the destination for the bundled JavaScript artifacts created by the <code>Rest</code> build process. It is the code that <code>Cocoon</code> actually loads at runtime.</td></tr><tr><td align="left"><h3>🦋</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Cocoon"><code>Land/Element/Cocoon</code></a></td><td align="left"><strong>The Node.js Extension Host (TypeScript).</strong> A sidecar process that runs standard VS Code extensions. It is built entirely with <code>Effect-TS</code> and provides a high-fidelity <code>vscode</code> API, proxying privileged calls to <code>Mountain</code> via gRPC.</td></tr><tr><td align="left"><h3>🍃</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Wind"><code>Land/Element/Wind</code></a></td><td align="left"><strong>The UI Service Layer (TypeScript).</strong> A complete, <code>Effect-TS</code> native re-implementation of the VS Code workbench services. It runs in the Tauri webview and manages the entire state and logic of the user interface.</td></tr><tr><td align="left"><h3>🍩</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Worker"><code>Land/Element/Worker</code></a></td><td align="left"><strong>Web Worker Implementations.</strong> This element holds the source code for any dedicated web workers used by the <code>Wind</code>/<code>Sky</code> frontend for computationally intensive tasks.</td></tr><tr><td align="left"><h3>🌌</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Sky"><code>Land/Element/Sky</code></a></td><td align="left"><strong>The UI Component Layer (Astro).</strong> This project contains the actual UI components that render the editor, side bar, status bar, etc. It is driven by the state managed in the <code>Wind</code> service layer.</td></tr><tr><td align="left"><h3>🌫️</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Mist"><code>Land/Element/Mist</code></a></td><td align="left"><strong>WebSocket Communication Logic.</strong> This component handles WebSocket communication. It can be implemented either as a native module within <code>Mountain</code> or as a separate sidecar.</td></tr><tr><td align="left"><h3>💪🏻</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Maintain"><code>Land/Element/Maintain</code></a></td><td align="left"><strong>Project Maintenance &#x26; CI/CD.</strong> Contains development utilities, <code>GritQL</code> queries for automated refactoring, CI/CD pipeline configurations, and other maintenance scripts.</td></tr><tr><td align="left"><h3>🌳</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Grove"><code>Land/Element/Grove</code></a></td><td align="left"><strong>(Future Vision) The Native Rust Extension Host.</strong> A planned project to build a high-performance, secure extension host in Rust, capable of running extensions compiled to WASM or statically linked as a Rust library.</td></tr></tbody></table>
 <hr>
 <h2 id="system-architecture-diagram">System Architecture Diagram</h2>
 <p>This diagram illustrates the build-time and runtime interactions between the
@@ -469,28 +491,52 @@ for a history of changes.</p>
 supported by the organizations and projects that believe in the future of
 open-source software.</p>
 <p>This project is funded through
-<a href="https://nlnet.nl/commonsfund">NGI0 Commons Fund</a>, a fund established by
-<a href="https://nlnet.nl">NLnet</a> with financial support from the European Commission’s
+<a href="https://NLnet.NL/commonsfund">NGI0 Commons Fund</a>, a fund established by
+<a href="https://NLnet.NL">NLnet</a> with financial support from the European Commission’s
 <a href="https://ngi.eu">Next Generation Internet</a> program. Learn more at the
-<a href="https://nlnet.nl/project/Land">NLnet project page</a>.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th align="left"><strong>Land</strong></th><th align="left">PlayForm</th><th align="left">NLnet</th><th align="left">NGI0 Commons Fund</th></tr></thead><tbody><tr><td align="left"><a href="https://editor.land"><img src="https://raw.githubusercontent.com/CodeEditorLand/Asset/refs/heads/Current/Logo/Land.svg" height="80px" alt="Land"></a></td><td align="left"><a href="https://playform.cloud"><img src="https://raw.githubusercontent.com/PlayForm/Asset/refs/heads/Current/Logo/PlayForm.svg" height="80px" alt="PlayForm"></a></td><td align="left"><a href="https://nlnet.nl"><img width="240px" src="https://nlnet.nl/logo/banner.svg" alt="NLnet"></a></td><td align="left"><a href="https://nlnet.nl/commonsfund"><img width="240px" src="https://nlnet.nl/image/logos/NGI0CommonsFund_tag_black_mono.svg" alt="NGI0 Commons Fund"></a></td></tr></tbody></table>
+<a href="https://NLnet.NL/project/Land">NLnet project page</a>.</p>
+<table>
+	<thead>
+		<tr>
+			<th align="left">
+			<strong>Land</strong>
+			</th>
+			<th align="left">
+			<strong>PlayForm</strong>
+			</th>
+			<th align="left">
+			<strong>NLnet</strong>
+			</th>
+			<th align="left">
+			<strong>NGI0 Commons Fund</strong>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td align="left" valign="middle">
+				<a href="https://Editor.Land">
+					<img width="60" src="https://raw.githubusercontent.com/CodeEditorLand/Asset/refs/heads/Current/Logo/Land.svg" alt="Land">
+				</a>
+			</td>
+			<td align="left" valign="middle">
+				<a href="https://PlayForm.Cloud">
+					<img width="76" src="https://raw.githubusercontent.com/PlayForm/Asset/refs/heads/Current/Logo/PlayForm.svg" alt="PlayForm">
+				</a>
+			</td>
+			<td align="left" valign="middle">
+				<a href="https://NLnet.NL">
+					<img width="240" src="https://NLnet.NL/logo/banner.svg" alt="NLnet">
+				</a>
+			</td>
+			<td align="left" valign="middle">
+				<a href="https://NLnet.NL/commonsfund">
+					<img width="240" src="https://NLnet.NL/image/logos/NGI0CommonsFund_tag_black_mono.svg" alt="NGI0 Commons Fund">
+				</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
 <h3 id="technology-acknowledgements">Technology Acknowledgements 🙌🏻</h3>
 <p>This project would not be possible without the incredible work of the
 open-source community. We are especially grateful for the following foundational
