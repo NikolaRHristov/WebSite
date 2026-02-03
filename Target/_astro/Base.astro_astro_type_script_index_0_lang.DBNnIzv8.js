@@ -68,7 +68,7 @@ const scriptRel = 'modulepreload';const assetsURL = function(dep) { return "/"+d
   });
 };
 
-await (async () => (await __vitePreload(async () => { const {initializeApp} = await import('./index.esm.Io5fA2Nb.js');return { initializeApp }},true              ?[]:void 0)).initializeApp({
+await (async () => (await __vitePreload(async () => { const {initializeApp} = await import('./index.esm.tyqtCNeg.js');return { initializeApp }},true              ?[]:void 0)).initializeApp({
   apiKey: "AIzaSyCiIOIiAvdRwC5n6AzX_F5WSivt9bvosTQ",
   authDomain: "nikolahristov-web.firebaseapp.com",
   projectId: "nikolahristov-web",
@@ -77,4 +77,4 @@ await (async () => (await __vitePreload(async () => { const {initializeApp} = aw
   appId: "1:540449914377:web:bf0a39a757e9ebcd1ec2d8",
   measurementId: "G-146FB9N18L"
 }))();
-//# sourceMappingURL=Base.astro_astro_type_script_index_0_lang.BhettGwR.js.map
+//# sourceMappingURL=Base.astro_astro_type_script_index_0_lang.DBNnIzv8.js.map

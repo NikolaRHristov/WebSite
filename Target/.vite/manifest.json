@@ -1,26 +1,26 @@
 {
-  "../../../node_modules/.pnpm/astro@5.16.8_@types+node@25.0.3_jiti@1.21.7_lightningcss@1.30.2_rollup@2.79.2_sass-embe_0c2c2f3fb349278770614835e8b01979/node_modules/astro/components/ClientRouter.astro?astro&type=script&index=0&lang.ts": {
+  "../../../node_modules/.pnpm/astro@5.16.15_@azure+identity@4.9.1_@azure+keyvault-secrets@4.10.0_@types+node@25.2.0_j_592bb40293dbf5ce4031218b5d6905e9/node_modules/astro/components/ClientRouter.astro?astro&type=script&index=0&lang.ts": {
     "file": "_astro/ClientRouter.astro_astro_type_script_index_0_lang.DNw5njM9.js",
     "name": "ClientRouter.astro_astro_type_script_index_0_lang",
-    "src": "../../../node_modules/.pnpm/astro@5.16.8_@types+node@25.0.3_jiti@1.21.7_lightningcss@1.30.2_rollup@2.79.2_sass-embe_0c2c2f3fb349278770614835e8b01979/node_modules/astro/components/ClientRouter.astro?astro&type=script&index=0&lang.ts",
+    "src": "../../../node_modules/.pnpm/astro@5.16.15_@azure+identity@4.9.1_@azure+keyvault-secrets@4.10.0_@types+node@25.2.0_j_592bb40293dbf5ce4031218b5d6905e9/node_modules/astro/components/ClientRouter.astro?astro&type=script&index=0&lang.ts",
     "isEntry": true,
     "imports": [
       "_index.-3zTOL8O.js"
     ]
   },
-  "../../../node_modules/.pnpm/firebase@12.7.0/node_modules/firebase/app/dist/esm/index.esm.js": {
-    "file": "_astro/index.esm.Io5fA2Nb.js",
+  "../../../node_modules/.pnpm/firebase@12.8.0/node_modules/firebase/app/dist/esm/index.esm.js": {
+    "file": "_astro/index.esm.tyqtCNeg.js",
     "name": "index.esm",
-    "src": "../../../node_modules/.pnpm/firebase@12.7.0/node_modules/firebase/app/dist/esm/index.esm.js",
+    "src": "../../../node_modules/.pnpm/firebase@12.8.0/node_modules/firebase/app/dist/esm/index.esm.js",
     "isDynamicEntry": true
   },
   "Source/Layout/Base.astro?astro&type=script&index=0&lang.ts": {
-    "file": "_astro/Base.astro_astro_type_script_index_0_lang.BhettGwR.js",
+    "file": "_astro/Base.astro_astro_type_script_index_0_lang.DBNnIzv8.js",
     "name": "Base.astro_astro_type_script_index_0_lang",
     "src": "Source/Layout/Base.astro?astro&type=script&index=0&lang.ts",
     "isEntry": true,
     "dynamicImports": [
-      "../../../node_modules/.pnpm/firebase@12.7.0/node_modules/firebase/app/dist/esm/index.esm.js"
+      "../../../node_modules/.pnpm/firebase@12.8.0/node_modules/firebase/app/dist/esm/index.esm.js"
     ]
   },
   "_index.-3zTOL8O.js": {

@@ -1384,7 +1384,7 @@ function isVersionServiceProvider(provider) {
 }
 
 const name$q = "@firebase/app";
-const version$1 = "0.14.6";
+const version$1 = "0.14.7";
 
 /**
  * @license
@@ -2156,7 +2156,7 @@ function registerCoreComponents(variant) {
 registerCoreComponents('');
 
 var name = "firebase";
-var version = "12.7.0";
+var version = "12.8.0";
 
 /**
  * @license
@@ -2177,4 +2177,4 @@ var version = "12.7.0";
 registerVersion(name, version, 'app');
 
 export { FirebaseError, DEFAULT_ENTRY_NAME as _DEFAULT_ENTRY_NAME, _addComponent, _apps, _components, _registerComponent, _serverApps, initializeApp, registerVersion };
-//# sourceMappingURL=index.esm.Io5fA2Nb.js.map
+//# sourceMappingURL=index.esm.tyqtCNeg.js.map
