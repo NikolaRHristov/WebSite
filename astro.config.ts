@@ -4,94 +4,149 @@ export const On = process.env["NODE_ENV"] === "development";
 
 export default defineConfig({
 	srcDir: "./Source",
+
 	publicDir: "./Public",
+
 	outDir: "./Target",
+
 	site: On ? "http://localhost" : "https://NikolaHristov.Tech",
+
 	compressHTML: true,
+
 	prefetch: {
 		defaultStrategy: "hover",
+
 		prefetchAll: true,
 	},
+
 	server: {
 		port: 9999,
 	},
+
 	build: {
 		concurrency: 9999,
 	},
+
 	integrations: [
 		// @ts-ignore
 		import.meta.env.MODE === "production"
 			? (await import("astrojs-service-worker")).default()
 			: null,
+
 		(await import("@astrojs/sitemap")).default(),
+
 		!On ? (await import("@playform/inline")).default({ Logger: 1 }) : null,
-		!On ? (await import("@playform/format")).default({ Logger: 1 }) : null,
+
 		!On
 			? (await import("@playform/compress")).default({
 					Logger: 1,
+
 					Exclude: [(File: string) => File.indexOf("Raw") !== -1],
 				})
 			: null,
 	],
+
 	experimental: {
 		clientPrerender: true,
+
 		contentIntellisense: true,
 	},
+
 	vite: {
 		build: {
 			sourcemap: On,
+
 			manifest: true,
+
 			minify: On ? false : "terser",
+
 			cssMinify: On ? false : "esbuild",
+
 			terserOptions: On
 				? {
 						compress: false,
+
 						ecma: 2020,
+
 						enclose: false,
+
 						format: {
 							ascii_only: false,
+
 							braces: false,
+
 							comments: false,
+
 							ie8: false,
+
 							indent_level: 4,
+
 							indent_start: 0,
+
 							inline_script: false,
+
 							keep_numbers: true,
+
 							keep_quoted_props: true,
+
 							max_line_len: 80,
+
 							preamble: "",
+
 							ecma: 5,
+
 							preserve_annotations: true,
+
 							quote_keys: false,
+
 							quote_style: 3,
+
 							safari10: true,
+
 							semicolons: true,
+
 							shebang: false,
+
 							shorthand: false,
+
 							webkit: true,
+
 							wrap_func_args: true,
+
 							wrap_iife: true,
 						},
+
 						sourceMap: true,
+
 						ie8: true,
+
 						keep_classnames: true,
+
 						keep_fnames: true,
+
 						mangle: false,
+
 						module: true,
+
 						toplevel: true,
 					}
 				: {},
 		},
+
 		resolve: {
 			preserveSymlinks: false,
 		},
+
 		css: {
 			devSourcemap: true,
+
 			transformer: "postcss",
 		},
+
 		plugins: [
 			{
 				name: "CrossOrigin",
+
 				transform(Code, Identifier, _) {
 					const CrossOrigin =
 						Identifier.includes(".mjs") ||
@@ -103,14 +158,17 @@ export default defineConfig({
 					return Code.replace(/<script/g, `<script ${CrossOrigin}`)
 						.replace(
 							/<link[^>]*(?=.*rel="preload")(?=.*href="[^"]*\.js")(?=.*as="script")[^>]*/g,
+
 							`$& ${CrossOrigin}`,
 						)
 						.replace(
 							/<link[^>]*(?=.*rel="preload")(?=.*as="font")[^>]*/g,
+
 							`$& ${CrossOrigin}`,
 						)
 						.replace(
 							/<link[^>]*(?=.*rel="stylesheet")(?=.*href="https?:\/\/[^"]*")[^>]*/g,
+
 							`$& ${CrossOrigin}`,
 						);
 				},
