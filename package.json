@@ -33,7 +33,7 @@
 		"astro": "5.17.2",
 		"astro-capo": "0.0.1",
 		"astrojs-service-worker": "2.0.0",
-		"autoprefixer": "10.4.24",
+		"autoprefixer": "10.4.27",
 		"cssnano": "7.1.2",
 		"cssnano-preset-advanced": "7.0.10",
 		"deepmerge-ts": "7.1.5",
