@@ -1,0 +1,1 @@
+import{a as i}from"./index.NYiWWkXn.js";i();

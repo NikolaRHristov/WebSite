@@ -1,1 +1,0 @@
-import{a}from"./index.DdwPFDNn.js";a();
