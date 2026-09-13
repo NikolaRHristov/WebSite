@@ -1,5 +1,5 @@
-<!DOCTYPE html><meta charset="utf-8"><script type="module" src="/_astro/page.DwyPnI0o.js"></script><table>
-	<tbody><tr>
+<!DOCTYPE html><meta charset="utf-8"><script type="module" src="/_astro/page.Cz5e5o0I.js"></script><table>
+	<tr>
 		<td align="left" valign="middle">
 			<h3 align="left">
 				<a href="https://Editor.Land" target="_blank">
@@ -37,7 +37,7 @@
 				</a>
 			</h3>
 		</td>
-	</tr></tbody></table>
+	</tr></table>
 <hr>
 <h1 id="land️the-next-generation-code-editor"><strong>Land</strong> 🏞️ The Next-Generation Code Editor</h1>
 <p>Welcome to <strong>Land</strong>! We are building a high-performance, resource-efficient, and
@@ -52,7 +52,7 @@ application. This architecture ensures that all side effects from filesystem
 operations to UI updates and network requests are handled in a structured,
 testable, and composable way.</p>
 <hr>
-<h2 id="key-features--architectural-highlights">Key Features &#x26; Architectural Highlights 🔐</h2>
+<h2 id="key-features--architectural-highlights">Key Features &amp; Architectural Highlights 🔐</h2>
 <ul>
 <li><strong>Declarative Effect System:</strong> The entire application, from the Rust backend
 to the TypeScript frontend, is built on an effects-based architecture. We use
@@ -77,37 +77,37 @@ performant, and strongly-typed API contract defined in a <code>.proto</code> fil
 <h2 id="core-architecture️">Core Architecture 🏗️</h2>
 <p><strong>Land</strong>’s architecture is composed of several key components that work in
 concert to deliver a modern editing experience.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th align="left">Component</th><th align="left">Role &#x26; Key Responsibilities</th><th align="left">Primary Technologies</th></tr></thead><tbody><tr><td align="left"><strong><code>Common</code> (Rust)</strong></td><td align="left"><strong>The Abstract Core Library.</strong> Defines the application’s “language”. It contains all abstract <code>trait</code> definitions, the <code>ActionEffect</code> system, and Data Transfer Objects (DTOs). It has no knowledge of the final implementation.</td><td align="left">Rust</td></tr><tr><td align="left"><strong><code>Mountain</code> (Rust)</strong></td><td align="left"><strong>The Native Backend.</strong> A Tauri application that <strong>implements</strong> the traits from <code>Common</code>. It manages native OS operations, hosts the gRPC server, manages the <code>Cocoon</code> process, and communicates with the <code>Wind</code> UI via Tauri events.</td><td align="left">Rust, Tauri, Tokio, <code>tonic</code> (gRPC)</td></tr><tr><td align="left"><strong><code>Cocoon</code> (TypeScript)</strong></td><td align="left"><strong>The Extension Host.</strong> A Node.js process that provides a high-fidelity <code>vscode</code> API to extensions. It’s built entirely with Effect-TS and communicates with <code>Mountain</code> via gRPC for all privileged operations.</td><td align="left">TypeScript, Node.js, Effect-TS, gRPC</td></tr><tr><td align="left"><strong><code>Wind</code> &#x26; <code>Sky</code> (TypeScript)</strong></td><td align="left"><strong>The UI Layer.</strong> <code>Wind</code> is the Effect-TS native re-implementation of the VS Code workbench services. <code>Sky</code> is the UI component layer that renders the state managed by <code>Wind</code>. <code>Wind</code> communicates with <code>Mountain</code> via Tauri events.</td><td align="left">TypeScript, Effect-TS</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Component</th>
+<th style="text-align: left">Role &amp; Key Responsibilities</th>
+<th style="text-align: left">Primary Technologies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left"><strong><code>Common</code> (Rust)</strong></td>
+<td style="text-align: left"><strong>The Abstract Core Library.</strong> Defines the application’s “language”. It contains all abstract <code>trait</code> definitions, the <code>ActionEffect</code> system, and Data Transfer Objects (DTOs). It has no knowledge of the final implementation.</td>
+<td style="text-align: left">Rust</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong><code>Mountain</code> (Rust)</strong></td>
+<td style="text-align: left"><strong>The Native Backend.</strong> A Tauri application that <strong>implements</strong> the traits from <code>Common</code>. It manages native OS operations, hosts the gRPC server, manages the <code>Cocoon</code> process, and communicates with the <code>Wind</code> UI via Tauri events.</td>
+<td style="text-align: left">Rust, Tauri, Tokio, <code>tonic</code> (gRPC)</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong><code>Cocoon</code> (TypeScript)</strong></td>
+<td style="text-align: left"><strong>The Extension Host.</strong> A Node.js process that provides a high-fidelity <code>vscode</code> API to extensions. It’s built entirely with Effect-TS and communicates with <code>Mountain</code> via gRPC for all privileged operations.</td>
+<td style="text-align: left">TypeScript, Node.js, Effect-TS, gRPC</td>
+</tr>
+<tr>
+<td style="text-align: left"><strong><code>Wind</code> &amp; <code>Sky</code> (TypeScript)</strong></td>
+<td style="text-align: left"><strong>The UI Layer.</strong> <code>Wind</code> is the Effect-TS native re-implementation of the VS Code workbench services. <code>Sky</code> is the UI component layer that renders the state managed by <code>Wind</code>. <code>Wind</code> communicates with <code>Mountain</code> via Tauri events.</td>
+<td style="text-align: left">TypeScript, Effect-TS</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="architectural-workflows">Architectural Workflows 📄</h2>
 <p>To understand how these components interact, please refer to the detailed
@@ -117,7 +117,7 @@ The following provides a table of contents for these essential processes.</p>
 <h3 id="table-of-contents">Table of Contents</h3>
 <ol>
 <li>
-<p><strong>Application Startup &#x26; Handshake</strong></p>
+<p><strong>Application Startup &amp; Handshake</strong></p>
 <ul>
 <li><em>Describes the complete end-to-end process of launching <code>Mountain</code>,
 spawning <code>Cocoon</code>, and establishing a stable, initialized state for both
@@ -220,156 +220,156 @@ overhead of a Node.js runtime and enabling deeper integration with <code>Mountai
 component or library with a clear purpose. Most Elements are managed as Git
 submodules within the main <strong>Land</strong> repository, allowing for independent
 development and versioning.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th align="left"></th><th align="left">Path</th><th align="left">Component / Purpose</th></tr></thead><tbody><tr><td align="left"><h3>👨🏻‍🏭</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Common"><code>Land/Element/Common</code></a></td><td align="left"><strong>The Abstract Core Library (Rust).</strong> This is the architectural heart of the native backend. It contains no concrete logic, only <code>trait</code> definitions, the <code>ActionEffect</code> system, and shared Data Transfer Objects (DTOs). All other Rust components depend on it.</td></tr><tr><td align="left"><h3>📣</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Echo"><code>Land/Element/Echo</code></a></td><td align="left"><strong>The High-Performance Task Scheduler (Rust).</strong> A complete Rust library that provides a structured concurrency runtime. It features a high-performance, work-stealing queue and is designed to be the core execution engine for all asynchronous tasks within <code>Mountain</code>.</td></tr><tr><td align="left"><h3>🌿</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Vine"><code>Land/Element/Vine</code></a></td><td align="left"><strong>The gRPC Protocol &#x26; Implementation.</strong> This element contains the <strong><code>.proto</code></strong> file defining the gRPC contract between <code>Mountain</code> and <code>Cocoon</code>. It also includes the generated code and the concrete Rust server/client implementations within the <code>Mountain</code> and <code>Cocoon</code> projects.</td></tr><tr><td align="left"><h3>⛰️</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Mountain"><code>Land/Element/Mountain</code></a></td><td align="left"><strong>The Native Backend Application (Rust).</strong> This is the main Tauri application. It <strong>implements</strong> the traits from <code>Common</code>, manages the application window, orchestrates native OS operations, hosts the gRPC server, and manages the lifecycle of all sidecar processes.</td></tr><tr><td align="left"><h3>💻</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Editor"><code>Land/Element/Dependency/Microsoft/Dependency/Editor</code></a></td><td align="left"><strong>The VS Code Source Submodule.</strong> Contains a specific version of the Microsoft VS Code source code. This is a critical dependency used by <code>Rest</code> to build <code>Cocoon</code>’s runtime and by <code>Wind</code> to leverage VS Code’s core UI components and services.</td></tr><tr><td align="left"><h3>⛱️</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Rest"><code>Land/Element/Rest</code></a></td><td align="left"><strong>The JS Bundler Configuration.</strong> This element contains the build scripts and configurations (e.g., for <code>esbuild</code>) used to bundle the necessary VS Code platform code from the <code>Dependency</code> submodule for <code>Cocoon</code> to consume.</td></tr><tr><td align="left"><h3>⚫</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Output"><code>Land/Element/Output</code></a></td><td align="left"><strong>The Bundled JS Output.</strong> This directory is the destination for the bundled JavaScript artifacts created by the <code>Rest</code> build process. It is the code that <code>Cocoon</code> actually loads at runtime.</td></tr><tr><td align="left"><h3>🦋</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Cocoon"><code>Land/Element/Cocoon</code></a></td><td align="left"><strong>The Node.js Extension Host (TypeScript).</strong> A sidecar process that runs standard VS Code extensions. It is built entirely with <code>Effect-TS</code> and provides a high-fidelity <code>vscode</code> API, proxying privileged calls to <code>Mountain</code> via gRPC.</td></tr><tr><td align="left"><h3>🍃</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Wind"><code>Land/Element/Wind</code></a></td><td align="left"><strong>The UI Service Layer (TypeScript).</strong> A complete, <code>Effect-TS</code> native re-implementation of the VS Code workbench services. It runs in the Tauri webview and manages the entire state and logic of the user interface.</td></tr><tr><td align="left"><h3>🍩</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Worker"><code>Land/Element/Worker</code></a></td><td align="left"><strong>Web Worker Implementations.</strong> This element holds the source code for any dedicated web workers used by the <code>Wind</code>/<code>Sky</code> frontend for computationally intensive tasks.</td></tr><tr><td align="left"><h3>🌌</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Sky"><code>Land/Element/Sky</code></a></td><td align="left"><strong>The UI Component Layer (Astro).</strong> This project contains the actual UI components that render the editor, side bar, status bar, etc. It is driven by the state managed in the <code>Wind</code> service layer.</td></tr><tr><td align="left"><h3>🌫️</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Mist"><code>Land/Element/Mist</code></a></td><td align="left"><strong>WebSocket Communication Logic.</strong> This component handles WebSocket communication. It can be implemented either as a native module within <code>Mountain</code> or as a separate sidecar.</td></tr><tr><td align="left"><h3>💪🏻</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Maintain"><code>Land/Element/Maintain</code></a></td><td align="left"><strong>Project Maintenance &#x26; CI/CD.</strong> Contains development utilities, <code>GritQL</code> queries for automated refactoring, CI/CD pipeline configurations, and other maintenance scripts.</td></tr><tr><td align="left"><h3>🌳</h3></td><td align="left"><a href="https://github.com/CodeEditorLand/Grove"><code>Land/Element/Grove</code></a></td><td align="left"><strong>(Future Vision) The Native Rust Extension Host.</strong> A planned project to build a high-performance, secure extension host in Rust, capable of running extensions compiled to WASM or statically linked as a Rust library.</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left"></th>
+<th style="text-align: left">Path</th>
+<th style="text-align: left">Component / Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left"><h3>👨🏻‍🏭</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Common"><code>Land/Element/Common</code></a></td>
+<td style="text-align: left"><strong>The Abstract Core Library (Rust).</strong> This is the architectural heart of the native backend. It contains no concrete logic, only <code>trait</code> definitions, the <code>ActionEffect</code> system, and shared Data Transfer Objects (DTOs). All other Rust components depend on it.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>📣</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Echo"><code>Land/Element/Echo</code></a></td>
+<td style="text-align: left"><strong>The High-Performance Task Scheduler (Rust).</strong> A complete Rust library that provides a structured concurrency runtime. It features a high-performance, work-stealing queue and is designed to be the core execution engine for all asynchronous tasks within <code>Mountain</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>🌿</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Vine"><code>Land/Element/Vine</code></a></td>
+<td style="text-align: left"><strong>The gRPC Protocol &amp; Implementation.</strong> This element contains the <strong><code>.proto</code></strong> file defining the gRPC contract between <code>Mountain</code> and <code>Cocoon</code>. It also includes the generated code and the concrete Rust server/client implementations within the <code>Mountain</code> and <code>Cocoon</code> projects.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>⛰️</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Mountain"><code>Land/Element/Mountain</code></a></td>
+<td style="text-align: left"><strong>The Native Backend Application (Rust).</strong> This is the main Tauri application. It <strong>implements</strong> the traits from <code>Common</code>, manages the application window, orchestrates native OS operations, hosts the gRPC server, and manages the lifecycle of all sidecar processes.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>💻</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Editor"><code>Land/Element/Dependency/Microsoft/Dependency/Editor</code></a></td>
+<td style="text-align: left"><strong>The VS Code Source Submodule.</strong> Contains a specific version of the Microsoft VS Code source code. This is a critical dependency used by <code>Rest</code> to build <code>Cocoon</code>’s runtime and by <code>Wind</code> to leverage VS Code’s core UI components and services.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>⛱️</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Rest"><code>Land/Element/Rest</code></a></td>
+<td style="text-align: left"><strong>The JS Bundler Configuration.</strong> This element contains the build scripts and configurations (e.g., for <code>esbuild</code>) used to bundle the necessary VS Code platform code from the <code>Dependency</code> submodule for <code>Cocoon</code> to consume.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>⚫</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Output"><code>Land/Element/Output</code></a></td>
+<td style="text-align: left"><strong>The Bundled JS Output.</strong> This directory is the destination for the bundled JavaScript artifacts created by the <code>Rest</code> build process. It is the code that <code>Cocoon</code> actually loads at runtime.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>🦋</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Cocoon"><code>Land/Element/Cocoon</code></a></td>
+<td style="text-align: left"><strong>The Node.js Extension Host (TypeScript).</strong> A sidecar process that runs standard VS Code extensions. It is built entirely with <code>Effect-TS</code> and provides a high-fidelity <code>vscode</code> API, proxying privileged calls to <code>Mountain</code> via gRPC.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>🍃</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Wind"><code>Land/Element/Wind</code></a></td>
+<td style="text-align: left"><strong>The UI Service Layer (TypeScript).</strong> A complete, <code>Effect-TS</code> native re-implementation of the VS Code workbench services. It runs in the Tauri webview and manages the entire state and logic of the user interface.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>🍩</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Worker"><code>Land/Element/Worker</code></a></td>
+<td style="text-align: left"><strong>Web Worker Implementations.</strong> This element holds the source code for any dedicated web workers used by the <code>Wind</code>/<code>Sky</code> frontend for computationally intensive tasks.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>🌌</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Sky"><code>Land/Element/Sky</code></a></td>
+<td style="text-align: left"><strong>The UI Component Layer (Astro).</strong> This project contains the actual UI components that render the editor, side bar, status bar, etc. It is driven by the state managed in the <code>Wind</code> service layer.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>🌫️</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Mist"><code>Land/Element/Mist</code></a></td>
+<td style="text-align: left"><strong>WebSocket Communication Logic.</strong> This component handles WebSocket communication. It can be implemented either as a native module within <code>Mountain</code> or as a separate sidecar.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>💪🏻</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Maintain"><code>Land/Element/Maintain</code></a></td>
+<td style="text-align: left"><strong>Project Maintenance &amp; CI/CD.</strong> Contains development utilities, <code>GritQL</code> queries for automated refactoring, CI/CD pipeline configurations, and other maintenance scripts.</td>
+</tr>
+<tr>
+<td style="text-align: left"><h3>🌳</h3></td>
+<td style="text-align: left"><a href="https://github.com/CodeEditorLand/Grove"><code>Land/Element/Grove</code></a></td>
+<td style="text-align: left"><strong>(Future Vision) The Native Rust Extension Host.</strong> A planned project to build a high-performance, secure extension host in Rust, capable of running extensions compiled to WASM or statically linked as a Rust library.</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="system-architecture-diagram">System Architecture Diagram</h2>
 <p>This diagram illustrates the build-time and runtime interactions between the
 primary components of the Land application.</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="mermaid"><code><span class="line"><span style="color:#E1E4E8">graph LR</span></span>
-<span class="line"><span style="color:#E1E4E8">    classDef mountain fill:#f9f,stroke:#333,stroke-width:2px;</span></span>
-<span class="line"><span style="color:#E1E4E8">    classDef cocoon fill:#ccf,stroke:#333,stroke-width:2px;</span></span>
-<span class="line"><span style="color:#E1E4E8">    classDef wind fill:#9cf,stroke:#333,stroke-width:2px;</span></span>
-<span class="line"><span style="color:#E1E4E8">    classDef common fill:#cfc,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5;</span></span>
-<span class="line"><span style="color:#E1E4E8">    classDef ipc fill:#ff9,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5;</span></span>
-<span class="line"><span style="color:#E1E4E8">    classDef build fill:#ddd,stroke:#666;</span></span>
-<span class="line"><span style="color:#E1E4E8">    classDef data fill:#eee,stroke:#666;</span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="mermaid"><code><span class="line"><span style="color:#F97583">graph</span><span style="color:#B392F0"> LR</span></span>
+<span class="line"><span style="color:#F97583">    classDef</span><span style="color:#FFAB70"> mountain</span><span style="color:#9ECBFF"> fill:#f9f,stroke:#333,stroke-width:2px;</span></span>
+<span class="line"><span style="color:#F97583">    classDef</span><span style="color:#FFAB70"> cocoon</span><span style="color:#9ECBFF"> fill:#ccf,stroke:#333,stroke-width:2px;</span></span>
+<span class="line"><span style="color:#F97583">    classDef</span><span style="color:#FFAB70"> wind</span><span style="color:#9ECBFF"> fill:#9cf,stroke:#333,stroke-width:2px;</span></span>
+<span class="line"><span style="color:#F97583">    classDef</span><span style="color:#FFAB70"> common</span><span style="color:#9ECBFF"> fill:#cfc,stroke:#333,stroke-width:1px,stroke-dasharray:</span><span style="color:#FFAB70"> 5 5</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    classDef</span><span style="color:#FFAB70"> ipc</span><span style="color:#9ECBFF"> fill:#ff9,stroke:#333,stroke-width:1px,stroke-dasharray:</span><span style="color:#FFAB70"> 5 5</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    classDef</span><span style="color:#FFAB70"> build</span><span style="color:#9ECBFF"> fill:#ddd,stroke:#666;</span></span>
+<span class="line"><span style="color:#F97583">    classDef</span><span style="color:#FFAB70"> data</span><span style="color:#9ECBFF"> fill:#eee,stroke:#666;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">    subgraph "Build Time Process"</span></span>
-<span class="line"><span style="color:#E1E4E8">        direction LR</span></span>
-<span class="line"><span style="color:#E1E4E8">        VSCodeSource["VS Code Source (Dependency/Editor)"]:::build</span></span>
-<span class="line"><span style="color:#E1E4E8">        RestBuild["JS Bundler (Rest Element)"]:::build</span></span>
-<span class="line"><span style="color:#E1E4E8">        CocoonBundleJS(Cocoon Runtime JS):::data</span></span>
-<span class="line"><span style="color:#E1E4E8">        SkyBuildProcess["Sky Build (Sky Element)"]:::build</span></span>
-<span class="line"><span style="color:#E1E4E8">        SkyAssets(Sky Frontend Assets):::data</span></span>
+<span class="line"><span style="color:#FFAB70">    subgraph </span><span style="color:#E1E4E8">"</span><span style="color:#FFAB70">Build Time Process</span><span style="color:#E1E4E8">"</span></span>
+<span class="line"><span style="color:#F97583">        direction</span><span style="color:#B392F0"> LR</span></span>
+<span class="line"><span style="color:#FFAB70">        VSCodeSource</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">"VS Code Source (Dependency/Editor)"</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">build</span></span>
+<span class="line"><span style="color:#FFAB70">        RestBuild</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">"JS Bundler (Rest Element)"</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">build</span></span>
+<span class="line"><span style="color:#FFAB70">        CocoonBundleJS</span><span style="color:#F97583">(</span><span style="color:#9ECBFF">Cocoon Runtime JS</span><span style="color:#F97583">)</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">data</span></span>
+<span class="line"><span style="color:#FFAB70">        SkyBuildProcess</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">"Sky Build (Sky Element)"</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">build</span></span>
+<span class="line"><span style="color:#FFAB70">        SkyAssets</span><span style="color:#F97583">(</span><span style="color:#9ECBFF">Sky Frontend Assets</span><span style="color:#F97583">)</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">data</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">        VSCodeSource --> RestBuild;</span></span>
-<span class="line"><span style="color:#E1E4E8">        VSCodeSource -- Uses UI code --> SkyBuildProcess;</span></span>
-<span class="line"><span style="color:#E1E4E8">        RestBuild --> CocoonBundleJS;</span></span>
-<span class="line"><span style="color:#E1E4E8">        SkyBuildProcess --> SkyAssets;</span></span>
-<span class="line"><span style="color:#E1E4E8">    end</span></span>
+<span class="line"><span style="color:#FFAB70">        VSCodeSource </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> RestBuild</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#FFAB70">        VSCodeSource </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Uses UI code </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> SkyBuildProcess</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#FFAB70">        RestBuild </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> CocoonBundleJS</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#FFAB70">        SkyBuildProcess </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> SkyAssets</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    end</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">    subgraph "Runtime: **Land** Application"</span></span>
-<span class="line"><span style="color:#E1E4E8">        subgraph "Native Backend (Rust)"</span></span>
-<span class="line"><span style="color:#E1E4E8">            Mountain["**Mountain (Tauri App)**"]:::mountain</span></span>
-<span class="line"><span style="color:#E1E4E8">            CommonCrate[**Common Crate**]:::common</span></span>
-<span class="line"><span style="color:#E1E4E8">            TrackDispatcher[Track Dispatcher]:::mountain</span></span>
-<span class="line"><span style="color:#E1E4E8">            VineGRPCServer[Vine gRPC Server]:::mountain</span></span>
-<span class="line"><span style="color:#E1E4E8">            NativeHandlers["Native Logic Handlers"]:::mountain</span></span>
-<span class="line"><span style="color:#E1E4E8">            ProcessMgmt["Process Management"]:::mountain</span></span>
+<span class="line"><span style="color:#FFAB70">    subgraph </span><span style="color:#E1E4E8">"</span><span style="color:#FFAB70">Runtime</span><span style="color:#E1E4E8">: **</span><span style="color:#FFAB70">Land</span><span style="color:#E1E4E8">** </span><span style="color:#FFAB70">Application</span><span style="color:#E1E4E8">"</span></span>
+<span class="line"><span style="color:#FFAB70">        subgraph </span><span style="color:#E1E4E8">"</span><span style="color:#FFAB70">Native Backend </span><span style="color:#F97583">(</span><span style="color:#9ECBFF">Rust</span><span style="color:#F97583">)</span><span style="color:#E1E4E8">"</span></span>
+<span class="line"><span style="color:#FFAB70">            Mountain</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">"**Mountain (Tauri App)**"</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">mountain</span></span>
+<span class="line"><span style="color:#FFAB70">            CommonCrate</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">**Common Crate**</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">common</span></span>
+<span class="line"><span style="color:#FFAB70">            TrackDispatcher</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">Track Dispatcher</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">mountain</span></span>
+<span class="line"><span style="color:#FFAB70">            VineGRPCServer</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">Vine gRPC Server</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">mountain</span></span>
+<span class="line"><span style="color:#FFAB70">            NativeHandlers</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">"Native Logic Handlers"</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">mountain</span></span>
+<span class="line"><span style="color:#FFAB70">            ProcessMgmt</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">"Process Management"</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">mountain</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">            Mountain -- Uses --> TrackDispatcher</span></span>
-<span class="line"><span style="color:#E1E4E8">            TrackDispatcher -- Routes to --> NativeHandlers</span></span>
-<span class="line"><span style="color:#E1E4E8">            Mountain -- Implements traits from --> CommonCrate</span></span>
-<span class="line"><span style="color:#E1E4E8">            Mountain -- Contains --> VineGRPCServer</span></span>
-<span class="line"><span style="color:#E1E4E8">            Mountain -- Contains --> ProcessMgmt</span></span>
-<span class="line"><span style="color:#E1E4E8">        end</span></span>
+<span class="line"><span style="color:#FFAB70">            Mountain </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Uses </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> TrackDispatcher</span></span>
+<span class="line"><span style="color:#FFAB70">            TrackDispatcher </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Routes to </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> NativeHandlers</span></span>
+<span class="line"><span style="color:#FFAB70">            Mountain </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Implements traits from </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> CommonCrate</span></span>
+<span class="line"><span style="color:#FFAB70">            Mountain </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Contains </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> VineGRPCServer</span></span>
+<span class="line"><span style="color:#FFAB70">            Mountain </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Contains </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> ProcessMgmt</span></span>
+<span class="line"><span style="color:#F97583">        end</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">        subgraph "UI Frontend (Tauri Webview)"</span></span>
-<span class="line"><span style="color:#E1E4E8">            WindServices["**Wind (Effect-TS Services)**"]:::wind</span></span>
-<span class="line"><span style="color:#E1E4E8">            SkyUI["**Sky (UI Components)**"]:::wind</span></span>
-<span class="line"><span style="color:#E1E4E8">            WindServices -- Drives state of --> SkyUI</span></span>
-<span class="line"><span style="color:#E1E4E8">        end</span></span>
+<span class="line"><span style="color:#FFAB70">        subgraph </span><span style="color:#E1E4E8">"</span><span style="color:#FFAB70">UI Frontend </span><span style="color:#F97583">(</span><span style="color:#9ECBFF">Tauri Webview</span><span style="color:#F97583">)</span><span style="color:#E1E4E8">"</span></span>
+<span class="line"><span style="color:#FFAB70">            WindServices</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">"**Wind (Effect-TS Services)**"</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">wind</span></span>
+<span class="line"><span style="color:#FFAB70">            SkyUI</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">"**Sky (UI Components)**"</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">wind</span></span>
+<span class="line"><span style="color:#FFAB70">            WindServices </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Drives state of </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> SkyUI</span></span>
+<span class="line"><span style="color:#F97583">        end</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">        subgraph "Extension Host (Node.js Sidecar)"</span></span>
-<span class="line"><span style="color:#E1E4E8">            Cocoon[**Cocoon Process**]:::cocoon</span></span>
-<span class="line"><span style="color:#E1E4E8">            VineGRPCClient[Vine gRPC Client]:::cocoon</span></span>
-<span class="line"><span style="color:#E1E4E8">            VSCodeAPI[vscode API Shim]:::cocoon</span></span>
-<span class="line"><span style="color:#E1E4E8">            Extension["Extension Code"]:::cocoon</span></span>
+<span class="line"><span style="color:#FFAB70">        subgraph </span><span style="color:#E1E4E8">"</span><span style="color:#FFAB70">Extension Host </span><span style="color:#F97583">(</span><span style="color:#9ECBFF">Node.js Sidecar</span><span style="color:#F97583">)</span><span style="color:#E1E4E8">"</span></span>
+<span class="line"><span style="color:#FFAB70">            Cocoon</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">**Cocoon Process**</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">cocoon</span></span>
+<span class="line"><span style="color:#FFAB70">            VineGRPCClient</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">Vine gRPC Client</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">cocoon</span></span>
+<span class="line"><span style="color:#FFAB70">            VSCodeAPI</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">vscode API Shim</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">cocoon</span></span>
+<span class="line"><span style="color:#FFAB70">            Extension</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">"Extension Code"</span><span style="color:#F97583">]</span><span style="color:#E1E4E8">:::</span><span style="color:#FFAB70">cocoon</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">            Cocoon -- Contains --> VineGRPCClient</span></span>
-<span class="line"><span style="color:#E1E4E8">            Cocoon -- Provides --> VSCodeAPI</span></span>
-<span class="line"><span style="color:#E1E4E8">            VSCodeAPI -- Used by --> Extension</span></span>
-<span class="line"><span style="color:#E1E4E8">        end</span></span>
+<span class="line"><span style="color:#FFAB70">            Cocoon </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Contains </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> VineGRPCClient</span></span>
+<span class="line"><span style="color:#FFAB70">            Cocoon </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Provides </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> VSCodeAPI</span></span>
+<span class="line"><span style="color:#FFAB70">            VSCodeAPI </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Used by </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> Extension</span></span>
+<span class="line"><span style="color:#F97583">        end</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">        ProcessMgmt -- Spawns &#x26; Manages --> Cocoon</span></span>
+<span class="line"><span style="color:#FFAB70">        ProcessMgmt </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Spawns &amp; Manages </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> Cocoon</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">        WindServices -- Tauri IPC (Commands &#x26; Events) --> TrackDispatcher</span></span>
-<span class="line"><span style="color:#E1E4E8">        VineGRPCClient -- gRPC (Vine Protocol) &#x3C;--> VineGRPCServer; class VineGRPCClient,VineGRPCServer ipc;</span></span>
+<span class="line"><span style="color:#FFAB70">        WindServices </span><span style="color:#F97583">--</span><span style="color:#FFAB70"> Tauri IPC </span><span style="color:#F97583">(</span><span style="color:#9ECBFF">Commands &amp; Events</span><span style="color:#F97583">)</span><span style="color:#F97583"> --&gt;</span><span style="color:#FFAB70"> TrackDispatcher</span></span>
+<span class="line"><span style="color:#FFAB70">        VineGRPCClient </span><span style="color:#F97583">--</span><span style="color:#FFAB70"> gRPC </span><span style="color:#F97583">(</span><span style="color:#9ECBFF">Vine Protocol</span><span style="color:#F97583">)</span><span style="color:#F97583"> &lt;--&gt;</span><span style="color:#FFAB70"> VineGRPCServer</span><span style="color:#E1E4E8">; </span><span style="color:#F97583">class</span><span style="color:#FFAB70"> VineGRPCClient,VineGRPCServer</span><span style="color:#9ECBFF"> ipc</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">    end</span></span>
+<span class="line"><span style="color:#F97583">    end</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">    CocoonBundleJS -- Loaded by --> Cocoon;</span></span>
-<span class="line"><span style="color:#E1E4E8">    SkyAssets -- Loaded by --> WindServices;</span></span></code></pre>
+<span class="line"><span style="color:#FFAB70">    CocoonBundleJS </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Loaded by </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> Cocoon</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#FFAB70">    SkyAssets </span><span style="color:#F97583">--</span><span style="color:#9ECBFF"> Loaded by </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> WindServices</span><span style="color:#E1E4E8">;</span></span></code></pre>
 <hr>
 <h2 id="getting-started">Getting Started 🚀</h2>
 <p>Follow these steps to get <strong>Land</strong> up and running on your system.</p>
@@ -389,48 +389,48 @@ control the output, allowing you to create either an optimized production build
 or a flexible development build.</p>
 <p><strong>Build Variables Explained:</strong></p>
 <p>These variables are passed to our build scripts to configure their behavior:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th align="left">Variable</th><th align="left">Purpose</th></tr></thead><tbody><tr><td align="left"><code>NODE_VERSION</code></td><td align="left">Sets the <code>Node.js</code> version for the <code>SideCar</code> picked from - <a href="https://github.com/CodeEditorLand/SideCar">https://github.com/CodeEditorLand/SideCar</a> to be included in the final build in <code>Mountain</code>.</td></tr><tr><td align="left"><code>NODE_ENV</code></td><td align="left">Sets the build mode. <code>development</code> includes source maps and skips minification for easier debugging. <code>production</code> creates smaller, optimized files for release.</td></tr><tr><td align="left"><code>Clean</code></td><td align="left">If <code>true</code>, the build script will first delete the <code>Land/Element/Output</code> directory to ensure a completely fresh build without any old artifacts.</td></tr><tr><td align="left"><code>Browser</code></td><td align="left">If <code>true</code>, configures the TypeScript and bundler settings to produce code compatible with a browser environment, which is necessary for <code>Wind</code>/<code>Sky</code> running in Tauri’s webview.</td></tr><tr><td align="left"><code>Dependency</code></td><td align="left">Specifies the source directory for the VS Code platform code. This should always be set to <code>Microsoft/VSCode</code> to point to the submodule at <code>Land/Dependency/Microsoft/Dependency/Editor</code>.</td></tr><tr><td align="left"><code>Bundle</code></td><td align="left"><strong>(Important)</strong> If <code>true</code>, this triggers the <code>Sky</code> build element to bundle the required VS Code platform JavaScript into a format that the <code>Cocoon</code> (Node.js) sidecar can load and use. This is essential for Path A.</td></tr><tr><td align="left"><code>Compile</code></td><td align="left">If <code>true</code>, this bundles the code into single, self-contained files. This is typically used for production builds to reduce the number of network requests and simplify deployment. When <code>false</code> (for <code>tauri dev</code>), it allows for faster, incremental builds and hot-reloading.</td></tr><tr><td align="left"><code>NODE_OPTIONS</code></td><td align="left">Used to increase the default memory limit for Node.js. The bundling process, especially for the entire VS Code platform, can be memory-intensive.</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Variable</th>
+<th style="text-align: left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left"><code>NODE_VERSION</code></td>
+<td style="text-align: left">Sets the <code>Node.js</code> version for the <code>SideCar</code> picked from - <a href="https://github.com/CodeEditorLand/SideCar">https://github.com/CodeEditorLand/SideCar</a> to be included in the final build in <code>Mountain</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>NODE_ENV</code></td>
+<td style="text-align: left">Sets the build mode. <code>development</code> includes source maps and skips minification for easier debugging. <code>production</code> creates smaller, optimized files for release.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>Clean</code></td>
+<td style="text-align: left">If <code>true</code>, the build script will first delete the <code>Land/Element/Output</code> directory to ensure a completely fresh build without any old artifacts.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>Browser</code></td>
+<td style="text-align: left">If <code>true</code>, configures the TypeScript and bundler settings to produce code compatible with a browser environment, which is necessary for <code>Wind</code>/<code>Sky</code> running in Tauri’s webview.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>Dependency</code></td>
+<td style="text-align: left">Specifies the source directory for the VS Code platform code. This should always be set to <code>Microsoft/VSCode</code> to point to the submodule at <code>Land/Dependency/Microsoft/Dependency/Editor</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>Bundle</code></td>
+<td style="text-align: left"><strong>(Important)</strong> If <code>true</code>, this triggers the <code>Sky</code> build element to bundle the required VS Code platform JavaScript into a format that the <code>Cocoon</code> (Node.js) sidecar can load and use. This is essential for Path A.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>Compile</code></td>
+<td style="text-align: left">If <code>true</code>, this bundles the code into single, self-contained files. This is typically used for production builds to reduce the number of network requests and simplify deployment. When <code>false</code> (for <code>tauri dev</code>), it allows for faster, incremental builds and hot-reloading.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>NODE_OPTIONS</code></td>
+<td style="text-align: left">Used to increase the default memory limit for Node.js. The bundling process, especially for the entire VS Code platform, can be memory-intensive.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Development Build:</strong></p>
 <p>This command creates a full development build of the application. The output is
 not as optimized as a release build but is ideal for debugging.</p>
@@ -486,7 +486,7 @@ file.</p>
 <a href="https://github.com/CodeEditorLand/Land/tree/Current/CHANGELOG.md"><code>CHANGELOG.md</code></a>
 for a history of changes.</p>
 <hr>
-<h2 id="funding--acknowledgements">Funding &#x26; Acknowledgements 🙏🏻</h2>
+<h2 id="funding--acknowledgements">Funding &amp; Acknowledgements 🙏🏻</h2>
 <p><strong>Land</strong> 🏞️ is proud to be an open-source endeavor. Our journey is significantly
 supported by the organizations and projects that believe in the future of
 open-source software.</p>
@@ -553,7 +553,7 @@ robust, type-safe, and declarative application with a powerful structured
 concurrency and dependency management system in TypeScript.</li>
 <li><a href="https://www.rust-lang.org/"><strong>Rust</strong></a>: For the performance, safety, and
 modern tooling that powers our entire native backend.</li>
-<li><a href="https://tokio.rs/"><strong>Tokio</strong></a> &#x26;
+<li><a href="https://tokio.rs/"><strong>Tokio</strong></a> &amp;
 <a href="https://github.com/hyperium/tonic"><strong>Tonic</strong></a>: For providing the asynchronous
 runtime and gRPC framework that are the backbone of our high-performance IPC.</li>
 <li><a href="https://astro.build/"><strong>Astro</strong></a>: For its content-driven approach that allows
