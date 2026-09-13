@@ -7,9 +7,11 @@ import Table from "@Component/Readme/Table.astro";
 import type Cell from "../../../../../Type/Cell.js";
 ---
 
-<>
-	<Table>
-		<tr>
+<html>
+	<head></head>
+	<body>
+		<Table>
+			<tr>
 			<td colspan="4">
 				<h1>
 					<a href="https://holopin.io/@Nikola" target="_blank"
@@ -88,6 +90,29 @@ import type Cell from "../../../../../Type/Cell.js";
 				"GitHub:NikolaRHristov/ZSH",
 			])}
 		/>
+
+		<Heading Text="PlayForm" Emoji="☁️" />
+
+		<Row
+			Package={new Set<Cell>([
+				"GitHub:PlayForm/Aphrodite",
+				"GitHub:PlayForm/Aphrodite-Hermes",
+				"GitHub:PlayForm/Auth-Cloudflare",
+				"GitHub:PlayForm/Automate",
+				"GitHub:PlayForm/Eliminate",
+				"GitHub:PlayForm/Favicon",
+				"GitHub:PlayForm/Format",
+			])}
+		/>
+
+		<Heading Text="NikolaRHristov" Emoji="🚀" />
+
+		<Row
+			Package={new Set<Cell>([
+				"GitHub:NikolaRHristov/Quick-Actions",
+				"GitHub:NikolaRHristov/WebSite",
+			])}
+		/>
 	</Table>
 
 	Generated from: <a
@@ -95,4 +120,5 @@ import type Cell from "../../../../../Type/Cell.js";
 		target="_blank">
 		NikolaRHristov/Website/blob/Current/Source/pages/Raw/Readme/NikolaRHristov/NikolaRHristov/index.astro
 	</a>
-</>
+	</body>
+</html>
