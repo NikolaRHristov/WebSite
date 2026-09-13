@@ -23,7 +23,7 @@
 	"dependencies": {
 		"@astrojs/sitemap": "3.7.3",
 		"@octokit/core": "7.0.7",
-		"@playform/build": "0.3.3",
+		"@playform/build": "0.3.4",
 		"@playform/compress": "0.2.3",
 		"@playform/inline": "0.1.4",
 		"@tailwindcss/aspect-ratio": "0.4.2",
