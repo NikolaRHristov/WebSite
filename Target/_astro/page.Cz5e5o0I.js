@@ -1,0 +1,1 @@
+import{t as r}from"./prefetch.B7ra_jLX.js";r();
