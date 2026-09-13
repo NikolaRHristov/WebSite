@@ -1,5 +1,9 @@
 import { defineConfig } from "astro/config";
 
+import { fileURLToPath } from "node:url";
+
+const Source = (Path: string) => fileURLToPath(new URL(`./Source/${Path}`, import.meta.url));
+
 export const On = process.env["NODE_ENV"] === "development";
 
 export default defineConfig({
@@ -135,6 +139,27 @@ export default defineConfig({
 
 		resolve: {
 			preserveSymlinks: false,
+
+			alias: {
+				"@Asset": Source("Asset"),
+				"@Class": Source("Class"),
+				"@Component": Source("Component"),
+				"@Context": Source("Context"),
+				"@Element": Source("Element"),
+				"@Function": Source("Function"),
+				"@Interface": Source("Interface"),
+				"@Layout": Source("Layout"),
+				"@Library": Source("Library"),
+				"@Notation": Source("Notation"),
+				"@Option": Source("Option"),
+				"@Page": Source("pages"),
+				"@Script": Source("Script"),
+				"@Stylesheet": Source("Stylesheet"),
+				"@Target": Source("Target"),
+				"@Test": Source("Test"),
+				"@Type": Source("Type"),
+				"@Variable": Source("Variable"),
+			},
 		},
 
 		css: {
