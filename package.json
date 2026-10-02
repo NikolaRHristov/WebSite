@@ -34,7 +34,7 @@
 		"astrojs-service-worker": "2.0.3",
 		"autoprefixer": "10.6.1",
 		"cssnano": "9.1.1",
-		"cssnano-preset-advanced": "9.1.0",
+		"cssnano-preset-advanced": "9.1.1",
 		"deepmerge-ts": "8.0.2",
 		"dotenv": "18.0.4",
 		"etag": "1.8.1",
